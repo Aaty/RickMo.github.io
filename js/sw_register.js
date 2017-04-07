@@ -1,0 +1,10 @@
+use "strict";
+
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register("/sw.js", {scope: "./pwa/"}).then(function (reg) {
+		console.log("serviceWorker successfully registered");
+	}).catch(function (err) {
+		console.warm("Error registering serviceWorker");
+	});
+}
+
