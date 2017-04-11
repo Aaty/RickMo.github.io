@@ -2,7 +2,7 @@ var assets_cache_name = "v1_static";
 
 var siteDomain = "hhtps://jangosto.github.io";
 
-var static_assets = array(
+var static_assets = Array(
     "https://jangosto.github.io/shell.html",
     "https://jangosto.github.io/css/core-portada-elmundo-mobile.css",
     "https://jangosto.github.io/js/jquery.2.1.4.js",
