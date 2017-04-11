@@ -19,7 +19,7 @@ console.log("Caching static files");
             return cache.addAll(static_assets).then(function() {
                 self.skipWaiting();
             });
-        });
+        })
     );
 });
 
