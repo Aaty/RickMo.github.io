@@ -13,6 +13,7 @@ var updatePage = function (data) {
 }
 
 var transformContent = function () {
+    var siteDomain = "https://jangosto.github.io";
     // ... regex for portadillas
     var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?$", "i");
     // ... regex for news
