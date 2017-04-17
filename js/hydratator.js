@@ -5,7 +5,6 @@ var getJsonUrl = function (url) {
 var getContent = function (url) {
     fetch(url).then(function (response) {
         return response.text().then(function (data) {
-console.log("DATA: ", data);
             return data;
         });
     });
@@ -18,6 +17,7 @@ var removeQueryString = function (url) {
 
 var updatePage = function (data) {
     var container = document.getElementById("content");
+console.log("OTHER DATA: ", data);
     container.innerHTML = data;
 }
 
