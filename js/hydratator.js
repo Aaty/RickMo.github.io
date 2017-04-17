@@ -13,12 +13,20 @@ var updatePage = function (data) {
 }
 
 var transformContent = function () {
+    // ... regex for portadillas
+    var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?$", "i");
+    // ... regex for news
+    var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
     var currentUrl = removeQueryString(window.location.href);
-    var urlArray = currentUrl.split("/");
-    var fileName = urlArray[urlArray.length-1];
-
-    var ampUrl = "https://jangosto.github.io/api/contents/"+fileName;
-
+    
+    var ampUrl = "";
+    if (newPattern.test(currentUrl)) {
+        var urlArray = currentUrl.split("/");
+        var fileName = urlArray[urlArray.length-1];
+        ampUrl = "https://jangosto.github.io/api/contents/"+fileName;
+    } else if (autocoverPattern.test(currentUrl)) {
+        ampUrl = "https://jangosto.github.io/api/contents/index.html";
+    }
     //var jsonUrl = getJsonUrl(currentUrl);
     //var jsonData = getContent(jsonUrl);
     //var arrayData = JSON.parse(jsonData);
