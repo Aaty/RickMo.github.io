@@ -21,7 +21,11 @@ self.addEventListener('install', function(event) {
     );
 });
 
-self.addEventListener('activate', function(event) {});
+self.addEventListener('activate', function(event) {
+
+    console.log("El service worker está activo...");
+
+});
 
 self.addEventListener('fetch', function(event)
 {
