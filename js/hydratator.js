@@ -17,11 +17,11 @@ var removeQueryString = function (url) {
 
 var updatePage = function (data) {
     var container = document.getElementById("content");
-    data = data.replace('[[[---URL---]]]', currentUrl);
+    //data = data.replace('[[[---URL---]]]', currentUrl);
     container.innerHTML = data;
 }
 
-var tranformContent = function () {
+var transformContent = function () {
     var currentUrl = removeQueryString(window.location.href);
     var urlArray = currentUrl.split("/");
     var fileName = urlArray[urlArray.length-1];
@@ -44,4 +44,4 @@ var tranformContent = function () {
     }
 }
 
-tranformContent();
+transformContent();
