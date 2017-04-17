@@ -28,8 +28,9 @@ self.addEventListener('activate', function(event) {});
 
 self.addEventListener('fetch', function(event) {
     var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?$", "i");
+    var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
 
-    if (autocoverPattern.test(event.request.url)) {
+    if (autocoverPattern.test(event.request.url) || newPattern.test(event.request.url)) {
         shellRequest = new Request(siteDomain+"/shell.html");
         event.respondWith(
             caches.match(shellRequest).then(function(response) {
