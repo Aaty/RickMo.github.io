@@ -5,7 +5,7 @@ var siteDomain = "https://jangosto.github.io";
 
 var static_assets = Array(
     "https://jangosto.github.io/shell.html",
-    "https://jangosto.github.io/css/core-portada-elmundo-mobiler.css",
+    "https://jangosto.github.io/css/core-portada-elmundo-mobile.css",
     "https://jangosto.github.io/js/jquery.2.1.4.js",
     "https://jangosto.github.io/js/mobile.min.js",
     "https://jangosto.github.io/js/hydratator.js",
