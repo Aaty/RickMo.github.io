@@ -17,7 +17,8 @@
 
             $coverHtml .= '<article class="newsItem">';
             $ampContent = generateAmpContent($dataArray);
-            $coverHtml .= '</article>';
+            
+            $coverHtml .= '<button class="read-later" id="read-later-'.$dataArray->id.'">Leer Más Tarde</button></article>';
 
             file_put_contents("./contents/".$dataArray->id.".html", $ampContent);
         }
