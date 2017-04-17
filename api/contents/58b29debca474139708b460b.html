@@ -1,0 +1,1404 @@
+      <style amp-custom>
+        html,
+        body,
+        div,
+        span,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        abbr,
+        address,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        samp,
+        small,
+        strong,
+        sub,
+        sup,
+        var,
+        b,
+        i,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        background: transparent;
+        }
+
+        .hidden-content {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+        }
+
+        .site-header {
+        padding: 10px 10px 10px 10px;
+        border-bottom: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        max-height: 45px;
+        }
+
+        .site-header a {
+        display: block;
+        max-width: 280px;
+        max-height: 45px;
+        padding-right: 5px;
+        }
+
+        .site-header .portal-channel {
+        background-size: 100%;
+        float: left;
+        }
+
+        .site-footer {
+        margin: 0;
+        overflow: hidden;
+        border-top: 1px solid #000;
+        padding: 0 16px;
+        }
+
+        .container-about-footer p {
+        font-size: 13px;
+        margin: 20px 0;
+        text-align: center;
+        }
+
+        ul.tools {
+        overflow: hidden;
+        list-style-type: none;
+        }
+
+        ul.horizontal li {
+        float: left;
+        }
+
+        .aside-tools {
+        text-align: center;
+        }
+
+        .aside-tools .social-tools {
+        float: left;
+        width: 100%;
+        margin: 5px auto;
+        }
+
+        .aside-tools .social-tools .icon {
+        margin: 0 5px;
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: inline-block;
+        }
+
+        .aside-tools i {
+        width: 35px;
+        height: 35px;
+        display: block;
+        cursor: pointer;
+        background-size: 35px 35px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        }
+
+        .social-tools .icon-facebook {
+        background-color: #44619d;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2235%22%20height%3D%2235%22%20fill%3D%22%23fff%22%20viewBox%3D%220%200%2035%2035%22%3E%3Cpath%20d%3D%22M21.5%207.2L21.5%207.2L21.5%207.2v4h-2c-0.7%200-1%200.8-1%201.5v2.5l0%200h3v4h-3v8h-4v-8h-3v-4h3v-4c0-2.2%201.8-4%204-4H21.5z%22%20%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .social-tools .icon-whatsapp {
+        background-color: #00b200;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2235%22%20height%3D%2235%22%20fill%3D%22%23fff%22%20viewBox%3D%220%200%2035%2035%22%3E%3Cpath%20d%3D%22M22.2%2019.5c0.3%200.1%200.4%200.2%200.5%200.3c0.1%200.1%200%200.6-0.2%201.2c-0.2%200.6-1.2%201.1-1.7%201.1c-0.5%200-0.5%200.4-3-0.7%20s-4-3.8-4.1-3.9c-0.1-0.2-1-1.4-0.9-2.6c0.1-1.2%200.7-1.8%201-2c0.2-0.3%200.5-0.3%200.7-0.3h0.5c0.2%200%200.4-0.1%200.6%200.4l0.7%201.9%20c0.1%200.1%200.1%200.3%200%200.4l-0.3%200.4l-0.4%200.4c-0.1%200.1-0.3%200.3-0.1%200.5c0.1%200.3%200.6%201.1%201.3%201.8c0.9%200.9%201.7%201.2%201.9%201.3%20c0.2%200.1%200.4%200.1%200.5%200l0.8-0.9c0.2-0.3%200.4-0.2%200.6-0.1L22.2%2019.5%20M17.5%207.5c5.5%200%2010%204.5%2010%2010s-4.5%2010-10%2010%20c-2%200-3.8-0.6-5.3-1.5l-4.7%201.5L9%2022.9c-1-1.5-1.5-3.4-1.5-5.4C7.5%2012%2012%207.5%2017.5%207.5%20M17.5%209.5c-4.4%200-8%203.6-8%208%20c0%201.7%200.5%203.3%201.5%204.6L10%2025l2.9-1c1.3%200.9%202.9%201.5%204.6%201.5c4.4%200%208-3.6%208-8S21.9%209.5%2017.5%209.5z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .social-tools .icon-twitter {
+        background-color: #03A3D8;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2235%22%20height%3D%2235%22%20fill%3D%22%23fff%22%20viewBox%3D%220%200%2035%2035%22%3E%3Cpath%20d%3D%22M28%2011.7c-0.8%200.4-1.6%200.6-2.5%200.7c0.9-0.5%201.6-1.4%201.9-2.4c-0.8%200.5-1.8%200.8-2.7%201.1c-0.8-0.9-1.9-1.4-3.2-1.4%20c-2.4%2C0-4.3%201.9-4.3%204.3c0%200.3%200%200.7%200.1%201c-3.6-0.2-6.7-1.9-8.8-4.5c-0.4%200.6-0.6%2C1.4-0.6%202.2c0%201.5%200.7%202.8%201.9%203.6%20c-0.7%200-1.4-0.2-1.9-0.5c0%200%200%200%200%200c0%202.1%201.5%203.8%203.4%204.2c-0.4%200.1-0.7%200.2-1.1%200.2c-0.3%200-0.5%200-0.8-0.1c0.5%201.7%202.1%202.9%204%203%20c-1.5%201.2-3.3%201.8-5.3%201.8c-0.3%200-0.7%200-1-0.1c1.9%201.2%204.2%201.9%206.6%201.9c7.9%200%2012.2-6.5%2012.2-12.2c0-0.2%200-0.4%200-0.6%20C26.7%2013.3%2027.4%2012.5%2028%2011.7z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .social-tools .icon-google {
+        background-color: #d73d32;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2235%22%20height%3D%2235%22%20fill%3D%22%23fff%22%20viewBox%3D%220%200%2035%2035%22%3E%3Cpath%20d%3D%22M30%2016.7h-2v-2h-2v2h-2v2h2v2h2v-2h2%20M15%2016.7v2.4h4c-0.2%201-1.2%203-4%203c-2.4%200-4.3-2-4.3-4.4s1.9-4.4%204.3-4.4%20c1.4%200%202.3%200.6%202.8%201.1l1.9-1.8c-1.2-1.2-2.8-1.9-4.7-1.9c-3.9%200-7%203.1-7%207s3.1%207%207%207c4%200%206.7-2.8%206.7-6.8c0-0.5%200-0.8-0.1-1.2H15z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .social-tools .icon-mail {
+        background-color: #444;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2235%22%20height%3D%2235%22%20fill%3D%22%23fff%22%20viewBox%3D%220%200%2035%2035%22%3E%3Cpath%20d%3D%22M25.5%2013.5l-8%205l-8-5v-2l8%205l8-5%20M25.5%209.5h-16c-1.1%200-2%200.9-2%202v12c0%201.1%200.9%202%202%202h16c1.1%200%202-0.9%202-2v-12%20C27.5%2010.4%2026.6%209.5%2025.5%209.5z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .advertising {
+        margin: 30px 0 30px -20px;
+        }
+
+        .advertising amp-ad {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-top: 25px;
+        }
+
+        .advertising span {
+        position: absolute;
+        top: 0;
+        color: #9F9F9F;
+        font-size: 12px;
+        }
+
+        .advertising .ad-slot iframe {
+        top: 20px;
+        }
+
+        .content .advertising {
+        margin: 30px 0 30px -10px;
+        }
+
+        .main-body > .advertising {
+        margin: 15px 0 15px;
+        }
+
+        .view-video {
+        cursor: pointer;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22130%22%20height%3D%22130%22%20viewBox%3D%220%200%20130%20130%22%3E%3Cpath%20opacity%3D%220.2%22%20fill%3D%22%23fff%22%20d%3D%22M108.044%2C65.505c0.023%2C23.691-18.5%2C42.392-42.009%2C42.407%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20c-22.58%2C0.015-41.955-19.567-41.952-42.401c0.002-22.781%2C18.911-41.537%2C41.904-41.565C89.718%2C23.916%2C108.02%2C42.001%2C108.044%2C65.505z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M51.005%2C65.525c0-6.332%2C0.065-12.663-0.025-18.993%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20c-0.05-3.494%2C1.16-4.166%2C4.15-2.406c11.049%2C6.506%2C22.101%2C13.01%2C33.24%2C19.36c3.218%2C1.834%2C2.797%2C3.018-0.051%2C4.644%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20c-11.135%2C6.359-22.242%2C12.768-33.33%2C19.21c-2.848%2C1.653-3.971%2C0.732-3.969-2.321c0.005-6.497%2C0.001-12.995%2C0.001-19.493%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20C51.016%2C65.525%2C51.011%2C65.525%2C51.005%2C65.525z%22%2F%3E%3Ccircle%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%226%22%20cx%3D%2266.125%22%20cy%3D%2265.875%22%20r%3D%2242.125%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        }
+
+        .view-video:hover {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22130%22%20height%3D%22130%22%20viewBox%3D%220%200%20130%20130%22%3E%3Cpath%20opacity%3D%220.5%22%20fill%3D%22%23fff%22%20d%3D%22M108.044%2C65.505c0.023%2C23.691-18.5%2C42.392-42.009%2C42.407%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20c-22.58%2C0.015-41.955-19.567-41.952-42.401c0.002-22.781%2C18.911-41.537%2C41.904-41.565C89.718%2C23.916%2C108.02%2C42.001%2C108.044%2C65.505z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M51.005%2C65.525c0-6.332%2C0.065-12.663-0.025-18.993%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20c-0.05-3.494%2C1.16-4.166%2C4.15-2.406c11.049%2C6.506%2C22.101%2C13.01%2C33.24%2C19.36c3.218%2C1.834%2C2.797%2C3.018-0.051%2C4.644%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20c-11.135%2C6.359-22.242%2C12.768-33.33%2C19.21c-2.848%2C1.653-3.971%2C0.732-3.969-2.321c0.005-6.497%2C0.001-12.995%2C0.001-19.493%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20C51.016%2C65.525%2C51.011%2C65.525%2C51.005%2C65.525z%22%2F%3E%3Ccircle%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%226%22%20cx%3D%2266.125%22%20cy%3D%2265.875%22%20r%3D%2242.125%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        }
+
+        .sidebar-menu {
+        width: 100%;
+        padding: 10px 0 70px 0;
+        }
+
+        .sidebar-menu .close-sidebar-menu {
+        display: block;
+        width: 48px;
+        height: 52px;
+        float: right;
+        cursor: pointer;
+        margin-right: 10px;
+        }
+
+        .sidebar-menu ul {
+        margin-top: 55px;
+        }
+
+        .sidebar-menu ul li {
+        line-height: 44px;
+        list-style-type: none;
+        }
+
+        .sidebar-menu ul li a {
+        text-decoration: none;
+        padding: 0 20px;
+        width: 100%;
+        display: block;
+        }
+
+        .show-sidebar-menu,
+        .close-sidebar-menu {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        height: 44px;
+        font-size: 11px;
+        font-family: Arial, sans-serif, helvetica;
+        }
+
+        .main-body {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        }
+
+        h2.kicker {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+        }
+
+        h2.kicker .kicker {
+        text-transform: none;
+        }
+
+        h2,
+        h3,
+        h4,
+        h3.list-header,
+        .ficha h1,
+        h3.subhead,
+        h2.ladillo,
+        .entrevista h1,
+        .claves h1,
+        .glosario h1,
+        .ranking h1 {
+        padding-bottom: 20px;
+        }
+
+        .player-container {
+        position: relative;
+        }
+
+        .multimedia-item.main .image {
+        margin-left: -20px;
+        }
+
+        .multimedia-item:not(.main) {
+        margin-bottom: 20px;
+        }
+
+        .multimedia-item .caption {
+        padding: 8px 0;
+        margin-right: 20px;
+        }
+
+        .multimedia-item .caption:empty {
+        display: none;
+        }
+
+        .news-item {
+        padding: 0px 0px 0px 20px;
+        }
+
+        .news-item .content {
+        margin-bottom: 30px;
+        margin-right: 20px;
+        }
+
+        .news-item .content iframe {
+        padding: 10px 0px 20px 0px;
+        }
+
+        .subtitle {
+        border-bottom: 1px dotted #8C8C7A;
+        padding-left: 20px;
+        margin: 20px 20px 0 0;
+        }
+
+        .subtitle:empty {
+        display: none;
+        }
+
+        .info-extra {
+        padding: 8px 0;
+        margin: 0 20px 20px 0;
+        border-top: 1px dotted #8C8C7A;
+        border-bottom: 1px dotted #8C8C7A;
+        font-size: 14px;
+        }
+
+        .info-extra .news-author {
+        padding-bottom: 8px;
+        font-style: normal;
+        }
+
+        time.date {
+        color: #767676;
+        }
+
+        .citas {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        }
+        .most-viewed-news {
+        margin: -7px 20px 20px 0;
+        counter-reset: contadorListas;
+        list-style-type: none;
+        }
+
+        .most-viewed-news li {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        line-height: 1;
+        min-height: 93px;
+        position: relative;
+        width: 100%;
+        }
+
+        .most-viewed-news li:before {
+        counter-increment: contadorListas;
+        content: counter(contadorListas) " ";
+        position: absolute;
+        }
+
+        .most-viewed-news a {
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        }
+
+        .most-viewed-news span {
+        display: inline-block;
+        width: calc(100% - 160px);
+        width: -webkit-calc(100% - 160px);
+        }
+
+        .most-viewed-news amp-img {
+        float: right;
+        }
+
+        .related-news {
+        margin: -7px 20px 20px 0;
+        }
+
+        .related-news li {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        line-height: 1;
+        min-height: 93px;
+        position: relative;
+        width: 100%;
+        }
+
+        .related-news li:before {
+        content: "\25CF";
+        position: absolute;
+        }
+
+        .related-news a {
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        }
+
+        .related-news span {
+        display: inline-block;
+        width: calc(100% - 160px);
+        width: -webkit-calc(100% - 160px);
+        }
+
+        .related-news amp-img {
+        float: right;
+        }
+
+        .related-tags {
+        overflow: hidden;
+        padding-right: 20px;
+        }
+
+        .related-tags li {
+        font-size: 16px;
+        }
+
+        .item-tags {
+        list-style: none;
+        }
+
+        .item-tags li {
+        float: left;
+        margin: 0px 20px 20px 0px;
+        padding: 10px 16px;
+        border: solid 1px #8C8C7A;
+        border-radius: 2px;
+        color: #000;
+        }
+
+        .not-supported-item {
+        text-align: center;
+        border-top: solid 2px #000000;
+        background-color: #E5E5E5;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .not-supported-item h4 {
+        font-size: 24px;
+        padding-bottom: 15px;
+        }
+
+        .not-supported-item p {
+        line-height: 24px;
+        margin-bottom: 20px;
+        }
+
+        .not-supported-item span {
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        }
+
+        i.icon-sad-face {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/sad-face.svg') no-repeat;
+        width: 32px;
+        height: 32px;
+        background-size: 32px;
+        display: block;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+        }
+
+        i.icon-right {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/right.svg') no-repeat;
+        width: 16px;
+        height: 14px;
+        display: inline-block;
+        background-size: 16px;
+        margin-left: 5px;
+        }
+
+        .horizontal,
+        .author {
+        list-style-type: none;
+        }
+
+        .horizontal li,
+        .author li {
+        display: inline-block;
+        margin: 0 5px;
+        }
+
+        ul.list,
+        ol.list,
+        .ranking ol {
+        padding-left: 20px;
+        font-size: 18px;
+        margin-bottom: 30px;
+        }
+
+        .list li:not(:last-of-type) {
+        padding-bottom: 30px;
+        }
+
+        .summary-lead {
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        }
+
+        ol.list li,
+        .ranking li {
+        line-height: 24px;
+        }
+
+        blockquote.summary-cite::before,
+        blockquote.summary-cite::after {
+        content: "\"";
+        }
+
+        .ficha {
+        margin-bottom: 30px;
+        padding: 20px;
+        overflow: hidden;
+        }
+
+        .ficha > *:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        }
+
+        .ficha p {
+        margin-bottom: 30px;
+        }
+
+        .ficha p:last-child {
+        margin-bottom: 0px;
+        }
+
+        .ficha dd {
+        line-height: 27px;
+        font-size: 18px;
+        color: #2a2a2a;
+        }
+
+        .ficha .multimedia-item .caption {
+        margin-right: 0;
+        }
+
+        .summary {
+        margin-bottom: 30px;
+        padding: 20px;
+        overflow: hidden;
+        }
+
+        .summary .ficha {
+        margin-bottom: 0;
+        padding: 10px 0px 20px 0;
+        }
+
+        .summary > *:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        }
+
+        .summary p {
+        margin-bottom: 30px;
+        }
+
+        .summary p:last-child {
+        margin-bottom: 0px;
+        }
+
+        .summary dd {
+        line-height: 27px;
+        font-size: 18px;
+        color: #2a2a2a;
+        }
+
+        .summary .multimedia-item .caption {
+        margin-right: 0;
+        }
+
+        .claves dt,
+        .glosario dt {
+        font-weight: bold;
+        }
+
+        .claves dt:first-child,
+        .glosario dt:first-child {
+        padding-top: 0;
+        }
+
+        .claves dd:not(:last-child),
+        .glosario dd:not(:last-child) {
+        margin-bottom: 27px;
+        }
+
+        @font-face {
+        font-family: "Roboto";
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Regular.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Regular.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Regular.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Regular.ttf") format("ttf");
+        }
+
+        @font-face {
+        font-family: "RobotoItalic";
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Italic.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Italic.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Italic.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Italic.ttf") format("ttf");
+        }
+
+        @font-face {
+        font-family: "RobotoBold";
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Bold.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Bold.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Bold.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/Roboto-Bold.ttf") format("ttf");
+        }
+
+        @font-face {
+        font-family: 'oswaldregular';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/oswald-regular.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/oswald-regular.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/oswald-regular.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/oswald-regular.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/oswald-regular.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/oswald-regular.svg#oswaldregular") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'Lato';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Regular-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Regular-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Regular-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Regular-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Regular-webfont.svg#latoregular") format("svg");
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'Lato Bold';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Bold-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Bold-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Bold-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Bold-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/Lato-Bold-webfont.svg#latobold") format("svg");
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'PT Serif';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-regular-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-regular-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-regular-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-regular-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-regular-webfont.svg#oswaldregular") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'PT Serif Bold';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-bold-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-bold-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-bold-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-bold-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-bold-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/pt_serif-web-bold-webfont.svg#oswaldbold") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'Playfair Display';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-regular-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-regular-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-regular-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-regular-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular") format("svg");
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'Playfair Display';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-black-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-black-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-black-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-black-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-black-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-black-webfont.svg#playfair_displaybold") format("svg");
+        font-weight: 900;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'Playfair Display';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-italic-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-italic-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-italic-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-italic-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-italic-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic") format("svg");
+        font-weight: 400;
+        font-style: italic;
+        }
+
+        @font-face {
+        font-family: 'Playfair Display';
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-blackitalic-webfont.eot");
+        src: url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-blackitalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-blackitalic-webfont.woff2") format("woff2"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-blackitalic-webfont.woff") format("woff"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-blackitalic-webfont.ttf") format("truetype"), url("https://franciscosantamaria.me/pwa/juan/fonts/playfairdisplay-blackitalic-webfont.svg#playfair_displayitalic") format("svg");
+        font-weight: 900;
+        font-style: italic;
+        }
+
+        body {
+        font-family: "Roboto", Arial, sans-serif, helvetica;
+        font-size: 18px;
+        line-height: 27px;
+        color: #222;
+        }
+
+        body a {
+        color: #2e6d9d;
+        }
+
+        body br {
+        margin-top: 27px;
+        display: block;
+        content: "";
+        }
+
+        .site-header-elmundo .portal {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/logo_elmundo.svg') no-repeat transparent 0 0;
+        width: 190px;
+        height: 25px;
+        }
+
+        .site-header-zen .portal,
+        .site-header-Fcinco .portal,
+        .site-header-papel .portal,
+        .site-header-yodona .portal {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/logo_elmundo_peq.svg') no-repeat transparent 0 0;
+        width: 80px;
+        height: 27px;
+        border-right: 1px solid #999;
+        }
+
+        .site-header-zen .portal-channel {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/logo_zen.svg') no-repeat transparent 0 0;
+        background-size: 100%;
+        width: 91px;
+        height: 40px;
+        margin-left: 95px;
+        margin-top: -30px;
+        }
+
+        .site-header-Fcinco .portal-channel {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/logo_f5.svg') no-repeat transparent 0 0;
+        background-size: 100%;
+        width: 150px;
+        height: 35px;
+        margin-left: 90px;
+        margin-top: -28px;
+        }
+
+        .site-header-papel .portal-channel {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/logo_papel.svg') no-repeat transparent 0 0;
+        background-size: 100%;
+        width: 125px;
+        height: 30px;
+        margin-left: 95px;
+        margin-top: -28px;
+        }
+
+        .site-header-yodona .portal-channel {
+        background: url('https://franciscosantamaria.me/pwa/juan/img/logo_yodona.svg') no-repeat transparent 0 0;
+        background-size: 100%;
+        width: 109px;
+        height: 43px;
+        margin-left: 90px;
+        margin-top: -39px;
+        }
+
+        h2.kicker .kicker {
+        color: #8a8a8a;
+        }
+
+        .news-item .headline {
+        font-size: 32px;
+        line-height: 38px;
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        margin: 0px 20px 20px 0px;
+        font-weight: normal;
+        clear: both;
+        }
+
+        .news-item p,
+        .news-item .content {
+        font-family: "Roboto", Arial, sans-serif, helvetica;
+        }
+
+        .news-item .subhead {
+        font-size: 26px;
+        line-height: 28px;
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        }
+
+        ol.list,
+        .ranking ol {
+        padding-left: 25px;
+        }
+
+        .list li:not(:last-of-type) {
+        line-height: 24px;
+        padding-bottom: 24px;
+        }
+
+        .list strong {
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        }
+
+        .cite-author {
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        font-size: 20px;
+        color: #8a8a8a;
+        }
+
+        .ficha,
+        .summary {
+        background-color: #ebebeb;
+        }
+
+        .ficha h4 {
+        font-size: 20px;
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        }
+
+        .ficha h4:empty {
+        display: none;
+        }
+
+        .list-header {
+        font-size: 26px;
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        }
+
+        .ficha h2.ladillo,
+        .clave h1,
+        .glosario h1,
+        .ranking h1 {
+        font-size: 26px;
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        }
+
+        .ficha dd,
+        .summary dd {
+        font-family: "Roboto", Arial, sans-serif, helvetica;
+        }
+
+        blockquote.summary-cite {
+        font-size: 22px;
+        line-height: 28px;
+        font-family: "RobotoBold", Arial, sans-serif, helvetica;
+        font-style: italic;
+        padding-bottom: 20px;
+        }
+
+        .multimedia-item .caption {
+        font-size: 14px;
+        line-height: 20px;
+        color: #8a8a8a;
+        border-bottom: 1px dotted #8a8a8a;
+        font-family: "Roboto", Arial, sans-serif, helvetica;
+        }
+
+        a .multimedia-item .caption {
+        color: #2e6d9d;
+        }
+
+        dl.interview,
+        .glosario dl,
+        .claves dl {
+        padding-bottom: 30px;
+        font-family: "Roboto", Arial, sans-serif, helvetica;
+        }
+
+        .claves li strong {
+        padding-right: 5px;
+        }
+
+        dl.interview dt:not(:last-child), dl.interview dd:not(:last-child) {
+        margin-bottom: 27px;
+        }
+
+        dl.interview dt::before {
+        content: "Pregunta: ";
+        color: #8a8a8a;
+        }
+
+        dl.interview dd::before {
+        content: "Respuesta: ";
+        color: #8a8a8a;
+        }
+
+        .not-supported-item {
+        border-top: solid 2px #2e6d9d;
+        color: #2e6d9d;
+        }
+
+        .not-supported-item p,
+        .not-supported-item span {
+        font-family: "Roboto", Arial, sans-serif, helvetica;
+        color: #2e6d9d;
+        }
+
+        .most-viewed-news li:before {
+        color: #8a8a8a;
+        font-size: 52px;
+        left: 0;
+        top: 5px;
+        }
+
+        .related-news li:before {
+        left: 0;
+        top: 9px;
+        }
+
+        .most-viewed-news li,
+        .related-news li {
+        border-bottom: 1px solid #8a8a8a;
+        }
+
+        .most-viewed-news li {
+        padding: 7px 0 7px 45px;
+        }
+
+        .related-news li {
+        padding: 7px 0 7px 18px;
+        }
+
+        .most-viewed-news amp-img,
+        .related-news amp-img {
+        width: 140px;
+        height: 78px;
+        }
+
+        .show-sidebar-menu {
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23000%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M26%2010.5a.5.5%200%200%200-.5-.5h-19a.5.5%200%200%200-.5.5v1a.5.5%200%200%200%20.5.5h19a.5.5%200%200%200%20.5-.5v-1zM26%2015.5a.5.5%200%200%200-.5-.5h-19a.5.5%200%200%200-.5.5v1a.5.5%200%200%200%20.5.5h19a.5.5%200%200%200%20.5-.5v-1zM26%2020.5a.5.5%200%200%200-.5-.5h-19a.5.5%200%200%200-.5.5v1a.5.5%200%200%200%20.5.5h19a.5.5%200%200%200%20.5-.5v-1z%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        float: right;
+        margin-top: -35px;
+        padding-top: 22px;
+        }
+
+        .sidebar-menu .close-sidebar-menu {
+        padding-top: 36px;
+        }
+
+        .elmundo .sidebar-menu {
+        background: #2e6d9d;
+        }
+
+        .elmundo .sidebar-menu .close-sidebar-menu {
+        color: #fff;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23fff%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M26.253%2025.547a.502.502%200%200%200%200-.708L7.161%205.748a.5.5%200%200%200-.707%200l-.707.706a.5.5%200%200%200%200%20.707l19.092%2019.092a.5.5%200%200%200%20.707%200l.707-.706z%22%2F%3E%3Cpath%20d%3D%22M6.454%2026.253a.5.5%200%200%200%20.707%200L26.253%207.161a.5.5%200%200%200%200-.707l-.707-.707a.5.5%200%200%200-.707%200L5.747%2024.839a.502.502%200%200%200%200%20.708l.707.706z%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: 55% 5px;
+        }
+
+        .elmundo .sidebar-menu a {
+        color: #fff;
+        }
+
+        .elmundo .sidebar-menu a:hover {
+        background: #0c3048;
+        }
+
+        .zen .sidebar-menu,
+        .yodona .sidebar-menu,
+        .papel .sidebar-menu,
+        .Fcinco .sidebar-menu {
+        background: #FFF;
+        }
+
+        .zen .sidebar-menu .close-sidebar-menu,
+        .yodona .sidebar-menu .close-sidebar-menu,
+        .papel .sidebar-menu .close-sidebar-menu,
+        .Fcinco .sidebar-menu .close-sidebar-menu {
+        color: #222;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 55% 5px;
+        }
+
+        .zen .sidebar-menu a,
+        .yodona .sidebar-menu a,
+        .papel .sidebar-menu a,
+        .Fcinco .sidebar-menu a {
+        color: #222;
+        text-transform: uppercase;
+        }
+
+        .Fcinco .sidebar-menu a {
+        font-family: "oswaldregular", Arial, sans-serif, helvetica;
+        }
+
+        .Fcinco .sidebar-menu a:hover {
+        border-bottom: 2px solid #e67e22;
+        }
+
+        .Fcinco .sidebar-menu .close-sidebar-menu {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e67e22%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M26.253%2025.547a.502.502%200%200%200%200-.708L7.161%205.748a.5.5%200%200%200-.707%200l-.707.706a.5.5%200%200%200%200%20.707l19.092%2019.092a.5.5%200%200%200%20.707%200l.707-.706z%22%2F%3E%3Cpath%20d%3D%22M6.454%2026.253a.5.5%200%200%200%20.707%200L26.253%207.161a.5.5%200%200%200%200-.707l-.707-.707a.5.5%200%200%200-.707%200L5.747%2024.839a.502.502%200%200%200%200%20.708l.707.706z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .Fcinco .news-item .headline {
+        font-family: "oswaldregular", Arial, sans-serif, helvetica;
+        }
+
+        .papel a {
+        color: #e01010;
+        }
+
+        .papel .sidebar-menu a {
+        font-family: "oswaldregular", Arial, sans-serif, helvetica;
+        }
+
+        .papel .sidebar-menu a:hover {
+        color: #e01010;
+        }
+
+        .papel .sidebar-menu .close-sidebar-menu {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e01010%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M26.253%2025.547a.502.502%200%200%200%200-.708L7.161%205.748a.5.5%200%200%200-.707%200l-.707.706a.5.5%200%200%200%200%20.707l19.092%2019.092a.5.5%200%200%200%20.707%200l.707-.706z%22%2F%3E%3Cpath%20d%3D%22M6.454%2026.253a.5.5%200%200%200%20.707%200L26.253%207.161a.5.5%200%200%200%200-.707l-.707-.707a.5.5%200%200%200-.707%200L5.747%2024.839a.502.502%200%200%200%200%20.708l.707.706z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .papel .news-item .headline {
+        font-family: "oswaldregular", Arial, sans-serif, helvetica;
+        }
+
+        .yodona a {
+        color: #ba007c;
+        text-decoration: none;
+        }
+
+        .yodona a:hover {
+        color: #ba007c;
+        text-decoration: underline;
+        }
+
+        .yodona .sidebar-menu a {
+        font-family: "Lato", Arial, sans-serif, helvetica;
+        }
+
+        .yodona .sidebar-menu a:hover {
+        color: #ba007c;
+        }
+
+        .yodona .sidebar-menu .close-sidebar-menu {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ba007c%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M26.253%2025.547a.502.502%200%200%200%200-.708L7.161%205.748a.5.5%200%200%200-.707%200l-.707.706a.5.5%200%200%200%200%20.707l19.092%2019.092a.5.5%200%200%200%20.707%200l.707-.706z%22%2F%3E%3Cpath%20d%3D%22M6.454%2026.253a.5.5%200%200%200%20.707%200L26.253%207.161a.5.5%200%200%200%200-.707l-.707-.707a.5.5%200%200%200-.707%200L5.747%2024.839a.502.502%200%200%200%200%20.708l.707.706z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .yodona .news-item .headline {
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 900;
+        }
+
+        .zen .sidebar-menu a {
+        font-family: "oswaldregular", Arial, sans-serif, helvetica;
+        }
+
+        .zen .sidebar-menu a:hover {
+        color: #990044;
+        }
+
+        .zen .sidebar-menu .close-sidebar-menu {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23990044%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M26.253%2025.547a.502.502%200%200%200%200-.708L7.161%205.748a.5.5%200%200%200-.707%200l-.707.706a.5.5%200%200%200%200%20.707l19.092%2019.092a.5.5%200%200%200%20.707%200l.707-.706z%22%2F%3E%3Cpath%20d%3D%22M6.454%2026.253a.5.5%200%200%200%20.707%200L26.253%207.161a.5.5%200%200%200%200-.707l-.707-.707a.5.5%200%200%200-.707%200L5.747%2024.839a.502.502%200%200%200%200%20.708l.707.706z%22%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .zen .news-item .headline {
+        font-family: "oswaldregular", Arial, sans-serif, helvetica;
+        }
+    </style>
+      <div id="container">
+         <amp-analytics type="comscore">
+            <script type="application/json">
+               {
+                 "vars": {
+                   "c2": "7184769"
+                 }
+               }
+            </script>
+         </amp-analytics>
+         <amp-analytics type="googleanalytics" id="analytics2">
+            <script type="application/json">
+               {
+                 "vars": {
+                   "account": "UA-73702930-1"
+                 },
+                 "triggers": {
+                   "defaultPageview": {
+                     "on": "visible",
+                     "request": "pageview",
+                     "vars": {
+                       "title": "La Policía admite fallos en la custodia de la mochila del 11-M"
+                     }
+                   },
+                   "trackRelatedNews": {
+                     "on": "click",
+                     "selector": ".related-news>a",
+                     "request": "event",
+                     "vars":{
+                       "eventCategory": "Módulo Noticias Relacionadas",
+                       "eventAction": "click-relacionadas"
+                     }
+                   },
+                   "trackMostViewedNews": {
+                     "on": "click",
+                     "selector": ".most-viewed-news>li>a",
+                     "request": "event",
+                     "vars":{
+                         "eventCategory": "Módulo Más Leídas",
+                         "eventAction": "click-mas-leidas"
+                     }
+                   },
+                   "trackFacebookShares": {
+                     "on": "click",
+                     "selector": "#facebook-share",
+                     "request": "event",
+                     "vars":{
+                         "eventCategory": "Compartir en Redes Sociales",
+                         "eventAction": "compartir-fb"
+                     }
+                   },
+                   "trackTwitterShares": {
+                     "on": "click",
+                     "selector": "#twitter-share",
+                     "request": "event",
+                     "vars":{
+                         "eventCategory": "Compartir en Redes Sociales",
+                         "eventAction": "compartir-tw"
+                     }
+                   },
+                   "trackWhatsappShares": {
+                     "on": "click",
+                     "selector": "#whatsapp-share",
+                     "request": "event",
+                     "vars":{
+                         "eventCategory": "Compartir en Redes Sociales",
+                         "eventAction": "compartir-whatsapp"
+                     }
+                   },
+                   "trackGooglePlusShares": {
+                     "on": "click",
+                     "selector": "#googleplus-share",
+                     "request": "event",
+                     "vars":{
+                         "eventCategory": "Compartir en Redes Sociales",
+                         "eventAction": "compartir-gplus"
+                     }
+                   },
+                   "trackEmailShares": {
+                     "on": "click",
+                     "selector": "#email-share",
+                     "request": "event",
+                     "vars":{
+                         "eventCategory": "Compartir en Redes Sociales",
+                         "eventAction": "compartir-email"
+                     }
+                   }
+                 }
+               }
+            </script>
+         </amp-analytics>
+         <amp-analytics type="chartbeat">
+            <script type="application/json">
+               {
+                 "vars": {
+                   "uid": "52682",
+                   "domain": "elmundo.es",
+                   "sections": "espana"
+                 }
+               }
+            </script>
+         </amp-analytics>
+         <amp-analytics>
+            <script type="application/json">
+               {
+                   "transport":
+                   {"xhrpost": false, "beacon": true},
+                   "requests": {
+                       "base": "https://${trackingServer}/b/ss/${accounts}/1/AMP-0.1/s${random}","pageView": "${base}?AQB=1&vid=CLIENT_ID(amp_id)&pageName=${canonicalUrl}&r=${documentReferrer}&channel=${ch}&c1=${prop1}&c2=${prop2}&c3=${prop3}&c4=${prop4}&c5=${prop5}&c6=${prop6}&c7=${prop7}&c9=${prop9}&c11=${prop11}&c27=${prop27}&c29=${prop29}&c30=${prop30}&c32=${prop32}&c61=${prop61}&c75=${prop75}&AQE=1"
+                   },
+                   "vars": {
+                       "trackingServer": "smetrics.el-mundo.net",
+                       "accounts": "uevistatest,ueelmundopreprod",
+                       "ch": "espana",
+                       "prop1": "",
+                       "prop2": "",
+                       "prop3": "",
+                       "prop4": "",
+                       "prop5": "",
+                       "prop6": "",
+                       "prop7": "elmundo.es",
+                       "prop9": "http://www.elmundo.es/espana/2017/02/20/58a9e858268e3e97488b4570.html",
+                       "prop11": "La Policía admite fallos en la custodia de la mochila del 11-M-58a9e858268e3e97488b4570",
+                       "prop19": "",
+                       "prop27": "movil",
+                       "prop29": "Audiencia Nacional,Madrid,ETA,salud",
+                       "prop30": "imagenes",
+                       "prop31": "",
+                       "prop32": "noticia",
+                       "prop33": "espana-home",
+                       "prop52": "",
+                       "prop61": "amp",
+                       "prop75": "FERNANDO LÁZARO"
+                   },
+                   "triggers": {
+                       "pageLoad": {
+                           "on": "visible",
+                           "request": "pageView"
+                       }
+                   }
+               }
+            </script>
+         </amp-analytics>
+      </div>
+      <div class="main-body">
+         <div class="advertising">
+            <amp-ad width="320" height="53" class="ad-slot" type="doubleclick" data-slot="/99071977/mun-mv/espana/amp" json='{"targeting":{"p":"m"}}'><span>Publicidad</span></amp-ad>
+         </div>
+         <article class="news-item">
+            <h2 class="kicker">Crónica</h2>
+            <h1 class="headline">Odebrecht Sobornos S.L</h1>
+            <figure class="multimedia-item main" itemprop="image">
+               <amp-img class="image" layout=responsive src="https://franciscosantamaria.me/pwa/juan/api/contents/images/2017-02-26-14880988422860.jpg" height="625" width="660"></amp-img>
+               <figcaption class="caption" itemprop="description">Marcelo Odebrecht, alias el 'Principe'</figcaption>
+            </figure>
+            <ul class="subtitle">
+               <li class="summary-lead">Achaca los errores a «la confusión» y dice que no hubo "manipulación en el traslado"</li>
+               <li class="summary-lead">Sostiene que la mochila "fue depositada en el tren por los terroristas" bajo un asiento</li>
+               <li class="summary-lead">Advierte que no se mostró su fotografía a un testigo que la había visto en el vagón</li>
+            </ul>
+            <aside class="aside-tools byline-tools">
+               <ul class="tools ">
+                  <li class="social-tools">
+                     <ul class="horizontal">
+                        <li id="facebook-share"><a href="https://www.facebook.com/dialog/share?app_id=279395918757488&href=[[[---URL---]]]&redirect_uri=[[[---URL---]]]" title="Facebook"><i class="icon-facebook"></i><span class="hidden-content">Facebook</span></a></li>
+                        <li id="twitter-share"><a href="https://twitter.com/intent/tweet?text=Odebrecht Sobornos S.L&url=[[[---URL---]]]&via=elmundoes" title="Twitter"><i class="icon-twitter"></i><span class="hidden-content">Twitter</span></a></li>
+                        <li id="googleplus-share"><a href=" https://plus.google.com/share?url=[[[---URL---]]]" title="Google+"><i class="icon-google"></i><span class="hidden-content">Google+</span></a></li>
+                        <li id="whatsapp-share"><a href="whatsapp://send?text=Odebrecht Sobornos S.L | Espana | ELMUNDO - [[[---URL---]]]" title="Whatsapp"><i class="icon-whatsapp"></i><span class="hidden-content">Whatsapp</span></a></li>
+                        <li id="email-share"><a href="mailto:?subject=Odebrecht Sobornos S.L&body=[[[---URL---]]]" title="Mail"><i class="icon-mail" title="Enviar"></i><span class="hidden-content">Email</span></a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </aside>
+            <div class="info-extra">
+               <address class="news-author">
+                  <ul class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                     <li itemprop="name" class="author-name">MARTÍN MUCHA | </li>
+                  </ul>
+               </address>
+               <time datetime="2017-02-20 03:03:06" class="date" itemprop="dateModified">
+               ACTUALIZADO Fri, 03 Mar 2017 03:37:00 +0100
+               </time>
+            </div>
+            <div class="content">
+               
+               <div class="advertising">
+                  <amp-ad width="300" height="250" class="ad-slot" type="doubleclick" data-slot="/99071977/mun-mv/espana/amp" json='{"targeting":{"p":"r"}}'><span>Publicidad</span></amp-ad>
+               </div>
+               Es 14 de febrero de 2017. <strong>Dial 103.5 FM</strong>. "El presidente debe tocar el <strong>tema Odebrecht.</strong>.. No es un problema solamente de este país, sino de toda América Latina...". Terminó de decir esto y 58 segundos después <strong>sonaron dos balazos</strong>. Una operaria gritó: "¡Tiros, tiros!". Y en plena cabina de radio, el periodista <strong>Luis Manuel Medina fue asesinado</strong>. Ocurrió en San Pedro de Macorís, en República Dominicana. 
+
+Segunda muerte, esta aún más sospechosa. A 5.250 kilómetros, 19 de enero de 2017. <strong>El avión del incorruptible juez brasileño Teori Zavascki se cae en la costa de Paraty</strong> (Río de Janeiro). No lo detuvo nadie cuando estuvo en sus manos el <em>impeachment </em>contra la presidenta Dilma Rousseff. Tampoco paró la investigación sobre Lula da Silva. Murió justo cuando le tocaba analizar las "confesiones del fin del mundo",<strong> las acusaciones contra 77 directivos de la multinacional Odebrecht</strong>, en las que están comprometidos sobornos en todo el continente,<strong> más de 2.000 millones de dólares pagados a funcionarios</strong>, donde se ven comprometidos una docena de presidentes de toda América... 
+
+El Hawker Beechcraft King Air C90, modelo fiable y bastante nuevo, de 2006, el que llevaba al alto magistrado de la Corte Suprema, cayó al Océano Atlántico. La autopsia señala que <strong>su muerte fue por politraumatismo.</strong> Teori es responsable de mandar a la cárcel al <em>Príncipe</em>, el milmillonario <strong>Marcelo Odebrecht</strong>, quien convirtió a la <strong>empresa constructora más grande de la región en la mayor pagadora de sobornos de la Historia</strong>, según la fiscalía de Estados Unidos. El juez del caso denominado <em>Operação Lava Jato</em> (operación lavado a presión) fue velado como héroe justiciero.
+
+Marcelo Odebrecht ya no reina. <strong>Vive en una celda de 15 metros cuadrados en Curitiba</strong>. En menos espacio vital siquiera que el <em>jet </em>que lo transportaba de país en país, de continente en continente, con un millón de dólares en efectivo en su caja fuerte. Siempre listos para lo que aconteciera. Condenado a 19 años, el <em>Príncipe </em>camina en círculos. Lee y se reúne con sus abogados. Hasta hace poco, para prepararse para <strong>el interrogatorio con el discreto juez Teori</strong>, el único que no se aventuraba a nada, quien callaba para <strong>dejar que fuera la Justicia la que hable. </strong>Odebrecht gesticula. Hace muecas y gestos de horror, de pesadumbre, de autosuficiencia. 
+
+Antes de estar entre rejas, <strong>era presumido como su padre</strong>, Emilio. "Si mi hijo va a la cárcel, van a tener que poner<strong> más celdas: para Lula, para Dilma y para mí</strong>", señaló. Luego negó haberlo dicho. Ahora todos los Odebrecht, los <em>Rockefeller </em>de Brasil, colaboran con la Justicia. 
+
+El <em>Príncipe </em>es hoy el preso 118-065. Sólo tiene derecho a una hora de luz al día. Nada que ver con el heredero que nació el 18 de octubre de 1968 en Salvador de Bahía entre pañales de seda. Es conocido también como <em>Odebrecht III</em>, <strong>miembro de una saga que arribó de tierras germanas en el siglo XIX</strong>. Después de un inicio silente, ahora no calla. Está decidido a castigar <strong>a aquellos que, cree, lo han traicionado</strong>. Cumple la advertencia de su padre, quien también ha sido condenado, pero a <strong>cuatro años de arresto domiciliario</strong>. Nada mal para quienes poseen mansiones de decenas de miles de metros cuadrados en las mejores zonas de Brasil. Lo que el <em>Príncipe </em>defenestrado busca con su testimonio es lograr esas mismas condiciones para finales de año. Y le va a costar caro. Muy caro.
+
+El acuerdo judicial alcanzado con las autoridades norteamericanas<strong> se ha forjado con el pago de 3.500 millones de dólares</strong>. Los testigos protegidos -que en el sumario, al cual ha tenido acceso <em>Crónica</em>, aparecen como <em>brazilian officials</em> 1, 2, 3, 4 y 5- han reconocido "<strong>788 millones de dólares por más de 100 proyectos en 12 países</strong>, incluyendo Angola, Argentina, Brasil, Colombia, República Dominicana, Ecuador, Guatemala, México, Mozambique, Panamá, Perú y Venezuela". Y sólo abarca el <strong>periodo de 2001 a 2016.</strong> Y únicamente lo que han confesado y documentado. Lo real supera largamente los 2.000 millones, pueden alcanzar los 4.000 y hay quienes apuntan a 6.000. Mareante. 
+
+Así de claras son las confesiones. Por ejemplo, el delator llamado<em> brazilian official </em>4, un político de alta jerarquía, <strong>confiesa haber recibido 20 millones de dólares para la concesión de un proyecto de transporte</strong>. O <em>Número 5</em>, que cobró <strong>9,7 millones.</strong> Así de criminal. Así de intenso. Así de cerca se ha llegado al pus.
+
+<h3 class="subhead">El cáncer de la corrupción</h3>
+
+Es una "organización criminal", según la justicia estadounidense. En el <strong>escrito que firman Robert L. Capers</strong>, fiscal del Distrito Este de Nueva York, <strong>y Andrew Weissmann</strong>, jefe de la sección de Fraude del departamento de Justicia de EEUU, se describe minuciosamente un <strong>entramado de pagos definido país a país</strong>. La infección de ese cáncer llamado corrupción como nunca antes se ha podido desvelar. Marcelo está desesperado por reencontrarse en un terreno apropiado con su mujer, Isabela, y sus tres hijas: Rafa, Gabi y Mari. Y va a soltar lo necesario para conseguirlo. De comer en restaurantes de mil dólares el cubierto <strong>ha pasado a comer arroz, frijoles, pasta y carne de segunda</strong>. Como privilegios: frutos secos y queso. Dice estar anémico y haber perdido tres kilos de peso. 
+
+En juego no está únicamente su salud, también <strong>la caída de un emporio de 150.000 trabajadores en cuatro continentes y 20 países</strong>. Prácticamente lo mismo que el grupo Inditex. Sólo que los ingresos anuales de Odebrecht eran de 35.000 millones [el liderado por Amancio Ortega, 22.000 millones]. La fortuna de la familia es incalculable entre <strong>paraísos fiscales y dinero en efectivo.</strong> Algunos la estiman en 30.000 millones. Como bien decía Marcelo en tiempos de libertad: <strong>"Odebrecht no es un grupo, es una organización"</strong>. Criminal, se ve hoy. 
+
+"Lula recibió sobornos por más de dos millones de dólares en efectivo". Es parte de la confesión de <em>Odebrecht III.</em> El otrora tan querido Lula estuvo a sueldo de la multinacional. De sindicalista indomable, adalid de los pobres, pasó a viajar en aviones privados que ponían a su disposición, acompañado por directivos de la compañía que hoy están en prisión. Pero no sólo se habría llevado dinero en <em>cash</em>. Las investigaciones suman <strong>inmuebles por 3,7 millones</strong> y otras <strong>operaciones financieras más sofisticadas por 15 millones</strong>. Esta cifra, por encima de los 20 millones, es el baremo con el que el <em>Príncipe </em>corrompía presidentes. Otro mandatario que ha caído en desgracia por una suma similar <strong>es Alejandro Toledo</strong>. 
+
+El ex símbolo peruano, un <em>self-made man</em>, baluarte contra la dictadura del nefasto Alberto Fujimori, el "cholo sano y sagrado" como se autodenominaba, está en fuga. Incluso <strong>tiene su propio letrero de "se busca" lanzado por el Ministerio del Interior,</strong> recompensa incluida. Su escapada con paradas en EEUU, Israel y Francia sería tragicómica de no ser porque <strong>ha insultado la lucha democrática de un país.</strong>
+
+Tras <strong>la caída del sátrapa Fujimori</strong>, quien también habría recibido mordidas de los Odebrecht, se investiga a todos los presidentes peruanos elegidos en democracia. Alan García, quién prometía un "futuro diferente", declaró ante la fiscalía la semana pasada. Ollanta Humala tiene acusaciones por financiación ilegal de su campaña y por laconcesión de un gasoducto de <strong> 7.300 millones de dólares</strong>. El actual presidente, <strong>Pedro Pablo Kuczynski, ha expulsado a Odebrecht "para siempre"</strong>. Como recuerdo en el país andino queda el <em>Cristo de lo Robado,</em> una burda réplica del Corcobado que financió la constructora y que se ha convertido en icono visible de la corrupción.
+
+Los nombres propios de mandatarios siguen. <strong>En Colombia</strong> se apunta a Juan Manuel Santos y Álvaro Uribe.<strong> En Argentina</strong>, a Cristina Fernández de Kirchner -por emolumentos a la inmobiliaria familiar-y a Macri, que tiene que dar explicaciones sobre su jefe de espías y por supuestos sobornos a su primo. 
+
+<strong>Centroamérica</strong> ve la mancha caer sobre <strong>tres presidentes dominicanos</strong>: Leonel Fernández, Hipólito Mejía y Danilo Medina. Este último, a quien apodan el <em>Mudo</em>, aún no se pronuncia al respecto. Justo eso exigía el periodista radiofónico Luis Manuel Medina, cuando segundos después <a href="http://www.elmundo.es/television/2017/02/15/58a41bf246163fb74d8b4634.html">fue asesinado el día de los enamorados a balazos</a>.
+
+<strong>Guatemala </strong>no se vio sorprendida por las <strong>acusaciones contra Otto Pérez Molina,</strong> quien ya había sido destituido y es un reo. "Una raya más al tigre", como dice el dicho popular. En cambio, Panamá sí siente cómo el caos toca su puerta por la actuación de Juan Carlos Varela y Ricardo Martinelli. <strong>La justicia ha metido en prisión a los Mossack & Fonseca</strong> -cabecillas de la trama de los <em>#PanamáPapers</em>- por participar en el entramado de la constructora brasileña. Mas ellos quieren actuar como los Odebrecht. 
+
+<strong>Ramón Fonseca</strong>, además ex ministro consejero de la presidencia, <strong>y Jürgen Mossack</strong><strong>amenazan con confesarlo todo</strong>, lo que sería otro terremoto. La primera declaración del primero ya ha removido los cimientos del propio Canal: "A mí el presidente Varela me dijo que recibió donaciones de Odebrecht. Que no se podía pelear contra todo el mundo". 
+
+Venezuela es caso aparte. Se pagó allí una buena parte de los sobornos fuera de Brasil, no menos de 98 millones. <strong>Nicolás Maduro está en el punto de mira pero -una vez más- por no actuar</strong>. Sólo verborrea en un país donde faltan hasta las medicinas más básicas. Odebrecht recibió concesiones por <strong>16.000 millones de dólares</strong>. La oposición señala que con sobrecostes del 600%. Deja inconclusos puentes, líneas de metro, un aeropuerto, una hidroeléctrica... Lo mismo pasa en Ecuador, donde al presidente Correa le puso en jaque, en plenas elecciones, con<strong> 35 millones de sobornos pagados</strong> allí por declaración del <em>Príncipe</em>. Él ha actuado de modo similar que Maduro. Lo había considerado "distorsiones de la campaña".
+
+México tiene que lidiar con un escándalo más. <em>Odebrecht III</em> ha confesado que se reunió en octubre de 2013 con un alto cargo gubernamental y acordó la cifra del soborno [en ese país, pagó coimas por 10,5 millones]. <strong>¿Con quién se arrejuntó ese mes? </strong>Con el mismísimo<strong> Enrique Peña Nieto</strong>, a quien ofreció 8.100 millones en inversiones. Como en todos los casos, desde su despacho se niega cualquier vínculo con la corrupción. Una fotografía juntos, en la residencia oficial de los Pinos, recuerda aquel encuentro. 
+
+El mejor retrato del <em>Príncipe </em>corruptor es a su salida de declarar ante la Justicia. Flaco, intentando ir con la cabeza en alto, sonríe a la cámara. Como si se hubiera quitado, al fin, un peso de encima.
+            </div>
+            <aside class="related-tags">
+               <h3 class="list-header"><span>Temas Relacionados</span></h3>
+               <ul class="item-tags">
+                  <a href="http://www.elmundo.es/e/au/audiencia-nacional.html" rel="tag">
+                     <li>AUDIENCIA NACIONAL</li>
+                  </a>
+                  <a href="http://www.elmundo.es/madrid.html" rel="tag">
+                     <li>MADRID</li>
+                  </a>
+                  <a href="http://www.elmundo.es/e/et/eta.html" rel="tag">
+                     <li>ETA</li>
+                  </a>
+                  <a href="http://www.elmundo.es/ciencia-y-salud/salud.html" rel="tag">
+                     <li>SALUD</li>
+                  </a>
+               </ul>
+            </aside>
+            <div class="advertising">
+               <amp-ad width="300" height="250" class="ad-slot" type="doubleclick" data-slot="/99071977/mun-mv/espana/amp" json='{"targeting":{"p":"rb"}}'><span>Publicidad</span></amp-ad>
+            </div>
+            <h3 class="list-header">Noticias Relacionadas</h3>
+            <ul class="related-news">
+               <li>
+                  <a href="http://www.elmundo.es/espana/2017/02/17/58a70948e2704e9f018b456e.html?cid=MNOT23801&amp;s_kw=el_informe_secreto_del_11_m_critica_la_gestion_policial_de_la_mochila_de_vallecas">
+                     <span>El informe secreto del 11-M critica la gestión policial de la mochila de Vallecas</span>
+                     <amp-img alt="El informe secreto del 11-M critica la gestión policial de la mochila de Vallecas" class="flex-article__multimedia-item" height="78"  width="140" src="https://franciscosantamaria.me/pwa/juan/api/contents/images/14873479065511.jpg"></amp-img>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.elmundo.es/espana/2017/02/14/58a20f9dca4741265f8b4623.html?cid=MNOT23801&amp;s_kw=justicia_paraliza_la_ejecucion_de_las_condenas_del_caso_faisan">
+                     <span>Justicia paraliza la ejecución de las condenas del &#039;caso Faisán&#039;</span>
+                     <amp-img alt="Justicia paraliza la ejecución de las condenas del &#039;caso Faisán&#039;" class="flex-article__multimedia-item" height="78"  width="140" src="https://franciscosantamaria.me/pwa/juan/api/contents/images/14870149734867.jpg"></amp-img>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.elmundo.es/espana/2017/02/14/58a2ae79e2704e0e428b458b.html?cid=MNOT23801&amp;s_kw=las_partes_del_caso_pujol_asisten_hoy_al_volcado_del_pendrive_localizado_ordenando_cajones">
+                     <span>Las partes del caso Pujol asisten hoy al volcado del pendrive localizado &quot;ordenando cajones&quot;</span>
+                     <amp-img alt="Las partes del caso Pujol asisten hoy al volcado del pendrive localizado &quot;ordenando cajones&quot;" class="flex-article__multimedia-item" height="78"  width="140" src="https://franciscosantamaria.me/pwa/juan/api/contents/images/14516521443907.jpg"></amp-img>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.elmundo.es/espana/2017/02/19/58a97dd4268e3e44108b465c.html?cid=MNOT23801&amp;s_kw=el_pendrive_sobre_los_pujol_que_entrego_la_policia_al_juez_contiene_informacion_desde_1998">
+                     <span>El &#039;pendrive&#039; sobre los Pujol que entregó la Policía al juez contiene información desde 1998</span>
+                     <amp-img alt="El &#039;pendrive&#039; sobre los Pujol que entregó la Policía al juez contiene información desde 1998" class="flex-article__multimedia-item" height="78"  width="140" src="https://franciscosantamaria.me/pwa/juan/img/elmundo_140x78.jpg"></amp-img>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.elmundo.es/economia/2017/02/16/58a623f4468aeb7f138b4638.html?cid=MNOT23801&amp;s_kw=la_audiencia_nacional_quiere_que_se_investigue_a_blesa_por_delito_fiscal">
+                     <span>La Audiencia Nacional quiere que se investigue a Blesa por delito fiscal</span>
+                     <amp-img alt="La Audiencia Nacional quiere que se investigue a Blesa por delito fiscal" class="flex-article__multimedia-item" height="78"  width="140" src="https://franciscosantamaria.me/pwa/juan/api/contents/images/14872830891034.jpg"></amp-img>
+                  </a>
+               </li>
+            </ul>
+            <amp-list src="https://amp.elmundo.es/data/masleidas/most_read_espana_5.json" credentials="include" width=300 height=200 layout=responsive>
+               <template type="amp-mustache">
+                  <h3 class="list-header">Noticias más leídas</h3>
+                  <ol class="most-viewed-news">
+                     {{#content}}
+                     <li>
+                        <a href="http://www.elmundo.es{{url}}">
+                           <span>{{titulo}}</span>
+                           {{#imagen}}
+                           <amp-img class="most-viewed" layout="responsive" src="{{imagen}}" height="78"  width="140"></amp-img>
+                        </a>
+                     </li>
+                     {{/imagen}}
+                     {{^imagen}}
+                     <amp-img class="most-viewed" layout="responsive" src="https://franciscosantamaria.me/pwa/juan/img/elmundo_140x78.jpg" height="78"  width="140"></amp-img>
+                     </a></li>
+                     {{/imagen}}
+                     {{/content}}
+                  </ol>
+               </template>
+               <div overflow role=button aria-label="Show more" class="list-overflow">Show more</div>
+            </amp-list>
+            <div class="advertising">
+               <amp-ad width="300" height="250" class="ad-slot" type="doubleclick" data-slot="/99071977/mun-mv/espana/amp" json='{"targeting":{"p":"rc"}}'><span>Publicidad</span></amp-ad>
+            </div>
+         </article>
+      </div>
