@@ -50,8 +50,14 @@ var transformContent = function () {
 
 transformContent();
 
-var sendReadLaterMessage = function (elementId, newUrl) {
-    
+var sendReadLaterMessage = function (id, url) {
+    var message = '{"data": {"url": "'+url+'", "id": "'+id.replace("read-later-", "")+'"}}';
+    return new Promise(function(resolve, reject) {
+        navigator.serviceWorker.controller.postMessage(message);
+        window.serviceWorker.onMessage = function(e) {
+            resolve(e.data);
+        };
+    });
 }
 
 var readLaterButtons = getElementsByClassName("read-later");
