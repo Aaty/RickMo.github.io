@@ -2,14 +2,6 @@ var getJsonUrl = function (url) {
     removeQueryString(url);
 }
 
-var getContent = function (url) {
-    fetch(url).then(function (response) {
-        return response.text().then(function (data) {
-            return data;
-        });
-    });
-}
-
 var removeQueryString = function (url) {
     var response = url.replace(/(\?)([^=]+=[^&]+)+/g, "");
     return response; 
@@ -40,7 +32,11 @@ var transformContent = function () {
     //document.querySelector([data-ue-u="title"]).innerHTML = "Noticias de " + arrayData.titulo + " | EL MUNDO";
     
     if (ampUrl.length > 0) {
-        updatePage(getContent(ampUrl));
+        fetch(url).then(function (response) {
+            return response.text().then(function (data) {
+                updatePage(getContent(ampUrl));
+            });
+        });
     }
 }
 
