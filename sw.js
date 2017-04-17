@@ -8,26 +8,27 @@ var static_assets = Array(
     "https://jangosto.github.io/css/core-portada-elmundo-mobile.css",
     "https://jangosto.github.io/js/jquery.2.1.4.js",
     "https://jangosto.github.io/js/mobile.min.js",
-    "https://jangosto.github.io/js/hydratator.js",
-    "https://securepubads.g.doubleclick.net/gpt/pubads_impl_113.js",
-    "https://static.chartbeat.com/js/chartbeat_mab.js"
+    "https://jangosto.github.io/js/hydratator.js"//,
+    //"https://securepubads.g.doubleclick.net/gpt/pubads_impl_113.js",
+    //"https://static.chartbeat.com/js/chartbeat_mab.js"
 );
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(assets_cache_name).then(function(cache) {
-console.log("Caching static files");
-            return cache.addAll(static_assets).then(function() {
-                self.skipWaiting();
-            });
+            return cache.addAll(static_assets);
         })
     );
 });
 
 self.addEventListener('activate', function(event) {});
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event)
+{
+    // ... regex for portadillas
     var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?$", "i");
+
+    // ... regex for news
     var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
 
     if (autocoverPattern.test(event.request.url) || newPattern.test(event.request.url)) {

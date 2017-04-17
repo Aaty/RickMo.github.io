@@ -7,4 +7,3 @@ if ('serviceWorker' in navigator) {
 		console.warm("Error registering serviceWorker");
 	});
 }
-
