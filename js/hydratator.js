@@ -9,7 +9,6 @@ var removeQueryString = function (url) {
 
 var updatePage = function (data) {
     var container = document.getElementById("content");
-console.log("OTHER DATA: ", data);
     container.innerHTML = data;
 }
 
@@ -32,9 +31,9 @@ var transformContent = function () {
     //document.querySelector([data-ue-u="title"]).innerHTML = "Noticias de " + arrayData.titulo + " | EL MUNDO";
     
     if (ampUrl.length > 0) {
-        fetch(url).then(function (response) {
+        fetch(ampUrl).then(function (response) {
             return response.text().then(function (data) {
-                updatePage(getContent(ampUrl));
+                updatePage(data);
             });
         });
     }
