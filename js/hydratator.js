@@ -49,3 +49,19 @@ var transformContent = function () {
 }
 
 transformContent();
+
+var sendReadLaterMessage = function (elementId, newUrl) {
+    
+}
+
+var readLaterButtons = getElementsByClassName("read-later");
+
+if (readLaterButtons.length > 0) {
+    for (var i = 0; i < readLaterButtons.length; i++) {
+        var elementId = readLaterButtons[i].getAttribute("id");
+        var newUrl = readLaterButtons[i].parentNode.getElementByClassName("new-url").getAttribute('href');
+        readLaterButtons[i].onclick = function(elementId, newUrl) {
+            sendReadLaterMessage(elementId, newUrl);
+        };
+    }
+}

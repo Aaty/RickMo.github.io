@@ -59,7 +59,7 @@ function generateAmpContent($data)
     }
     if (isset($data->titulo)) {
         $content = str_replace('[[[---TITLE---]]]', $data->titulo, $content);
-        $coverHtml .= '<h1 class="headline"><a href="'.str_replace('http://www.elmundo.es/', $siteRootUrl, $data->url).'">'.$data->titulo.'</a></h1>';
+        $coverHtml .= '<h1 class="headline"><a class="new-url" href="'.str_replace('http://www.elmundo.es/', $siteRootUrl, $data->url).'">'.$data->titulo.'</a></h1>';
     }
     if (isset($data->multimedia) && count($data->multimedia) > 0) {
         foreach ($data->multimedia as $multimediaItem) {
