@@ -50,7 +50,8 @@ transformContent();
 
 //READ LATER FEATURE IMPLEMENTATION
 var sendReadLaterMessage = function (e) {
-console.log("EVENT: ", e);
+    var id = e.target.getAttribute("id");
+    var url = e.target.parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
     var message = {"data": {"url": url, "id": id}};
     return new Promise(function(resolve, reject) {
         var messageChannel = new MessageChannel();
@@ -65,8 +66,6 @@ var observer = new MutationObserver(function (mutations) {
     var readLaterButtons = document.getElementsByClassName("read-later");
     if (readLaterButtons.length > 0) {
         for (var i = 0; i < readLaterButtons.length; i++) {
-            var elementId = readLaterButtons[i].getAttribute("id");
-            var newUrl = readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
             readLaterButtons[i].addEventListener("click", function(e) {
                 sendReadLaterMessage(e);
             }, false);
