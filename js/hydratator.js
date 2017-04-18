@@ -42,7 +42,7 @@ transformContent();
 
 //READ LATER FEATURE IMPLEMENTATION
 var sendReadLaterMessage = function (id, url) {
-    var message = '{"data": {"url": "'+url+'", "id": "'+id.replace("read-later-", "")+'"}}';
+    var message = {"data": {"url": url, "id": id}};
     return new Promise(function(resolve, reject) {
         var messageChannel = new MessageChannel();
         messageChannel.port1.onmessage = function(e) {

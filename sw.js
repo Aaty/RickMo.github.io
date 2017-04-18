@@ -71,5 +71,17 @@ self.addEventListener('fetch', function(event)
 });
 
 self.addEventListener("message", function(event) {
-    console.log(event.data);
+    var dataArray = JSON.parse(event.data);
+    var request = new Request(dataArray['data']['url']);
+    caches.match(request).then(function(response) {
+        if (response) {
+            event.ports[0].postMessage({"alreadyCached": true, "id": dataArray['data']['id']});
+        } else {
+            return caches.open(content_cache_name).then(function(cache) {
+                cache.add(request).then(function() {
+                    event.ports[0].postMessage({"alreadyCached": true, "id": dataArray['data']['id']});
+                });
+            });
+        }
+    }
 });
