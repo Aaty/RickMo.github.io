@@ -53,11 +53,11 @@ console.log("SENDING MESSAGE: ", id, url);
 }
 
 var readLaterButtons = document.getElementsByClassName("read-later");
-console.log("READ LATER BUTTONS: ", readLaterButtons);
 if (readLaterButtons.length > 0) {
     for (var i = 0; i < readLaterButtons.length; i++) {
         var elementId = readLaterButtons[i].getAttribute("id");
         var newUrl = readLaterButtons[i].parentNode.getElementByClassName("new-url").getAttribute('href');
+console.log("ELEMENT TO CREATE EVENT: ", readLaterButtons[i], elementId, newUrl)
         readLaterButtons[i].onclick = function(elementId, newUrl) {
             sendReadLaterMessage(elementId, newUrl);
         };
