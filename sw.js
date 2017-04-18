@@ -72,16 +72,30 @@ self.addEventListener('fetch', function(event)
 
 self.addEventListener("message", function(event) {
     var data = event.data;
-    var request = new Request(data.data.url);
-    caches.match(request).then(function(response) {
-        if (response) {
-            event.ports[0].postMessage({"alreadyCached": true, "id": data.data.id});
-        } else {
-            return caches.open(content_cache_name).then(function(cache) {
-                cache.add(request).then(function() {
-                    event.ports[0].postMessage({"alreadyCached": false, "id": data.data.id});
-                });
+    switch (data.type) {
+        case "cacheAddUrlRequest":
+            var request = new Request(data.url);
+            caches.match(request).then(function(response) {
+                if (response) {
+                    event.ports[0].postMessage({"alreadyCached": true});
+                } else {
+                    return caches.open(content_cache_name).then(function(cache) {
+                        cache.add(request).then(function() {
+                            event.ports[0].postMessage({"alreadyCached": false});
+                        });
+                    });
+                }
             });
-        }
-    });
+            break;
+        case "isUrlCachedRequest":
+            var request = new Request(data.url);
+            caches.match(request).then(function(response) {
+                if (response) {
+                    event.ports[0].postMessage({"cached": true});
+                } else {
+                    event.ports[0].postMessage({"cached": false});
+                }
+            });
+            break;
+    }
 });
