@@ -60,7 +60,7 @@ console.log("BUTTONS NUMBER: ", readLaterButtons.length);
     console.log("ENTRÓ EN LA GENERACIÓN DE EVENTOS...");
         for (var i = 0; i < readLaterButtons.length; i++) {
             var elementId = readLaterButtons[i].getAttribute("id");
-            var newUrl = readLaterButtons[i].parentNode.getElementByClassName("new-url").getAttribute('href');
+            var newUrl = readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
     console.log("ELEMENT TO CREATE EVENT: ", readLaterButtons[i], elementId, newUrl)
             readLaterButtons[i].onclick = function(elementId, newUrl) {
                 sendReadLaterMessage(elementId, newUrl);
