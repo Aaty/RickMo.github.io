@@ -81,7 +81,7 @@ var observer = new MutationObserver(function (mutations) {
     var readLaterButtons = document.getElementsByClassName("read-later");
     if (readLaterButtons.length > 0) {
         for (var i = 0; i < readLaterButtons.length; i++) {
-            sendIsCachedMessage(getAmpUrl(readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href'));
+            sendIsCachedMessage(getAmpUrl(readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href')));
             readLaterButtons[i].addEventListener("click", function(e) {
                 sendReadLaterMessage(e);
             }, false);
