@@ -1,9 +1,3 @@
-function htmlToElement(html) {
-    var template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content.firstChild;
-}
-
 var getJsonUrl = function (url) {
     removeQueryString(url);
 }
@@ -15,7 +9,7 @@ var removeQueryString = function (url) {
 
 var updatePage = function (data) {
     var container = document.getElementById("content");
-    container.appendChild(htmlToElement(data));
+    container.innerHTML = data;
 }
 
 var transformContent = function () {
@@ -59,6 +53,7 @@ console.log("SENDING MESSAGE: ", id, url);
 }
 
 var readLaterButtons = document.getElementsByClassName("read-later");
+console.log("BUTTONS: ", readLaterButtons);
 console.log("BUTTONS NUMBER: ", readLaterButtons.length);
 if (readLaterButtons.length > 0) {
 console.log("ENTRÓ EN LA GENERACIÓN DE EVENTOS...");
