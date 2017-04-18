@@ -72,7 +72,7 @@ self.addEventListener('fetch', function(event)
 
 self.addEventListener("message", function(event) {
     var data = event.data;
-    var request = new Request("https://www.meneame.net/");
+    var request = new Request(data.data.url);
     caches.match(request).then(function(response) {
         if (response) {
             event.ports[0].postMessage({"alreadyCached": true, "id": data.data.id});
