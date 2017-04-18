@@ -28,16 +28,6 @@ var transformContent = function () {
     } else if (autocoverPattern.test(currentUrl)) {
         ampUrl = "https://jangosto.github.io/api/contents/index.html";
     }
-    //var jsonUrl = getJsonUrl(currentUrl);
-    //var jsonData = getContent(jsonUrl);
-    //var arrayData = JSON.parse(jsonData);
-
-    //document.querySelector('[data-ue-u="title"]').innerHTML = "Noticias de " + arrayData.titulo + " | EL MUNDO";
-    //if (arrayData.type != "portada") {
-        //document.querySelector('[data-ue-u="only-portada"]').remove();
-    //}
-    //document.querySelector([data-ue-u="title"]).innerHTML = "Noticias de " + arrayData.titulo + " | EL MUNDO";
-    //document.querySelector([data-ue-u="title"]).innerHTML = "Noticias de " + arrayData.titulo + " | EL MUNDO";
     
     if (ampUrl.length > 0) {
         fetch(ampUrl).then(function (response) {
@@ -50,7 +40,9 @@ var transformContent = function () {
 
 transformContent();
 
+//READ LATER FEATURE IMPLEMENTATION
 var sendReadLaterMessage = function (id, url) {
+console.log("SENDING MESSAGE: ", id, url);
     var message = '{"data": {"url": "'+url+'", "id": "'+id.replace("read-later-", "")+'"}}';
     return new Promise(function(resolve, reject) {
         navigator.serviceWorker.controller.postMessage(message);
