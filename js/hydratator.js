@@ -54,15 +54,17 @@ console.log("SENDING MESSAGE: ", id, url);
 
 var readLaterButtons = document.getElementsByClassName("read-later");
 console.log("BUTTONS: ", readLaterButtons);
+readLaterButtons.onload = function () {
 console.log("BUTTONS NUMBER: ", readLaterButtons.length);
-if (readLaterButtons.length > 0) {
-console.log("ENTRÓ EN LA GENERACIÓN DE EVENTOS...");
-    for (var i = 0; i < readLaterButtons.length; i++) {
-        var elementId = readLaterButtons[i].getAttribute("id");
-        var newUrl = readLaterButtons[i].parentNode.getElementByClassName("new-url").getAttribute('href');
-console.log("ELEMENT TO CREATE EVENT: ", readLaterButtons[i], elementId, newUrl)
-        readLaterButtons[i].onclick = function(elementId, newUrl) {
-            sendReadLaterMessage(elementId, newUrl);
-        };
+    if (readLaterButtons.length > 0) {
+    console.log("ENTRÓ EN LA GENERACIÓN DE EVENTOS...");
+        for (var i = 0; i < readLaterButtons.length; i++) {
+            var elementId = readLaterButtons[i].getAttribute("id");
+            var newUrl = readLaterButtons[i].parentNode.getElementByClassName("new-url").getAttribute('href');
+    console.log("ELEMENT TO CREATE EVENT: ", readLaterButtons[i], elementId, newUrl)
+            readLaterButtons[i].onclick = function(elementId, newUrl) {
+                sendReadLaterMessage(elementId, newUrl);
+            };
+        }
     }
 }
