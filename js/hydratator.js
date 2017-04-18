@@ -50,6 +50,7 @@ transformContent();
 
 //READ LATER FEATURE IMPLEMENTATION
 var sendReadLaterMessage = function (id, url) {
+console.log("URL: ", url);
     var message = {"data": {"url": url, "id": id}};
     return new Promise(function(resolve, reject) {
         var messageChannel = new MessageChannel();
