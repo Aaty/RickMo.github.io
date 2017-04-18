@@ -52,7 +52,7 @@ console.log("SENDING MESSAGE: ", id, url);
     });
 }
 
-window.onload = function () {
+var observer = new MutationObserver(function (mutations) {
     var readLaterButtons = document.getElementsByClassName("read-later");
 console.log("BUTTONS: ", readLaterButtons);
 console.log("BUTTONS NUMBER: ", readLaterButtons.length);
@@ -68,3 +68,7 @@ console.log("BUTTONS NUMBER: ", readLaterButtons.length);
         }
     }
 }
+
+var container = document.getElementById("content");
+var config = { attributes: false, childList: true, characterData: false };
+observer.observe(container, config);
