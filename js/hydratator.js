@@ -52,7 +52,7 @@ console.log("SENDING MESSAGE: ", id, url);
     });
 }
 
-var readLaterButtons = getElementsByClassName("read-later");
+var readLaterButtons = document.getElementsByClassName("read-later");
 console.log("READ LATER BUTTONS: ", readLaterButtons);
 if (readLaterButtons.length > 0) {
     for (var i = 0; i < readLaterButtons.length; i++) {
