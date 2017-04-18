@@ -52,9 +52,9 @@ console.log("SENDING MESSAGE: ", id, url);
     });
 }
 
-var readLaterButtons = document.getElementsByClassName("read-later");
+window.onload = function () {
+    var readLaterButtons = document.getElementsByClassName("read-later");
 console.log("BUTTONS: ", readLaterButtons);
-readLaterButtons.onload = function () {
 console.log("BUTTONS NUMBER: ", readLaterButtons.length);
     if (readLaterButtons.length > 0) {
     console.log("ENTRÓ EN LA GENERACIÓN DE EVENTOS...");
