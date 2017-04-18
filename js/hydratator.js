@@ -67,7 +67,7 @@ console.log("BUTTONS NUMBER: ", readLaterButtons.length);
             };
         }
     }
-}
+});
 
 var container = document.getElementById("content");
 var config = { attributes: false, childList: true, characterData: false };
