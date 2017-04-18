@@ -42,7 +42,7 @@ transformContent();
 
 //READ LATER FEATURE IMPLEMENTATION
 var sendReadLaterMessage = function (e) {
-console.log("SENDING MESSAGE: ", e);
+console.log("SENDING MESSAGE: ", e.data);
     var message = '{"data": {"url": "'+url+'", "id": "'+id.replace("read-later-", "")+'"}}';
     return new Promise(function(resolve, reject) {
         navigator.serviceWorker.controller.postMessage(message);
