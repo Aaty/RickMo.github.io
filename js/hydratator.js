@@ -9,7 +9,7 @@ var removeQueryString = function (url) {
 
 var updatePage = function (data) {
     var container = document.getElementById("content");
-    container.innerHTML = data;
+    container.appendChild(data);
 }
 
 var transformContent = function () {
