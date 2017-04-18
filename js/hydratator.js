@@ -55,7 +55,10 @@ var sendReadLaterMessage = function (e) {
     var message = {"data": {"url": getAmpUrl(url), "id": id}};
     return new Promise(function(resolve, reject) {
         var messageChannel = new MessageChannel();
-        messageChannel.port1.onmessage = function(e) {
+        messageChannel.port1.onmessage = function(ev) {
+            if (ev.data) {
+                e.target.setAttribute('style', 'background:#00FF00');
+            }
             console.log(e.data);
         };
         navigator.serviceWorker.controller.postMessage(message, [messageChannel.port2]);
