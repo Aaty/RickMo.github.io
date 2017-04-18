@@ -12,14 +12,14 @@ var updatePage = function (data) {
     container.innerHTML = data;
 }
 
-var transformContent = function () {
+var getAmpUrl = function (url) {
     var siteDomain = "https://jangosto.github.io";
     // ... regex for portadillas
     var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?$", "i");
     // ... regex for news
     var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
-    var currentUrl = removeQueryString(window.location.href);
-    
+    var currentUrl = removeQueryString(url);
+
     var ampUrl = "";
     if (newPattern.test(currentUrl)) {
         var urlArray = currentUrl.split("/");
@@ -28,7 +28,15 @@ var transformContent = function () {
     } else if (autocoverPattern.test(currentUrl)) {
         ampUrl = "https://jangosto.github.io/api/contents/index.html";
     }
-    
+
+    return ampUrl;
+}
+
+var transformContent = function () {
+    var currentUrl = window.location.href;
+
+    var ampUrl = getAmpUrl(currentUrl);
+
     if (ampUrl.length > 0) {
         fetch(ampUrl).then(function (response) {
             return response.text().then(function (data) {
@@ -59,7 +67,7 @@ var observer = new MutationObserver(function (mutations) {
             var elementId = readLaterButtons[i].getAttribute("id");
             var newUrl = readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
             readLaterButtons[i].addEventListener("click", function() {
-                sendReadLaterMessage(elementId, newUrl);
+                sendReadLaterMessage(elementId, getAmpUrl(newUrl));
             });
         }
     }
