@@ -65,11 +65,10 @@ var observer = new MutationObserver(function (mutations) {
     if (readLaterButtons.length > 0) {
         for (var i = 0; i < readLaterButtons.length; i++) {
             var elementId = readLaterButtons[i].getAttribute("id");
-console.log("HREF: ", readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href'));
             var newUrl = readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
             readLaterButtons[i].addEventListener("click", function() {
                 sendReadLaterMessage(elementId, getAmpUrl(newUrl));
-            });
+            }, false);
         }
     }
 });
