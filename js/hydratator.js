@@ -1,3 +1,9 @@
+function htmlToElement(html) {
+    var template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content.firstChild;
+}
+
 var getJsonUrl = function (url) {
     removeQueryString(url);
 }
@@ -9,7 +15,7 @@ var removeQueryString = function (url) {
 
 var updatePage = function (data) {
     var container = document.getElementById("content");
-    container.appendChild(data);
+    container.appendChild(htmlToElement(data));
 }
 
 var transformContent = function () {
