@@ -52,7 +52,7 @@ transformContent();
 var sendReadLaterMessage = function (e) {
     var id = e.target.getAttribute("id");
     var url = e.target.parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
-    var message = {"data": {"url": url, "id": id}};
+    var message = {"data": {"url": getAmpUrl(url), "id": id}};
     return new Promise(function(resolve, reject) {
         var messageChannel = new MessageChannel();
         messageChannel.port1.onmessage = function(e) {
