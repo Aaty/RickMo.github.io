@@ -42,7 +42,7 @@ transformContent();
 
 //READ LATER FEATURE IMPLEMENTATION
 var sendReadLaterMessage = function (e) {
-console.log("SENDING MESSAGE: ", e.data);
+console.log("SENDING MESSAGE: ", e);
     var message = '{"data": {"url": "'+url+'", "id": "'+id.replace("read-later-", "")+'"}}';
     return new Promise(function(resolve, reject) {
         navigator.serviceWorker.controller.postMessage(message);
@@ -62,9 +62,9 @@ console.log("BUTTONS NUMBER: ", readLaterButtons.length);
             var elementId = readLaterButtons[i].getAttribute("id");
             var newUrl = readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
     console.log("ELEMENT TO CREATE EVENT: ", readLaterButtons[i], elementId, newUrl)
-            readLaterButtons[i].onclick = function(elementId, newUrl) {
+            readLaterButtons[i].addEventListener("click", function(elementId, newUrl) {
                 sendReadLaterMessage(elementId, newUrl);
-            };
+            });
         }
     }
 });
