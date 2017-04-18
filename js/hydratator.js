@@ -42,26 +42,22 @@ transformContent();
 
 //READ LATER FEATURE IMPLEMENTATION
 var sendReadLaterMessage = function (id, url) {
-console.log("SENDING MESSAGE: ", id, url);
     var message = '{"data": {"url": "'+url+'", "id": "'+id.replace("read-later-", "")+'"}}';
     return new Promise(function(resolve, reject) {
-        navigator.serviceWorker.controller.postMessage(message);
-        window.serviceWorker.onMessage = function(e) {
-            resolve(e.data);
+        var messageChannel = new MessageChannel();
+        messageChannel.port1.onmessage = function(e) {
+            console.log(e.data);
         };
+        navigator.serviceWorker.controller.postMessage(message, [messageChannel.port2]);
     });
 }
 
 var observer = new MutationObserver(function (mutations) {
     var readLaterButtons = document.getElementsByClassName("read-later");
-console.log("BUTTONS: ", readLaterButtons);
-console.log("BUTTONS NUMBER: ", readLaterButtons.length);
     if (readLaterButtons.length > 0) {
-    console.log("ENTRÓ EN LA GENERACIÓN DE EVENTOS...");
         for (var i = 0; i < readLaterButtons.length; i++) {
             var elementId = readLaterButtons[i].getAttribute("id");
             var newUrl = readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
-    console.log("ELEMENT TO CREATE EVENT: ", readLaterButtons[i], elementId, newUrl)
             readLaterButtons[i].addEventListener("click", function() {
                 sendReadLaterMessage(elementId, newUrl);
             });
