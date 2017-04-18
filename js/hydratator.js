@@ -49,8 +49,8 @@ var transformContent = function () {
 transformContent();
 
 //READ LATER FEATURE IMPLEMENTATION
-var sendReadLaterMessage = function (id, url) {
-console.log("URL: ", url);
+var sendReadLaterMessage = function (e) {
+console.log("EVENT: ", e);
     var message = {"data": {"url": url, "id": id}};
     return new Promise(function(resolve, reject) {
         var messageChannel = new MessageChannel();
@@ -67,8 +67,8 @@ var observer = new MutationObserver(function (mutations) {
         for (var i = 0; i < readLaterButtons.length; i++) {
             var elementId = readLaterButtons[i].getAttribute("id");
             var newUrl = readLaterButtons[i].parentNode.getElementsByClassName("new-url")[0].getAttribute('href');
-            readLaterButtons[i].addEventListener("click", function() {
-                sendReadLaterMessage(elementId, getAmpUrl(newUrl));
+            readLaterButtons[i].addEventListener("click", function(e) {
+                sendReadLaterMessage(e);
             }, false);
         }
     }
