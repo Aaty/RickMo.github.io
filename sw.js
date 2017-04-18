@@ -71,15 +71,15 @@ self.addEventListener('fetch', function(event)
 });
 
 self.addEventListener("message", function(event) {
-    var dataArray = JSON.parse(event.data);
-    var request = new Request(dataArray['data']['url']);
+    var data = event.data;
+    var request = new Request(data.data.url);
     caches.match(request).then(function(response) {
         if (response) {
-            event.ports[0].postMessage({"alreadyCached": true, "id": dataArray['data']['id']});
+            event.ports[0].postMessage({"alreadyCached": true, "id": data.data.id});
         } else {
             return caches.open(content_cache_name).then(function(cache) {
                 cache.add(request).then(function() {
-                    event.ports[0].postMessage({"alreadyCached": true, "id": dataArray['data']['id']});
+                    event.ports[0].postMessage({"alreadyCached": true, "id": data.data.id});
                 });
             });
         }
