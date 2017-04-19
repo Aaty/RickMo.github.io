@@ -1,5 +1,6 @@
 var assets_cache_name = "v1_static";
 var content_cache_name = 'v1_dynamic';
+var user_cache_name = 'v1_dynamic';
 
 var siteDomain = "https://jangosto.github.io";
 
@@ -83,7 +84,7 @@ self.addEventListener("message", function(event) {
     switch (data.type) {
         case "cacheAddUrlRequest":
             var request = new Request(data.url);
-            caches.match(request).then(function(response) {
+            caches.match(request, {"cacheName": user_cache_name}).then(function(response) {
                 if (response) {
                     event.ports[0].postMessage({"alreadyCached": true});
                 } else {
@@ -97,7 +98,7 @@ self.addEventListener("message", function(event) {
             break;
         case "isUrlCachedRequest":
             var request = new Request(data.url);
-            caches.match(request).then(function(response) {
+            caches.match(request, {"cacheName": user_cache_name}).then(function(response) {
                 if (response) {
                     event.ports[0].postMessage({"cached": true});
                 } else {
