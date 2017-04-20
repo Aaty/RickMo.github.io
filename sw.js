@@ -135,12 +135,21 @@ self.addEventListener("message", function(event) {
 
 
 var clean_cache = function (cache_name) {
-console.log("CLEANNING CACHE "+cache_name);
     var max_num_cached_contents = 5;
+    var cleanable_url_pattern = new RegExp("^"+siteDomain+"\/api\/contents\/[0-9a-f]{24}.html$", "i");
 
     caches.open(cache_name).then(function(cache) {
         cache.keys().then(function(keys) {
-            console.log(keys);
+            var counter = 0;
+            for (var i=keys.length-1; i>=0; i--) {
+                if (cleanable_url_pattern.test(keys[i].url)) {
+                    if (counter < max_num_cached_contents) {
+                        counter++;
+                    } else {
+                        cache.delete(keys[i]);
+                    }
+                } 
+            }
         })
     });
 }
