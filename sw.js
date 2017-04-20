@@ -44,6 +44,8 @@ self.addEventListener('fetch', function(event)
     // ... regex for news
     var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
 
+    var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/[^\/]+.html$", "i");
+
     if (autocoverPattern.test(event.request.url) || newPattern.test(event.request.url)) {
         shellRequest = new Request(siteDomain+"/shell.html");
         event.respondWith(
@@ -51,14 +53,14 @@ self.addEventListener('fetch', function(event)
                 if (response) {
                     return response;
                 }
-                return caches.open(static_assets).then(function(cache) {
+                return caches.open(assets_cache_name).then(function(cache) {
                     cache.add(shellRequest).then(function() {
                         return fetch(shellRequest);
                     });
                 });
             })
         );
-    } else {
+    } else if (newContentPattern.test(event.request.url)) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 if (response) {
@@ -67,6 +69,25 @@ self.addEventListener('fetch', function(event)
 
                 if (event.request.method = "GET") {
                     return caches.open(content_cache_name).then(function(cache) {
+                        return cache.add(event.request).then(function() {
+                            clean_cache(content_cache_name);
+                            return fetch(event.request);
+                        });
+                    });
+                } else {
+                    return fetch(event.request);
+                }
+            })
+        );
+    }else {
+        event.respondWith(
+            caches.match(event.request).then(function(response) {
+                if (response) {
+                    return response;
+                }
+
+                if (event.request.method = "GET") {
+                    return caches.open(assets_cache_name).then(function(cache) {
                         return cache.add(event.request).then(function() {
                             return fetch(event.request);
                         });
@@ -88,7 +109,7 @@ self.addEventListener("message", function(event) {
                 if (response) {
                     event.ports[0].postMessage({"alreadyCached": true});
                 } else {
-                    return caches.open(content_cache_name).then(function(cache) {
+                    return caches.open(user_cache_name).then(function(cache) {
                         cache.add(request).then(function() {
                             event.ports[0].postMessage({"alreadyCached": false});
                         });
@@ -108,3 +129,16 @@ self.addEventListener("message", function(event) {
             break;
     }
 });
+
+
+
+
+var clean_cache = function (cache_name) {
+    var max_num_cached_contents = 5;
+
+    caches.open(cache_name).then(function(cache) {
+        cache.keys().then(function(keys) {
+            console.log(keys);
+        })
+    });
+}
