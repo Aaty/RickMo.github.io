@@ -119,7 +119,7 @@ self.addEventListener("message", function(event) {
             break;
         case "isUrlCachedRequest":
             var request = new Request(data.url);
-            caches.match(request, {"cacheName": user_cache_name}).then(function(response) {
+            caches.match(request/*, {"cacheName": user_cache_name}*/).then(function(response) {
                 if (response) {
                     event.ports[0].postMessage({"cached": true});
                 } else {
