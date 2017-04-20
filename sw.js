@@ -70,6 +70,7 @@ self.addEventListener('fetch', function(event)
                 if (event.request.method = "GET") {
                     return caches.open(content_cache_name).then(function(cache) {
                         return cache.add(event.request).then(function() {
+console.log("JUST BEFORE CLEANNING DYNAMIC CACHE");
                             clean_cache(content_cache_name);
                             return fetch(event.request);
                         });
@@ -134,6 +135,7 @@ self.addEventListener("message", function(event) {
 
 
 var clean_cache = function (cache_name) {
+console.log("CLEANNING CACHE "+cache_name);
     var max_num_cached_contents = 5;
 
     caches.open(cache_name).then(function(cache) {
