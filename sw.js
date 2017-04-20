@@ -1,6 +1,6 @@
 var assets_cache_name = "v1_static";
 var content_cache_name = 'v1_dynamic';
-var user_cache_name = 'v1_dynamic';
+var user_cache_name = 'v1_user';
 
 var siteDomain = "https://jangosto.github.io";
 
