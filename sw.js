@@ -70,7 +70,6 @@ self.addEventListener('fetch', function(event)
                 if (event.request.method = "GET") {
                     return caches.open(content_cache_name).then(function(cache) {
                         return cache.add(event.request).then(function() {
-console.log("JUST BEFORE CLEANNING DYNAMIC CACHE");
                             clean_cache(content_cache_name);
                             return fetch(event.request);
                         });
