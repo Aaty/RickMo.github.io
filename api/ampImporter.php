@@ -2,31 +2,36 @@
     ini_set("allow_url_fopen", true);
 
     $siteRootUrl = "https://jangosto.github.io/";
-    $coverHtml = '<div id="container cover">';
+    $originDomain = "http://www.elmundo.es/";
 
-    $autocoverJson = file_get_contents("http://www.elmundo.es/json/index.json");
+    $sections = array("index", "economia", "espana", "deportes");
 
-    $autocoverArray = json_decode($autocoverJson);
+    foreach ($sections as $section) {
+        $autocoverHtml = getFile($originDomain.$section.".html");
 
-    foreach ($autocoverArray->cts as $contentType) {
-        $contentUrl = $contentType->url;
+        $autocoverJson = file_get_contents("http://www.elmundo.es/json/".$section.".json");
         
-        if (urlExists(str_replace(".html", ".json", $contentUrl))) {
-            $contentData = getFile(str_replace(".html", ".json", $contentUrl));
-            $dataArray = json_decode($contentData);
 
-            $coverHtml .= '<article class="newsItem">';
-            $htmlContent = generateHtmlContent($dataArray);
+        $autocoverArray = json_decode($autocoverJson);
+
+        foreach ($autocoverArray->cts as $contentType) {
+            $contentUrl = $contentType->url;
             
-            $coverHtml .= '<button class="read-later" id="read-later-'.$dataArray->id.'">Leer Más Tarde</button></article>';
+            if (urlExists(str_replace(".html", ".json", $contentUrl))) {
+                $contentData = getFile(str_replace(".html", ".json", $contentUrl));
+                $dataArray = json_decode($contentData);
 
-            file_put_contents("./contents/html/".$dataArray->id.".html", $htmlContent);
+                $coverHtml .= '<article class="newsItem">';
+                $htmlContent = generateHtmlContent($dataArray);
+                
+                $coverHtml .= '<button class="read-later" id="read-later-'.$dataArray->id.'">Leer Más Tarde</button></article>';
+
+                file_put_contents("./contents/html/".$dataArray->id.".html", $htmlContent);
+            }
         }
+
+        $coverHtml .= '</div>';
     }
-
-    $coverHtml .= '</div>';
-
-    file_put_contents("./contents/html/index.html", $coverHtml);
 
 
 function urlExists ($url)
