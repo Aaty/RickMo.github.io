@@ -1,0 +1,380 @@
+<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f9140c46163f26398b4649"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Macroeconomía",portal:"elmundo",ct:"n",model:"economia-home",contentId:'58f9140c46163f26398b4649',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Economía" href="http://www.elmundo.es/economia.html"><span itemprop="title">Economía</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="macroeconomia"><a title="Macroeconomía" href="http://www.elmundo.es/economia/macroeconomia.html">Macroeconomía</a></li><li data-section="empresas"><a title="Empresas" href="http://www.elmundo.es/economia/empresas.html">Empresas</a></li><li data-section="bolsa"><a title="Bolsa" href="http://www.elmundo.es/economia/bolsa/indices.html">Bolsa</a></li><li data-section="ahorro-y-consumo"><a title="Ahorro y Consumo" href="http://www.elmundo.es/economia/ahorro-y-consumo.html">Ahorro y Consumo</a></li><li data-section="vivienda"><a title="Vivienda" href="http://www.elmundo.es/economia/vivienda.html">Vivienda</a></li><li data-section="innovadores"><a title="INnovadores" href="http://www.elmundo.es/economia/innovadores.html">INnovadores</a></li><li data-section="comparador"><a title="Comparador" href="http://comparador.elmundo.es/">Comparador</a></li></ul>',numComments:'6',rrss:{img:"http://e00-elmundo.uecdn.es/assets/multimedia/imagenes/graficos/1492715892_990x0.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<ul><li class="deportes">
+<span><strong>TITULARES</strong><a href="http://www.elmundo.es/television/2017/04/21/58f9f3f7e5fdea1c658b4625.html?cid=ULTHR22001&amp;s_kw=titulares">Seis noticias para seguir informado.</a></span>
+</li></ul>
+</div>
+<script type="text/javascript">
+if (typeof portal == 'undefined') {
+    portal = '';
+}
+var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+
+if (ueAlert == null) {
+    window.addEventListener('cargaUtils', function(){
+        ueAlert = initUeAlerts();
+    });
+}
+
+function initUeAlerts(event) {
+    var pos = 0,
+    lis = [],
+    nlis = 0,
+    timer1 = null,
+    btPlay = null,
+    btStop = null;
+
+    function init() {
+        var alerta_container = document.getElementById("alerta");
+        var cont = alerta_container.getElementsByTagName("ul")[0];
+        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
+        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
+        if(portal == 'portada'){
+            lis = cont.getElementsByTagName("li");
+        } else {
+            lis = cont.getElementsByClassName('urgente');
+        }
+        nlis = lis.length;
+        if (nlis == 0){
+            ueUtils.addClass(alerta_container,'ocultar');
+        } else {
+            ueUtils.addClass(lis[0], "mostrar");
+            ueUtils.addClass(btStop, "ocultar");
+            ueAlert.play();
+                    }
+    }
+
+    var ueAlert = {
+        play: function () {
+            timer1 = setInterval(ueAlert.next, 5000);
+            ueUtils.addClass(btPlay, "ocultar");
+            ueUtils.removeClass(btStop, "ocultar");
+        },
+
+        stop: function () {
+            if (timer1) {
+            clearInterval(timer1);
+            timer1 = null;
+            }
+            ueUtils.addClass(btStop, "ocultar");
+            ueUtils.removeClass(btPlay, "ocultar");
+        },
+
+        next: function () {
+            var nextPos=((pos+1)<nlis)?(pos+1):0;
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        },
+
+        preview: function () {
+            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        }
+    }
+    init();
+    return ueAlert;
+}
+</script>
+<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="http://www.elmundo.es/economia/macroeconomia.html">Macroeconomía</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_m_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_m_58f9140c46163f26398b4649');});</script></div></div></div><h2 class="kicker"> NUEVA PREVISIÓN DEL GOBIERNO PARA 2017</h2><h1 itemprop="headline" class="js-headline">España crecerá un punto más que la Eurozona y casi el doble que Francia</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li class="author-twitter"><a href="https://twitter.com/DanielVianaR" target="_blank"><i class="icon-twitter_14x11_a"></i>DANIEL VIAÑA</a></li><li class="author-twitter"><a href="https://twitter.com/oruezabala2002" target="_blank"><i class="icon-twitter_14x11_a"></i>MARISA CRUZ</a></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-21"><time datetime="2017-04-21 03:32:15" class="date" itemprop="dateModified">
+21
+abr.
+2017
+<strong>03:32</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure id="graphic-58f9140c46163f26398b4649" class="multimedia-item graphic" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img src="//e04-elmundo.uecdn.es/elmundo/2017/graficos/abr/evolucion660.jpg" style="width:100%;"/></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_b300x100_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_b300x100_58f9140c46163f26398b4649');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58f9140c46163f26398b4649"><span class="left"><i class="icon-comments_24x20_a"></i><strong>6 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_r_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_r_58f9140c46163f26398b4649');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i><a href="http://www.elmundo.es/economia/2017/04/20/58f8a549e2704e13098b45fd.html">El Gobierno eleva la previsión de crecimiento de España al 2,7%</a></p><p class="summary-lead"><i class="icon-apoyo_16_b"></i><a href="http://www.elmundo.es/economia/macroeconomia/2017/04/20/58f7a62aca474167038b45ee.html">¿Acierta con sus previsiones el Gobierno?</a></p></div><p>En una semana marcada por los problemas judiciales que sufre su partido, Mariano Rajoy decidió recurrir ayer al que, desde hace unos años, es uno de sus mejores argumentos políticos: el fuerte crecimiento económico que experimenta España. Lo hizo, en concreto, <strong>elevando la previsión oficial de crecimiento para este año hasta el 2,7%</strong>, desde el 2,5% que estaba fijado en el cuadro macroeconómico. Esta revisión al alza, explicó el presidente del Gobierno en la clausura de la Asamblea General de la CEOE, será aprobada en el Consejo de Ministros de la próxima semana y permitirá que España reafirme su posición como economía avanzada que más crece. </p><p>De hecho, este 2,7% está, por ejemplo, más de un punto por encima del 1,6% que el Fondo Monetario Internacional (FMI) estima que crecerá Alemania, <strong>casi dobla el 1,4% que el mismo organismo asigna a Francia, y supera en un 1% la proyección realizada para el conjunto de la Eurozona</strong>. Y si la comparación se hace con Italia, el resultado es aún más llamativo ya que el Producto Interior Bruto (PIB) de este país apenas avanzará un 0,8%.</p><p>La nueva previsión de crecimiento del Gobierno, además, supera levemente la del propio FMI (2,6%), pero todavía se encuentra por detrás de la del Banco de España o de lo que prevén analistas privados como BBVA Research o Afi. Así se encargó de recordarlo Rajoy, que calificó <strong>la nueva cifra de "realista y prudente"</strong>. Esto quiere decir que la economía podría crecer incluso más, ya que durante los últimos ejercicios el Gobierno siempre ha preferido quedarse corto en sus previsiones, incluso en aquellas que ha revisado al alza, tal y como ocurre este año, para así poder ofrecer a cierre de año un dato mejor del proyectado.</p><aside class="summary-item"><span class="blueline-top"></span><figure id="graphic-58f9140c46163f26398b4649_summary_1" class="multimedia-item graphic" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img src="//e01-elmundo.uecdn.es/elmundo/2017/graficos/abr/instituciones660.jpg" style="width:100%;"/></figure><span class="blueline-bottom"></span></aside><p>Esta buena marcha, añadió Rajoy, seguirá en los próximos años ya que, si las cosas se hacen "bien", <strong>en 2018 y 2019 el crecimiento también será "muy positivo"</strong> y se podrá alcanzar el objetivo de los 20 millones de empleos en 2020. Por todo ello, el presidente del Gobierno destacó el cambio de la economía española en los últimos años, que ha pasado de encadenar cinco años de recesión a sumar ya tres de crecimiento continuado -2014, 2015 y 2016- y cuatro de superávit exterior. </p><p>Sin embargo, España sigue registrando una importante desviación presupuestaria, y por ello Rajoy señaló que es necesario mantener el esfuerzo de consolidación fiscal para situar el déficit este año en el 3,1% del PIB. Para cumplir con este objetivo marcado por la Unión Europea, el presidente del Gobierno señaló que no se debe dar marcha atrás en las reformas porque ello significaría "desandar el camino de la recuperación". </p><p>"No hay que caer en la autocomplacencia, no todo está hecho y hay que seguir con las políticas reformistas y ganando competitividad en todos lo sectores. (...) No se puede bajar la guardia <strong>ni volver a repetir lo que ocurrió entre 2007 y 2009</strong>", añadió Rajoy.</p><aside class="summary-item"><span class="blueline-top"></span><figure id="graphic-58f9140c46163f26398b4649_summary_2" class="multimedia-item graphic" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img src="//e02-elmundo.uecdn.es/elmundo/2017/graficos/abr/europa660.jpg" style="width:100%;"/></figure><span class="blueline-bottom"></span></aside><p>Precisamente este cumplimiento de déficit es el que siguen poniendo en duda los mismos organismos y firmas que alaban el crecimiento económico. Así, el FMI considera que España incumplirá tanto este año como el que viene, ya que la desviación en 2017 será del 3,25%, y en 2018 del 2,71%. Ese ejercicio el déficit debería ser del 2,2%, cifra que, según el Fondo, la economía española no logrará hasta 2021.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-economia_n_nata_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_nata_58f9140c46163f26398b4649');});</script></div><div id='div-gpt-ad-economia_n_natb_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natb_58f9140c46163f26398b4649');});</script></div><div id='div-gpt-ad-economia_n_natc_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natc_58f9140c46163f26398b4649');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'El Gobierno cree que España crecerá al 3% este año', 'http://www.elmundo.es/economia/2017/04/07/58e6fda7e2704e4c438b4570.html?cid=MNOT23801&amp;s_kw=el_gobierno_cree_que_espana_crecera_al_3_este_ano');" href="http://www.elmundo.es/economia/2017/04/07/58e6fda7e2704e4c438b4570.html?cid=MNOT23801&amp;s_kw=el_gobierno_cree_que_espana_crecera_al_3_este_ano">El Gobierno cree que España crecerá al 3% este año</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'España lidera el ránking de empresas con mayor crecimiento, según &#039;Financial Times&#039;', 'http://www.elmundo.es/economia/macroeconomia/2017/04/07/58e7741e268e3e80128b45cd.html?cid=MNOT23801&amp;s_kw=espana_lidera_el_ranking_de_empresas_con_mayor_crecimiento_segun_financial_times');" href="http://www.elmundo.es/economia/macroeconomia/2017/04/07/58e7741e268e3e80128b45cd.html?cid=MNOT23801&amp;s_kw=espana_lidera_el_ranking_de_empresas_con_mayor_crecimiento_segun_financial_times">España lidera el ránking de empresas con mayor crecimiento, según 'Financial Times'</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'El Gobierno eleva la previsión de crecimiento de España al 2,7%', 'http://www.elmundo.es/economia/2017/04/20/58f8a549e2704e13098b45fd.html?cid=MNOT23801&amp;s_kw=el_gobierno_eleva_la_prevision_de_crecimiento_de_espana_al_27');" href="http://www.elmundo.es/economia/2017/04/20/58f8a549e2704e13098b45fd.html?cid=MNOT23801&amp;s_kw=el_gobierno_eleva_la_prevision_de_crecimiento_de_espana_al_27">El Gobierno eleva la previsión de crecimiento de España al 2,7%</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', '¿Por qué el FMI asegura que España crecerá en 2017 más que ningún otro país desarrollado?', 'http://www.elmundo.es/economia/macroeconomia/2017/04/19/58f66965e2704e54298b45b8.html?cid=MNOT23801&amp;s_kw=por_que_el_fmi_asegura_que_espana_crecera_en_2017_mas_que_ningun_otro_pais_desarrollado');" href="http://www.elmundo.es/economia/macroeconomia/2017/04/19/58f66965e2704e54298b45b8.html?cid=MNOT23801&amp;s_kw=por_que_el_fmi_asegura_que_espana_crecera_en_2017_mas_que_ningun_otro_pais_desarrollado">¿Por qué el FMI asegura que España crecerá en 2017 más que ningún otro país desarrollado?</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', '&quot;La Patente Unitaria podría tener un Tribunal en español&quot;', 'http://www.elmundo.es/economia/2017/04/03/58e21e8622601d0d4b8b4667.html?cid=MNOT23801&amp;s_kw=la_patente_unitaria_podria_tener_un_tribunal_en_espanol');" href="http://www.elmundo.es/economia/2017/04/03/58e21e8622601d0d4b8b4667.html?cid=MNOT23801&amp;s_kw=la_patente_unitaria_podria_tener_un_tribunal_en_espanol">"La Patente Unitaria podría tener un Tribunal en español"</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="http://www.elmundo.es/e/ma/mariano-rajoy.html" rel="tag">Mariano Rajoy</a></li><li><a href="http://www.elmundo.es/e/fm/fmi.html" rel="tag">FMI</a></li><li><a href="http://www.elmundo.es/e/pi/pib.html" rel="tag">PIB</a></li><li><a href="http://www.elmundo.es/internacional/francia.html" rel="tag">Francia</a></li><li><a href="http://www.elmundo.es/internacional/italia.html" rel="tag">Italia</a></li><li><a href="http://www.elmundo.es/internacional/alemania.html" rel="tag">Alemania</a></li><li><a href="http://www.elmundo.es/e/un/union-europea-ue.html" rel="tag">Unión Europea</a></li><li><a href="http://www.elmundo.es/economia/macroeconomia.html" rel="tag">Macroeconomía</a></li><li><a href="http://www.elmundo.es/economia.html" rel="tag">economía</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rb_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rb_58f9140c46163f26398b4649');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="http://www.elmundo.es/economia/macroeconomia/2017/04/21/58f9140c46163f26398b4649.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/economia/macroeconomia/2017/04/21/58f9140c46163f26398b4649.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/economia/macroeconomia/2017/04/21/58f9140c46163f26398b4649.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_mb_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_mb_58f9140c46163f26398b4649');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rc_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rc_58f9140c46163f26398b4649');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:6" itemprop="interactionCount">6</strong> Comentarios</h3>
+<article>
+<header>
+<span>1</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">chicodelmundo</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T08:04:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">08:04 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Bueno Francia esta en crisis con un 10% de paro, poca perdida de PIB y pese a tasas de creciminto moderadas la diferencia es notable, sobretodo en cuanto a servicios sociales y sueldo minimo.</p>
+</div>
+</article>
+<article>
+<header>
+<span>2</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">letiziabuscanovio</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T09:18:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">09:18 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>La realidad es que el BCE ha convertido la eurozona en una de las zonas que menos crece económicamente del mundo.</p>
+</div>
+</article>
+<div class="comments-tool js-botonComentarios-58f9140c46163f26398b4649">
+<span>Ver <strong>6</strong> comentarios
+<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
+<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</span>
+</div>
+</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'España crecerá un punto más que la Eurozona y casi el doble que Francia'</a></div>
+<script type="text/javascript">var registroCookie=false;</script>
+<section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:6" itemprop="interactionCount">6</strong> Comentarios</h3>
+<form name="formulario_paginar_comentarios" id="formulario_paginar_comentarios" method="post">
+<input type="hidden" name="noticia" value="1415184"/>
+<input type="hidden" name="portal" value="R"/>
+<input type="hidden" name="pagina" value="0"/>
+</form>
+<div class="right-panel login-comentar js-comentar">
+<p id="navTopComentarios" class="js-cajaLogin"><button class="registro-login-button js-loginClick" ue-attr-csp="1403">Iniciar sesión para participar</button></p>
+<div id="hacer-comentario" class="js-cajaComentario no-visible ">
+<form class="comentar" name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
+<input type="hidden" name="opcion" value="1"/>
+<input type="hidden" name="noticia" value="1415184"/>
+<input type="hidden" name="portal" value="R"/>
+<textarea rows="1" name="texto" id="formulario_comentar_comentarios_texto" placeholder="Escriba aqu&iacute; su comentario" required="required"></textarea>
+<input type="button" onclick="javascript:enviarComentario()" class="boton" id="enviar" value="PUBLICAR" name="enviar"/>
+</form>
+</div>
+</div>
+<div id="listado_comentarios"><nav>
+<ul>
+<li class="seleccionado"><a rel="nofollow" href="#comentarios" onclick="javascript:return false;" title="Ver todos los mensajes">Todos</a></li>
+<li class="mejor-valorados"><a rel="nofollow" href="#comentarios" onclick="javascript:pasarPaginaComentariosMejorValorados(1);return false;" title="Ver los mensajes más valorados">M&aacute;s valorados</a></li>
+</ul>
+</nav>
+<section id="comentarios-usuarios" class="comentarios-usuarios">
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Freestyler');comentarReferenciaComentario(this, '#6');return false;">6</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">Freestyler</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:21:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:21 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>No nos emocionemos, Irlanda crece al 5,2% Luxemburgo al 4,2% Bulgaria al 3,4%, Bosnia al 3,1% Croacia y Turquia al 2,9% Chipre y Serbia al 2,8% que parece que crecer mas de 1 punto de la media de la Eurozona significa que somos únicos y no....por otro lado es normal que crezcamos un punto mas que Francia ya que Francia se mantiene en unos niveles desde hace años, nunca llegaron al 0% ni a negativo cuando España llego a estar en el -3,6% en 2009....comportamiento mas propio el de España de un pais de los pequeños que de la 3a economia mas potente de la zona Euro que somos...</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Freestyler');comentarReferenciaComentario(this, '#6');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899567" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899567,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899567,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899567">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@NoMeLoCreo');comentarReferenciaComentario(this, '#5');return false;">5</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">NoMeLoCreo</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T10:34:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">10:34 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@orgullosovotantedelpp <a rel="nofollow" onclick="ocultaMuestraCapa('comentarios_lectores_referencia_5_3_0');" class="ancla_referencia">#3<span class="referencia" id="comentarios_lectores_referencia_5_3_0" style="display:none"><i class="comentario-cerrar"><span>Cerrar</span></i>ESTO es lo realmente importante, la economía; y está demostrado que con gobiernos del PP va como un tiro hacia arriba y la gente vive mejor. Por eso el PP volvería a arrasar en las elecciones si ahora se celebraran, por muchos ataques que reciba desde la izquierda mediática. Me quito el sombrero ante el gobierno de Don Mariano Rajoy.</span></a> Eso de que *la gente vive mejor* me va a permitir que lo dude. Tenemos el mismo PIB que antes de la crisis, Montoro dice que se va a recaudar lo mismo que antes de la crisis, luego tendríamos que vivir igual que antes de la crisis y eso no se lo cree nadie, a menos que se sea un comeollas del PP. El aumento del PIB y se lo están llevando *los de siempre* la mejora de la macroeconomía ha sido utilizada para que se la lleven los *de siempre* y aumentar las desigualdades. Si el pueblo tuviese luces y hubiese dejado atrás el *viva las caenas* a la hora de votar se preguntaría: Después de años de sacrificio yo vivo mejor o peor que antes de la crisis? Y los que viven mejor lógicamente votarían al PP y los que viven peor votarían a otros partidos.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@NoMeLoCreo');comentarReferenciaComentario(this, '#5');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899068" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899068,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899068,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899068">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@NoMeLoCreo');comentarReferenciaComentario(this, '#4');return false;">4</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">NoMeLoCreo</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T10:25:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">10:25 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>La pregunta del millón: Para quien va a ser ese 1% de más? Va a ser para los de siempre o llegará algo al pueblo llano?</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@NoMeLoCreo');comentarReferenciaComentario(this, '#4');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899021" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899021,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899021,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899021">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@orgullosovotantedelpp');comentarReferenciaComentario(this, '#3');return false;">3</a>
+</span>
+<img class="avatar" alt src="//e03-elmundo.uecdn.es/portal/social/ugc/avatars/006/162/xlarge_6162273.png">
+<div class="autor" itemprop="author">
+<span class="alias">orgullosovotantedelpp</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T09:57:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">09:57 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>ESTO es lo realmente importante, la economía; y está demostrado que con gobiernos del PP va como un tiro hacia arriba y la gente vive mejor. Por eso el PP volvería a arrasar en las elecciones si ahora se celebraran, por muchos ataques que reciba desde la izquierda mediática. Me quito el sombrero ante el gobierno de Don Mariano Rajoy.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@orgullosovotantedelpp');comentarReferenciaComentario(this, '#3');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10898904" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10898904,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10898904,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10898904">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@letiziabuscanovio');comentarReferenciaComentario(this, '#2');return false;">2</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">letiziabuscanovio</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T09:18:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">09:18 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>La realidad es que el BCE ha convertido la eurozona en una de las zonas que menos crece económicamente del mundo.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@letiziabuscanovio');comentarReferenciaComentario(this, '#2');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10898764" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10898764,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10898764,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10898764">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@chicodelmundo');comentarReferenciaComentario(this, '#1');return false;">1</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">chicodelmundo</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T08:04:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">08:04 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Bueno Francia esta en crisis con un 10% de paro, poca perdida de PIB y pese a tasas de creciminto moderadas la diferencia es notable, sobretodo en cuanto a servicios sociales y sueldo minimo.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@chicodelmundo');comentarReferenciaComentario(this, '#1');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10898553" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10898553,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10898553,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10898553">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+</section>
+<ul id="subNavComentarios">
+<li>
+</li>
+</ul></div>
+<script type="text/javascript">function ocultaMuestraCapa(divId){if(document.getElementById(divId).style.display=='none')
+{document.getElementById(divId).style.display='block';}
+else{document.getElementById(divId).style.display='none';}};</script>
+</section>
+</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+<h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
+<ul class="list">
+<li><a href="http://www.elmundo.es/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
+<li><a href="http://www.elmundo.es/temas/">Temas</a></li>
+<li><a href="http://www.elmundo.es/economia/bolsa/indices/ibex35_I.IB.html">IBEX 35</a></li>
+<li><a href="http://www.elmundo.es/loterias/euromillones.html">Euromillones</a></li>
+<li><a href="http://www.elmundo.es/horoscopo/">Hor&oacute;scopo Diario</a></li>
+<li><a href="http://www.elmundo.es/mejores-colegios.html">Mejores colegios</a></li>
+</ul>
+<ul class="list">
+<li><a href="http://www.elmundo.es/servicios/">Servicios</a></li>
+<li><a href="http://quiosco.orbyt.es/">Orbyt</a></li>
+<li><a href="http://www.elmundo.es/traductor/">Traductor</a></li>
+<li><a href="http://www.elmundo.es/television/programacion-tv/">Gu&iacute;a TV</a></li>
+<li><a href="http://www.elmundo.es/diccionarios/">Diccionarios</a></li>
+<li><a href="http://www.elmundo.es/tiempo/">El tiempo</a></li>
+<li><a href="http://www.elmundo.es/promociones/">Promociones</a></li>
+<li><a href="http://www.elmundo.es/loterias/">Loter&iacute;a</a></li>
+<li><a href="http://comparador.elmundo.es/">Comparador financiero</a></li>
+<li><a href="http://seguroscoche.elmundo.es/">Comparador seguros</a></li>
+</ul>
+<h4>En vivos</h4>
+<ul class="list">
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43951-rafa-nadal-vs-alexander-zverev-en-vivo-montecarlo/"> Rafa Nadal vs Alexander Zverev, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43886-cska-mosc-baskonia/"> CSKA Moscú vs Baskonia, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43882-fc-schalke-04-ajax/"> Schalke 04 vs Ajax, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43883-krc-genk-celta-de-vigo/"> Genk vs Celta de Vigo, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43884-besiktas-lyon/"> Besiktas vs O. Lyon, en vivo</a>
+</li>
+</ul>
+</section>
+</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-economia_n_f2_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f2_58f9140c46163f26398b4649');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-economia_n_f3_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f3_58f9140c46163f26398b4649');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-economia_n_si_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_si_58f9140c46163f26398b4649');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-economia_n_sd_58f9140c46163f26398b4649' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_sd_58f9140c46163f26398b4649');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f9140c46163f26398b4649"});}
+if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f9140c46163f26398b4649');}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f9140c46163f26398b4649').find('.js_socialMedia').RedesSociales({title:"España crecerá  un punto más que la Eurozona y casi el doble que Francia",img:"http://e00-elmundo.uecdn.es/assets/multimedia/imagenes/graficos/1492715892_990x0.jpg",url:"http://www.elmundo.es/economia/macroeconomia/2017/04/21/58f9140c46163f26398b4649.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f9140c46163f26398b4649').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
+jQuery("#js_58f9140c46163f26398b4649 .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>

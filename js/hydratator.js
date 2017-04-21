@@ -24,9 +24,9 @@ var getAmpUrl = function (url) {
     if (newPattern.test(currentUrl)) {
         var urlArray = currentUrl.split("/");
         var fileName = urlArray[urlArray.length-1];
-        ampUrl = "https://jangosto.github.io/api/contents/"+fileName;
+        ampUrl = "https://jangosto.github.io/api/contents/html/"+fileName;
     } else if (autocoverPattern.test(currentUrl)) {
-        ampUrl = "https://jangosto.github.io/api/contents/index.html";
+        ampUrl = "https://jangosto.github.io/api/contents/html/index.html";
     }
 
     return ampUrl;

@@ -16,17 +16,17 @@
             $dataArray = json_decode($contentData);
 
             $coverHtml .= '<article class="newsItem">';
-            $ampContent = generateAmpContent($dataArray);
+            $htmlContent = generateHtmlContent($dataArray);
             
             $coverHtml .= '<button class="read-later" id="read-later-'.$dataArray->id.'">Leer Más Tarde</button></article>';
 
-            file_put_contents("./contents/".$dataArray->id.".html", $ampContent);
+            file_put_contents("./contents/html/".$dataArray->id.".html", $htmlContent);
         }
     }
 
     $coverHtml .= '</div>';
 
-    file_put_contents("./contents/index.html", $coverHtml);
+    file_put_contents("./contents/html/index.html", $coverHtml);
 
 
 function urlExists ($url)
@@ -47,18 +47,21 @@ function urlExists ($url)
     }
 }
 
-function generateAmpContent($data)
+function generateHtmlContent($data)
 {
     global $siteRootUrl, $coverHtml;
 
-    $content = file_get_contents("./ampPrototype.html");
+    $entireContent = getFile($data->url);
+    $matches = array();
+    preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
+    $content = $matches[0];
+
+    
 
     if (isset($data->cintillo)) {
-        $content = str_replace('[[[---PRETITLE---]]]', $data->cintillo, $content);
         $coverHtml .= '<h2 class="kicker">'.$data->cintillo.'</h2>';
     }
     if (isset($data->titulo)) {
-        $content = str_replace('[[[---TITLE---]]]', $data->titulo, $content);
         $coverHtml .= '<h1 class="headline"><a class="new-url" href="'.str_replace('http://www.elmundo.es/', $siteRootUrl, $data->url).'">'.$data->titulo.'</a></h1>';
     }
     if (isset($data->multimedia) && count($data->multimedia) > 0) {
@@ -67,45 +70,17 @@ function generateAmpContent($data)
                 if ($multimediaItem->type == 'image') {
                     $imageExtension = pathinfo($multimediaItem->url)['extension'];
                     $imageFile = getFile(str_replace("http://e00-marca.uecdn.es/", "http://estaticos.elmundo.es/",$multimediaItem->url));
-                    file_put_contents('./contents/images/'.$multimediaItem->id.'.'.$imageExtension, $imageFile);
-                    $content = str_replace('[[[---PRIMARY_IMAGE_URL---]]]', $siteRootUrl.'api/contents/images/'.$multimediaItem->id.'.'.$imageExtension, $content);
-                    $content = str_replace('[[[---PRIMARY_IMAGE_HEIGHT---]]]', $multimediaItem->height, $content);
-                    $content = str_replace('[[[---PRIMARY_IMAGE_WIDTH---]]]', $multimediaItem->width, $content);
+                    file_put_contents('./contents/html/images/'.$multimediaItem->id.'.'.$imageExtension, $imageFile);
+                    $content = str_replace($multimediaItem->url, $siteRootUrl."api/contents/html/images/".$multimediaItem->id.'.'.$imageExtension, $content);
 
                     $coverImageWidth = "200";
                     $coverHtml .= '<figure class="multimedia-item main" itemprop="image">';
                     $coverHtml .= '<amp-img class="image" layout="responsive" src="'.$siteRootUrl.'api/contents/images/'.$multimediaItem->id.'.'.$imageExtension.'" height="'.$coverImageWidth*$multimediaItem->height/$multimediaItem->width.'" width="'.$coverImageWidth.'">';
                     $coverHtml .= '</figure>';
                 }
-                if ($multimediaItem->type == 'video') {
-                    $content = str_replace('[[[---PRIMARY_IMAGE_URL---]]]', "https://v.uecdn.es/p/108/thumbnail/entry_id/".$multimediaItem->id."/width/600/", $content);
-                    $content = str_replace('[[[---PRIMARY_IMAGE_HEIGHT---]]]', '', $content);
-                    $content = str_replace('[[[---PRIMARY_IMAGE_WIDTH---]]]', '100%', $content);
-                }
-                if (isset($multimediaItem->titulo)) {
-                    $content = str_replace('[[[---PRIMARY_IMAGE_CAPTION---]]]', $multimediaItem->titulo, $content);
-                }
             }
         }
     }
-    if (isset($data->firmas[0])) {
-        if (isset($data->firmas[0]->name)) {
-            $content = str_replace('[[[---AUTHOR_NAME---]]]', $data->firmas[0]->name, $content);
-        }
-        if (isset($data->firmas[0]->location)) {
-            $content = str_replace('[[[---AUTHOR_PLACE---]]]', $data->firmas[0]->location, $content);
-        }
-    }
-    $content = str_replace('[[[---UPDATED_DATE---]]]', $data->publishedAt, $content);
-    if (isset($data->texto)) {
-        $matches = array();
-        preg_match('/<img[^>]+src="([^>"]+)"[^>]*>/i', $data->texto, $matches);
-        $content = str_replace('[[[---CONTENT_PART_2---]]]', $data->texto, $content);
-    }
-
-    $content = str_replace("[[[---URL---]]]", "[[[...URL...]]]", $content);
-    $content = preg_replace("/\[\[\[\-\-\-[^\-\]]+\-\-\-\]\]\]/i", "", $content);
-    $content = str_replace("[[[...URL...]]]", "[[[---URL---]]]",  $content);
 
     return $content;
 }

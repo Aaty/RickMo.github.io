@@ -1,0 +1,497 @@
+<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f8ece1e2704ee70d8b4648"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Fútbol",portal:"elmundo",ct:"n",model:"futbol",contentId:'58f8ece1e2704ee70d8b4648',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="Deportes" href="http://www.elmundo.es/deportes.html"><span itemprop="title">Deportes</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level"  id="bread-2"><a itemprop="url" title="Fútbol" href="http://www.elmundo.es/deportes/futbol.html"><span itemprop="title">Fútbol</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="laliga-santander"><a title="LaLiga Santander" href="http://www.elmundo.es/deportes/futbol/primera-division.html">LaLiga Santander</a></li><li data-section="copa"><a title="Copa" href="http://www.elmundo.es/deportes/futbol/copa-del-rey.html">Copa</a></li><li data-section="laliga123"><a title="LaLiga123" href="http://www.elmundo.es/deportes/futbol/segunda-division.html">LaLiga123</a></li><li data-section="2b"><a title="2ªB" href="http://www.elmundo.es/elmundodeporte/futbol/liga-segunda-b/grupo-1.html">2ªB</a></li><li data-section="premier"><a title="Premier" href="http://www.elmundo.es/deportes/futbol/premier-league.html">Premier</a></li><li data-section="alemania"><a title="Alemania" href="http://www.elmundo.es/deportes/futbol/bundesliga.html">Alemania</a></li><li data-section="italia"><a title="Italia" href="http://www.elmundo.es/deportes/futbol/serie-a.html">Italia</a></li><li data-section="champions"><a title="Champions" href="http://www.elmundo.es/deportes/futbol/champions-league.html">Champions</a></li><li data-section="e-league"><a title="E. League" href="http://www.elmundo.es/deportes/futbol/europa-league/calendario.html">E. League</a></li><li data-section="mundial18"><a title="Mundial&#039;18" href="http://www.elmundo.es/deportes/futbol/mundial.html">Mundial&#039;18</a></li></ul>',numComments:'15',rrss:{img:"https://jangosto.github.io/api/contents/html/images/2017-04-20-14927082977836.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<ul><li class="deportes">
+<span><strong>TITULARES</strong><a href="http://www.elmundo.es/television/2017/04/21/58f9f3f7e5fdea1c658b4625.html?cid=ULTHR22001&amp;s_kw=titulares">Seis noticias para seguir informado.</a></span>
+</li></ul>
+</div>
+<script type="text/javascript">
+if (typeof portal == 'undefined') {
+    portal = '';
+}
+var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+
+if (ueAlert == null) {
+    window.addEventListener('cargaUtils', function(){
+        ueAlert = initUeAlerts();
+    });
+}
+
+function initUeAlerts(event) {
+    var pos = 0,
+    lis = [],
+    nlis = 0,
+    timer1 = null,
+    btPlay = null,
+    btStop = null;
+
+    function init() {
+        var alerta_container = document.getElementById("alerta");
+        var cont = alerta_container.getElementsByTagName("ul")[0];
+        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
+        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
+        if(portal == 'portada'){
+            lis = cont.getElementsByTagName("li");
+        } else {
+            lis = cont.getElementsByClassName('urgente');
+        }
+        nlis = lis.length;
+        if (nlis == 0){
+            ueUtils.addClass(alerta_container,'ocultar');
+        } else {
+            ueUtils.addClass(lis[0], "mostrar");
+            ueUtils.addClass(btStop, "ocultar");
+            ueAlert.play();
+                    }
+    }
+
+    var ueAlert = {
+        play: function () {
+            timer1 = setInterval(ueAlert.next, 5000);
+            ueUtils.addClass(btPlay, "ocultar");
+            ueUtils.removeClass(btStop, "ocultar");
+        },
+
+        stop: function () {
+            if (timer1) {
+            clearInterval(timer1);
+            timer1 = null;
+            }
+            ueUtils.addClass(btStop, "ocultar");
+            ueUtils.removeClass(btPlay, "ocultar");
+        },
+
+        next: function () {
+            var nextPos=((pos+1)<nlis)?(pos+1):0;
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        },
+
+        preview: function () {
+            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        }
+    }
+    init();
+    return ueAlert;
+}
+</script>
+<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="http://www.elmundo.es/deportes/futbol.html">Fútbol</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-deportes_n_m_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_m_58f8ece1e2704ee70d8b4648');});</script></div></div></div><h2 class="kicker"> Fútbol</h2><h1 itemprop="headline" class="js-headline">El plan contra la decadencia del Barça</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li class="author-twitter"><a href="http://twitter.com/FCabezas78" target="_blank"><i class="icon-twitter_14x11_a"></i>FRANCISCO CABEZAS</a></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Barcelona</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-21"><time datetime="2017-04-21 09:14:41" class="date" itemprop="dateModified">
+21
+abr.
+2017
+<strong>09:14</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="https://jangosto.github.io/api/contents/html/images/2017-04-20-14927082977836.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Mathieu disputa un balón a Dybala, con Cuadrado en el suelo, durante el duelo con la Juve. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span>EFE</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_b300x100_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_b300x100_58f8ece1e2704ee70d8b4648');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58f8ece1e2704ee70d8b4648"><span class="left"><i class="icon-comments_24x20_a"></i><strong>15 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_r_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_r_58f8ece1e2704ee70d8b4648');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i>El conjunto azulgrana fichará un lateral derecho, un central, un centrocampista, y volverá Deulofeu, una de las sensaciones de la Serie A</p><p class="summary-lead"><i class="icon-apoyo_16_b"></i>Iniesta, que quiere mayor presencia en el equipo, duda sobre su continuidad</p></div><p>El Barcelona vivió frente a la Juventus su segunda eliminación consecutiva en cuartos de final del máximo torneo continental. La Liga pasa inevitablemente por un triunfo el domingo en el Santiago Bernabéu. El final de trayecto de la era Luis Enrique, más allá de la final de Copa frente al Alavés, ha desnudado las grietas de una plantilla que, a día de hoy, aún no sabe a lo que atenerse. El club azulgrana aún no ha decidido quién será el próximo entrenador del primer equipo. <strong>Y Ernesto Valverde, quien partía como gran favorito, se impacienta</strong> al ver cómo no hay movimiento alguno respecto a su contratación.</p><h3 class="subhead">La portería no es el problema</h3><p>En el Barcelona mantienen su plena confianza en Ter Stegen, pero también en su suplente, el holandés Cillessen, decisivo en la buenaventura de la Copa del Rey. Quien tiene escasas opciones de continuar es el tercer portero, Jordi Masip, que concluye su contrato el próximo 30 de junio y ha jugado cuatro partidos en tres temporadas. Ninguno en el presente curso.</p><h3 class="subhead">Mathieu y la duda de Mascherano</h3><p>Desde la cúpula del Barcelona tienen claro que, sea quien sea el próximo técnico, urge la contratación de un lateral derecho <strong>-la prioridad es Bellerín</strong>, pese a su alto precio- y de un central. La apuesta por Sergi Roberto en el carril no acabó de ser convincente, por lo que podría recuperar una plaza en el interior. El lesionado Aleix Vidal, mientras, tendrá una nueva oportunidad. </p><p>El decepcionante rendimiento de Mathieu le abre la puerta de salida, aunque su edad -cumplirá 34 años en octubre- dificulte la llegada de ofertas. La continuidad de Javier Mascherano, que hace un año estuvo a punto de aceptar una oferta de la Juventus, tampoco está clara. Sobre todo porque el secretario técnico, Robert Fernández, pretende incorporar a un central joven que sea quien corrija las ausencias de Piqué y Umtiti. </p><p>En el lateral zurdo, pese a la pérdida de incidencia de Jordi Alba y a la escasa participación de Digne en su primer año, no se esperan cambios. Eso sí, <strong>siempre y cuando no se abriera la posibilidad de disputar al Real Madrid la contratación del carrilero Theo Hernández</strong>, cedido al Alavés por el Atlético.</p><h3 class="subhead">Iniesta debe decidir si sigue</h3><p>«Andrés tiene una oferta de renovación encima de la mesa. Será él quien tenga que tomar una decisión». En los despachos del Barcelona admiten que Iniesta, a sus 32 años y que cumple su contrato el verano de 2018, valorará muchos más factores que el económico. El manchego se ve preparado para tener una participación en el equipo mucho más alta que la que ha tenido esta temporada con Luis Enrique. Y si no es en el club azulgrana, donde siempre ha manifestado que le gustaría retirarse, será en otro país este mismo verano. La decisión no está tomada. </p><p>Los dirigentes del Barça, eso sí, son conscientes de que la próxima gran incorporación debe reforzar la zona ancha. Se entraría así en el <strong>incierto mercado persa de futbolistas de altísimo caché, como Coutinho o Verratti</strong>. Conseguir una buena venta se presume indispensable aunque, en este caso, tampoco será fácil. Fue el propio <strong>Luis Enrique quien impidió el pasado mercado invernal que Arda Turan aceptara una generosa proposición del fútbol chino</strong>. Desde entonces, no se han producido más aproximaciones, aunque el valor de mercado del futbolista turco, alrededor todavía de los 30 millones de euros, sigue siendo notable fuera de nuestras fronteras.</p><p>Las dos apuestas de Robert Fernández del pasado verano para el centro del campo, <strong>el discutido André Gomes y el todavía irrelevante Denis Suárez, se mantendrán en una medular en la que el joven Carles Aleñá tendrá un hueco</strong>. Rafinha, ahora lesionado y ojito derecho de Luis Enrique, tendrá en su mano su continuidad.</p><h3 class="subhead">Deulofeu, para quedarse</h3><p>«Si <em>Deulo </em>viene, será para quedarse en el primer equipo».<strong> El Barça pagará 12 millones de euros al Everton para recuperar a su canterano</strong>, ahora cedido en el Milan. El extremo, eso sí, tiene que dar su conformidad. Su llegada, con un claro papel de agitador, no necesariamente debería comprometer a Paco Alcácer.<strong> En cuanto a Messi, que sigue sin firmar su continuidad, el Barça no duda:«Con calma, pero renovará»</strong>.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-deportes_n_nata_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_nata_58f8ece1e2704ee70d8b4648');});</script></div><div id='div-gpt-ad-deportes_n_natb_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natb_58f8ece1e2704ee70d8b4648');});</script></div><div id='div-gpt-ad-deportes_n_natc_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natc_58f8ece1e2704ee70d8b4648');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'La solución pasa por Alcácer', 'http://www.elmundo.es/deportes/futbol/2017/04/03/58e1796322601dcc318b45ed.html?cid=MNOT23801&amp;s_kw=la_solucion_pasa_por_alcacer');" href="http://www.elmundo.es/deportes/futbol/2017/04/03/58e1796322601dcc318b45ed.html?cid=MNOT23801&amp;s_kw=la_solucion_pasa_por_alcacer">La solución pasa por Alcácer</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'El factor tecnológico para encontrar al sustituto de Luis Enrique', 'http://www.elmundo.es/deportes/2017/03/22/58d17a2fe5fdead5758b461e.html?cid=MNOT23801&amp;s_kw=el_factor_tecnologico_para_encontrar_al_sustituto_de_luis_enrique');" href="http://www.elmundo.es/deportes/2017/03/22/58d17a2fe5fdead5758b461e.html?cid=MNOT23801&amp;s_kw=el_factor_tecnologico_para_encontrar_al_sustituto_de_luis_enrique">El factor tecnológico para encontrar al sustituto de Luis Enrique</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'Un año sin Johan Cruyff: &quot;Era un romántico del fútbol&quot;', 'http://www.elmundo.es/deportes/2017/03/24/58d42d84e5fdeaa14e8b45ec.html?cid=MNOT23801&amp;s_kw=un_ano_sin_johan_cruyff_era_un_romantico_del_futbol');" href="http://www.elmundo.es/deportes/2017/03/24/58d42d84e5fdeaa14e8b45ec.html?cid=MNOT23801&amp;s_kw=un_ano_sin_johan_cruyff_era_un_romantico_del_futbol">Un año sin Johan Cruyff: "Era un romántico del fútbol"</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'Messi, al límite; Zidane, con la reserva', 'http://www.elmundo.es/deportes/2017/04/16/58f2850546163fa57d8b456e.html?cid=MNOT23801&amp;s_kw=messi_al_limite_zidane_con_la_reserva');" href="http://www.elmundo.es/deportes/2017/04/16/58f2850546163fa57d8b456e.html?cid=MNOT23801&amp;s_kw=messi_al_limite_zidane_con_la_reserva">Messi, al límite; Zidane, con la reserva</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'El Barcelona vive por Messi', 'http://www.elmundo.es/deportes/futbol/2017/04/15/58f2867122601d146d8b464e.html?cid=MNOT23801&amp;s_kw=el_barcelona_vive_por_messi');" href="http://www.elmundo.es/deportes/futbol/2017/04/15/58f2867122601d146d8b464e.html?cid=MNOT23801&amp;s_kw=el_barcelona_vive_por_messi">El Barcelona vive por Messi</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="http://www.elmundo.es/e/lu/luis-enrique.html" rel="tag">Luis Enrique</a></li><li><a href="http://www.elmundo.es/deportes/futbol/equipos/real-madrid.html" rel="tag">Real Madrid</a></li><li><a href="http://www.elmundo.es/deportes/futbol/jugadores/arda-turan.html" rel="tag">Arda Turan</a></li><li><a href="http://www.elmundo.es/e/pa/paco-alcacer.html" rel="tag">Paco Alcácer</a></li><li><a href="http://www.elmundo.es/deportes/futbol/jugadores/jordi-alba.html" rel="tag">Jordi Alba</a></li><li><a href="http://www.elmundo.es/deportes.html" rel="tag">deportes</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_rb_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rb_58f8ece1e2704ee70d8b4648');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="http://www.elmundo.es/deportes/futbol/2017/04/21/58f8ece1e2704ee70d8b4648.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/deportes/futbol/2017/04/21/58f8ece1e2704ee70d8b4648.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/deportes/futbol/2017/04/21/58f8ece1e2704ee70d8b4648.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-deportes_n_mb_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_mb_58f8ece1e2704ee70d8b4648');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_rc_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rc_58f8ece1e2704ee70d8b4648');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:15" itemprop="interactionCount">15</strong> Comentarios</h3>
+<article>
+<header>
+<span>3</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">con-nudos</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T10:24:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">10:24 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Iniesta a ver si te das cuenta de una vez, Tu le has dado a Messi los balones de oro y las botas de oro. Tu eras el que ponias los balones muertos para que les empujara el Messi. (visto está que Messi sin Iniesta no es nadie ni en el Barça ni en la Seleccion argentina). Si Iniesta hubiera estado en otro equipo él sería el que tendria esos balones y botas de oro y lo mismo digo del Xavi. Ahora que el Iniesta anda mas relajado el Barça en decadencia. Es que el Barça era Iniesta.</p>
+</div>
+</article>
+<article>
+<header>
+<span>2</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">pintail</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T10:13:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">10:13 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Osea que con "Ter Statuen" no hay problema. Yo creo que muy gordo.</p>
+</div>
+</article>
+<div class="comments-tool js-botonComentarios-58f8ece1e2704ee70d8b4648">
+<span>Ver <strong>15</strong> comentarios
+<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
+<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</span>
+</div>
+</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'El plan contra la decadencia del Barça'</a></div>
+<script type="text/javascript">var registroCookie=false;</script>
+<section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:15" itemprop="interactionCount">15</strong> Comentarios</h3>
+<form name="formulario_paginar_comentarios" id="formulario_paginar_comentarios" method="post">
+<input type="hidden" name="noticia" value="1415241"/>
+<input type="hidden" name="portal" value="R"/>
+<input type="hidden" name="pagina" value="0"/>
+</form>
+<div class="right-panel login-comentar js-comentar">
+<p id="navTopComentarios" class="js-cajaLogin"><button class="registro-login-button js-loginClick" ue-attr-csp="1403">Iniciar sesión para participar</button></p>
+<div id="hacer-comentario" class="js-cajaComentario no-visible ">
+<form class="comentar" name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
+<input type="hidden" name="opcion" value="1"/>
+<input type="hidden" name="noticia" value="1415241"/>
+<input type="hidden" name="portal" value="R"/>
+<textarea rows="1" name="texto" id="formulario_comentar_comentarios_texto" placeholder="Escriba aqu&iacute; su comentario" required="required"></textarea>
+<input type="button" onclick="javascript:enviarComentario()" class="boton" id="enviar" value="PUBLICAR" name="enviar"/>
+</form>
+</div>
+</div>
+<div id="listado_comentarios"><nav>
+<ul>
+<li class="seleccionado"><a rel="nofollow" href="#comentarios" onclick="javascript:return false;" title="Ver todos los mensajes">Todos</a></li>
+<li class="mejor-valorados"><a rel="nofollow" href="#comentarios" onclick="javascript:pasarPaginaComentariosMejorValorados(1);return false;" title="Ver los mensajes más valorados">M&aacute;s valorados</a></li>
+</ul>
+</nav>
+<section id="comentarios-usuarios" class="comentarios-usuarios">
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@CpThule');comentarReferenciaComentario(this, '#15');return false;">15</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">CpThule</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:56:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:56 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Creo que hablar de decadencia me parece fuera de lugar. Sigue teniendo buenos resultados aunque no consiga todos los títulos. Sigue luchando por la liga y por la copa</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@CpThule');comentarReferenciaComentario(this, '#15');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899970" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899970,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899970,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899970">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@halfonxox');comentarReferenciaComentario(this, '#14');return false;">14</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">halfonxox</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:32:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:32 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Me parece que como análisis se queda muy corto. La defensa necesita más retoque. El centro del campo, ni qué decir. Y delante, hay que buscar gente con ganas que intente agitar la titularidad del trío. POrque no sólo alcacer ha estado muy por debajo, Denis tampoco ha dado la talla y rafinha ha tenido apariciones, pero muy puntuales. A Arda ni lo cuento. Y por mucho que digan, ni Rakitic, ni Andre Gomes están para el barsa actual, se necesita algo más.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@halfonxox');comentarReferenciaComentario(this, '#14');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899870" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899870,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899870,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899870">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@emilioypepi');comentarReferenciaComentario(this, '#13');return false;">13</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">emilioypepi</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:04:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:04 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@pintail9.Iniesta procede del latin...genesta=HINIESTA=retama,.Hay una variante muy extendida en Castilla como apellido Hiniesta,,con H..Para concluir decirte que con los apellidos no se puede generalizar en la ortografia,sobre todo en lo epónimos,y mucho menos provocar dolor en la vista,te recomiendo un buen oftalmólogo</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@emilioypepi');comentarReferenciaComentario(this, '#13');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899762" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899762,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899762,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899762">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@andresgomez');comentarReferenciaComentario(this, '#12');return false;">12</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">andresgomez</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:34:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:34 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Todo equipo tiene que tener un modelo de equipo y un modelo de juego. El modelo de equipo del Barcelona, con el que consiguió sus mayores logros, estaba formado por jugadores de la cantera. En su mejor época tenía 8 jugadores de la cantera de titulares indiscutibles y, poco a poco, este modelo se fue difuminando hasta conseguir un equipo de mercenarios, como el R.Madrid. Un ejemplo de ello es Deulofeu, lo dejaron marcharse y ahora hay que volver a comprarlo, siguiendo la práctica de Florentino de que hay que fichar. El jugador de la cantera sale gratis ¡Y eso no vale!</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@andresgomez');comentarReferenciaComentario(this, '#12');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899629" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899629,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899629,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899629">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@emilioypepi');comentarReferenciaComentario(this, '#11');return false;">11</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">emilioypepi</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:41:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:41 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@pintail9.No te parece que el error es tan grande que es más bien un lapsus?.Lo evidente es que tu dolor si es fácil de analizar.Un equipo envejecido,caduco,mantenido en Liga y Champión por arbitrajes aberrantes,al menos esgrime la valentia de criticar lo que te interesa.Pero para criticar no sólo hay que saber ortografia hay que tener una sustancia gris maleable,cosa poco frecuente en forofos muy ortogáficos,pero poco explícitos culturalmente.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@emilioypepi');comentarReferenciaComentario(this, '#11');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899657" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899657,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899657,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899657">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@kubas');comentarReferenciaComentario(this, '#10');return false;">10</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">kubas</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:31:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:31 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Creo que el Barcelona tiene un serio problema existencial, si renueva a Messi tendrá que poner un pastón e hipotecará al Club por unos cuantos años ya que no tendrá money para fichar y si no lo renueva actualmente el equipo sin Messi es una mediania y carece de calidad para estar entre los mejores. Hay que tener en cuenta que en los dos últimos años no ha hecho nada en la Champions que es la competición que da prestigio y dinero, difícil lo tienen Bartomeu y Cía.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@kubas');comentarReferenciaComentario(this, '#10');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899615" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899615,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899615,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899615">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@pintail');comentarReferenciaComentario(this, '#9');return false;">9</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">pintail</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:17:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:17 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@emilioypepi <a rel="nofollow" onclick="ocultaMuestraCapa('comentarios_lectores_referencia_9_1_0');" class="ancla_referencia">#1<span class="referencia" id="comentarios_lectores_referencia_9_1_0" style="display:none"><i class="comentario-cerrar"><span>Cerrar</span></i>El Barsa necesita una remodelación absoluta,como aficionado solo salvaria a Messi.Los demás....Neymar sólo fanrtasia,Súarez cañonero con poca clase y menos velocidad,Hiniesta gracias por los servicios,Busquet sobrevalorado por la prensa,lento y sin gol ni vericalidad,Rakitic buen jugador cuando se le dan galones y sitio, en el Barsa no los ha tenido.Piqué puede quedarse entre titular o suplente.....los demás no merecen ni un comentario</span></a> Haz el favor de volver a la escuela para aprender algo de ortografía!! Ver escrito Iniesta con H da dolor, amén del resto del texto.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@pintail');comentarReferenciaComentario(this, '#9');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899553" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899553,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899553,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899553">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@NoFate');comentarReferenciaComentario(this, '#8');return false;">8</a>
+</span>
+<img class="avatar" alt src="//e02-elmundo.uecdn.es/social/ugc/avatars/004/881/xlarge_4881374.png">
+<div class="autor" itemprop="author">
+<span class="alias">NoFate</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T11:31:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">11:31 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>No nos olvidemos de otro gran cáncer, el dtor deportivo, Robert Fernandez, ex jugador del Valencia, que casualmente ha comprado a su antiguo equipo unos cuantos pufos: André Gomez, Paco Alcacer. Estos, junto a: Turán, Mathieu, Digne deben salir ya.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@NoFate');comentarReferenciaComentario(this, '#8');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899370" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899370,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899370,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899370">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@johnroby');comentarReferenciaComentario(this, '#7');return false;">7</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">johnroby</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T11:21:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">11:21 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@pintail <a rel="nofollow" onclick="ocultaMuestraCapa('comentarios_lectores_referencia_7_2_0');" class="ancla_referencia">#2<span class="referencia" id="comentarios_lectores_referencia_7_2_0" style="display:none"><i class="comentario-cerrar"><span>Cerrar</span></i>Osea que con "Ter Statuen" no hay problema. Yo creo que muy gordo.</span></a> Calla, a ver si te van a leer y lo cambian</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@johnroby');comentarReferenciaComentario(this, '#7');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899314" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899314,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899314,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899314">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Pensativ0');comentarReferenciaComentario(this, '#6');return false;">6</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/social/ugc/avatars/004/801/xlarge_4801636.png">
+<div class="autor" itemprop="author">
+<span class="alias">Pensativ0</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T10:46:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">10:46 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>En el Granada Iniesta tendría las puertas abiertas. Pero quizá a él le gustaría terminar en un equipo grande como el Real Madrid.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Pensativ0');comentarReferenciaComentario(this, '#6');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899127" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899127,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899127,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899127">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+</section>
+<ul id="subNavComentarios">
+<li>
+<a rel="nofollow" class="boton mas" id="botonMas" onclick="ueComments.moreComments(false, 6)">Ver anteriores <i class="icon-abajo_16_d"></i></a>
+</li>
+</ul></div>
+<script type="text/javascript">function ocultaMuestraCapa(divId){if(document.getElementById(divId).style.display=='none')
+{document.getElementById(divId).style.display='block';}
+else{document.getElementById(divId).style.display='none';}};</script>
+</section>
+</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+<h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
+<ul class="list">
+<li><a href="http://www.elmundo.es/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
+<li><a href="http://www.elmundo.es/temas/">Temas</a></li>
+<li><a href="http://www.elmundo.es/economia/bolsa/indices/ibex35_I.IB.html">IBEX 35</a></li>
+<li><a href="http://www.elmundo.es/loterias/euromillones.html">Euromillones</a></li>
+<li><a href="http://www.elmundo.es/horoscopo/">Hor&oacute;scopo Diario</a></li>
+<li><a href="http://www.elmundo.es/mejores-colegios.html">Mejores colegios</a></li>
+</ul>
+<ul class="list">
+<li><a href="http://www.elmundo.es/servicios/">Servicios</a></li>
+<li><a href="http://quiosco.orbyt.es/">Orbyt</a></li>
+<li><a href="http://www.elmundo.es/traductor/">Traductor</a></li>
+<li><a href="http://www.elmundo.es/television/programacion-tv/">Gu&iacute;a TV</a></li>
+<li><a href="http://www.elmundo.es/diccionarios/">Diccionarios</a></li>
+<li><a href="http://www.elmundo.es/tiempo/">El tiempo</a></li>
+<li><a href="http://www.elmundo.es/promociones/">Promociones</a></li>
+<li><a href="http://www.elmundo.es/loterias/">Loter&iacute;a</a></li>
+<li><a href="http://comparador.elmundo.es/">Comparador financiero</a></li>
+<li><a href="http://seguroscoche.elmundo.es/">Comparador seguros</a></li>
+</ul>
+<h4>En vivos</h4>
+<ul class="list">
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43951-rafa-nadal-vs-alexander-zverev-en-vivo-montecarlo/"> Rafa Nadal vs Alexander Zverev, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43886-cska-mosc-baskonia/"> CSKA Moscú vs Baskonia, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43882-fc-schalke-04-ajax/"> Schalke 04 vs Ajax, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43883-krc-genk-celta-de-vigo/"> Genk vs Celta de Vigo, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43884-besiktas-lyon/"> Besiktas vs O. Lyon, en vivo</a>
+</li>
+</ul>
+</section>
+</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-deportes_n_f2_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_f2_58f8ece1e2704ee70d8b4648');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-deportes_n_f3_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_f3_58f8ece1e2704ee70d8b4648');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-deportes_n_si_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_si_58f8ece1e2704ee70d8b4648');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-deportes_n_sd_58f8ece1e2704ee70d8b4648' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_sd_58f8ece1e2704ee70d8b4648');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f8ece1e2704ee70d8b4648"});}
+if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f8ece1e2704ee70d8b4648');}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f8ece1e2704ee70d8b4648').find('.js_socialMedia').RedesSociales({title:"El plan contra la decadencia del Barça",img:"https://jangosto.github.io/api/contents/html/images/2017-04-20-14927082977836.jpg",url:"http://www.elmundo.es/deportes/futbol/2017/04/21/58f8ece1e2704ee70d8b4648.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f8ece1e2704ee70d8b4648').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
+jQuery("#js_58f8ece1e2704ee70d8b4648 .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>

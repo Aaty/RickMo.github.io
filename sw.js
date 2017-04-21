@@ -44,7 +44,7 @@ self.addEventListener('fetch', function(event)
     // ... regex for news
     var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
 
-    var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/[^\/]+.html$", "i");
+    var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
     if (autocoverPattern.test(event.request.url) || newPattern.test(event.request.url)) {
         shellRequest = new Request(siteDomain+"/shell.html");
@@ -135,7 +135,7 @@ self.addEventListener("message", function(event) {
 
 var clean_cache = function (cache_name) {
     var max_num_cached_contents = 5;
-    var cleanable_url_pattern = new RegExp("^"+siteDomain+"\/api\/contents\/[0-9a-f]{24}.html$", "i");
+    var cleanable_url_pattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[0-9a-f]{24}.html$", "i");
 
     caches.open(cache_name).then(function(cache) {
         cache.keys().then(function(keys) {

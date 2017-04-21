@@ -1,0 +1,550 @@
+<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f9d203468aeb8d208b462f"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58f9d203468aeb8d208b462f',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="http://www.elmundo.es/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="madrid"><a title="Madrid" href="http://www.elmundo.es/madrid.html">Madrid</a></li><li data-section="andalucia"><a title="Andalucía" href="http://www.elmundo.es/andalucia.html">Andalucía</a></li><li data-section="baleares"><a title="Baleares" href="http://www.elmundo.es/baleares.html">Baleares</a></li><li data-section="cataluna"><a title="Cataluña" href="http://www.elmundo.es/elmundo/barcelona.html">Cataluña</a></li><li data-section="comunidad-valenciana"><a title="Comunidad Valenciana" href="http://www.elmundo.es/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="pais-vasco"><a title="País Vasco" href="http://www.elmundo.es/pais-vasco.html">País Vasco</a></li></ul>',numComments:'27',rrss:{img:"https://jangosto.github.io/api/contents/html/images/2017-04-21-14927673789299.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<ul><li class="deportes">
+<span><strong>TITULARES</strong><a href="http://www.elmundo.es/television/2017/04/21/58f9f3f7e5fdea1c658b4625.html?cid=ULTHR22001&amp;s_kw=titulares">Seis noticias para seguir informado.</a></span>
+</li></ul>
+</div>
+<script type="text/javascript">
+if (typeof portal == 'undefined') {
+    portal = '';
+}
+var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+
+if (ueAlert == null) {
+    window.addEventListener('cargaUtils', function(){
+        ueAlert = initUeAlerts();
+    });
+}
+
+function initUeAlerts(event) {
+    var pos = 0,
+    lis = [],
+    nlis = 0,
+    timer1 = null,
+    btPlay = null,
+    btStop = null;
+
+    function init() {
+        var alerta_container = document.getElementById("alerta");
+        var cont = alerta_container.getElementsByTagName("ul")[0];
+        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
+        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
+        if(portal == 'portada'){
+            lis = cont.getElementsByTagName("li");
+        } else {
+            lis = cont.getElementsByClassName('urgente');
+        }
+        nlis = lis.length;
+        if (nlis == 0){
+            ueUtils.addClass(alerta_container,'ocultar');
+        } else {
+            ueUtils.addClass(lis[0], "mostrar");
+            ueUtils.addClass(btStop, "ocultar");
+            ueAlert.play();
+                    }
+    }
+
+    var ueAlert = {
+        play: function () {
+            timer1 = setInterval(ueAlert.next, 5000);
+            ueUtils.addClass(btPlay, "ocultar");
+            ueUtils.removeClass(btStop, "ocultar");
+        },
+
+        stop: function () {
+            if (timer1) {
+            clearInterval(timer1);
+            timer1 = null;
+            }
+            ueUtils.addClass(btStop, "ocultar");
+            ueUtils.removeClass(btPlay, "ocultar");
+        },
+
+        next: function () {
+            var nextPos=((pos+1)<nlis)?(pos+1):0;
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        },
+
+        preview: function () {
+            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        }
+    }
+    init();
+    return ueAlert;
+}
+</script>
+<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="http://www.elmundo.es/espana.html">España</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_m_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_m_58f9d203468aeb8d208b462f');});</script></div></div></div><h2 class="kicker"> INVESTIGACIÓN</h2><h1 itemprop="headline" class="js-headline">Anticorrupción releva a los fiscales del 'caso 3%' y pasa el caso a la fiscalía de Cataluña</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li class="author-twitter"><a href="https://twitter.com/angelesescriva" target="_blank"><i class="icon-twitter_14x11_a"></i>ÁNGELES ESCRIVÁ</a></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Madrid</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-21"><time datetime="2017-04-21 13:53:01" class="date" itemprop="dateModified">
+21
+abr.
+2017
+<strong>13:53</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="https://jangosto.github.io/api/contents/html/images/2017-04-21-14927673789299.jpg" class="full-image" itemprop="contentUrl" alt="El nuevo fiscal jefe de Anticorrupción, Manuel Moix."/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>El nuevo fiscal jefe de Anticorrupción, Manuel Moix. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">SERGIO GONZÁLEZ</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_b300x100_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_b300x100_58f9d203468aeb8d208b462f');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58f9d203468aeb8d208b462f"><span class="left"><i class="icon-comments_24x20_a"></i><strong>27 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_r_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58f9d203468aeb8d208b462f');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i>Manuel Moix aduce motivos operativos y un interés por acabar con el argumento de que hay animadversión de Madrid hacia Cataluña</p><p class="summary-lead"><i class="icon-apoyo_16_b"></i>Interrumpe una investigación de más de 10.000 folios en la que varios testigos protegidos han confiado en Bermejo y Grinda</p></div><p>El nuevo fiscal jefe de Anticorrupción, <strong>Manuel Moix</strong>, ha decidido relevar a los fiscales asignados a la investigación del<a href="http://www.elmundo.es/e/cd/cdc-convergencia-democratica-catalunya.html"><em> caso 3%</em></a> y remitir el procedimiento a la fiscalía de Cataluña. Interrumpe de este modo una investigación de más de 10.000 folios dirigida de forma prolija y exhaustiva por los fiscales <strong>Fernando Bermejo</strong> y <strong>José Grinda</strong> y que había logrado arrinconar a hombres de confianza del ex presidente Mas como <strong>Germá Gordó</strong>, actual diputado y ex secretario de Gobierno de la Generalitat de Cataluña.</p><p>Según fuentes de la <strong>Fiscalía Anticorrupción</strong> consultadas por éste periódico, Moix ha tomado esta decisión, -que para ser operativa tendrá que ser ratificada por la comisión Permante del Consejo Fiscal-, por motivos operativos, porque no considera razonable que habiendo fiscales muy competentes en Cataluña, tengan que desplazarse fiscales desde Madrid. Las mismas fuentes sostienen que su objetivo también es descargar de trabajo a unos funcionarios que están inmersos en las investigaciones de una cincuentena de casos. Otro de los motivos del relevo es conferirle mayor protagonismo a la fiscalía de Cataluña y quitar argumentos a quienes sostienen que el envío de representantes del Ministerio Público desde Madrid está fundamentado en una animadversión hacia <strong>Cataluña</strong>.</p><p>El hecho es que en estos momentos hay varias líneas de investigación abiertas. Por una parte, los agentes de la<a href="http://www.elmundo.es/e/gu/guardia-civil.html"> Guardia Civil</a> coordinados por ambos fiscales analizan centenares de documentos recabados en registros realizados, en <strong>Cataluña </strong>y en <strong>Madrid</strong>, en las sedes de las empresas investigadas por financiar de forma presuntamente irregular a Convergencia Democrática. Por otra parte, en el procedimiento hay varios testigos protegidos dispuestos a ampliar sus testimonios sobre las irregularidades detectadas en Convergencia y en sus responsables políticos cuya disposición ha estado muy vinculada a <strong>Bermejo </strong>y a <strong>Grinda</strong>. De modo que no sería descartable que la ausencia de ambos pueda tener consecuencias en el alcance de la investigación.</p><p>Estaba también pendiente la remisión, de nuevo, por parte de juez de El Vendrell,<strong> Josep Bosch</strong>, al <strong>Tribunal Superior de Justicia de Cataluña</strong>, de una exposición razonada sobre <strong>Gordó </strong>solicitando que sea este tribunal el que se haga cargo del procedimiento relativo al hombre de confianza de Mas, dada su condición de diputado y, por lo tanto, de aforado.</p><p>El primer paso en la investigación del<em> caso 3%</em> se dio hace cuatro años, después de que la ex concejal de ERC en Torredembarra (Tarargona), <strong>Montse Gasull,</strong> denunciara lo que consideraba irregularidades en la construcción de un aparcamiento por parte de la empresa Teyco, propiedad de la familia Sumarroca, fundadora de CDC. el consejero delegado de esta firma, Jordi Sumarroca, fue detenido y el juez decidió que había suficiente información como para dar lugar a una pieza separada. Una primera fase, que se sustanció en la llamada operación Petrum, señaló el posible pago de comisiones que, a través del alcalde de Torredembarra,<strong> Daniel Mesegué</strong>, habrían llegado a convergencia Democrática bajo la apariencia de donaciones a las fundaciones del partido, Catdem y Forum.</p><p>El procedimiento se repetía en varios Ayuntamientos y la investigación permitió la detención de Andreu Viloca, el extesorero de <a href="http://www.elmundo.es/e/cd/cdc-convergencia-democratica-catalunya.html">CDC</a>, de<strong> Josep Antoni Rosell</strong>, el ex director general de Infraestructuras de Cataluña y los responsable de las empresa Copisa, Urbaser, Rogasa, Grupo Soler, Tec4 y Oproler. Otra operación posterior, el pasado mes de febrero, la operación Pika, cerraría el círculo entorno a tres empresas públicas que amañaban los contratos en favor del <a href="http://www.elmundo.es/e/cd/cdc-convergencia-democratica-catalunya.html">CDC</a>.</p><p>En las investigaciones aparecía <strong>Andreu Viloca</strong> como el «señor conseguidor» para el que las empresas adjudicatarias de obra pública en Cataluña reservaban el 3%. <strong>Viloca</strong>, según la Fiscalía, es quien «controlaba de forma sistemática los pagos que serían, de confirmarse, sobornos bajo la apariencia de donaciones». Los empresarios se referían a él con nombres supuestos y alias. Del mismo modo que se referían a Gordó, a quien los fiscales Bermejo y Grinda atribuyeron 6 delitos, con nombres distintos al suyo. Ambos recabaron documentos y testimonios que demostrarían que Gordó recibía a los empresarios que aspiraban a adjudicaciones en la Generalitat. Uno de esos testimonios incluso sitúa a Artur Mas en el momento en el que se habla de las comisiones por adjudicaciones y detalla cómo el ex consejero de la Presidencia le manifestó el enfado del Ex presidente por no seguir sus instrucciones. Todo este material es el que tendrán que abordar los fiscales de Cataluña.</p><aside class="apoyos"><h3 class="list-header"><span>Podemos exige la dimisión del fiscal general</span></h3><p>
+Tras conocerse la noticia del relevo de los fiscales, la dirección de Podemos ha pedido la dimisión del fiscal general del Estado, José Manuel Maza, y del fiscal jefe Anticorrupción, Manuel Moix. La diputada y secretaria de Acción Institucional, Gloria Elizo, ha denunciado en el Congreso que tras estas "destituciones" es "imprescindible" ambas dimisiones porque su permanencia en el cargo hace "imposible mantener el crédito de las instituciones democráticas", informa Efe.
+</p><p></p><p>
+Asimismo, Podemos alerta que tras lo sucedido en el caso de Ignacio González parece que se "intenta frenar cualquier tipo de investigación que tenga que ver con la corrupción".
+</p><p></p><p>
+Por otra parte, Podemos ha anunciado que su partido se personará "de forma inmediata" como acusación popular en la <em>operación Lezo</em> que investiga la corrupción en el Canal de Isabel II, ya que tiene información relevante y "estructurada" que aportar sobre "la trama". Elizo no ha querido desvelar qué información tienen. Sólo ha dado esta pista: "Tenemos una composición más amplia y estructurada de lo que es la trama política, económica, financiera y policial y esa contextualización de la trama va a ayudar en la <em>operación Lezo</em>".
+</p></aside><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-espana_n_nata_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58f9d203468aeb8d208b462f');});</script></div><div id='div-gpt-ad-espana_n_natb_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58f9d203468aeb8d208b462f');});</script></div><div id='div-gpt-ad-espana_n_natc_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natc_58f9d203468aeb8d208b462f');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'El conseller de Justicia apadrina un acto junto a ediles imputados', 'http://www.elmundo.es/cataluna/2017/04/02/58dff8b022601d7e2d8b4658.html?cid=MNOT23801&amp;s_kw=el_conseller_de_justicia_apadrina_un_acto_junto_a_ediles_imputados');" href="http://www.elmundo.es/cataluna/2017/04/02/58dff8b022601d7e2d8b4658.html?cid=MNOT23801&amp;s_kw=el_conseller_de_justicia_apadrina_un_acto_junto_a_ediles_imputados">El conseller de Justicia apadrina un acto junto a ediles imputados</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'Rivera ve a CDC &quot;inhabilitada&quot; para gobernar y considera &quot;sensato&quot; unas elecciones', 'http://www.elmundo.es/cataluna/2017/03/24/58d4fa0bca47417a1f8b4591.html?cid=MNOT23801&amp;s_kw=rivera_ve_a_cdc_inhabilitada_para_gobernar_y_considera_sensato_unas_elecciones');" href="http://www.elmundo.es/cataluna/2017/03/24/58d4fa0bca47417a1f8b4591.html?cid=MNOT23801&amp;s_kw=rivera_ve_a_cdc_inhabilitada_para_gobernar_y_considera_sensato_unas_elecciones">Rivera ve a CDC "inhabilitada" para gobernar y considera "sensato" unas elecciones</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'García-Margallo advierte a Artur Mas: &quot;Cuando uno se salta la ley acaba como Venezuela&quot;', 'http://www.elmundo.es/espana/2017/03/21/58d175ab46163f41528b460f.html?cid=MNOT23801&amp;s_kw=garcia_margallo_advierte_a_artur_mas_cuando_uno_se_salta_la_ley_acaba_como_venezuela');" href="http://www.elmundo.es/espana/2017/03/21/58d175ab46163f41528b460f.html?cid=MNOT23801&amp;s_kw=garcia_margallo_advierte_a_artur_mas_cuando_uno_se_salta_la_ley_acaba_como_venezuela">García-Margallo advierte a Artur Mas: "Cuando uno se salta la ley acaba como Venezuela"</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'La Fiscalía cerca al Govern por el censo exterior', 'http://www.elmundo.es/cataluna/2017/04/04/58e29ea722601d18058b45a1.html?cid=MNOT23801&amp;s_kw=la_fiscalia_cerca_al_govern_por_el_censo_exterior');" href="http://www.elmundo.es/cataluna/2017/04/04/58e29ea722601d18058b45a1.html?cid=MNOT23801&amp;s_kw=la_fiscalia_cerca_al_govern_por_el_censo_exterior">La Fiscalía cerca al Govern por el censo exterior</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'El Govern rescata a Artur Mas para divulgar el referéndum', 'http://www.elmundo.es/cataluna/2017/03/22/58d18d3e268e3e810e8b4589.html?cid=MNOT23801&amp;s_kw=el_govern_rescata_a_artur_mas_para_divulgar_el_referendum');" href="http://www.elmundo.es/cataluna/2017/03/22/58d18d3e268e3e810e8b4589.html?cid=MNOT23801&amp;s_kw=el_govern_rescata_a_artur_mas_para_divulgar_el_referendum">El Govern rescata a Artur Mas para divulgar el referéndum</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="http://www.elmundo.es/catalunya.html" rel="tag">Cataluña</a></li><li><a href="http://www.elmundo.es/madrid.html" rel="tag">Madrid</a></li><li><a href="http://www.elmundo.es/e/ar/artur-mas.html" rel="tag">Artur Mas</a></li><li><a href="http://www.elmundo.es/e/cd/cdc-convergencia-democratica-catalunya.html" rel="tag">CDC</a></li><li><a href="http://www.elmundo.es/e/er/erc-esquerra-republicana.html" rel="tag">ERC</a></li><li><a href="http://www.elmundo.es/e/gu/guardia-civil.html" rel="tag">Guardia Civil</a></li><li><a href="http://www.elmundo.es/ciencia-y-salud/salud.html" rel="tag">salud</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rb_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58f9d203468aeb8d208b462f');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="http://www.elmundo.es/espana/2017/04/21/58f9d203468aeb8d208b462f.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/espana/2017/04/21/58f9d203468aeb8d208b462f.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/espana/2017/04/21/58f9d203468aeb8d208b462f.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_mb_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_mb_58f9d203468aeb8d208b462f');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rc_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58f9d203468aeb8d208b462f');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:27" itemprop="interactionCount">27</strong> Comentarios</h3>
+<article>
+<header>
+<span>5</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">vlgspain51</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T11:51:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">11:51 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Todo esto "huele muy mal".Este señor ya ha demostrado que de "anticorrupción", muy poco.Se van estrechando los cercos y en Cataluña hay varias "bombas atómicas" que llegan a Madrid también y en concreto a "ciertas instituciones".Ya veremos si los pujoles (es lo que parece y es vergonzoso)siguen calladitos y por ende "premiaditos de momento y en la calle".</p>
+</div>
+</article>
+<article>
+<header>
+<span>3</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">aleluya</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T11:48:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">11:48 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Como diría, o mejor dicho, cantaría Raphael: "Escándalo, es un escándalo, escándalo, es un escandaloooo..."</p>
+</div>
+</article>
+<div class="comments-tool js-botonComentarios-58f9d203468aeb8d208b462f">
+<span>Ver <strong>27</strong> comentarios
+<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
+<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</span>
+</div>
+</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Anticorrupción releva a los fiscales del &#039;caso 3%&#039; y pasa el caso a la fiscalía de Cataluña'</a></div>
+<script type="text/javascript">var registroCookie=false;</script>
+<section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:27" itemprop="interactionCount">27</strong> Comentarios</h3>
+<form name="formulario_paginar_comentarios" id="formulario_paginar_comentarios" method="post">
+<input type="hidden" name="noticia" value="1415286"/>
+<input type="hidden" name="portal" value="R"/>
+<input type="hidden" name="pagina" value="0"/>
+</form>
+<div class="right-panel login-comentar js-comentar">
+<p id="navTopComentarios" class="js-cajaLogin"><button class="registro-login-button js-loginClick" ue-attr-csp="1403">Iniciar sesión para participar</button></p>
+<div id="hacer-comentario" class="js-cajaComentario no-visible ">
+<form class="comentar" name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
+<input type="hidden" name="opcion" value="1"/>
+<input type="hidden" name="noticia" value="1415286"/>
+<input type="hidden" name="portal" value="R"/>
+<textarea rows="1" name="texto" id="formulario_comentar_comentarios_texto" placeholder="Escriba aqu&iacute; su comentario" required="required"></textarea>
+<input type="button" onclick="javascript:enviarComentario()" class="boton" id="enviar" value="PUBLICAR" name="enviar"/>
+</form>
+</div>
+</div>
+<div id="listado_comentarios"><nav>
+<ul>
+<li class="seleccionado"><a rel="nofollow" href="#comentarios" onclick="javascript:return false;" title="Ver todos los mensajes">Todos</a></li>
+<li class="mejor-valorados"><a rel="nofollow" href="#comentarios" onclick="javascript:pasarPaginaComentariosMejorValorados(1);return false;" title="Ver los mensajes más valorados">M&aacute;s valorados</a></li>
+</ul>
+</nav>
+<section id="comentarios-usuarios" class="comentarios-usuarios">
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@losutb');comentarReferenciaComentario(this, '#27');return false;">27</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">losutb</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T14:07:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">14:07 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Las ramas de la trama del 3% son muy alargadas, alargadísimas.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@losutb');comentarReferenciaComentario(this, '#27');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10900009" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10900009,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10900009,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10900009">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Tiveylan');comentarReferenciaComentario(this, '#26');return false;">26</a>
+</span>
+<img class="avatar" alt src="//e02-elmundo.uecdn.es/social/ugc/avatars/005/619/xlarge_5619383.png">
+<div class="autor" itemprop="author">
+<span class="alias">Tiveylan</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T14:01:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">14:01 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Que grande fuiste, Francisco Franco Bahamonde, que poco ha durado tu singladura, y cuanto necesitamos de tí los españoles ..</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Tiveylan');comentarReferenciaComentario(this, '#26');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899988" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899988,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899988,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899988">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@nachoara');comentarReferenciaComentario(this, '#25');return false;">25</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">nachoara</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:59:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:59 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Mariano....todo lo haces mal...eres una nulidad nihilista absoluta..</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@nachoara');comentarReferenciaComentario(this, '#25');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899981" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899981,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899981,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899981">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Tiveylan');comentarReferenciaComentario(this, '#24');return false;">24</a>
+</span>
+<img class="avatar" alt src="//e02-elmundo.uecdn.es/social/ugc/avatars/005/619/xlarge_5619383.png">
+<div class="autor" itemprop="author">
+<span class="alias">Tiveylan</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T14:04:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">14:04 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>La pregunta es, ¿quien investiga la corrupción de Anticorrupción? ..</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Tiveylan');comentarReferenciaComentario(this, '#24');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899994" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899994,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899994,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899994">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Samug');comentarReferenciaComentario(this, '#23');return false;">23</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/social/ugc/avatars/003/629/xlarge_3629443.jpg">
+<div class="autor" itemprop="author">
+<span class="alias">Samug</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:53:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:53 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Hace unas semanas un confidencial filtró una conversación privada con un ex-jefe del estado como protagonista. La cinta era poca cosa, pero indicaba que quien la tenía, tenía más y mucho más gordo. Fue un aviso. Ahora se demuestra que el aviso ha funcionado. Así actúa el muy honorable padrino de la masía.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Samug');comentarReferenciaComentario(this, '#23');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899961" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899961,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899961,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899961">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Serdna');comentarReferenciaComentario(this, '#22');return false;">22</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">Serdna</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:57:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:57 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>En Cataluña solo pueden haber en la política, judicatura, iglesia, funcionariado gente catalana de pro y "Xarnegos" conversos y asimilados.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Serdna');comentarReferenciaComentario(this, '#22');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899976" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899976,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899976,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899976">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Master_Chief');comentarReferenciaComentario(this, '#21');return false;">21</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">Master_Chief</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:45:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:45 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Esto me parece inaceptable por completo. Estoy empezando a pensar que hay que echar al PP del poder sea como sea, se le ha ido la cabeza.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Master_Chief');comentarReferenciaComentario(this, '#21');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899926" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899926,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899926,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899926">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Serdna');comentarReferenciaComentario(this, '#20');return false;">20</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">Serdna</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:35:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:35 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@oIo <a rel="nofollow" onclick="ocultaMuestraCapa('comentarios_lectores_referencia_20_18_0');" class="ancla_referencia">#18<span class="referencia" id="comentarios_lectores_referencia_20_18_0" style="display:none"><i class="comentario-cerrar"><span>Cerrar</span></i>@ coletero # 14 No hay lo que hay que tener para votar a Podemos . Ni para salir a la calle y exigir justicia . El español es cobarde y se amilana facilmente ante quien le somete Ellos lo saben y se aprovechan .</span></a>. Lo de cobarde estoy seguro que lo dice por UD y sus allegados, pues siempre se dice que hace falta serlo, para conocer a otro y si vota a Podemos, se cierra el circulo.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Serdna');comentarReferenciaComentario(this, '#20');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899877" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899877,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899877,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899877">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Tiveylan');comentarReferenciaComentario(this, '#19');return false;">19</a>
+</span>
+<img class="avatar" alt src="//e02-elmundo.uecdn.es/social/ugc/avatars/005/619/xlarge_5619383.png">
+<div class="autor" itemprop="author">
+<span class="alias">Tiveylan</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:09:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:09 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Pero que rehijos de la gran putisima son !!!!!</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Tiveylan');comentarReferenciaComentario(this, '#19');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899786" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899786,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899786,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899786">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@oIo');comentarReferenciaComentario(this, '#18');return false;">18</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">oIo</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:56:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:56 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@coletero <a rel="nofollow" onclick="ocultaMuestraCapa('comentarios_lectores_referencia_18_14_0');" class="ancla_referencia">#14<span class="referencia" id="comentarios_lectores_referencia_18_14_0" style="display:none"><i class="comentario-cerrar"><span>Cerrar</span></i>Puta vergüenza!!! Al final tendremos que votar a Podemos para que todo esto reviente de una vez! Aún a riesgo de sumir a España en una tiniebla oscura con Podemos y un PSOE más podemita que el Podemos, la sensación de no poder acabar con esto es asfixiante!</span></a> No hay lo que hay que tener para votar a Podemos . Ni para salir a la calle y exigir justicia . El español es cobarde y se amilana facilmente ante quien le somete Ellos lo saben y se aprovechan .</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@oIo');comentarReferenciaComentario(this, '#18');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899731" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899731,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899731,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899731">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+</section>
+<ul id="subNavComentarios">
+<li>
+<a rel="nofollow" class="boton mas" id="botonMas" onclick="ueComments.moreComments(false, 18)">Ver anteriores <i class="icon-abajo_16_d"></i></a>
+</li>
+</ul></div>
+<script type="text/javascript">function ocultaMuestraCapa(divId){if(document.getElementById(divId).style.display=='none')
+{document.getElementById(divId).style.display='block';}
+else{document.getElementById(divId).style.display='none';}};</script>
+</section>
+</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+<h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
+<ul class="list">
+<li><a href="http://www.elmundo.es/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
+<li><a href="http://www.elmundo.es/temas/">Temas</a></li>
+<li><a href="http://www.elmundo.es/economia/bolsa/indices/ibex35_I.IB.html">IBEX 35</a></li>
+<li><a href="http://www.elmundo.es/loterias/euromillones.html">Euromillones</a></li>
+<li><a href="http://www.elmundo.es/horoscopo/">Hor&oacute;scopo Diario</a></li>
+<li><a href="http://www.elmundo.es/mejores-colegios.html">Mejores colegios</a></li>
+</ul>
+<ul class="list">
+<li><a href="http://www.elmundo.es/servicios/">Servicios</a></li>
+<li><a href="http://quiosco.orbyt.es/">Orbyt</a></li>
+<li><a href="http://www.elmundo.es/traductor/">Traductor</a></li>
+<li><a href="http://www.elmundo.es/television/programacion-tv/">Gu&iacute;a TV</a></li>
+<li><a href="http://www.elmundo.es/diccionarios/">Diccionarios</a></li>
+<li><a href="http://www.elmundo.es/tiempo/">El tiempo</a></li>
+<li><a href="http://www.elmundo.es/promociones/">Promociones</a></li>
+<li><a href="http://www.elmundo.es/loterias/">Loter&iacute;a</a></li>
+<li><a href="http://comparador.elmundo.es/">Comparador financiero</a></li>
+<li><a href="http://seguroscoche.elmundo.es/">Comparador seguros</a></li>
+</ul>
+<h4>En vivos</h4>
+<ul class="list">
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43951-rafa-nadal-vs-alexander-zverev-en-vivo-montecarlo/"> Rafa Nadal vs Alexander Zverev, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43886-cska-mosc-baskonia/"> CSKA Moscú vs Baskonia, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43882-fc-schalke-04-ajax/"> Schalke 04 vs Ajax, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43883-krc-genk-celta-de-vigo/"> Genk vs Celta de Vigo, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43884-besiktas-lyon/"> Besiktas vs O. Lyon, en vivo</a>
+</li>
+</ul>
+</section>
+</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-espana_n_f2_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f2_58f9d203468aeb8d208b462f');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-espana_n_f3_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f3_58f9d203468aeb8d208b462f');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-espana_n_si_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_si_58f9d203468aeb8d208b462f');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-espana_n_sd_58f9d203468aeb8d208b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_sd_58f9d203468aeb8d208b462f');});</script></div></div></div></div><script type="text/javascript">
+
+        jQuery(function() {
+
+                if (Comentarios) {
+                    window.Comments = new Comentarios({
+                        botonesDesplegar : '.js-botonComentarios',
+                        newsId: "58f9d203468aeb8d208b462f"
+                    });
+                }
+
+                if (typeof inicializarComentarios === 'function') {
+                    inicializarComentarios(1, '#js_58f9d203468aeb8d208b462f');
+                }
+
+                if (typeof jQuery.fn.RedesSociales === 'function') {
+                    jQuery('#js_58f9d203468aeb8d208b462f').find('.js_socialMedia').RedesSociales({
+                        title: "Anticorrupción releva a los fiscales del \'caso 3%\' y pasa el caso a la fiscalía de Cataluña",
+                        img:"https://jangosto.github.io/api/contents/html/images/2017-04-21-14927673789299.jpg",
+                        url: "http://www.elmundo.es/espana/2017/04/21/58f9d203468aeb8d208b462f.html",
+                        summary :"",
+                        viaTwitter: 'elmundoes',
+                        urlCorreo: "http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                        sufijoAnalitica: '_1'
+                    });
+                }
+
+                if (typeof jQuery.fn.ElementoFijo === 'function') {
+                    jQuery('#js_58f9d203468aeb8d208b462f').find('.js_fixed').ElementoFijo({
+                        elementosAnteriores: ['.nav-container', '.breadcrumbs '],
+                        elementoDesdeFixed: '.content',
+                        elementoHastaFixed: '.end-fixed',
+                        minWidthFijo: 768
+                    });
+                }
+
+                jQuery("#js_58f9d203468aeb8d208b462f .comentarios.aside-comments").find(".texto-comentario p").map(
+                        function(){
+                            var textComment = jQuery(this).parent(".texto-comentario");
+                            var size = textComment.css("max-height").split("px")[0];
+                            if( this.offsetHeight > size ){
+                                textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");
+                            }
+                        }
+                )
+            });
+            function cargarComentario(event, element){
+                event.preventDefault();
+                jQuery(element).parent(".texto-comentario").css("max-height","none");
+                jQuery(element).remove();
+            }
+    </script></main>

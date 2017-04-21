@@ -1,0 +1,496 @@
+<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f9100522601d3e3e8b4599"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Madrid",portal:"elmundo",ct:"n",model:"madrid-home",contentId:'58f9100522601d3e3e8b4599',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="España" href="http://www.elmundo.es/espana.html"><span itemprop="title">España</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level"  id="bread-2"><a itemprop="url" title="Madrid" href="http://www.elmundo.es/madrid.html"><span itemprop="title">Madrid</span></a></li></ul>',children:'',numComments:'10',rrss:{img:"https://jangosto.github.io/api/contents/html/images/2017-04-20-14927175246616.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<ul><li class="deportes">
+<span><strong>TITULARES</strong><a href="http://www.elmundo.es/television/2017/04/21/58f9f3f7e5fdea1c658b4625.html?cid=ULTHR22001&amp;s_kw=titulares">Seis noticias para seguir informado.</a></span>
+</li></ul>
+</div>
+<script type="text/javascript">
+if (typeof portal == 'undefined') {
+    portal = '';
+}
+var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+
+if (ueAlert == null) {
+    window.addEventListener('cargaUtils', function(){
+        ueAlert = initUeAlerts();
+    });
+}
+
+function initUeAlerts(event) {
+    var pos = 0,
+    lis = [],
+    nlis = 0,
+    timer1 = null,
+    btPlay = null,
+    btStop = null;
+
+    function init() {
+        var alerta_container = document.getElementById("alerta");
+        var cont = alerta_container.getElementsByTagName("ul")[0];
+        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
+        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
+        if(portal == 'portada'){
+            lis = cont.getElementsByTagName("li");
+        } else {
+            lis = cont.getElementsByClassName('urgente');
+        }
+        nlis = lis.length;
+        if (nlis == 0){
+            ueUtils.addClass(alerta_container,'ocultar');
+        } else {
+            ueUtils.addClass(lis[0], "mostrar");
+            ueUtils.addClass(btStop, "ocultar");
+            ueAlert.play();
+                    }
+    }
+
+    var ueAlert = {
+        play: function () {
+            timer1 = setInterval(ueAlert.next, 5000);
+            ueUtils.addClass(btPlay, "ocultar");
+            ueUtils.removeClass(btStop, "ocultar");
+        },
+
+        stop: function () {
+            if (timer1) {
+            clearInterval(timer1);
+            timer1 = null;
+            }
+            ueUtils.addClass(btStop, "ocultar");
+            ueUtils.removeClass(btPlay, "ocultar");
+        },
+
+        next: function () {
+            var nextPos=((pos+1)<nlis)?(pos+1):0;
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        },
+
+        preview: function () {
+            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        }
+    }
+    init();
+    return ueAlert;
+}
+</script>
+<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="http://www.elmundo.es/madrid.html">Madrid</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-madrid_n_m_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_m_58f9100522601d3e3e8b4599');});</script></div></div></div><h2 class="kicker"><a href="/madrid.html">MADRID</a></h2><span class="kicker">Memoria histórica</span><h1 itemprop="headline" class="js-headline">Piden cambiar la calle del General Yagüe de Madrid por Humor de Gila</h1><div class="row content sharing-tools"><ul><li class="signatures-container"></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-21"><time datetime="2017-04-21 13:35:45" class="date" itemprop="dateModified">
+21
+abr.
+2017
+<strong>13:35</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="https://jangosto.github.io/api/contents/html/images/2017-04-20-14927175246616.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Gila en la entrega de los premios TP de 1996. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">MARINA DE MIGUEL</span></figcaption></figure><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i>Una vecina lanza una campaña en change.org y consigue 4.400 firmas</p><p class="summary-lead"><i class="icon-apoyo_16_b"></i>El PSOE afirma que llevará la idea como enmienda al Comisionado de Memoria Histórica</p></div><p>Llenar las calles de humor en lugar de los recuerdos franquistas. Esa es la pretensión de las casi <strong>4.400 personas</strong> que han firmado hasta el momento el cambio de nombre de la calle del General Yagüe por la de <strong>«Humor de Gila»</strong> en la plataforma digital change.org . </p><p>La iniciativa fue puesta en marcha por Estrella Caso en agosto del año pasado. La solicitante descubrió que las tropas del <strong>General Yagüe</strong> estuvieron a punto de fusilar a Miguel Gila, el humorista más conocido por su apellido, en diciembre de 1938.</p><p>Hasta los oídos de Caso llegó la información de que una asociación de Badajoz había pedido a la alcaldesa de Madrid, Manuela Carmena, que le cambiase el nombre a la calle del general franquista ya que fueron sus hombres los encargados de llevar a cabo la conocida como <strong>«matanza de Badajoz»</strong>. La encargada de la petición pensó entonces que «sería genial cambiar la calle de Yagüe por el de Gila, al que casi matan los hombres del militar». </p><p>En ese momento se puso en contacto con el Comisionado de Memoria Histórica del Ayuntamiento de Madrid para hacerles llegar su petición. «Cuando vi que la página llevaba <strong>1.000 firmas</strong> me di cuenta de que había mucha gente interesada en ponerle una calle a Gila». </p><p>Según explica, la presidenta del órgano, Paca Sahuquillo, le dijo en un primer momento que la intención era renombrar la calle como <strong>«San Germán»</strong>, que ya cuenta con una iglesia en la barriada. «Con todos mis respetos al santo, pero Gila nació aquí mientras que San Germán era de Constantinopla», asegura Caso. </p><p>Finalmente, hace dos días hablaron con ella la concejala de cultura del PSOE, Mar Espinar, y el concejal socialista del distrito de Tetuán, para decirle que «les gustaba la idea», afirma Caso. Espinar ha explicado que su intención es presentar una enmienda con este cambio a la entidad que preside Sahuquillo para que valore si introducen el «Humor de Gila» dentro del callejero madrileño. </p><p>La concejala afirmó que en ningún caso se lo han planteado a Sahuquillo, también del PSOE, porque «no queremos influir en las decisiones del Comisionado».</p><p>Caso ve en esta iniciativa una oportunidad de reivindicar el humor: «En estos tiempos que corren, con tanta Fiscalía de por medio, es una buena forma de realzar la risa y la figura de un madrileño».</p><p>La impulsora de esta idea apunta que «además, Gila nació en el <strong>barrio de Villavistas</strong>, que pertenece a Tetuán, aunque luego fuese criado por sus abuelos en Chamberí». Caso se proclama como «una gran fan» del humorista y de toda su obra.</p><p>Como homenaje, utiliza la página web el mundo de gila para subir documentos del artista, desde viñetas hasta datos de su vida. El cambio de nombre a favor del también dibujante de historietas está apoyado por su gremio. Distintos artistas gráficos han realizado 27 viñetas con frases de Gila para pedir que se le reconozca con una calle. Con la conocida frase «¿está el enemigo? Que se ponga», los dibujantes han querido reivindicar la figura del cómico. </p><p>Grandes nombres del humor español se han querido sumar a el cambio propuesto por Caso. Es el ejemplo de Forges y de los caricaturistas de este periódico Gallego & Rey, que desde el Instituto Quevedo del Humor le han echo llegar su apoyo.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-madrid_n_nata_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_nata_58f9100522601d3e3e8b4599');});</script></div><div id='div-gpt-ad-madrid_n_natb_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_natb_58f9100522601d3e3e8b4599');});</script></div><div id='div-gpt-ad-madrid_n_natc_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_natc_58f9100522601d3e3e8b4599');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'El PSOE a Carmena: &#039;No podemos perder el tiempo con crisis internas&#039;', 'http://www.elmundo.es/madrid/2017/04/03/58e149cde2704eaf278b4621.html?cid=MNOT23801&amp;s_kw=el_psoe_a_carmena_no_podemos_perder_el_tiempo_con_crisis_internas');" href="http://www.elmundo.es/madrid/2017/04/03/58e149cde2704eaf278b4621.html?cid=MNOT23801&amp;s_kw=el_psoe_a_carmena_no_podemos_perder_el_tiempo_con_crisis_internas">El PSOE a Carmena: 'No podemos perder el tiempo con crisis internas'</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'Carmena ejercerá como concejal de Cultura durante &quot;tres o cuatro meses&quot;', 'http://www.elmundo.es/madrid/2017/03/28/58da2480268e3e625c8b49b8.html?cid=MNOT23801&amp;s_kw=carmena_ejercera_como_concejal_de_cultura_durante_tres_o_cuatro_meses');" href="http://www.elmundo.es/madrid/2017/03/28/58da2480268e3e625c8b49b8.html?cid=MNOT23801&amp;s_kw=carmena_ejercera_como_concejal_de_cultura_durante_tres_o_cuatro_meses">Carmena ejercerá como concejal de Cultura durante "tres o cuatro meses"</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'El PSOE complica el &#039;sudoku&#039; de Carmena para reorganizar su equipo', 'http://www.elmundo.es/madrid/2017/03/30/58dc07ece5fdead81e8b4615.html?cid=MNOT23801&amp;s_kw=el_psoe_complica_el_sudoku_de_carmena_para_reorganizar_su_equipo');" href="http://www.elmundo.es/madrid/2017/03/30/58dc07ece5fdead81e8b4615.html?cid=MNOT23801&amp;s_kw=el_psoe_complica_el_sudoku_de_carmena_para_reorganizar_su_equipo">El PSOE complica el 'sudoku' de Carmena para reorganizar su equipo</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'Ángel Sánchez: &quot;Con Santa Coloma triunfas o fracasas, no hay otra opción&quot;', 'http://www.elmundo.es/cultura/toros/2017/03/30/58da98fee2704ef7628b4624.html?cid=MNOT23801&amp;s_kw=angel_sanchez_con_santa_coloma_triunfas_o_fracasas_no_hay_otra_opcion');" href="http://www.elmundo.es/cultura/toros/2017/03/30/58da98fee2704ef7628b4624.html?cid=MNOT23801&amp;s_kw=angel_sanchez_con_santa_coloma_triunfas_o_fracasas_no_hay_otra_opcion">Ángel Sánchez: "Con Santa Coloma triunfas o fracasas, no hay otra opción"</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'Madrid, un chollo inmobiliario para las grandes fortunas mundiales', 'http://www.elmundo.es/economia/vivienda/2017/03/30/58dbd14646163f107f8b4599.html?cid=MNOT23801&amp;s_kw=madrid_un_chollo_inmobiliario_para_las_grandes_fortunas_mundiales');" href="http://www.elmundo.es/economia/vivienda/2017/03/30/58dbd14646163f107f8b4599.html?cid=MNOT23801&amp;s_kw=madrid_un_chollo_inmobiliario_para_las_grandes_fortunas_mundiales">Madrid, un chollo inmobiliario para las grandes fortunas mundiales</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="http://www.elmundo.es/madrid.html" rel="tag">Madrid</a></li><li><a href="http://www.elmundo.es/t/me/memoria-historica.html" rel="tag">Memoria histórica</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-madrid_n_rb_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_rb_58f9100522601d3e3e8b4599');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="http://www.elmundo.es/madrid/2017/04/21/58f9100522601d3e3e8b4599.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/madrid/2017/04/21/58f9100522601d3e3e8b4599.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="http://www.elmundo.es/madrid/2017/04/21/58f9100522601d3e3e8b4599.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-madrid_n_mb_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_mb_58f9100522601d3e3e8b4599');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-madrid_n_rc_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_rc_58f9100522601d3e3e8b4599');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:10" itemprop="interactionCount">10</strong> Comentarios</h3>
+<article>
+<header>
+<span>1</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">mmmh</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T11:52:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">11:52 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Me gustaría que Carmena saliera a la calle y preguntara a 100 madrileños "¿A qué le suena General Yagüe?" Estoy seguro de que las cien personas contestarían: "Eso es una calle". Las palabras adquieren el significado que les otorga su uso. Pero claro, esas consideraciones lingüísticas no están al alcance de nuestra ignorante clase política. Pero al margen de esto, Gila se merece una calle como otros magníficos humoristas españoles de izquierdas y de derechas.</p>
+</div>
+</article>
+<article>
+<header>
+<span>6</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">db105</a>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:38:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:38 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Y si le quieren poner una calle a Gila, por qué no llamarla "Miguel Gila", o "Gila" a secas, en vez de "Humor de Gila". Igual que la calle Velazquez se llama así, no "Pinturas de Velazquez".</p>
+</div>
+</article>
+<div class="comments-tool js-botonComentarios-58f9100522601d3e3e8b4599">
+<span>Ver <strong>10</strong> comentarios
+<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
+<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</span>
+</div>
+</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Piden cambiar la calle del General Yagüe de Madrid por Humor de Gila'</a></div>
+<script type="text/javascript">var registroCookie=false;</script>
+<section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:10" itemprop="interactionCount">10</strong> Comentarios</h3>
+<form name="formulario_paginar_comentarios" id="formulario_paginar_comentarios" method="post">
+<input type="hidden" name="noticia" value="1415170"/>
+<input type="hidden" name="portal" value="R"/>
+<input type="hidden" name="pagina" value="0"/>
+</form>
+<div class="right-panel login-comentar js-comentar">
+<p id="navTopComentarios" class="js-cajaLogin"><button class="registro-login-button js-loginClick" ue-attr-csp="1403">Iniciar sesión para participar</button></p>
+<div id="hacer-comentario" class="js-cajaComentario no-visible ">
+<form class="comentar" name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
+<input type="hidden" name="opcion" value="1"/>
+<input type="hidden" name="noticia" value="1415170"/>
+<input type="hidden" name="portal" value="R"/>
+<textarea rows="1" name="texto" id="formulario_comentar_comentarios_texto" placeholder="Escriba aqu&iacute; su comentario" required="required"></textarea>
+<input type="button" onclick="javascript:enviarComentario()" class="boton" id="enviar" value="PUBLICAR" name="enviar"/>
+</form>
+</div>
+</div>
+<div id="listado_comentarios"><nav>
+<ul>
+<li class="seleccionado"><a rel="nofollow" href="#comentarios" onclick="javascript:return false;" title="Ver todos los mensajes">Todos</a></li>
+<li class="mejor-valorados"><a rel="nofollow" href="#comentarios" onclick="javascript:pasarPaginaComentariosMejorValorados(1);return false;" title="Ver los mensajes más valorados">M&aacute;s valorados</a></li>
+</ul>
+</nav>
+<section id="comentarios-usuarios" class="comentarios-usuarios">
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Bookface');comentarReferenciaComentario(this, '#10');return false;">10</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">Bookface</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:11:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:11 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>¿Quien era "Gila"?</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Bookface');comentarReferenciaComentario(this, '#10');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899791" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899791,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899791,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899791">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@sanjoaner');comentarReferenciaComentario(this, '#9');return false;">9</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">sanjoaner</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:07:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:07 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Ya está bien de cambiar nombres de calles, avenidas o plazas, la aplicación de nombres como el del señor Miguel Gila u otros deben aplicarse a nuevas vías de circulación, bien sean de personas o de vehículos.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@sanjoaner');comentarReferenciaComentario(this, '#9');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899778" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899778,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899778,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899778">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Steve');comentarReferenciaComentario(this, '#8');return false;">8</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">Steve</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T13:04:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">13:04 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Pesaítos... esta izquierda hispana sigue anclada en el franquismo.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@Steve');comentarReferenciaComentario(this, '#8');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899761" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899761,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899761,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899761">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@SR_LOPEZ');comentarReferenciaComentario(this, '#7');return false;">7</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">SR_LOPEZ</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:48:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:48 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>¿Qué es esa tontería de "humor de Gila"? que ridiculez, si quieren dedicarle una calle a Gila que se llama calle de Miguel Gila, vamos digo yo. Por cierto el barrio se llama Bellas Vistas, no Villavistas.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@SR_LOPEZ');comentarReferenciaComentario(this, '#7');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899696" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899696,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899696,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899696">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@db105');comentarReferenciaComentario(this, '#6');return false;">6</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">db105</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:38:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:38 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Y si le quieren poner una calle a Gila, por qué no llamarla "Miguel Gila", o "Gila" a secas, en vez de "Humor de Gila". Igual que la calle Velazquez se llama así, no "Pinturas de Velazquez".</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@db105');comentarReferenciaComentario(this, '#6');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899646" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899646,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899646,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899646">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@mmmh');comentarReferenciaComentario(this, '#5');return false;">5</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">mmmh</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:36:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:36 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@apgs78000 <a rel="nofollow" onclick="ocultaMuestraCapa('comentarios_lectores_referencia_5_3_0');" class="ancla_referencia">#3<span class="referencia" id="comentarios_lectores_referencia_5_3_0" style="display:none"><i class="comentario-cerrar"><span>Cerrar</span></i>@ mmmh # 1 si a usted no le importa nada este señor,.que mas le da que le cambien e. nombre a la calle,,</span></a> Lo que me importa es que los políticos se dediquen a gilip.lleces para entretener al personal.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@mmmh');comentarReferenciaComentario(this, '#5');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899644" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899644,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899644,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899644">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@rusiapedrop');comentarReferenciaComentario(this, '#4');return false;">4</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">rusiapedrop</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:29:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:29 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>señores dirigentes cumplan con la ley de memoria histórica de una vez</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@rusiapedrop');comentarReferenciaComentario(this, '#4');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899603" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899603,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899603,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899603">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@apgs78000');comentarReferenciaComentario(this, '#3');return false;">3</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">apgs78000</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:11:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:11 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>@mmmh <a rel="nofollow" onclick="ocultaMuestraCapa('comentarios_lectores_referencia_3_1_0');" class="ancla_referencia">#1<span class="referencia" id="comentarios_lectores_referencia_3_1_0" style="display:none"><i class="comentario-cerrar"><span>Cerrar</span></i>Me gustaría que Carmena saliera a la calle y preguntara a 100 madrileños "¿A qué le suena General Yagüe?" Estoy seguro de que las cien personas contestarían: "Eso es una calle". Las palabras adquieren el significado que les otorga su uso. Pero claro, esas consideraciones lingüísticas no están al alcance de nuestra ignorante clase política. Pero al margen de esto, Gila se merece una calle como otros magníficos humoristas españoles de izquierdas y de derechas.</span></a> si a usted no le importa nada este señor,.que mas le da que le cambien e. nombre a la calle,,</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@apgs78000');comentarReferenciaComentario(this, '#3');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899528" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899528,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899528,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899528">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@farix');comentarReferenciaComentario(this, '#2');return false;">2</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">farix</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T12:07:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">12:07 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Por una vez, y sin que sirva de precedente, estoy de acuerdo con la gente de Podemos. El general Yagë utilizo sistematicamente técnicas de terror para conseguir sus objetivos militares, entre ellos utilizar tropas moras que mataron y violaron a numerosas mujeres españolas. Por todo ello, deberia ser conseiderado un genocida que no merece ningún tipo de recuerdo conmemorativo, y mucho menos el nombre de una calle.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@farix');comentarReferenciaComentario(this, '#2');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899519" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899519,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899519,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899519">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@mmmh');comentarReferenciaComentario(this, '#1');return false;">1</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">mmmh</span>
+</div>
+<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T11:52:00+01:00">
+<span class="fecha">21/04/2017</span>
+<span class="hora">11:52 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Me gustaría que Carmena saliera a la calle y preguntara a 100 madrileños "¿A qué le suena General Yagüe?" Estoy seguro de que las cien personas contestarían: "Eso es una calle". Las palabras adquieren el significado que les otorga su uso. Pero claro, esas consideraciones lingüísticas no están al alcance de nuestra ignorante clase política. Pero al margen de esto, Gila se merece una calle como otros magníficos humoristas españoles de izquierdas y de derechas.</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@mmmh');comentarReferenciaComentario(this, '#1');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10899456" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10899456,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10899456,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10899456">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+</section>
+<ul id="subNavComentarios">
+<li>
+</li>
+</ul></div>
+<script type="text/javascript">function ocultaMuestraCapa(divId){if(document.getElementById(divId).style.display=='none')
+{document.getElementById(divId).style.display='block';}
+else{document.getElementById(divId).style.display='none';}};</script>
+</section>
+</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+<h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
+<ul class="list">
+<li><a href="http://www.elmundo.es/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
+<li><a href="http://www.elmundo.es/temas/">Temas</a></li>
+<li><a href="http://www.elmundo.es/economia/bolsa/indices/ibex35_I.IB.html">IBEX 35</a></li>
+<li><a href="http://www.elmundo.es/loterias/euromillones.html">Euromillones</a></li>
+<li><a href="http://www.elmundo.es/horoscopo/">Hor&oacute;scopo Diario</a></li>
+<li><a href="http://www.elmundo.es/mejores-colegios.html">Mejores colegios</a></li>
+</ul>
+<ul class="list">
+<li><a href="http://www.elmundo.es/servicios/">Servicios</a></li>
+<li><a href="http://quiosco.orbyt.es/">Orbyt</a></li>
+<li><a href="http://www.elmundo.es/traductor/">Traductor</a></li>
+<li><a href="http://www.elmundo.es/television/programacion-tv/">Gu&iacute;a TV</a></li>
+<li><a href="http://www.elmundo.es/diccionarios/">Diccionarios</a></li>
+<li><a href="http://www.elmundo.es/tiempo/">El tiempo</a></li>
+<li><a href="http://www.elmundo.es/promociones/">Promociones</a></li>
+<li><a href="http://www.elmundo.es/loterias/">Loter&iacute;a</a></li>
+<li><a href="http://comparador.elmundo.es/">Comparador financiero</a></li>
+<li><a href="http://seguroscoche.elmundo.es/">Comparador seguros</a></li>
+</ul>
+<h4>En vivos</h4>
+<ul class="list">
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43951-rafa-nadal-vs-alexander-zverev-en-vivo-montecarlo/"> Rafa Nadal vs Alexander Zverev, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43886-cska-mosc-baskonia/"> CSKA Moscú vs Baskonia, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43882-fc-schalke-04-ajax/"> Schalke 04 vs Ajax, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43883-krc-genk-celta-de-vigo/"> Genk vs Celta de Vigo, en vivo</a>
+</li>
+<li>
+<a href="http://www.elmundo.es/eventos/en-directo/2017/04/20/43884-besiktas-lyon/"> Besiktas vs O. Lyon, en vivo</a>
+</li>
+</ul>
+</section>
+</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-madrid_n_f2_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_f2_58f9100522601d3e3e8b4599');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-madrid_n_f3_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_f3_58f9100522601d3e3e8b4599');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-madrid_n_si_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_si_58f9100522601d3e3e8b4599');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-madrid_n_sd_58f9100522601d3e3e8b4599' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-madrid_n_sd_58f9100522601d3e3e8b4599');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f9100522601d3e3e8b4599"});}
+if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f9100522601d3e3e8b4599');}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f9100522601d3e3e8b4599').find('.js_socialMedia').RedesSociales({title:"Piden cambiar la calle del General Yagüe de Madrid por Humor de Gila",img:"https://jangosto.github.io/api/contents/html/images/2017-04-20-14927175246616.jpg",url:"http://www.elmundo.es/madrid/2017/04/21/58f9100522601d3e3e8b4599.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f9100522601d3e3e8b4599').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
+jQuery("#js_58f9100522601d3e3e8b4599 .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
