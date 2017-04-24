@@ -15,6 +15,8 @@
 
         $entireCoverHtml = extract_images($entireCoverHtml);
 
+        $entireCoverHtml = add_sw_registration($entireCoverHtml);
+
         $entireCoverHtml = str_replace($originDomain, "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireCoverHtml);
@@ -77,6 +79,8 @@ function generateHtmlContent($data)
 
     $entireContent = extract_images($entireContent);
 
+    $entireContent = add_sw_registration($entireContent);
+
     $entireContent = str_replace($originDomain, "/", $entireContent);
     $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
     $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
@@ -137,6 +141,15 @@ function extract_main_content($content)
     $matches = array();
     preg_match('/<main[^>]+>(.*)<\/main>/s', $content, $matches);
     $result = $matches[0];
+
+    return $result;
+}
+
+function add_sw_registration($content)
+{
+    $content = preg_replace("/<\/head>/i", '<script src="/js/sw_register.js"></script></head>', $content);
+
+    $result = $content;
 
     return $result;
 }
