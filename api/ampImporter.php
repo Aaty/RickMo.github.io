@@ -9,9 +9,10 @@
 
     foreach ($sections as $section) {
         $coverUrl = $originDomain.$section.".html";
-        $entireCoverHtml = getFile($coverUrl);
+        $entireCoverHtml = getFile($originDomain.$section."_mobile.html");
         $entireCoverHtml = str_replace($originDomain, "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://estaticos.elmundo.es/", "/", $entireCoverHtml);
 
         $matches = array();
@@ -68,6 +69,7 @@ function generateHtmlContent($data)
     $entireContent = getFile($data->url);
     $entireContent = str_replace($originDomain, "/", $entireContent);
     $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
+    $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
     $entireContent = str_replace("http://estaticos.elmundo.es/", "/", $entireContent);
     $matches = array();
     preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
