@@ -68,9 +68,6 @@ function generateHtmlContent($data)
     global $siteRootUrl, $siteRootPath, $originDomain;
 
     $entireContent = getFile($data->url);
-    $matches = array();
-    preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
-    $content = $matches[0];
 
     if (isset($data->multimedia) && count($data->multimedia) > 0) {
         foreach ($data->multimedia as $multimediaItem) {
@@ -79,7 +76,7 @@ function generateHtmlContent($data)
                     $imageExtension = pathinfo($multimediaItem->url)['extension'];
                     $imageFile = getFile(str_replace("http://e00-marca.uecdn.es/", "http://estaticos.elmundo.es/",$multimediaItem->url));
                     file_put_contents('./contents/html/images/'.$multimediaItem->id.'.'.$imageExtension, $imageFile);
-                    $content = str_replace($multimediaItem->url, $siteRootUrl."api/contents/html/images/".$multimediaItem->id.'.'.$imageExtension, $content);
+                    $entireContent = str_replace($multimediaItem->url, $siteRootUrl."api/contents/html/images/".$multimediaItem->id.'.'.$imageExtension, $entireContent);
                 }
             }
         }
@@ -96,12 +93,9 @@ function generateHtmlContent($data)
     }
     file_put_contents($siteRootPath.str_replace($originDomain, "", $data->url), $entireContent);
 
-    $content = str_replace($originDomain, "/", $content);
-    $content = str_replace("http://e00-marca.uecdn.es/", "/", $content);
-    $content = str_replace("http://e00-elmundo.uecdn.es/", "/", $content);
-    $content = str_replace("http://estaticos.elmundo.es/", "/", $content);
-    $content = str_replace("assets/v7/css/", "css/", $content);
-    $content = str_replace("assets/v7/js/", "js/", $content);
+    $matches = array();
+    preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
+    $content = $matches[0];
 
     return $content;
 }
