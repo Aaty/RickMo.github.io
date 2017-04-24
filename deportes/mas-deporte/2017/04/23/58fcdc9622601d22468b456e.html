@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"/>
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title data-ue-u="title" data-ue-c="innerHTML">Abril en Londres | Deportes | EL MUNDO</title>
@@ -573,7 +573,19 @@ googletag.enableServices();});</script>
                 }            }
         </script>
 <div class="container">
-  <article class="news-item" itemtype="http://schema.org/NewsArticle">
+ <div class="alerta" id="alerta">
+<ul><li class="deportes">
+<span><strong>TITULARES</strong><a href="/television/2017/04/24/58fdec03ca4741425f8b459d.html?cid=ULTHR22001&amp;s_kw=titulares">Seis noticias para manterse al día.</a></span>
+</li></ul>
+</div>
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
 <span class="section-title-group">
 <span class="section-type"><a href="/deportes/mas-deporte.html">Más Deporte</a></span>
 </span> <h2 class="kicker"> EL RUEDO IBÉRICO</h2>
@@ -870,7 +882,81 @@ jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesS
 </div>
 <!-- SiteCatalyst code version: H.25.1.
 Copyright 1996-2012 Adobe, Inc. All Rights Reserved
-More info available at http://www.omniture.com --><script language="JavaScript" type="text/javascript" data-ue-omniture>var s={};var pageName="/deportes/mas-deporte/2017/04/23/58fcdc9622601d22468b456e.html";s.pageType="";s.pageName="/deportes/mas-deporte/2017/04/23/58fcdc9622601d22468b456e.html";s.channel="deportes";s.prop4="ESPANA";s.prop1="deportes";s.prop2="";s.prop3="mas-deporte";s.prop4="ESPANA";s.prop5="";s.prop6="Abril en Londres-58fcdc9622601d22468b456e";s.prop7="elmundo.es";s.prop11="";s.hier1="elmundo.es|deportes|deportes|mas-deporte";s.prop27="movil";s.prop28="0|0";s.prop29="deportes,atletismo";s.list2="deportes,atletismo";s.prop30="imagenes";s.prop52=navigator.platform;s.prop53="";s.prop31="deportes";s.prop32="opinion";s.prop2="opinion";s.hier1="elmundo.es|deportes|deportes|mas-deporte"+"|"+"opinion";s.prop33="";s.prop34="pc";s.prop35="origen";s.prop36="";s.prop39="nuevo-04-23";s.prop55="";s.prop75="CARLOS TORO";/*Conversion Variables*/s.eVar1=s.channel;s.eVar2=s.prop1;s.eVar3=s.prop2;s.eVar4=s.prop3;s.eVar5=s.prop5;s.eVar11=s.prop11;s.eVar35=s.prop4;s.eVar31=s.prop6;s.eVar36=s.prop7;s.eVar27=s.prop27;s.eVar28=s.prop28;s.eVar29=s.prop29;s.eVar30=s.prop30;s.eVar45=s.prop32;s.eVar33=s.prop33;s.eVar34=s.prop34;s.eVar39=s.prop39;s.eVar52=s.prop52;s.eVar75=s.prop75;s.eVar80=s.prop53;var s_omniture=s;/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! */</script>
+More info available at http://www.omniture.com --><script language="JavaScript" type="text/javascript" data-ue-omniture>
+var s = {};var pageName = "/deportes/mas-deporte/2017/04/23/58fcdc9622601d22468b456e.html";s.pageType="";
+s.pageName="/deportes/mas-deporte/2017/04/23/58fcdc9622601d22468b456e.html";s.channel="deportes";s.prop4="ESPANA";s.prop1="deportes";
+s.prop2="";
+s.prop3="mas-deporte";
+s.prop4="ESPANA";
+s.prop5="";
+s.prop6="Abril en Londres-58fcdc9622601d22468b456e";s.prop7="elmundo.es";
+
+s.prop11="";
+
+    s.hier1="elmundo.es|deportes|deportes|mas-deporte";
+                                              s.prop27="movil";
+
+    s.prop28="0|0";
+
+s.prop29="deportes,atletismo";
+s.list2="deportes,atletismo";
+                                        s.prop30="imagenes";
+                    s.prop52 = navigator.platform;
+    s.prop53="";
+
+    s.prop31="deportes";
+s.prop32="opinion";
+s.prop2="opinion";s.hier1 = "elmundo.es|deportes|deportes|mas-deporte" + "|" + "opinion";s.prop33="";
+s.prop34="pc";
+s.prop35="origen";
+s.prop36="";
+s.prop39="nuevo-04-23";s.prop55="";s.prop75="CARLOS TORO";
+/* Conversion Variables */
+s.eVar1=s.channel;
+s.eVar2=s.prop1;
+s.eVar3=s.prop2;
+s.eVar4=s.prop3;
+s.eVar5=s.prop5;
+s.eVar11=s.prop11;
+s.eVar35=s.prop4;
+s.eVar31=s.prop6;
+s.eVar36=s.prop7;
+s.eVar27=s.prop27;
+s.eVar28=s.prop28;
+s.eVar29=s.prop29;
+s.eVar30=s.prop30;
+s.eVar45=s.prop32;
+s.eVar33=s.prop33;
+s.eVar34=s.prop34;
+s.eVar39=s.prop39;
+s.eVar52=s.prop52;
+s.eVar75=s.prop75;
+s.eVar80=s.prop53;
+var s_omniture = s;
+<!-- ==== pageName="/deportes/mas-deporte/2017/04/23/58fcdc9622601d22468b456e.html" ==== -->
+<!-- ==== pageType="" ==== -->
+<!-- ==== channel="deportes" ==== -->
+<!-- ==== prop1="deportes" ==== -->
+<!-- ==== prop2="" ==== -->
+<!-- ==== prop3="mas-deporte" ==== -->
+<!-- ==== prop4="ESPANA" ==== -->
+<!-- ==== prop5="" ==== -->
+<!-- ==== prop6="Abril en Londres-58fcdc9622601d22468b456e" ==== -->
+<!-- ==== prop7="elmundo.es" ==== -->
+<!-- ==== prop11="" ==== -->
+<!-- ==== hier1="elmundo.es|deportes|deportes|mas-deporte" ==== -->
+<!-- ==== prop29="deportes,atletismo" ==== -->
+<!-- ==== list2="deportes,atletismo" ==== -->
+<!-- ==== prop30="imagenes" ==== -->
+<!-- ==== prop31="deportes" ==== -->
+<!-- ==== prop32="opinion" ==== -->
+<!-- ==== prop35="origen" ==== -->
+<!-- ==== prop36="" ==== -->
+<!-- ==== prop39="nuevo-04-23" ==== -->
+<!-- ==== prop55="" ==== -->
+<!-- ==== prop75="CARLOS TORO" ==== -->
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+</script>
 <script type="text/javascript">function DM_prepClient(csid,client){client.DM_cat("deportes > deportes > opinion");}</script>
 <img src="//amplifypixel.outbrain.com/pixel?mid=008d6342efb6be8a979dc0f7a159804afd"><!-- SiteCatalyst code version: H.21.
 Copyright 1996-2010 Adobe, Inc. All Rights Reserved

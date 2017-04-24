@@ -19,6 +19,7 @@
         $entireCoverHtml = str_replace("http://estaticos.elmundo.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("assets/v7/css/", "css/", $entireCoverHtml);
         $entireCoverHtml = str_replace("assets/v7/js/", "js/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("iso-8859-15", "utf8", $entireCoverHtml);
 
         $coverHtml = extract_main_content($entireCoverHtml);
 
@@ -78,6 +79,8 @@ function generateHtmlContent($data)
     $entireContent = str_replace("http://estaticos.elmundo.es/", "/", $entireContent);
     $entireContent = str_replace("assets/v7/css/", "css/", $entireContent);
     $entireContent = str_replace("assets/v7/js/", "js/", $entireContent);
+    $entireContent = str_replace("iso-8859-15", "utf8", $entireContent);
+
     if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($data->url)))) {
         mkdir($siteRootPath.str_replace($originDomain, "", dirname($data->url)), 0755, true);
     }

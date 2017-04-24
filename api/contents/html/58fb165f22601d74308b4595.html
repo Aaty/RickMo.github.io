@@ -240,31 +240,5 @@ if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f
 if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fb165f22601d74308b4595').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
 jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
 </div>
-<script type="text/javascript">
-    jQuery(function() {
-        if (typeof jQuery.fn.RedesSociales === 'function') {
-            jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({
-                title: "Baleares es la más perjudicada por la inversión estatal desde 2008",
-                img:"",
-                url: "/baleares/2017/04/22/58fb165f22601d74308b4595.html",
-                summary :"",
-                viaTwitter: 'elmundoes',
-                urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
-                sufijoAnalitica: '_1'
-            });
-        }
-        jQuery(document).on("urlChanged", function (event, data) {
-            if (typeof jQuery.fn.RedesSociales === 'function') {
-                jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({
-                    title: data.title,
-                    img: data.rrss.img,
-                    url: data.url,
-                    summary : data.rrss.summary,
-                    viaTwitter: data.rrss.viaTwitter,
-                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
-                    sufijoAnalitica: '_1'
-                });
-            }
-        });
-    });
-</script> </main>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Baleares es la más perjudicada por la inversión estatal desde 2008",img:"",url:"/baleares/2017/04/22/58fb165f22601d74308b4595.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>
