@@ -14,7 +14,8 @@
         $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://estaticos.elmundo.es/", "/", $entireCoverHtml);
-        $entireContent = str_replace("assets/v7/css/", "css/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("assets/v7/css/", "css/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("assets/v7/js/", "js/", $entireCoverHtml);
 
         $matches = array();
         preg_match('/<main[^>]+>(.*)<\/main>/s', $entireCoverHtml, $matches);
@@ -73,6 +74,7 @@ function generateHtmlContent($data)
     $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
     $entireContent = str_replace("http://estaticos.elmundo.es/", "/", $entireContent);
     $entireContent = str_replace("assets/v7/css/", "css/", $entireContent);
+    $entireContent = str_replace("assets/v7/js/", "js/", $entireContent);
     $matches = array();
     preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
     $content = $matches[0];
