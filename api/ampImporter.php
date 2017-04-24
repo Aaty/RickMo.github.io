@@ -71,6 +71,7 @@ function generateHtmlContent($data)
     $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
     $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
     $entireContent = str_replace("http://estaticos.elmundo.es/", "/", $entireContent);
+    $entireContent = str_replace("assets/v7/css/", "/css/", $entireContent);
     $matches = array();
     preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
     $content = $matches[0];
