@@ -2,22 +2,22 @@ var assets_cache_name = "v1_static";
 var content_cache_name = 'v1_dynamic';
 var user_cache_name = 'v1_user';
 
-var siteDomain = "https://jangosto.github.io";
+var siteDomain = "";
 
 var static_assets = Array(
-    "https://jangosto.github.io/shell.html",
-    "https://jangosto.github.io/css/core-portada-elmundo-mobile.css",
-    "https://jangosto.github.io/js/jquery.2.1.4.js",
-    "https://jangosto.github.io/js/mobile.min.js",
-    "https://jangosto.github.io/js/hydratator.js",
-    "https://jangosto.github.io/js/v0.js",
-    "https://jangosto.github.io/js/v0/amp-iframe-0.1.js",
-    "https://jangosto.github.io/js/v0/amp-analytics-0.1.js",
-    "https://jangosto.github.io/js/v0/amp-sidebar-0.1.js",
-    "https://jangosto.github.io/js/v0/amp-list-0.1.js",
-    "https://jangosto.github.io/js/v0/amp-mustache-0.1.js",
-    "https://jangosto.github.io/js/v0/amp-fit-text-0.1.js",
-    "https://jangosto.github.io/js/v0/amp-ad-0.1.js",
+    "/shell.html",
+    "/css/core-portada-elmundo-mobile.css",
+    "/js/jquery.2.1.4.js",
+    "/js/mobile.min.js",
+    "/js/hydratator.js",
+    "/js/v0.js",
+    "/js/v0/amp-iframe-0.1.js",
+    "/js/v0/amp-analytics-0.1.js",
+    "/js/v0/amp-sidebar-0.1.js",
+    "/js/v0/amp-list-0.1.js",
+    "/js/v0/amp-mustache-0.1.js",
+    "/js/v0/amp-fit-text-0.1.js",
+    "/js/v0/amp-ad-0.1.js",
     "https://securepubads.g.doubleclick.net/gpt/pubads_impl_113.js",
     "https://static.chartbeat.com/js/chartbeat_mab.js"
 );

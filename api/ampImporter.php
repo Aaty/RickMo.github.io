@@ -1,17 +1,22 @@
 <?php
     ini_set("allow_url_fopen", true);
 
-    $siteRootUrl = "https://jangosto.github.io/";
+    $siteRootUrl = "/";
     $siteRootPath = "/home/jangosto/projects/elmundo/pwa/";
     $originDomain = "http://www.elmundo.es/";
 
     $sections = array("index", "economia", "espana", "deportes");
 
     foreach ($sections as $section) {
-        $coverHtml = getFile($originDomain.$section.".html");
-        $coverHtml = str_replace($originDomain, "/", $coverHtml);
-        $coverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $coverHtml);
-        $coverHtml = str_replace("http://estaticos.elmundo.es/", "/", $coverHtml);
+        $coverUrl = $originDomain.$section.".html";
+        $entireCoverHtml = getFile($coverUrl);
+        $entireCoverHtml = str_replace($originDomain, "/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("http://estaticos.elmundo.es/", "/", $entireCoverHtml);
+
+        $matches = array();
+        preg_match('/<main[^>]+>(.*)<\/main>/s', $entireCoverHtml, $matches);
+        $coverHtml = $matches[0];
 
         $autocoverJson = file_get_contents("http://www.elmundo.es/json/".$section.".json");
 
@@ -30,9 +35,10 @@
             }
         }
 
-        if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($data->url)))) {
-            mkdir($siteRootPath.str_replace($originDomain, "", dirname($data->url)), 0755, true));
+        if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($coverUrl)))) {
+            mkdir($siteRootPath.str_replace($originDomain, "", dirname($coverUrl)), 0755, true);
         }
+        file_put_contents($siteRootPath.str_replace($originDomain, "", $coverUrl), $entireCoverHtml);
         file_put_contents("./contents/html/".$section.".html", $coverHtml);
     }
 
@@ -57,7 +63,7 @@ function urlExists ($url)
 
 function generateHtmlContent($data)
 {
-    global $siteRootUrl;
+    global $siteRootUrl, $siteRootPath, $originDomain;
 
     $entireContent = getFile($data->url);
     $entireContent = str_replace($originDomain, "/", $entireContent);
@@ -75,7 +81,7 @@ function generateHtmlContent($data)
                     $imageFile = getFile(str_replace("http://e00-marca.uecdn.es/", "http://estaticos.elmundo.es/",$multimediaItem->url));
                     file_put_contents('./contents/html/images/'.$multimediaItem->id.'.'.$imageExtension, $imageFile);
                     if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($data->url)))) {
-                        mkdir($siteRootPath.str_replace($originDomain, "", dirname($data->url)), 0755, true));
+                        mkdir($siteRootPath.str_replace($originDomain, "", dirname($data->url)), 0755, true);
                     }
                     file_put_contents($siteRootPath.str_replace($originDomain, "", $data->url), $entireContent);
                     $content = str_replace($multimediaItem->url, $siteRootUrl."api/contents/html/images/".$multimediaItem->id.'.'.$imageExtension, $content);
