@@ -11,6 +11,8 @@
         $coverUrl = $originDomain.$section.".html";
         $entireCoverHtml = getFile($originDomain.$section."_mobile.html");
 
+        $entireCoverHtml = utf8_encode($entireCoverHtml);
+
         $entireCoverHtml = extract_images($entireCoverHtml);
 
         $entireCoverHtml = str_replace($originDomain, "/", $entireCoverHtml);
@@ -70,6 +72,8 @@ function generateHtmlContent($data)
     global $siteRootUrl, $siteRootPath, $originDomain;
 
     $entireContent = getFile(str_replace(".html", "_mobile.html", $data->url));
+
+    $entireContent = utf8_encode($entireContent);
 
     $entireContent = extract_images($entireContent);
 
