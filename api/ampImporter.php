@@ -14,6 +14,7 @@
         $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://estaticos.elmundo.es/", "/", $entireCoverHtml);
+        $entireContent = str_replace("assets/v7/css/", "/css/", $entireCoverHtml);
 
         $matches = array();
         preg_match('/<main[^>]+>(.*)<\/main>/s', $entireCoverHtml, $matches);
