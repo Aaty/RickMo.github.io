@@ -10,6 +10,9 @@
     foreach ($sections as $section) {
         $coverUrl = $originDomain.$section.".html";
         $entireCoverHtml = getFile($originDomain.$section."_mobile.html");
+
+        $entireCoverHtml = extract_images($entireCoverHtml);
+
         $entireCoverHtml = str_replace($originDomain, "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireCoverHtml);
@@ -17,9 +20,7 @@
         $entireCoverHtml = str_replace("assets/v7/css/", "css/", $entireCoverHtml);
         $entireCoverHtml = str_replace("assets/v7/js/", "js/", $entireCoverHtml);
 
-        $matches = array();
-        preg_match('/<main[^>]+>(.*)<\/main>/s', $entireCoverHtml, $matches);
-        $coverHtml = $matches[0];
+        $coverHtml = extract_main_content($entireCoverHtml);
 
         $autocoverJson = getFile("http://www.elmundo.es/json/".$section.".json");
 
@@ -69,18 +70,7 @@ function generateHtmlContent($data)
 
     $entireContent = getFile(str_replace(".html", "_mobile.html", $data->url));
 
-    if (isset($data->multimedia) && count($data->multimedia) > 0) {
-        foreach ($data->multimedia as $multimediaItem) {
-            if (isset($multimediaItem->position) && $multimediaItem->position != '') {
-                if ($multimediaItem->type == 'image') {
-                    $imageExtension = pathinfo($multimediaItem->url)['extension'];
-                    $imageFile = getFile(str_replace("http://e00-marca.uecdn.es/", "http://estaticos.elmundo.es/",$multimediaItem->url));
-                    file_put_contents('./contents/html/images/'.$multimediaItem->id.'.'.$imageExtension, $imageFile);
-                    $entireContent = str_replace($multimediaItem->url, $siteRootUrl."api/contents/html/images/".$multimediaItem->id.'.'.$imageExtension, $entireContent);
-                }
-            }
-        }
-    }
+    $entireContent = extract_images($entireContent);
 
     $entireContent = str_replace($originDomain, "/", $entireContent);
     $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
@@ -93,9 +83,7 @@ function generateHtmlContent($data)
     }
     file_put_contents($siteRootPath.str_replace($originDomain, "", $data->url), $entireContent);
 
-    $matches = array();
-    preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
-    $content = $matches[0];
+    $content = extract_main_content($entireContent);
 
     return $content;
 }
@@ -111,4 +99,37 @@ function getFile($url)
     $data = curl_exec($ch);
     curl_close($ch);
     return $data;
+}
+
+function extract_images($content)
+{
+    global $siteRootPath;
+
+    $matches = array();
+    preg_match_all('/<img[^>]+src="[^"]+"[^>\/]+[\/]?>/i', $content, $matches);
+    foreach ($matches[0] as $match) {
+        $urls = array();
+        preg_match_all('/src="([^"]+)"/i', $match, $urls);
+        foreach ($urls[1] as $imageUrl) {
+            $image = getFile($imageUrl);
+            $imageInfo = parse_url($imageUrl);
+            if (!file_exists($siteRootPath.dirname($imageInfo['path']))) {
+                mkdir($siteRootPath.dirname($imageInfo['path']), 0755, true);
+            }
+            file_put_contents($siteRootPath.$imageInfo['path'], $image);
+            $content = str_replace($imageUrl, $imageInfo['path'], $content);
+        }
+    }
+    $result = $content;
+
+    return $result;
+}
+
+function extract_main_content($content)
+{
+    $matches = array();
+    preg_match('/<main[^>]+>(.*)<\/main>/s', $content, $matches);
+    $result = $matches[0];
+
+    return $result;
 }
