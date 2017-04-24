@@ -1,84 +1,110 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f89aae46163f33348b4592"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Economía",portal:"elmundo",ct:"n",model:"economia-home",contentId:'58f89aae46163f33348b4592',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Economía" href="/economia.html"><span itemprop="title">Economía</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="macroeconomia"><a title="Macroeconomía" href="/economia/macroeconomia.html">Macroeconomía</a></li><li data-section="empresas"><a title="Empresas" href="/economia/empresas.html">Empresas</a></li><li data-section="bolsa"><a title="Bolsa" href="/economia/bolsa/indices.html">Bolsa</a></li><li data-section="ahorro-y-consumo"><a title="Ahorro y Consumo" href="/economia/ahorro-y-consumo.html">Ahorro y Consumo</a></li><li data-section="vivienda"><a title="Vivienda" href="/economia/vivienda.html">Vivienda</a></li><li data-section="innovadores"><a title="INnovadores" href="/economia/innovadores.html">INnovadores</a></li><li data-section="comparador"><a title="Comparador" href="http://comparador.elmundo.es/">Comparador</a></li></ul>',numComments:'9',rrss:{img:"/api/contents/html/images/2017-04-20-14926875239661.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58f89aae46163f33348b4592">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"Economía",portal:"elmundo",ct:"n",model:"economia-home",contentId:'58f89aae46163f33348b4592',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Economía" href="/economia.html"><span itemprop="title">Economía</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/economia.html" title="Economía">Economía</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Macroeconomía"><a title="Macroeconomía" href="/economia/macroeconomia.html">Macroeconomía</a></li><li data-section="Empresas"><a title="Empresas" href="/economia/empresas.html">Empresas</a></li><li data-section="Bolsa"><a title="Bolsa" href="/economia/bolsa/indices.html">Bolsa</a></li><li data-section="Ahorro y Consumo"><a title="Ahorro y Consumo" href="/economia/ahorro-y-consumo.html">Ahorro y Consumo</a></li><li data-section="Vivienda"><a title="Vivienda" href="/economia/vivienda.html">Vivienda</a></li><li data-section="INnovadores"><a title="INnovadores" href="/economia/innovadores.html">INnovadores</a></li><li data-section="Comparador"><a title="Comparador" href="http://comparador.elmundo.es/">Comparador</a></li></ul></li></ul>',numComments:'9',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/economia.html">Economía</a></span>
+</span> <h2 class="kicker"> <a href="/economia.html">ECONOMÍA</a></h2>
+<h1 itemprop="headline" class="js-headline">El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje "no confuso"</h1>
+ <div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/api/contents/html/images/2017-04-20-14926875239661.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>El subgobernador del Banco de España, Javier Alonso. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">E.M.</span> </figcaption></figure>
+  <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>Insta a la banca a mejorar las prácticas de comercialización de productos y servicios y a reforzar la confianza de sus clientes</p>
+<aside class="aside-tools byline-tools"><ul class="tools">
+<li class="social-tools"><ul class="horizontal js_socialMedia"><li>
+<i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span>
+</li>
+<li>
+<i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span>
+</li><li>
+<a onclick="envioEventoRedSocial('whatsapp');" href="whatsapp://send?text=El%20Banco%20de%20Espa%C3%B1a%20supervisar%C3%A1%20el%20uso%20de%20nuevas%20tecnolog%C3%ADas%20y%20pide%20a%20la%20banca%20un%20lenguaje%20%22no%20confuso%22 | Economia | ELMUNDO - http%3A%2F%2Fwww.elmundo.es%2Feconomia%2F2017%2F04%2F20%2F58f89aae46163f33348b4592.html" title="Whatsapp"><i class="icon-whatsapp icon-whatsapp_36_d"></i><span class="hidden-content">Whatsapp</span></a>
+</li> <li class="comments-tool js-botonComentarios-58f89aae46163f33348b4592"><a href="#ancla_comentarios" title="Ver comentarios"><i class="icon-comentarios2_36_d"></i>
+<strong>
+9 </strong>
+</a>
+</li>
+</ul>
+</li></ul></aside>
+<footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<li itemprop="name" class="author-name">
+<strong>EUROPA PRESS</strong>
+</li>
+<li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality">Madrid</span>
+</li>
+</ul></address>
+</footer> <meta itemprop="datePublished" content="2017-04-20">
+<time datetime="2017-04-20 13:25:46" class="date" itemprop="dateModified">
+20/04/2017 <strong>13:25</strong>
+</time>
 
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
+<p>El subgobernador del Banco de España, Javier Alonso, ha afirmado que la institución tiene previsto a lo largo de este año<strong> iniciar actuaciones de supervisión del uso de nuevas tecnologías en la contratación de productos bancarios</strong>. </p>
+<p> La intención de la institución durante este año es reforzar sus actuaciones relacionadas con la <strong>supervisión de la conducta bancaria</strong>, según ha explicado Alonso, que ha detallado que en 2016 se llevaron a cabo 109 actuaciones relacionadas con la comercialización de créditos hipotecarios y al consumo, el funcionamiento de los servicios de atención al cliente y el respeto a las normas sobre publicidad bancaria. </p>
+<p> Alonso, en su primera intervención pública como subgobernador del Banco de España, ha instado a la banca a<strong> mejorar las prácticas de comercialización</strong> de productos y servicios. "Se requieren mayores esfuerzos para asegurar que el cliente bancario, principal activo de la entidad, es <strong>capaz de comprender las condiciones de la operativa que está realizando</strong>, sean cláusulas de los contratos o precios de los servicios", ha indicado. </p>
+<div id='div-gpt-ad-economia_n_r_58f89aae46163f33348b4592' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_r_58f89aae46163f33348b4592');});</script>
+</div>
+<p> Además, ha señalado que "debe extremarse el celo en facilitar una<strong> adecuada información precontractual</strong>, al tiempo que debe erradicarse la venta de productos a clientes cuyo perfil no es apto para comprar esos productos". </p>
+<p> El subgobernador del Banco de España ha advertido a las entidades bancarias que los nombres y la descripción de los productos bancarios "no deben ser confusos" respecto a sus características de rentabilidad y riesgo <strong>ni ser utilizados "como herramienta comercial engañosa"</strong>. "Debe evitarse el uso de términos que ofrezcan una falsa sensación de seguridad en cuanto a la percepción de una renta o interés", ha dicho. </p>
+<h3 class="subhead">Lenguaje comprensible</h3>
+<p>En su opinión, la necesidad de mejorar el lenguaje es "aún más apremiante", dado que <strong>"el diálogo entre el banco y el cliente no es un diálogo de fuerzas equilibradas"</strong>. En este sentido, ha puesto en valor las actuaciones llevadas a cabo por la institución y la Comisión Nacional del Mercado de Valores (CNMV) en materia de educación financiera. </p>
+<p> Alonso ha instado a la banca a<strong> reforzar la confianza de sus cliente</strong>s, ya que "es el activo más relevante y más frágil con el que cuenta una entidad bancaria y determina la naturaleza de la relación entre el cliente y la entidad financiera", después de que la crisis dejara sobre las entidades bancarias "un poso de desconfianza". </p>
+<p> "La recuperación y el fortalecimiento de la reputación del sector ante los inversores y clientes es uno de los principales desafíos que tenemos por delante", ha afirmado Alonso, para el que es necesario "<strong>empezar por priorizar la sencillez y la veracidad </strong>en toda comunicación con los clientes". </p>
+<h3 class="subhead">Repercutir los costes al cliente</h3>
+<p> Según ha explicado Alonso, "es importante que<strong> el precio de los servicios</strong> que se repercute al cliente<strong> se ajuste al coste de los mismos</strong>", ya que, actualmente, "gran parte de las mejoras tecnológicas que se ofrecen no parecen tener un coste adicional para el usuario", pues servicios como la inmediatez en el acceso a los datos a través de dispositivos móviles, la reiteración automática de consultas cada pocos segundos o los envíos masivos de instrucciones o de peticiones de datos "se ofrecen sin coste aparente para el cliente". </p>
+<p> En su opinión, "los nuevos servicios tienen costes y estos <strong>deben repercutirse de forma clara</strong> y transparente a los clientes", ya que los beneficios de las nuevas tecnologías "no están exentos de costes ni riesgo". "Estamos ante un gran cambio tecnológico en el sector bancario cuyos efectos están aún por concretarse", ha advertido. </p>
+<p> Alonso ha señalado <strong>las nuevas tecnologías y el papel de las <em>fintech </em>como uno de los principales retos de la banca</strong> y, en este sentido, ha indicado que el desarrollo de nuevos servicios requiere una nueva regulación acorde. Según ha dicho, la idea de que las <em>fintech </em><strong>desplazarán a las entidades de crédito</strong> en la prestación de los servicios financieros tradicionales es "una visión simplista y distorsionada de una realidad mucho más compleja". </p>
+<p> Otro de los retos que la banca tiene por delante, en opinión de Alonso, es la necesidad de <strong>mantener la rentabilidad del sector</strong> para mantener su buen funcionamiento en un entorno en el que los tipos de interés muy reducidos presionan a la baja los márgenes de la intermediación financiera y la "fuerte competencia" para conseguir nuevos clientes "dificulta elevar los tipos de los préstamos".</p>
 
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/economia.html">Economía</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_m_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_m_58f89aae46163f33348b4592');});</script></div></div></div><h2 class="kicker"><a href="/economia.html">ECONOMÍA</a></h2><h1 itemprop="headline" class="js-headline">El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje "no confuso"</h1><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="/api/contents/html/images/2017-04-20-14926875239661.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>El subgobernador del Banco de España, Javier Alonso. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">E.M.</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_b300x100_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_b300x100_58f89aae46163f33348b4592');});</script></div></div></div><aside class="aside-tools js_fixed"><ul class="tools"><li class="social-tools"><ul class="horizontal js_socialMedia"><li><i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li><i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail icon-mail_36_d js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li><ul class="horizontal"><li class="comments-tool js-botonComentarios-58f89aae46163f33348b4592"><a href="#ancla_comentarios"><i class="icon-comentarios_32_d"></i><strong>9 Comentarios </strong><i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i><i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i></a></li></ul></li></ul><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_r_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_r_58f89aae46163f33348b4592');});</script></div></div></div></aside></aside><p class="summary-lead"><i class="icon-apoyo_16_b"></i>Insta a la banca a mejorar las prácticas de comercialización de productos y servicios y a reforzar la confianza de sus clientes</p><footer><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name" class="author-name"><strong>EUROPA PRESS</strong></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality">Madrid</span></li></ul></address></footer><meta itemprop="datePublished" content="2017-04-20"><time datetime="2017-04-20 13:25:46" class="date" itemprop="dateModified">
-20/04/2017 <strong>13:25</strong></time><p>El subgobernador del Banco de España, Javier Alonso, ha afirmado que la institución tiene previsto a lo largo de este año<strong> iniciar actuaciones de supervisión del uso de nuevas tecnologías en la contratación de productos bancarios</strong>. </p><p> La intención de la institución durante este año es reforzar sus actuaciones relacionadas con la <strong>supervisión de la conducta bancaria</strong>, según ha explicado Alonso, que ha detallado que en 2016 se llevaron a cabo 109 actuaciones relacionadas con la comercialización de créditos hipotecarios y al consumo, el funcionamiento de los servicios de atención al cliente y el respeto a las normas sobre publicidad bancaria. </p><p> Alonso, en su primera intervención pública como subgobernador del Banco de España, ha instado a la banca a<strong> mejorar las prácticas de comercialización</strong> de productos y servicios. "Se requieren mayores esfuerzos para asegurar que el cliente bancario, principal activo de la entidad, es <strong>capaz de comprender las condiciones de la operativa que está realizando</strong>, sean cláusulas de los contratos o precios de los servicios", ha indicado. </p><p> Además, ha señalado que "debe extremarse el celo en facilitar una<strong> adecuada información precontractual</strong>, al tiempo que debe erradicarse la venta de productos a clientes cuyo perfil no es apto para comprar esos productos". </p><p> El subgobernador del Banco de España ha advertido a las entidades bancarias que los nombres y la descripción de los productos bancarios "no deben ser confusos" respecto a sus características de rentabilidad y riesgo <strong>ni ser utilizados "como herramienta comercial engañosa"</strong>. "Debe evitarse el uso de términos que ofrezcan una falsa sensación de seguridad en cuanto a la percepción de una renta o interés", ha dicho. </p><h3 class="subhead">Lenguaje comprensible</h3><p>En su opinión, la necesidad de mejorar el lenguaje es "aún más apremiante", dado que <strong>"el diálogo entre el banco y el cliente no es un diálogo de fuerzas equilibradas"</strong>. En este sentido, ha puesto en valor las actuaciones llevadas a cabo por la institución y la Comisión Nacional del Mercado de Valores (CNMV) en materia de educación financiera. </p><p> Alonso ha instado a la banca a<strong> reforzar la confianza de sus cliente</strong>s, ya que "es el activo más relevante y más frágil con el que cuenta una entidad bancaria y determina la naturaleza de la relación entre el cliente y la entidad financiera", después de que la crisis dejara sobre las entidades bancarias "un poso de desconfianza". </p><p> "La recuperación y el fortalecimiento de la reputación del sector ante los inversores y clientes es uno de los principales desafíos que tenemos por delante", ha afirmado Alonso, para el que es necesario "<strong>empezar por priorizar la sencillez y la veracidad </strong>en toda comunicación con los clientes". </p><h3 class="subhead">Repercutir los costes al cliente</h3><p> Según ha explicado Alonso, "es importante que<strong> el precio de los servicios</strong> que se repercute al cliente<strong> se ajuste al coste de los mismos</strong>", ya que, actualmente, "gran parte de las mejoras tecnológicas que se ofrecen no parecen tener un coste adicional para el usuario", pues servicios como la inmediatez en el acceso a los datos a través de dispositivos móviles, la reiteración automática de consultas cada pocos segundos o los envíos masivos de instrucciones o de peticiones de datos "se ofrecen sin coste aparente para el cliente". </p><p> En su opinión, "los nuevos servicios tienen costes y estos <strong>deben repercutirse de forma clara</strong> y transparente a los clientes", ya que los beneficios de las nuevas tecnologías "no están exentos de costes ni riesgo". "Estamos ante un gran cambio tecnológico en el sector bancario cuyos efectos están aún por concretarse", ha advertido. </p><p> Alonso ha señalado <strong>las nuevas tecnologías y el papel de las <em>fintech </em>como uno de los principales retos de la banca</strong> y, en este sentido, ha indicado que el desarrollo de nuevos servicios requiere una nueva regulación acorde. Según ha dicho, la idea de que las <em>fintech </em><strong>desplazarán a las entidades de crédito</strong> en la prestación de los servicios financieros tradicionales es "una visión simplista y distorsionada de una realidad mucho más compleja". </p><p> Otro de los retos que la banca tiene por delante, en opinión de Alonso, es la necesidad de <strong>mantener la rentabilidad del sector</strong> para mantener su buen funcionamiento en un entorno en el que los tipos de interés muy reducidos presionan a la baja los márgenes de la intermediación financiera y la "fuerte competencia" para conseguir nuevos clientes "dificulta elevar los tipos de los préstamos".</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-economia_n_nata_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_nata_58f89aae46163f33348b4592');});</script></div><div id='div-gpt-ad-economia_n_natb_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natb_58f89aae46163f33348b4592');});</script></div><div id='div-gpt-ad-economia_n_natc_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natc_58f89aae46163f33348b4592');});</script></div></aside><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/deportes/formula-1/pilotos/fernando-alonso.html" rel="tag">Fernando Alonso</a></li><li><a href="/economia.html" rel="tag">economía</a></li><li><a href="/t/da/dacion-en-pago.html" rel="tag">Dación en pago</a></li><li><a href="/economia/vivienda.html" rel="tag">Vivienda</a></li></ul></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rb_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rb_58f89aae46163f33348b4592');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/economia/2017/04/20/58f89aae46163f33348b4592.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/economia/2017/04/20/58f89aae46163f33348b4592.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/economia/2017/04/20/58f89aae46163f33348b4592.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rc_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rc_58f89aae46163f33348b4592');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/deportes/formula-1/pilotos/fernando-alonso.html" rel="tag">Fernando Alonso</a> </li> <li>
+<a href="/economia.html" rel="tag">economía</a> </li> <li>
+<a href="/t/da/dacion-en-pago.html" rel="tag">Dación en pago</a> </li> <li>
+<a href="/economia/vivienda.html" rel="tag">Vivienda</a> </li> </ul> </aside>
+<aside class="aside-tools byline-tools"><ul class="tools">
+<li class="social-tools"><ul class="horizontal js_socialMedia_1">
+<li>
+Compartir:
+</li><li>
+<i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span>
+</li>
+<li>
+<i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span>
+</li><li>
+<a onclick="envioEventoRedSocial('whatsapp');" href="whatsapp://send?text=El%20Banco%20de%20Espa%C3%B1a%20supervisar%C3%A1%20el%20uso%20de%20nuevas%20tecnolog%C3%ADas%20y%20pide%20a%20la%20banca%20un%20lenguaje%20%22no%20confuso%22 | Economia | ELMUNDO - http%3A%2F%2Fwww.elmundo.es%2Feconomia%2F2017%2F04%2F20%2F58f89aae46163f33348b4592.html" title="Whatsapp"><i class="icon-whatsapp icon-whatsapp_36_d"></i><span class="hidden-content">Whatsapp</span></a>
+</li></ul>
+</li></ul></aside>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_320x53b_58f89aae46163f33348b4592' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_320x53b_58f89aae46163f33348b4592');});</script>
+</div>
+</div>
+</div>
+</aside>
+<div class="row content">
+ <aside id="ancla_comentarios" class="comentarios aside-comments">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:9" itemprop="interactionCount">9</strong> Comentarios</h3>
 <article>
 <header>
@@ -118,7 +144,13 @@ function initUeAlerts(event) {
 <i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
 </span>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje &quot;no confuso&quot;'</a></div>
+</aside>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje &quot;no confuso&quot;'</a>
+<i class="ellipsis"></i>
+</div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:9" itemprop="interactionCount">9</strong> Comentarios</h3>
@@ -410,7 +442,42 @@ function initUeAlerts(event) {
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_mb_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_mb_58f89aae46163f33348b4592');});</script></div></div></div><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_rb_58f89aae46163f33348b4592' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rb_58f89aae46163f33348b4592');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/economia/2017/04/20/58f89aae46163f33348b4592.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/economia/2017/04/20/58f89aae46163f33348b4592.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/economia/2017/04/20/58f89aae46163f33348b4592.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_rc_58f89aae46163f33348b4592' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rc_58f89aae46163f33348b4592');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-economia_n_nata_58f89aae46163f33348b4592' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_nata_58f89aae46163f33348b4592');});</script>
+</div>
+<div id='div-gpt-ad-economia_n_natb_58f89aae46163f33348b4592' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natb_58f89aae46163f33348b4592');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -451,7 +518,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-economia_n_f2_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f2_58f89aae46163f33348b4592');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-economia_n_f3_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f3_58f89aae46163f33348b4592');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-economia_n_si_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_si_58f89aae46163f33348b4592');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-economia_n_sd_58f89aae46163f33348b4592' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_sd_58f89aae46163f33348b4592');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f89aae46163f33348b4592"});}
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f89aae46163f33348b4592"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f89aae46163f33348b4592').find('.js_socialMedia').RedesSociales({title:"El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje \"no confuso\"",img:"",url:"/economia/2017/04/20/58f89aae46163f33348b4592.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58f89aae46163f33348b4592').find('.js_socialMedia_1').RedesSociales({title:"El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje \"no confuso\"",img:"",url:"/economia/2017/04/20/58f89aae46163f33348b4592.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
 if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f89aae46163f33348b4592');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f89aae46163f33348b4592').find('.js_socialMedia').RedesSociales({title:"El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje \"no confuso\"",img:"/api/contents/html/images/2017-04-20-14926875239661.jpg",url:"/economia/2017/04/20/58f89aae46163f33348b4592.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
-if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f89aae46163f33348b4592').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}});</script></main>
+if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f89aae46163f33348b4592').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"El Banco de España supervisará el uso de nuevas tecnologías y pide a la banca un lenguaje \"no confuso\"",img:"",url:"/economia/2017/04/20/58f89aae46163f33348b4592.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

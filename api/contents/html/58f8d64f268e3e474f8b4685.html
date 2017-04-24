@@ -1,127 +1,101 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f8d64f268e3e474f8b4685"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Economía",portal:"elmundo",ct:"n",model:"economia-home",contentId:'58f8d64f268e3e474f8b4685',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Economía" href="/economia.html"><span itemprop="title">Economía</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="macroeconomia"><a title="Macroeconomía" href="/economia/macroeconomia.html">Macroeconomía</a></li><li data-section="empresas"><a title="Empresas" href="/economia/empresas.html">Empresas</a></li><li data-section="bolsa"><a title="Bolsa" href="/economia/bolsa/indices.html">Bolsa</a></li><li data-section="ahorro-y-consumo"><a title="Ahorro y Consumo" href="/economia/ahorro-y-consumo.html">Ahorro y Consumo</a></li><li data-section="vivienda"><a title="Vivienda" href="/economia/vivienda.html">Vivienda</a></li><li data-section="innovadores"><a title="INnovadores" href="/economia/innovadores.html">INnovadores</a></li><li data-section="comparador"><a title="Comparador" href="http://comparador.elmundo.es/">Comparador</a></li></ul>',numComments:'6',rrss:{img:"/api/contents/html/images/2017-04-20-14927028735730.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58f8d64f268e3e474f8b4685">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"Economía",portal:"elmundo",ct:"n",model:"economia-home",contentId:'58f8d64f268e3e474f8b4685',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Economía" href="/economia.html"><span itemprop="title">Economía</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/economia.html" title="Economía">Economía</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Macroeconomía"><a title="Macroeconomía" href="/economia/macroeconomia.html">Macroeconomía</a></li><li data-section="Empresas"><a title="Empresas" href="/economia/empresas.html">Empresas</a></li><li data-section="Bolsa"><a title="Bolsa" href="/economia/bolsa/indices.html">Bolsa</a></li><li data-section="Ahorro y Consumo"><a title="Ahorro y Consumo" href="/economia/ahorro-y-consumo.html">Ahorro y Consumo</a></li><li data-section="Vivienda"><a title="Vivienda" href="/economia/vivienda.html">Vivienda</a></li><li data-section="INnovadores"><a title="INnovadores" href="/economia/innovadores.html">INnovadores</a></li><li data-section="Comparador"><a title="Comparador" href="http://comparador.elmundo.es/">Comparador</a></li></ul></li></ul>',numComments:'6',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
-
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/economia.html">Economía</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_m_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_m_58f8d64f268e3e474f8b4685');});</script></div></div></div><h2 class="kicker"><a href="/economia.html">ECONOMÍA</a></h2><span class="kicker">En el sector público</span><h1 itemprop="headline" class="js-headline">El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name" class="author-name"><strong>EUROPA PRESS</strong></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Madrid</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-20"><time datetime="2017-04-20 17:40:07" class="date" itemprop="dateModified">
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/economia.html">Economía</a></span>
+</span> <h2 class="kicker"> <a href="/economia.html">ECONOMÍA</a></h2><span class="kicker">En el sector público</span>
+<h1 itemprop="headline" class="js-headline">El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza</h1>
+ <div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/api/contents/html/images/2017-04-20-14927028735730.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Fachada del Tribunal Supremo. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">GONZALO ARROYO</span> </figcaption></figure>
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-economia_n_320x53_58f8d64f268e3e474f8b4685' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_320x53_58f8d64f268e3e474f8b4685');});</script>
+</div>
+</div>
+</div>
+</aside>
+   <footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li itemprop="name" class="author-name">
+<strong>EUROPA PRESS</strong>
+</li> <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality"> Madrid</span>
+</li>
+</ul>
+</address>
+</footer> <meta itemprop="datePublished" content="2017-04-20">
+<time datetime="2017-04-20 17:40:07" class="date" itemprop="dateModified">
 20
 abr.
 2017
-<strong>17:40</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="/api/contents/html/images/2017-04-20-14927028735730.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Fachada del Tribunal Supremo. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">GONZALO ARROYO</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_b300x100_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_b300x100_58f8d64f268e3e474f8b4685');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58f8d64f268e3e474f8b4685"><span class="left"><i class="icon-comments_24x20_a"></i><strong>6 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_r_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_r_58f8d64f268e3e474f8b4685');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><p>El Tribunal Supremo ha determinado que los trabajadores indefinidos no fijos del sector público, cuando son depedidos por cobertura de la plaza que ocupaban, tienen derecho a una<strong> indemnización de 20 días por año de servicio</strong>, con límite de 12 mensualidades, frente a los 8 días por año que establecía hasta ahora su jurisprudencia en los casos de ceses por amortización de vacantes. </p><p> En una sentencia fechada el pasado 28 de marzo y de la que ha sido ponente el magistrado José Manuel López, el Alto Tribunal cree que procede abonar una <strong>indemnización de 20 días por año trabajado a una empleada</strong> con contrato indefinido no fijo que llevaba diez años trabajando para el Consejo Superior de Investigaciones Científicas (CSIC) y a la que se rescindió el contrato por cobertura por concurso-oposición de la plaza que ocupaba. </p><p> En el fallo, el Supremo explica que que ha modificado el criterio respecto a estas indemnizaciones en virtud de cuatro argumentos. El primero de ellos es que el <strong>indefinido no fijo no puede equiparse al personal temporal</strong>, por lo que no correspondería abonarle una indemnización reservada para los contratados de manera temporal. </p><p> En segundo lugar, el Alto Tribunal argumenta que el origen de la figura del personal indefinido no fijo "se encuentra en un uso abusivo de la contratación temporal por parte de algún órgano administrativo". De este modo, añade, cuando ese uso abusivo de la contratación temporal se lleva a cabo por empresas privadas el contrato se convierte en fijo. En el caso de la <strong>Administración no puede imponerse dicha sanción</strong> porque el acceso a la Función Pública debe hacerse mediante concursos públicos en los que se respeten los principios de igualdad, mérito y capacidad. </p><p> El tercer argumento que aporta el Supremo se basa en que la figura jurídica del contrato indefinido no fijo es diferente del contratado temporal y del fijo. Al no tratarse de un contrato temporal, el<strong> Tribunal entiende que "parece insuficiente"</strong> la que hasta ahora le ha venido reconociendo la Sala (8 días por año). </p><p> "Parece necesario reforzar la cuantía de la indemnización y reconocer una superior a la establecida para la terminación de los contratos temporales, pues el <strong>vacío normativo</strong> al respecto no justifica, sin más, la equiparación del trabajador indefinido no fijo a uno temporal como hemos venido haciendo", explica. </p><p> Por último, el Supremo señala que la ausencia de un régimen jurídico propio del contrato indefinido no fijo --el Estatuto Básico del Empleado Público reconoce esta figura <strong>pero no regula sus elementos esenciale</strong>s--, "obliga a la Sala a resolver el debate planteado en torno a la indemnización derivada de la extinción de tal contrato, cuando la misma se produce por la cobertura reglamentaria de la plaza". </p><p> En este sentido, y analizando supuestos comparables, el Supremo entiende que es procedente una indemnización de 20 días por año de servicio, con límite de 12 mensualidades, que es la establecida en el Estatuto de los Trabajadores para las extinciones de contratos por causas objetivas. </p><p> El Supremo precisa que esta equiparación no se realiza porque la situación encaje exactamente en alguno de los supuestos de extinción contractual contemplados en el Estatuto, sino porque podría ser asimilable <strong>a la que el legislador considera como circunstancias objetivas. </strong></p><p> La sentencia rechaza el recurso que el abogado del Estado, en nombre del CSIC, interpuso contra la sentencia del Tribunal Superior de Justicia de Madrid de 11 de febrero de 2015 y por la que se concedió una indemnización de 19.214 euros a la trabajadora del CSIC despedida. Por contra, el Supremo <strong>declara la firmeza </strong>de la sentencia recurrida. </p><p> Asimismo, el Alto Tribunal también desestima el recurso planteado por la trabajadora, quien alegaba que <strong>no constaba que su plaza fuese sacada realmente a concurso</strong> ni tampoco que fuese cubierta como resultado de ese concurso.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-economia_n_nata_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_nata_58f8d64f268e3e474f8b4685');});</script></div><div id='div-gpt-ad-economia_n_natb_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natb_58f8d64f268e3e474f8b4685');});</script></div><div id='div-gpt-ad-economia_n_natc_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natc_58f8d64f268e3e474f8b4685');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'El Supremo resolverá el &#039;caso Uber&#039;', '/economia/empresas/2017/04/04/58e2b15922601d9c588b45c0.html?cid=MNOT23801&amp;s_kw=el_supremo_resolvera_el_caso_uber');" href="/economia/empresas/2017/04/04/58e2b15922601d9c588b45c0.html?cid=MNOT23801&amp;s_kw=el_supremo_resolvera_el_caso_uber">El Supremo resolverá el 'caso Uber'</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'El TS avala que se obligara a TV3 a compensar a otros partidos por retransmitir la Diada en 2015', '/cataluna/2017/04/07/58e7ac0c46163f964b8b4653.html?cid=MNOT23801&amp;s_kw=el_ts_avala_que_se_obligara_a_tv3_a_compensar_a_otros_partidos_por_retransmitir_la_diada_en_2015');" href="/cataluna/2017/04/07/58e7ac0c46163f964b8b4653.html?cid=MNOT23801&amp;s_kw=el_ts_avala_que_se_obligara_a_tv3_a_compensar_a_otros_partidos_por_retransmitir_la_diada_en_2015">El TS avala que se obligara a TV3 a compensar a otros partidos por retransmitir la Diada en 2015</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'El Supremo rechaza el recurso de la Junta contra la sentencia que anuló el canon de regadíos', '/andalucia/2017/04/13/58ef5535e5fdea47558b4654.html?cid=MNOT23801&amp;s_kw=el_supremo_rechaza_el_recurso_de_la_junta_contra_la_sentencia_que_anulo_el_canon_de_regadios');" href="/andalucia/2017/04/13/58ef5535e5fdea47558b4654.html?cid=MNOT23801&amp;s_kw=el_supremo_rechaza_el_recurso_de_la_junta_contra_la_sentencia_que_anulo_el_canon_de_regadios">El Supremo rechaza el recurso de la Junta contra la sentencia que anuló el canon de regadíos</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'Emaya vuelve a entrar en déficit después de 4 años de superávit', '/baleares/2017/04/03/58e21ac222601dbc498b466f.html?cid=MNOT23801&amp;s_kw=emaya_vuelve_a_entrar_en_deficit_despues_de_4_anos_de_superavit');" href="/baleares/2017/04/03/58e21ac222601dbc498b466f.html?cid=MNOT23801&amp;s_kw=emaya_vuelve_a_entrar_en_deficit_despues_de_4_anos_de_superavit">Emaya vuelve a entrar en déficit después de 4 años de superávit</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'El PSOE respeta la sentencia de Homs pero pide &quot;soluciones políticas&quot; a &quot;un problema político&quot;', '/espana/2017/03/22/58d29446e2704eec288b45e1.html?cid=MNOT23801&amp;s_kw=el_psoe_respeta_la_sentencia_de_homs_pero_pide_soluciones_politicas_a_un_problema_politico');" href="/espana/2017/03/22/58d29446e2704eec288b45e1.html?cid=MNOT23801&amp;s_kw=el_psoe_respeta_la_sentencia_de_homs_pero_pide_soluciones_politicas_a_un_problema_politico">El PSOE respeta la sentencia de Homs pero pide "soluciones políticas" a "un problema político"</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/e/tr/tribunal-supremo.html" rel="tag">Tribunal Supremo</a></li><li><a href="/economia.html" rel="tag">economía</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rb_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rb_58f8d64f268e3e474f8b4685');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/economia/2017/04/20/58f8d64f268e3e474f8b4685.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/economia/2017/04/20/58f8d64f268e3e474f8b4685.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/economia/2017/04/20/58f8d64f268e3e474f8b4685.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_mb_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_mb_58f8d64f268e3e474f8b4685');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rc_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rc_58f8d64f268e3e474f8b4685');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:6" itemprop="interactionCount">6</strong> Comentarios</h3>
-<article>
-<header>
-<span>2</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/social/ugc/avatars/006/300/xlarge_6300223.JPG">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">JohnMcClane</a>
-</div>
-<time content="2017-04-20" itemprop="dateCreated" datetime="2017-04-20T18:21:00+01:00">
-<span class="fecha">20/04/2017</span>
-<span class="hora">18:21 horas</span>
+<strong>17:40</strong>
 </time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Disculpe, pero la noticia va de que el TS ha aumentado a 20 días&#8203;/año desde los 8 días que quería pagar la Administración. Y usted dice que le parece bien...¿y que no deberían recibir indemnización? Contradictorio</p>
+
+<p>El Tribunal Supremo ha determinado que los trabajadores indefinidos no fijos del sector público, cuando son depedidos por cobertura de la plaza que ocupaban, tienen derecho a una<strong> indemnización de 20 días por año de servicio</strong>, con límite de 12 mensualidades, frente a los 8 días por año que establecía hasta ahora su jurisprudencia en los casos de ceses por amortización de vacantes. </p>
+<p> En una sentencia fechada el pasado 28 de marzo y de la que ha sido ponente el magistrado José Manuel López, el Alto Tribunal cree que procede abonar una <strong>indemnización de 20 días por año trabajado a una empleada</strong> con contrato indefinido no fijo que llevaba diez años trabajando para el Consejo Superior de Investigaciones Científicas (CSIC) y a la que se rescindió el contrato por cobertura por concurso-oposición de la plaza que ocupaba. </p>
+<p> En el fallo, el Supremo explica que que ha modificado el criterio respecto a estas indemnizaciones en virtud de cuatro argumentos. El primero de ellos es que el <strong>indefinido no fijo no puede equiparse al personal temporal</strong>, por lo que no correspondería abonarle una indemnización reservada para los contratados de manera temporal. </p>
+<div id='div-gpt-ad-economia_n_r_58f8d64f268e3e474f8b4685' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_r_58f8d64f268e3e474f8b4685');});</script>
 </div>
-</article>
-<article>
-<header>
-<span>5</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">paco_urtiaga_prieto</a>
+<p> En segundo lugar, el Alto Tribunal argumenta que el origen de la figura del personal indefinido no fijo "se encuentra en un uso abusivo de la contratación temporal por parte de algún órgano administrativo". De este modo, añade, cuando ese uso abusivo de la contratación temporal se lleva a cabo por empresas privadas el contrato se convierte en fijo. En el caso de la <strong>Administración no puede imponerse dicha sanción</strong> porque el acceso a la Función Pública debe hacerse mediante concursos públicos en los que se respeten los principios de igualdad, mérito y capacidad. </p>
+<p> El tercer argumento que aporta el Supremo se basa en que la figura jurídica del contrato indefinido no fijo es diferente del contratado temporal y del fijo. Al no tratarse de un contrato temporal, el<strong> Tribunal entiende que "parece insuficiente"</strong> la que hasta ahora le ha venido reconociendo la Sala (8 días por año). </p>
+<p> "Parece necesario reforzar la cuantía de la indemnización y reconocer una superior a la establecida para la terminación de los contratos temporales, pues el <strong>vacío normativo</strong> al respecto no justifica, sin más, la equiparación del trabajador indefinido no fijo a uno temporal como hemos venido haciendo", explica. </p>
+<p> Por último, el Supremo señala que la ausencia de un régimen jurídico propio del contrato indefinido no fijo --el Estatuto Básico del Empleado Público reconoce esta figura <strong>pero no regula sus elementos esenciale</strong>s--, "obliga a la Sala a resolver el debate planteado en torno a la indemnización derivada de la extinción de tal contrato, cuando la misma se produce por la cobertura reglamentaria de la plaza". </p>
+<p> En este sentido, y analizando supuestos comparables, el Supremo entiende que es procedente una indemnización de 20 días por año de servicio, con límite de 12 mensualidades, que es la establecida en el Estatuto de los Trabajadores para las extinciones de contratos por causas objetivas. </p>
+<p> El Supremo precisa que esta equiparación no se realiza porque la situación encaje exactamente en alguno de los supuestos de extinción contractual contemplados en el Estatuto, sino porque podría ser asimilable <strong>a la que el legislador considera como circunstancias objetivas. </strong></p>
+<p> La sentencia rechaza el recurso que el abogado del Estado, en nombre del CSIC, interpuso contra la sentencia del Tribunal Superior de Justicia de Madrid de 11 de febrero de 2015 y por la que se concedió una indemnización de 19.214 euros a la trabajadora del CSIC despedida. Por contra, el Supremo <strong>declara la firmeza </strong>de la sentencia recurrida. </p>
+<p> Asimismo, el Alto Tribunal también desestima el recurso planteado por la trabajadora, quien alegaba que <strong>no constaba que su plaza fuese sacada realmente a concurso</strong> ni tampoco que fuese cubierta como resultado de ese concurso.</p>
+
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/e/tr/tribunal-supremo.html" rel="tag">Tribunal Supremo</a> </li> <li>
+<a href="/economia.html" rel="tag">economía</a> </li> </ul> </aside>
 </div>
-<time content="2017-04-20" itemprop="dateCreated" datetime="2017-04-20T20:45:00+01:00">
-<span class="fecha">20/04/2017</span>
-<span class="hora">20:45 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>el problema del funcionariado es que hay dos clases muy diferentes, 1.- por concurso oposición, en la cual te curras un buen examen y ya tienes trabajo practicamente para siempre ( habría que revisarlo claro, y consistir en contratos prorrogables según rendimiento&#8203;/bajas) y 2,. el famoso funcionario de Libre designación, es decir, el amigo que colocas porque te da la gana. Todos los de libre designación deberían desaparecer por completo. Lo mejor de todo es que los puestos mas altos de funcionariado, son de libre designación, cuya única ocupación es contentar a quien le puso en el sillon, mienttras que todos los que están por debajo se han tenido que sacar su plaza.</p>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_320x53b_58f8d64f268e3e474f8b4685' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_320x53b_58f8d64f268e3e474f8b4685');});</script>
 </div>
-</article>
-<div class="comments-tool js-botonComentarios-58f8d64f268e3e474f8b4685">
-<span>Ver <strong>6</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</div>
+</div>
+</aside>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58f8d64f268e3e474f8b4685"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+6 Comentarios </strong>
 </span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza'</a>
+<i class="ellipsis"></i>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza'</a></div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:6" itemprop="interactionCount">6</strong> Comentarios</h3>
@@ -326,7 +300,42 @@ abr.
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_rb_58f8d64f268e3e474f8b4685' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rb_58f8d64f268e3e474f8b4685');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/economia/2017/04/20/58f8d64f268e3e474f8b4685.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/economia/2017/04/20/58f8d64f268e3e474f8b4685.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/economia/2017/04/20/58f8d64f268e3e474f8b4685.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_rc_58f8d64f268e3e474f8b4685' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rc_58f8d64f268e3e474f8b4685');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-economia_n_nata_58f8d64f268e3e474f8b4685' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_nata_58f8d64f268e3e474f8b4685');});</script>
+</div>
+<div id='div-gpt-ad-economia_n_natb_58f8d64f268e3e474f8b4685' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natb_58f8d64f268e3e474f8b4685');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -367,8 +376,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-economia_n_f2_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f2_58f8d64f268e3e474f8b4685');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-economia_n_f3_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f3_58f8d64f268e3e474f8b4685');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-economia_n_si_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_si_58f8d64f268e3e474f8b4685');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-economia_n_sd_58f8d64f268e3e474f8b4685' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_sd_58f8d64f268e3e474f8b4685');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f8d64f268e3e474f8b4685"});}
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f8d64f268e3e474f8b4685"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f8d64f268e3e474f8b4685').find('.js_socialMedia').RedesSociales({title:"El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza",img:"",url:"/economia/2017/04/20/58f8d64f268e3e474f8b4685.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58f8d64f268e3e474f8b4685').find('.js_socialMedia_1').RedesSociales({title:"El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza",img:"",url:"/economia/2017/04/20/58f8d64f268e3e474f8b4685.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
 if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f8d64f268e3e474f8b4685');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f8d64f268e3e474f8b4685').find('.js_socialMedia').RedesSociales({title:"El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza",img:"/api/contents/html/images/2017-04-20-14927028735730.jpg",url:"/economia/2017/04/20/58f8d64f268e3e474f8b4685.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f8d64f268e3e474f8b4685').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery("#js_58f8d64f268e3e474f8b4685 .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"El Supremo eleva de ocho a 20 días la indemnización para indefinidos no fijos despedidos por cubrirse su plaza",img:"",url:"/economia/2017/04/20/58f8d64f268e3e474f8b4685.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

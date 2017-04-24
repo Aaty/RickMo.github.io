@@ -1,127 +1,97 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f90302268e3ec50b8b4590"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58f90302268e3ec50b8b4590',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="andalucia"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="cataluna"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="comunidad-valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="pais-vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul>',numComments:'40',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58f90302268e3ec50b8b4590">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58f90302268e3ec50b8b4590',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/espana.html" title="España">España</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="Andalucía"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="Baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="Cataluña"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="Comunidad Valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="País Vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul></li></ul>',numComments:'40',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/espana.html">España</a></span>
+</span> <h2 class="kicker"> <a href="/espana.html">ESPAÑA</a></h2><span class="kicker">'Operación Lezo'</span>
+<h1 itemprop="headline" class="js-headline">Investigan si Gallardón compró una filial del Canal por 11 veces su precio</h1>
+ <div class="row content" itemprop="articleBody">
 
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/espana.html">España</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_m_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_m_58f90302268e3ec50b8b4590');});</script></div></div></div><h2 class="kicker"><a href="/espana.html">ESPAÑA</a></h2><span class="kicker">'Operación Lezo'</span><h1 itemprop="headline" class="js-headline">Investigan si Gallardón compró una filial del Canal por 11 veces su precio</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name" class="author-name"><strong>Q. ALSEDO / P. HERRAIZ</strong></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Madrid</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-20"><time datetime="2017-04-20 21:24:33" class="date" itemprop="dateModified">
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-espana_n_320x53_58f90302268e3ec50b8b4590' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53_58f90302268e3ec50b8b4590');});</script>
+</div>
+</div>
+</div>
+</aside>
+  <div class="subtitle-items">
+<p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>En los registros se ha buscado documentación sobre la primera operación exterior del Canal, en la que podrían haber incurrido en sobrecostes como los investigados de la etapa de Ignacio González</p>
+</div>
+ <footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li itemprop="name" class="author-name">
+<strong>Q. ALSEDO / P. HERRAIZ</strong>
+</li> <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality"> Madrid</span>
+</li>
+</ul>
+</address>
+</footer> <meta itemprop="datePublished" content="2017-04-20">
+<time datetime="2017-04-20 21:24:33" class="date" itemprop="dateModified">
 20
 abr.
 2017
-<strong>21:24</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_b300x100_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_b300x100_58f90302268e3ec50b8b4590');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58f90302268e3ec50b8b4590"><span class="left"><i class="icon-comments_24x20_a"></i><strong>40 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_r_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58f90302268e3ec50b8b4590');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i>En los registros se ha buscado documentación sobre la primera operación exterior del Canal, en la que podrían haber incurrido en sobrecostes como los investigados de la etapa de Ignacio González</p></div><p>La operación contra la corrupción en el Canal de Isabel de II podría terminar <strong>salpicando a Alberto Ruiz-Gallardón.</strong> Dependerá, principalmente, de los primeros resultados de los registros practicados por los agentes de la UCO. fuentes del caso confirmaron que, una vez solventada la polémica con el fiscal jefe Anticorrupción por incluir en los registros unos asuntos del año 2001, estos registros se practicaron. </p><p>Desde hace tiempo hay sospechas de sobrecostes en la operación que generó toda la corrupción que ahora salpica a la empresa de agua pública: la compra de la filial en Latinoamérica para empezar el negocio exterior del Canal. </p><p>Esta operación se hizo cuando Alberto Ruiz-Gallardón era presidente de la Comunidad, y su hombre de confianza <strong>Pedro Calvo</strong> presidente de la entidad. Según un ex trabajador del Canal, dos antiguos directivos de Aguas de Barcelona (Agbar) compraron por siete millones la empresa que 10 meses después el Canal de Isabel II compró por 79. Es decir, <strong>11 veces su precio.</strong></p><p>Ese gran negocio sería el que se va a investigar en caso de que los documentos encontrados den pie a ello. Esto salpicaría directamente a Ruiz-Gallardón, ya que hasta el año 2003 tanto la gestión del Canal como el Gobierno regional dependían de su equipo.</p><p>Esa primera expansión al exterior fue la que <strong>desató las compras de filiales</strong> ya en los años de Esperanza Aguirre e Ignacio González al frente de la Comunidad de Madrid, hasta que el Canal llegó a tener, en 2014, <strong>participaciones en 18 sociedades hispanoamericanas.</strong> En ese año, el Canal ya tenía negocios en Venezuela, México, Colombia, República Dominicana, Ecuador, Uruguay, Brasil y Panamá.</p><p>Las mismas fuentes explicaron que la investigación por ahora está acotada a lo ocurrido a partir de 2003 porque los investigados son los que estuvieron a partir de ese año, pero en caso de que al analizar la documentación haya argumentos se incluirá lo ocurrido en la época de Gallardón.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-espana_n_nata_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58f90302268e3ec50b8b4590');});</script></div><div id='div-gpt-ad-espana_n_natb_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58f90302268e3ec50b8b4590');});</script></div><div id='div-gpt-ad-espana_n_natc_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natc_58f90302268e3ec50b8b4590');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'Anticorrupción atribuye un quinto delito a Pedro Antonio Sánchez por fraude en el &#039;caso Auditorio&#039;', '/espana/2017/04/06/58e60ea2268e3e273d8b4623.html?cid=MNOT23801&amp;s_kw=anticorrupcion_atribuye_un_quinto_delito_a_pedro_antonio_sanchez_por_fraude_en_el_caso_auditorio');" href="/espana/2017/04/06/58e60ea2268e3e273d8b4623.html?cid=MNOT23801&amp;s_kw=anticorrupcion_atribuye_un_quinto_delito_a_pedro_antonio_sanchez_por_fraude_en_el_caso_auditorio">Anticorrupción atribuye un quinto delito a Pedro Antonio Sánchez por fraude en el 'caso Auditorio'</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'El nuevo inspector del Ejército quiere &quot;estrechar lazos&quot; con las instituciones catalanas', '/cataluna/2017/04/06/58e628a3268e3eb64b8b4658.html?cid=MNOT23801&amp;s_kw=el_nuevo_inspector_del_ejercito_quiere_estrechar_lazos_con_las_instituciones_catalanas');" href="/cataluna/2017/04/06/58e628a3268e3eb64b8b4658.html?cid=MNOT23801&amp;s_kw=el_nuevo_inspector_del_ejercito_quiere_estrechar_lazos_con_las_instituciones_catalanas">El nuevo inspector del Ejército quiere "estrechar lazos" con las instituciones catalanas</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'El PP salva el &#039;primer asalto&#039; de los presupuestos con González-Moñux', '/madrid/2017/04/06/58e604fc268e3eca3e8b45ec.html?cid=MNOT23801&amp;s_kw=el_pp_salva_el_primer_asalto_de_los_presupuestos_con_gonzalez_monux');" href="/madrid/2017/04/06/58e604fc268e3eca3e8b45ec.html?cid=MNOT23801&amp;s_kw=el_pp_salva_el_primer_asalto_de_los_presupuestos_con_gonzalez_monux">El PP salva el 'primer asalto' de los presupuestos con González-Moñux</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'PP y la antigua Convergència, aliados para investigar la financiación de todos los partidos', '/espana/2017/04/05/58e508bd268e3eb8488b4586.html?cid=MNOT23801&amp;s_kw=pp_y_la_antigua_convergencia_aliados_para_investigar_la_financiacion_de_todos_los_partidos');" href="/espana/2017/04/05/58e508bd268e3eb8488b4586.html?cid=MNOT23801&amp;s_kw=pp_y_la_antigua_convergencia_aliados_para_investigar_la_financiacion_de_todos_los_partidos">PP y la antigua Convergència, aliados para investigar la financiación de todos los partidos</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'El  PP se suma al rechazo de todos los partidos valencianos a los presupuestos de Rajoy', '/comunidad-valenciana/2017/04/05/58e4c193e5fdea253a8b467b.html?cid=MNOT23801&amp;s_kw=el_pp_se_suma_al_rechazo_de_todos_los_partidos_valencianos_a_los_presupuestos_de_rajoy');" href="/comunidad-valenciana/2017/04/05/58e4c193e5fdea253a8b467b.html?cid=MNOT23801&amp;s_kw=el_pp_se_suma_al_rechazo_de_todos_los_partidos_valencianos_a_los_presupuestos_de_rajoy">El PP se suma al rechazo de todos los partidos valencianos a los presupuestos de Rajoy</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/t/co/corrupcion.html" rel="tag">Corrupción</a></li><li><a href="/e/pp/pp-partido-popular.html" rel="tag">PP</a></li><li><a href="/e/uc/uco.html" rel="tag">UCO</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rb_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58f90302268e3ec50b8b4590');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/espana/2017/04/20/58f90302268e3ec50b8b4590.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/20/58f90302268e3ec50b8b4590.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/20/58f90302268e3ec50b8b4590.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_mb_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_mb_58f90302268e3ec50b8b4590');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rc_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58f90302268e3ec50b8b4590');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:40" itemprop="interactionCount">40</strong> Comentarios</h3>
-<article>
-<header>
-<span>8</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/social/ugc/avatars/003/791/xlarge_3791259.jpg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">_SAW_</a>
-</div>
-<time content="2017-04-20" itemprop="dateCreated" datetime="2017-04-20T21:57:00+01:00">
-<span class="fecha">20/04/2017</span>
-<span class="hora">21:57 horas</span>
+<strong>21:24</strong>
 </time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Es lógico que estén todos en el ajo.Cuando una organización delinque de manera organizada,no se puede permitir que ninguno de sus integrantes se quede al margen.Es el método ideal,para que nadie se vaya de la lengua,delinquir .</p>
+
+<p>La operación contra la corrupción en el Canal de Isabel de II podría terminar <strong>salpicando a Alberto Ruiz-Gallardón.</strong> Dependerá, principalmente, de los primeros resultados de los registros practicados por los agentes de la UCO. fuentes del caso confirmaron que, una vez solventada la polémica con el fiscal jefe Anticorrupción por incluir en los registros unos asuntos del año 2001, estos registros se practicaron. </p>
+<p>Desde hace tiempo hay sospechas de sobrecostes en la operación que generó toda la corrupción que ahora salpica a la empresa de agua pública: la compra de la filial en Latinoamérica para empezar el negocio exterior del Canal. </p>
+<p>Esta operación se hizo cuando Alberto Ruiz-Gallardón era presidente de la Comunidad, y su hombre de confianza <strong>Pedro Calvo</strong> presidente de la entidad. Según un ex trabajador del Canal, dos antiguos directivos de Aguas de Barcelona (Agbar) compraron por siete millones la empresa que 10 meses después el Canal de Isabel II compró por 79. Es decir, <strong>11 veces su precio.</strong></p>
+<div id='div-gpt-ad-espana_n_r_58f90302268e3ec50b8b4590' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58f90302268e3ec50b8b4590');});</script>
 </div>
-</article>
-<article>
-<header>
-<span>4</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/social/ugc/avatars/004/318/xlarge_4318798.png">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">atticcuss</a>
+<p>Ese gran negocio sería el que se va a investigar en caso de que los documentos encontrados den pie a ello. Esto salpicaría directamente a Ruiz-Gallardón, ya que hasta el año 2003 tanto la gestión del Canal como el Gobierno regional dependían de su equipo.</p>
+<p>Esa primera expansión al exterior fue la que <strong>desató las compras de filiales</strong> ya en los años de Esperanza Aguirre e Ignacio González al frente de la Comunidad de Madrid, hasta que el Canal llegó a tener, en 2014, <strong>participaciones en 18 sociedades hispanoamericanas.</strong> En ese año, el Canal ya tenía negocios en Venezuela, México, Colombia, República Dominicana, Ecuador, Uruguay, Brasil y Panamá.</p>
+<p>Las mismas fuentes explicaron que la investigación por ahora está acotada a lo ocurrido a partir de 2003 porque los investigados son los que estuvieron a partir de ese año, pero en caso de que al analizar la documentación haya argumentos se incluirá lo ocurrido en la época de Gallardón.</p>
+
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/t/co/corrupcion.html" rel="tag">Corrupción</a> </li> <li>
+<a href="/e/pp/pp-partido-popular.html" rel="tag">PP</a> </li> <li>
+<a href="/e/uc/uco.html" rel="tag">UCO</a> </li> </ul> </aside>
 </div>
-<time content="2017-04-20" itemprop="dateCreated" datetime="2017-04-20T21:42:00+01:00">
-<span class="fecha">20/04/2017</span>
-<span class="hora">21:42 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Alberto, sé fuerte.</p>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_320x53b_58f90302268e3ec50b8b4590' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53b_58f90302268e3ec50b8b4590');});</script>
 </div>
-</article>
-<div class="comments-tool js-botonComentarios-58f90302268e3ec50b8b4590">
-<span>Ver <strong>40</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</div>
+</div>
+</aside>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58f90302268e3ec50b8b4590"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+40 Comentarios </strong>
 </span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Investigan si Gallardón compró una filial del Canal por 11 veces su precio'</a>
+<i class="ellipsis"></i>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Investigan si Gallardón compró una filial del Canal por 11 veces su precio'</a></div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:40" itemprop="interactionCount">40</strong> Comentarios</h3>
@@ -443,7 +413,42 @@ abr.
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rb_58f90302268e3ec50b8b4590' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58f90302268e3ec50b8b4590');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/espana/2017/04/20/58f90302268e3ec50b8b4590.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/20/58f90302268e3ec50b8b4590.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/20/58f90302268e3ec50b8b4590.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rc_58f90302268e3ec50b8b4590' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58f90302268e3ec50b8b4590');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-espana_n_nata_58f90302268e3ec50b8b4590' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58f90302268e3ec50b8b4590');});</script>
+</div>
+<div id='div-gpt-ad-espana_n_natb_58f90302268e3ec50b8b4590' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58f90302268e3ec50b8b4590');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -484,8 +489,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-espana_n_f2_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f2_58f90302268e3ec50b8b4590');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-espana_n_f3_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f3_58f90302268e3ec50b8b4590');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-espana_n_si_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_si_58f90302268e3ec50b8b4590');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-espana_n_sd_58f90302268e3ec50b8b4590' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_sd_58f90302268e3ec50b8b4590');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f90302268e3ec50b8b4590"});}
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f90302268e3ec50b8b4590"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f90302268e3ec50b8b4590').find('.js_socialMedia').RedesSociales({title:"Investigan si Gallardón compró una filial del Canal por 11 veces su precio",img:"",url:"/espana/2017/04/20/58f90302268e3ec50b8b4590.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58f90302268e3ec50b8b4590').find('.js_socialMedia_1').RedesSociales({title:"Investigan si Gallardón compró una filial del Canal por 11 veces su precio",img:"",url:"/espana/2017/04/20/58f90302268e3ec50b8b4590.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
 if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f90302268e3ec50b8b4590');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f90302268e3ec50b8b4590').find('.js_socialMedia').RedesSociales({title:"Investigan si Gallardón compró una filial del Canal por 11 veces su precio",img:"",url:"/espana/2017/04/20/58f90302268e3ec50b8b4590.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f90302268e3ec50b8b4590').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery("#js_58f90302268e3ec50b8b4590 .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Investigan si Gallardón compró una filial del Canal por 11 veces su precio",img:"",url:"/espana/2017/04/20/58f90302268e3ec50b8b4590.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

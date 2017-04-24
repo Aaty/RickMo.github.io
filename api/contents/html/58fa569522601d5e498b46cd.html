@@ -1,132 +1,111 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58fa569522601d5e498b46cd"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fa569522601d5e498b46cd',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="andalucia"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="cataluna"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="comunidad-valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="pais-vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul>',numComments:'43',rrss:{img:"/api/contents/html/images/2017-04-21-14928011631575.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58fa569522601d5e498b46cd">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fa569522601d5e498b46cd',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/espana.html" title="España">España</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="Andalucía"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="Baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="Cataluña"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="Comunidad Valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="País Vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul></li></ul>',numComments:'43',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
-
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/espana.html">España</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_m_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_m_58fa569522601d5e498b46cd');});</script></div></div></div><h2 class="kicker"> DEFENSA</h2><h1 itemprop="headline" class="js-headline">Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name" class="author-name"><strong>EUROPA PRESS</strong></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Melilla</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-21"><time datetime="2017-04-21 21:09:25" class="date" itemprop="dateModified">
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/espana.html">España</a></span>
+</span> <h2 class="kicker"> DEFENSA</h2>
+<h1 itemprop="headline" class="js-headline">Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona</h1>
+ <div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/api/contents/html/images/2017-04-21-14928011631575.jpg" class="full-image" itemprop="contentUrl" alt="Imagen del Panteón Militar del cementerio de Melilla donde reposan..."/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Imagen del Panteón Militar del cementerio de Melilla donde reposan los restos del general Sanjurjo. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">F. G. Guerrero</span> <span>EFE</span> </figcaption></figure>
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-espana_n_320x53_58fa569522601d5e498b46cd' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53_58fa569522601d5e498b46cd');});</script>
+</div>
+</div>
+</div>
+</aside>
+  <div class="subtitle-items">
+<p class="summary-lead">
+<i class="icon-apoyo_16_b"></i><a href="/espana/2016/11/09/58231538e2704e9e678b4680.html">HEMEROTECA: La familia Sanjurjo "reprueba" el pacto entre Ayuntamiento e Iglesia para exhumar los restos del general</a></p> <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i><a href="/la-aventura-de-la-historia/2016/09/01/57c82394268e3ee3098b45c7.html">HEMEROTECA: Sanjurjo, el laureado militar que fracasó en dos golpes de Estado</a></p>
+</div>
+ <footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li itemprop="name" class="author-name">
+<strong>EUROPA PRESS</strong>
+</li> <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality"> Melilla</span>
+</li>
+</ul>
+</address>
+</footer> <meta itemprop="datePublished" content="2017-04-21">
+<time datetime="2017-04-21 21:09:25" class="date" itemprop="dateModified">
 21
 abr.
 2017
-<strong>21:09</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="/api/contents/html/images/2017-04-21-14928011631575.jpg" class="full-image" itemprop="contentUrl" alt="Imagen del Panteón Militar del cementerio de Melilla donde reposan..."/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Imagen del Panteón Militar del cementerio de Melilla donde reposan los restos del general Sanjurjo. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">F. G. Guerrero</span><span>EFE</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_b300x100_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_b300x100_58fa569522601d5e498b46cd');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fa569522601d5e498b46cd"><span class="left"><i class="icon-comments_24x20_a"></i><strong>43 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_r_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58fa569522601d5e498b46cd');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i><a href="/espana/2016/11/09/58231538e2704e9e678b4680.html">HEMEROTECA: La familia Sanjurjo "reprueba" el pacto entre Ayuntamiento e Iglesia para exhumar los restos del general</a></p><p class="summary-lead"><i class="icon-apoyo_16_b"></i><a href="/la-aventura-de-la-historia/2016/09/01/57c82394268e3ee3098b45c7.html">HEMEROTECA: Sanjurjo, el laureado militar que fracasó en dos golpes de Estado</a></p></div><p>El <strong>Ejército de Tierra</strong>, a través de la <strong>Comandancia General de Melilla</strong>, ha admitido este viernes que el general <strong>José Sanjurjo</strong>, <a href="/espana/2016/11/09/58231538e2704e9e678b4680.html">exhumado</a> del cementerio de Pamplona por decisión del Ayuntamiento navarro en aplicación de la <strong>Ley de Memoria Histórica</strong> por su doble participación en golpes de Estado contra la República en los años 1932 y 1936, ha sido enterrado en el Panteón Militar de Melilla atendiendo su condición de ex Comandante General de Melilla y a petición de su familia. </p><p>A raíz de la publicación de un artículo de opinión en la prensa melillense que desvela que los restos del general Sanjurjo fueron enterrados en la ciudad autónoma el pasado mes de marzo, el departamento de comunicación del Ejército de Tierra ha reconocido que ante la exhumación, el pasado 16 de noviembre de 2016, de los restos del general Sanjurjo en Pamplona, "la familia solicitó que fuese enterrado en un panteón militar". </p><p>La institución militar ha añadido que "atendiendo a que fue Comandante General de Melilla, estuvo al mando de fuerzas de Regulares y estaba en posesión de dos cruces Laureadas de San Fernando (1914 y 1926), se autorizó que el entierro se celebrase en el cementerio municipal de Melilla, en el panteón de Regulares número 2, que se sigue utilizando para la inhumación de los fallecidos de Regulares que lo requieran". </p><p>La entidad ha aseverado que el sepelio se realizó en "una sencilla ceremonia, íntima y privada, a la que asistieron el actual Comandante General de Melilla acompañado por una pequeña comisión, al inhumarse en una parcela militar". </p><p>No obstante, el Ejército de Tierra, a raíz del contenido del citado artículo de opinión, ha aclarado que en el entierro del fuera comandante general de Melilla en 1921 y director general de la Guardia Civil en 1928, cargo que simultáneo con el de Alto Comisionado en el Protectorado Español, ha subrayado que "no hubo Honores Militares, no se formó ninguna unidad ni piquete y no formó ningún guión ni cornetín". </p><p>El general Sanjurjo participó en los golpes de Estado de agosto de 1932, la popularmente conocida como <em>Sanjurjada</em>, y de julio de 1936 y estaba llamado a ser el jefe de la Junta Militar, pero falleció el 20 de julio de 1936 cuando su avioneta se estrelló en el momento que despegaba de Portugal para viajar a la zona sublevada en España para ponerse al mando.</p><aside class="ficha"><h3 class="list-header"><span>EH Bildu pide la comparecencia de Cospedal</span></h3><h4></h4><p><a href="/e/bi/bildu.html">EH Bildu</a> ha pedido hoy la comparecencia urgente en el Congreso de la ministra de Defensa, <a href="/e/ma/maria-dolores-de-cospedal.html">María Dolores de Cospedal</a>, para que explique "en detalle" la participación de autoridades militares en el entierro "con honores" del general golpista José Sanjurjo, que tuvo lugar en Melilla en marzo, informa Efe.<br><br>
+<strong>21:09</strong>
+</time>
+
+<p>El <strong>Ejército de Tierra</strong>, a través de la <strong>Comandancia General de Melilla</strong>, ha admitido este viernes que el general <strong>José Sanjurjo</strong>, <a href="/espana/2016/11/09/58231538e2704e9e678b4680.html">exhumado</a> del cementerio de Pamplona por decisión del Ayuntamiento navarro en aplicación de la <strong>Ley de Memoria Histórica</strong> por su doble participación en golpes de Estado contra la República en los años 1932 y 1936, ha sido enterrado en el Panteón Militar de Melilla atendiendo su condición de ex Comandante General de Melilla y a petición de su familia. </p>
+<p>A raíz de la publicación de un artículo de opinión en la prensa melillense que desvela que los restos del general Sanjurjo fueron enterrados en la ciudad autónoma el pasado mes de marzo, el departamento de comunicación del Ejército de Tierra ha reconocido que ante la exhumación, el pasado 16 de noviembre de 2016, de los restos del general Sanjurjo en Pamplona, "la familia solicitó que fuese enterrado en un panteón militar". </p>
+<p>La institución militar ha añadido que "atendiendo a que fue Comandante General de Melilla, estuvo al mando de fuerzas de Regulares y estaba en posesión de dos cruces Laureadas de San Fernando (1914 y 1926), se autorizó que el entierro se celebrase en el cementerio municipal de Melilla, en el panteón de Regulares número 2, que se sigue utilizando para la inhumación de los fallecidos de Regulares que lo requieran". </p>
+<div id='div-gpt-ad-espana_n_r_58fa569522601d5e498b46cd' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58fa569522601d5e498b46cd');});</script>
+</div>
+<p>La entidad ha aseverado que el sepelio se realizó en "una sencilla ceremonia, íntima y privada, a la que asistieron el actual Comandante General de Melilla acompañado por una pequeña comisión, al inhumarse en una parcela militar". </p>
+<p>No obstante, el Ejército de Tierra, a raíz del contenido del citado artículo de opinión, ha aclarado que en el entierro del fuera comandante general de Melilla en 1921 y director general de la Guardia Civil en 1928, cargo que simultáneo con el de Alto Comisionado en el Protectorado Español, ha subrayado que "no hubo Honores Militares, no se formó ninguna unidad ni piquete y no formó ningún guión ni cornetín". </p>
+<p>El general Sanjurjo participó en los golpes de Estado de agosto de 1932, la popularmente conocida como <em>Sanjurjada</em>, y de julio de 1936 y estaba llamado a ser el jefe de la Junta Militar, pero falleció el 20 de julio de 1936 cuando su avioneta se estrelló en el momento que despegaba de Portugal para viajar a la zona sublevada en España para ponerse al mando.</p>
+<aside class="ficha"><h3 class="list-header"><span>EH Bildu pide la comparecencia de Cospedal</span></h3>
+<h4></h4>
+<p><a href="/e/bi/bildu.html">EH Bildu</a> ha pedido hoy la comparecencia urgente en el Congreso de la ministra de Defensa, <a href="/e/ma/maria-dolores-de-cospedal.html">María Dolores de Cospedal</a>, para que explique "en detalle" la participación de autoridades militares en el entierro "con honores" del general golpista José Sanjurjo, que tuvo lugar en Melilla en marzo, informa Efe.<br><br>
 Según han informado hoy a Efe fuentes municipales melillenses, los restos del general Sanjurjo recibieron sepultura en un panteón militar de esa ciudad el pasado 23 de marzo, tras ser exhumados en Pamplona en aplicación de la Ley de Memoria Histórica de Navarra, en contra de la voluntad de la familia.<br><br>
 Los restos habían sido exhumados del Monumento a los Caídos en Pamplona por una decisión del Ayuntamiento de la ciudad, gobernado por EH Bildu, en aplicación de la ley, que también supuso la <a href="/espana/2016/11/08/58220379ca4741b0318b463f.html">exhumación</a> de otros como los del general <strong>Emilio Mola</strong>.<br><br>
 EH Bildu señala hoy en un comunicado que, según algunas informaciones, sus restos fueron trasladados desde Pamplona a Melilla por una delegación de "alto rango" del Ministerio de Defensa y que "fue enterrado el 23 de marzo con todos los honores militares", en un acto fue presidido, y no sabe si también financiado, "por autoridades militares y civiles".<br><br>
 Por ello, la portavoz de la coalición soberanista en el Congreso, <strong>Marian Beitialarrangoitia</strong>, ha solicitado hoy la comparecencia urgente de la ministra de Defensa para que explique esa participación de "autoridades militares" en el entierro del general Sanjurjo.<br><br>
-Además, el senador de EH Bildu Jon Iñarritu ha registrado una batería de preguntas al respecto para saber quién organizó el traslado, quién lo decidió y quiénes participaron en él.</p></aside><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-espana_n_nata_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58fa569522601d5e498b46cd');});</script></div><div id='div-gpt-ad-espana_n_natb_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58fa569522601d5e498b46cd');});</script></div><div id='div-gpt-ad-espana_n_natc_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natc_58fa569522601d5e498b46cd');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'Sociedades de Rodrigo Rato facturaron 82 millones a las sociedades públicas privatizadas', '/espana/2017/04/08/58e7f325468aeb70688b45aa.html?cid=MNOT23801&amp;s_kw=sociedades_de_rodrigo_rato_facturaron_82_millones_a_las_sociedades_publicas_privatizadas');" href="/espana/2017/04/08/58e7f325468aeb70688b45aa.html?cid=MNOT23801&amp;s_kw=sociedades_de_rodrigo_rato_facturaron_82_millones_a_las_sociedades_publicas_privatizadas">Sociedades de Rodrigo Rato facturaron 82 millones a las sociedades públicas privatizadas</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'La Guardia Civil rescata a 30 inmigrantes y detiene a dos de ellos tras una &quot;rebelión&quot;', '/sociedad/2017/03/23/58d3d8efe5fdea284d8b4599.html?cid=MNOT23801&amp;s_kw=la_guardia_civil_rescata_a_30_inmigrantes_y_detiene_a_dos_de_ellos_tras_una_rebelion');" href="/sociedad/2017/03/23/58d3d8efe5fdea284d8b4599.html?cid=MNOT23801&amp;s_kw=la_guardia_civil_rescata_a_30_inmigrantes_y_detiene_a_dos_de_ellos_tras_una_rebelion">La Guardia Civil rescata a 30 inmigrantes y detiene a dos de ellos tras una "rebelión"</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'Detenido en Orense un camionero ruso que circulaba sextuplicando la tasa de alcoholemia', '/sociedad/2017/03/26/58d7ba9de2704e2b338b4585.html?cid=MNOT23801&amp;s_kw=detenido_en_orense_un_camionero_ruso_que_circulaba_sextuplicando_la_tasa_de_alcoholemia');" href="/sociedad/2017/03/26/58d7ba9de2704e2b338b4585.html?cid=MNOT23801&amp;s_kw=detenido_en_orense_un_camionero_ruso_que_circulaba_sextuplicando_la_tasa_de_alcoholemia">Detenido en Orense un camionero ruso que circulaba sextuplicando la tasa de alcoholemia</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'Rescatan a 100 inmigrantes en dos pateras interceptadas en Almería', '/andalucia/2017/04/02/58e131b8468aeb74658b4613.html?cid=MNOT23801&amp;s_kw=rescatan_a_100_inmigrantes_en_dos_pateras_interceptadas_en_almeria');" href="/andalucia/2017/04/02/58e131b8468aeb74658b4613.html?cid=MNOT23801&amp;s_kw=rescatan_a_100_inmigrantes_en_dos_pateras_interceptadas_en_almeria">Rescatan a 100 inmigrantes en dos pateras interceptadas en Almería</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'La Guardia Civil cree que Xisco Gràcia está vivo porque optó por esperar: &quot;Tomó una buena decisión&quot;', '/baleares/2017/04/19/58f74e9e46163fc8208b4600.html?cid=MNOT23801&amp;s_kw=la_guardia_civil_cree_que_xisco_gracia_esta_vivo_porque_opto_por_esperar_tomo_una_buena_decision');" href="/baleares/2017/04/19/58f74e9e46163fc8208b4600.html?cid=MNOT23801&amp;s_kw=la_guardia_civil_cree_que_xisco_gracia_esta_vivo_porque_opto_por_esperar_tomo_una_buena_decision">La Guardia Civil cree que Xisco Gràcia está vivo porque optó por esperar: "Tomó una buena decisión"</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/melilla.html" rel="tag">Melilla</a></li><li><a href="/internacional/portugal.html" rel="tag">Portugal</a></li><li><a href="/e/gu/guardia-civil.html" rel="tag">Guardia Civil</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rb_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58fa569522601d5e498b46cd');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa569522601d5e498b46cd.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa569522601d5e498b46cd.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa569522601d5e498b46cd.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_mb_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_mb_58fa569522601d5e498b46cd');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rc_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58fa569522601d5e498b46cd');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:43" itemprop="interactionCount">43</strong> Comentarios</h3>
-<article>
-<header>
-<span>5</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">pepurro</a>
+Además, el senador de EH Bildu Jon Iñarritu ha registrado una batería de preguntas al respecto para saber quién organizó el traslado, quién lo decidió y quiénes participaron en él.</p>
+</aside>
+
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/melilla.html" rel="tag">Melilla</a> </li> <li>
+<a href="/internacional/portugal.html" rel="tag">Portugal</a> </li> <li>
+<a href="/e/gu/guardia-civil.html" rel="tag">Guardia Civil</a> </li> </ul> </aside>
 </div>
-<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T21:53:00+01:00">
-<span class="fecha">21/04/2017</span>
-<span class="hora">21:53 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Los de BILDU,que acaban de homenajear a un etarra recien salido dela carcel ,tienen la desfachatez de exigir explicaciones por enterrar en el cementerio de Melilla a un militar que murió hace ¡¡¡¡81!!!!años</p>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_320x53b_58fa569522601d5e498b46cd' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53b_58fa569522601d5e498b46cd');});</script>
 </div>
-</article>
-<article>
-<header>
-<span>4</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">Alberich</a>
 </div>
-<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T21:45:00+01:00">
-<span class="fecha">21/04/2017</span>
-<span class="hora">21:45 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Estos olvidan que mientras para unos era un golpista para otros era un salvador. De todas formas, pienso que les ha salido el tiro por la culata porque mas respeto tendrán por sus huesos en Melilla que cerca de separatistas revolucionarios.</p>
 </div>
-</article>
-<div class="comments-tool js-botonComentarios-58fa569522601d5e498b46cd">
-<span>Ver <strong>43</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</aside>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fa569522601d5e498b46cd"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+43 Comentarios </strong>
 </span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona'</a>
+<i class="ellipsis"></i>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona'</a></div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:43" itemprop="interactionCount">43</strong> Comentarios</h3>
@@ -448,7 +427,42 @@ Además, el senador de EH Bildu Jon Iñarritu ha registrado una batería de pregunt
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rb_58fa569522601d5e498b46cd' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58fa569522601d5e498b46cd');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa569522601d5e498b46cd.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa569522601d5e498b46cd.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa569522601d5e498b46cd.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rc_58fa569522601d5e498b46cd' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58fa569522601d5e498b46cd');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-espana_n_nata_58fa569522601d5e498b46cd' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58fa569522601d5e498b46cd');});</script>
+</div>
+<div id='div-gpt-ad-espana_n_natb_58fa569522601d5e498b46cd' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58fa569522601d5e498b46cd');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -489,55 +503,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-espana_n_f2_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f2_58fa569522601d5e498b46cd');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-espana_n_f3_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f3_58fa569522601d5e498b46cd');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-espana_n_si_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_si_58fa569522601d5e498b46cd');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-espana_n_sd_58fa569522601d5e498b46cd' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_sd_58fa569522601d5e498b46cd');});</script></div></div></div></div><script type="text/javascript">
-
-        jQuery(function() {
-
-                if (Comentarios) {
-                    window.Comments = new Comentarios({
-                        botonesDesplegar : '.js-botonComentarios',
-                        newsId: "58fa569522601d5e498b46cd"
-                    });
-                }
-
-                if (typeof inicializarComentarios === 'function') {
-                    inicializarComentarios(1, '#js_58fa569522601d5e498b46cd');
-                }
-
-                if (typeof jQuery.fn.RedesSociales === 'function') {
-                    jQuery('#js_58fa569522601d5e498b46cd').find('.js_socialMedia').RedesSociales({
-                        title: "Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona",
-                        img:"/api/contents/html/images/2017-04-21-14928011631575.jpg",
-                        url: "/espana/2017/04/21/58fa569522601d5e498b46cd.html",
-                        summary :"",
-                        viaTwitter: 'elmundoes',
-                        urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
-                        sufijoAnalitica: '_1'
-                    });
-                }
-
-                if (typeof jQuery.fn.ElementoFijo === 'function') {
-                    jQuery('#js_58fa569522601d5e498b46cd').find('.js_fixed').ElementoFijo({
-                        elementosAnteriores: ['.nav-container', '.breadcrumbs '],
-                        elementoDesdeFixed: '.content',
-                        elementoHastaFixed: '.end-fixed',
-                        minWidthFijo: 768
-                    });
-                }
-
-                jQuery("#js_58fa569522601d5e498b46cd .comentarios.aside-comments").find(".texto-comentario p").map(
-                        function(){
-                            var textComment = jQuery(this).parent(".texto-comentario");
-                            var size = textComment.css("max-height").split("px")[0];
-                            if( this.offsetHeight > size ){
-                                textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");
-                            }
-                        }
-                )
-            });
-            function cargarComentario(event, element){
-                event.preventDefault();
-                jQuery(element).parent(".texto-comentario").css("max-height","none");
-                jQuery(element).remove();
-            }
-    </script></main>
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fa569522601d5e498b46cd"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fa569522601d5e498b46cd').find('.js_socialMedia').RedesSociales({title:"Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona",img:"",url:"/espana/2017/04/21/58fa569522601d5e498b46cd.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58fa569522601d5e498b46cd').find('.js_socialMedia_1').RedesSociales({title:"Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona",img:"",url:"/espana/2017/04/21/58fa569522601d5e498b46cd.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
+if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fa569522601d5e498b46cd');}
+if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fa569522601d5e498b46cd').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Los restos del general Sanjurjo, enterrados en el Panteón Militar de Melilla tras ser retirados de Pamplona",img:"",url:"/espana/2017/04/21/58fa569522601d5e498b46cd.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

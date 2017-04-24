@@ -1,97 +1,104 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58fb88b9e5fdeaee628b459c"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Fútbol",portal:"elmundo",ct:"n",model:"liga-bbva",contentId:'58fb88b9e5fdeaee628b459c',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="Deportes" href="/deportes.html"><span itemprop="title">Deportes</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level" itemref="bread-3" id="bread-2"><a itemprop="url" title="Fútbol" href="/deportes/futbol.html"><span itemprop="title">Fútbol</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="third-level"  id="bread-3"><a itemprop="url" title="LaLiga Santander" href="/deportes/futbol/primera-division.html"><span itemprop="title">LaLiga Santander</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="noticias"><a title="Noticias" href="/deportes/futbol/primera-division.html">Noticias</a></li><li data-section="clasificacion"><a title="Clasificación" href="/deportes/futbol/primera-division/clasificacion.html">Clasificación</a></li><li data-section="calendario"><a title="Calendario" href="/deportes/futbol/primera-division/calendario.html">Calendario</a></li><li data-section="quiniela"><a title="Quiniela" href="/loterias/quiniela.html">Quiniela</a></li></ul>',numComments:'0',rrss:{img:"/api/contents/html/images/2017-04-24-14930250691977.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58fb88b9e5fdeaee628b459c">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"Fútbol",portal:"elmundo",ct:"n",model:"liga-bbva",contentId:'58fb88b9e5fdeaee628b459c',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="Deportes" href="/deportes.html"><span itemprop="title">Deportes</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level" itemref="bread-3" id="bread-2"><a itemprop="url" title="Fútbol" href="/deportes/futbol.html"><span itemprop="title">Fútbol</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="third-level"  id="bread-3"><a itemprop="url" title="LaLiga Santander" href="/deportes/futbol/primera-division.html"><span itemprop="title">LaLiga Santander</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/deportes/futbol/primera-division.html" title="LaLiga Santander">LaLiga Santander</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Noticias"><a title="Noticias" href="/deportes/futbol/primera-division.html">Noticias</a></li><li data-section="Clasificación"><a title="Clasificación" href="/deportes/futbol/primera-division/clasificacion.html">Clasificación</a></li><li data-section="Calendario"><a title="Calendario" href="/deportes/futbol/primera-division/calendario.html">Calendario</a></li><li data-section="Quiniela"><a title="Quiniela" href="/loterias/quiniela.html">Quiniela</a></li></ul></li></ul>',numComments:'0',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
-
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/deportes/futbol.html">Fútbol</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-deportes_n_m_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_m_58fb88b9e5fdeaee628b459c');});</script></div></div></div><h2 class="kicker"> LaLiga</h2><span class="kicker">Real Madrid 2 - Barcelona 3</span><h1 itemprop="headline" class="js-headline">Sergi Roberto, el solitario legado de Luis Enrique</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li class="author-twitter"><a href="http://twitter.com/FCabezas78" target="_blank"><i class="icon-twitter_14x11_a"></i>FRANCISCO CABEZAS</a></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Barcelona</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-24"><time datetime="2017-04-24 11:11:33" class="date" itemprop="dateModified">
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/deportes/futbol.html">Fútbol</a></span>
+</span> <h2 class="kicker"> Fútbol</h2><span class="kicker">Real Madrid 2 - Barcelona 3</span>
+<h1 itemprop="headline" class="js-headline">Sergi Roberto, el solitario legado de Luis Enrique</h1>
+ <div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/api/contents/html/images/2017-04-24-14930250691977.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Sergi Roberto, en el duelo ante el Real Madrid. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">OSCAR DEL POZO</span> <span>AFP-PHOTO</span> </figcaption></figure>
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-deportes_n_320x53_58fb88b9e5fdeaee628b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_320x53_58fb88b9e5fdeaee628b459c');});</script>
+</div>
+</div>
+</div>
+</aside>
+  <div class="subtitle-items">
+<p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>El técnico asturiano, esquivo con La Masia, deja al hoy lateral en la élite</p> <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>El Real Madrid intentó ficharlo con 14 años, cuando idolatraba a Zidane</p>
+</div>
+ <footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li class="author-twitter"><a href="http://twitter.com/FCabezas78" target="_blank"><i class="icon-twitter_14x11_a"></i>FRANCISCO CABEZAS</a></li>
+<li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality"> Barcelona</span>
+</li>
+</ul>
+</address>
+</footer> <meta itemprop="datePublished" content="2017-04-24">
+<time datetime="2017-04-24 11:11:33" class="date" itemprop="dateModified">
 24
 abr.
 2017
-<strong>11:11</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="/api/contents/html/images/2017-04-24-14930250691977.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Sergi Roberto, en el duelo ante el Real Madrid. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">OSCAR DEL POZO</span><span>AFP-PHOTO</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_b300x100_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_b300x100_58fb88b9e5fdeaee628b459c');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fb88b9e5fdeaee628b459c"><span class="left"><i class="icon-comments_24x20_a"></i><strong>0</strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_r_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_r_58fb88b9e5fdeaee628b459c');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i>El técnico asturiano, esquivo con La Masia, deja al hoy lateral en la élite</p><p class="summary-lead"><i class="icon-apoyo_16_b"></i>El Real Madrid intentó ficharlo con 14 años, cuando idolatraba a Zidane</p></div><p>A Sergi Roberto (Reus, 1992) no le gusta cocinar. Era su ex compañero de piso y ahora defensa del Stoke, Marc Muniesa, quien tenía que ponerse frente a los fogones para no tener que recurrir a la comida a domicilio. A Sergi Roberto tampoco le gusta ser lateral derecho. Para alguien <strong>cuyos referentes infantiles fueron Zidane y Ronaldinho, y con Xavi e Iniesta como tutores futbolísticos en la adolescencia</strong>, nunca resultará sencillo recorrer la orilla de lado a lado. Siempre pendiente de que un polizón no se cuele a tu espalda. Corregir antes que crear.</p><p>«Pero estamos ante un chico que nunca se queja. <strong>Es demasiado correcto, demasiado humilde</strong>», mantienen en la Ciutat Esportiva Joan Gamper, seguros de estar ante una especie a proteger. Por mucho que en su club todavía no se hayan puesto manos a la obra con la renovación de <strong>un contrato que concluye el 30 de junio de 2019, con una accesible cláusula de 40 millones de euros</strong>. Pero no hay prisa. Su ficha, de las más bajas de la plantilla, aumenta gracias a los incentivos firmados por número de partidos. Y, sobre todo, el propio futbolista se quitó de la cabeza aquello de huir cuando nadie se atrevía a apostar por él. Ahora, está convencido de estar viviendo un sueño.</p><p>«Llevo 10 años en este club. Donde siempre soñé jugar y vivir cosas como la ocurrida ante el PSG. Marcar un gol así, para un chico de la casa, hace mucha ilusión». Sergi Roberto, <a href="/deportes/futbol/2017/03/08/58c07bd322601da60b8b45b2.html">el día después de firmar el 6-1</a> con el que se incrustaría para siempre en el imaginario colectivo azulgrana -hasta la fecha, su único tanto en 43 partidos de esta temporada- sólo descubría una sensación ante semejante torrente de emociones:«Soy el hombre más feliz del mundo».</p><h3 class="subhead">Debut continental en el Bernabéu</h3><p>Y a su vera, Luis Enrique Martínez, el mismo que le apretaba las tuercas a su manera -<strong>«¡no marcas un gol desde juveniles!"-</strong>, podía sentirse orgulloso. En tres temporadas en las que los jóvenes valores de La Masia apenas han tenido relevancia -bajo las órdenes del asturiano han debutado 16 canteranos, sin incidencia alguna-, el técnico siempre podrá apuntarse en su legado la consolidación definitiva del futbolista de Reus. </p><p>Echar la vista al pasado ayuda a descifrar lo logrado. Sergi Roberto debutó con el primer equipo en noviembre de 2010 de la mano de Pep Guardiola.<strong> Su estreno en la Champions, curiosamente, fue en el Santiago Bernabéu el 27 de abril de 2011</strong>, día en que Messi derrumbó al Madrid de Mourinho. Pero <strong>ni el ahora técnico del City, ni Tito Vilanova, ni Gerardo Martino encontraron la manera de promocionar a un jugador que, intimidado por la presión competitiva, nada tenía que ver con el descarado portento físico de los entrenamientos</strong>. Luis Enrique fue quien le arrancó el descaro de la pechera. Que sirva un dato. <strong>Entre el equipo inicial que conquistó la Champions en Berlín en 2015 y el que cayó eliminado frente a la Juventus esta semana sólo hubo dos novedades. La de Umtiti por Mascherano y la de Sergi Roberto por Dani Alves</strong>. Un par de focos de luz frente al crepúsculo.</p><p>Hermano, hijo y nieto de maestras, Sergi Roberto y su círculo familiar viven alejados de toda farándula. Al futbolista le basta con devorar cada nuevo capítulo de Juego de Tronos o Vikings o dar buena cuenta de la videoconsola en sus ratos de desconexión.</p><p>Y no le va mal.<strong> Sólo Marcelo, con ocho asistencias, ha ofrecido más goles que él (cinco)</strong> jugando como defensa. Precisamente, esta noche volverá a medirse en el Bernabéu al madridista, a quien llevó de cabeza en el 0-4 del curso pasado. Sea como extremo, carrilero, lateral u hombre orquesta. Él no se queja.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-deportes_n_nata_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_nata_58fb88b9e5fdeaee628b459c');});</script></div><div id='div-gpt-ad-deportes_n_natb_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natb_58fb88b9e5fdeaee628b459c');});</script></div><div id='div-gpt-ad-deportes_n_natc_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natc_58fb88b9e5fdeaee628b459c');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'El populismo se adueña del fútbol', '/deportes/futbol/2017/04/01/58dff30c468aeb77598b45b1.html?cid=MNOT23801&amp;s_kw=el_populismo_se_aduena_del_futbol');" href="/deportes/futbol/2017/04/01/58dff30c468aeb77598b45b1.html?cid=MNOT23801&amp;s_kw=el_populismo_se_aduena_del_futbol">El populismo se adueña del fútbol</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'Cristiano Ronaldo, mejor pagado que Messi por primera vez', '/deportes/futbol/2017/03/27/58d90fa3ca47414f2e8b4668.html?cid=MNOT23801&amp;s_kw=cristiano_ronaldo_mejor_pagado_que_messi_por_primera_vez');" href="/deportes/futbol/2017/03/27/58d90fa3ca47414f2e8b4668.html?cid=MNOT23801&amp;s_kw=cristiano_ronaldo_mejor_pagado_que_messi_por_primera_vez">Cristiano Ronaldo, mejor pagado que Messi por primera vez</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'Luis Enrique: &quot;Ya se vio que el Barcelona puede marcar tres goles en tres minutos&quot;', '/deportes/futbol/2017/04/18/58f60c51e2704ec42f8b4592.html?cid=MNOT23801&amp;s_kw=luis_enrique_ya_se_vio_que_el_barcelona_puede_marcar_tres_goles_en_tres_minutos');" href="/deportes/futbol/2017/04/18/58f60c51e2704ec42f8b4592.html?cid=MNOT23801&amp;s_kw=luis_enrique_ya_se_vio_que_el_barcelona_puede_marcar_tres_goles_en_tres_minutos">Luis Enrique: "Ya se vio que el Barcelona puede marcar tres goles en tres minutos"</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'Buffon: &quot;El Barça nos enseñó que todo es posible&quot;', '/deportes/futbol/2017/04/11/58ec042b46163f95768b4606.html?cid=MNOT23801&amp;s_kw=buffon_el_barca_nos_enseno_que_todo_es_posible');" href="/deportes/futbol/2017/04/11/58ec042b46163f95768b4606.html?cid=MNOT23801&amp;s_kw=buffon_el_barca_nos_enseno_que_todo_es_posible">Buffon: "El Barça nos enseñó que todo es posible"</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'El gran salto de Adams: de China y Azerbaiyán al banquillo del Granada', '/deportes/futbol/2017/04/10/58ebb97eca474161488b45ee.html?cid=MNOT23801&amp;s_kw=el_gran_salto_de_adams_de_china_y_azerbaiyan_al_banquillo_del_granada');" href="/deportes/futbol/2017/04/10/58ebb97eca474161488b45ee.html?cid=MNOT23801&amp;s_kw=el_gran_salto_de_adams_de_china_y_azerbaiyan_al_banquillo_del_granada">El gran salto de Adams: de China y Azerbaiyán al banquillo del Granada</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/e/pe/pep-guardiola.html" rel="tag">Pep Guardiola</a></li><li><a href="/television/series/juego-de-tronos.html" rel="tag">Juego de Tronos</a></li><li><a href="/deportes/futbol/jugadores/dani-alves.html" rel="tag">Dani Alves</a></li><li><a href="/deportes/futbol/primera-division.html" rel="tag">Primera División</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_rb_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rb_58fb88b9e5fdeaee628b459c');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-deportes_n_mb_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_mb_58fb88b9e5fdeaee628b459c');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_rc_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rc_58fb88b9e5fdeaee628b459c');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i> Comentarios</h3>
-<p>Todavía no hay comentarios. Sé el primero en dar tu opinión...</p>
-<div class="comments-tool js-botonComentarios-58fb88b9e5fdeaee628b459c">
-<span>
-Comentar noticia
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
-</span>
+<strong>11:11</strong>
+</time>
+
+<p>A Sergi Roberto (Reus, 1992) no le gusta cocinar. Era su ex compañero de piso y ahora defensa del Stoke, Marc Muniesa, quien tenía que ponerse frente a los fogones para no tener que recurrir a la comida a domicilio. A Sergi Roberto tampoco le gusta ser lateral derecho. Para alguien <strong>cuyos referentes infantiles fueron Zidane y Ronaldinho, y con Xavi e Iniesta como tutores futbolísticos en la adolescencia</strong>, nunca resultará sencillo recorrer la orilla de lado a lado. Siempre pendiente de que un polizón no se cuele a tu espalda. Corregir antes que crear.</p>
+<p>«Pero estamos ante un chico que nunca se queja. <strong>Es demasiado correcto, demasiado humilde</strong>», mantienen en la Ciutat Esportiva Joan Gamper, seguros de estar ante una especie a proteger. Por mucho que en su club todavía no se hayan puesto manos a la obra con la renovación de <strong>un contrato que concluye el 30 de junio de 2019, con una accesible cláusula de 40 millones de euros</strong>. Pero no hay prisa. Su ficha, de las más bajas de la plantilla, aumenta gracias a los incentivos firmados por número de partidos. Y, sobre todo, el propio futbolista se quitó de la cabeza aquello de huir cuando nadie se atrevía a apostar por él. Ahora, está convencido de estar viviendo un sueño.</p>
+<p>«Llevo 10 años en este club. Donde siempre soñé jugar y vivir cosas como la ocurrida ante el PSG. Marcar un gol así, para un chico de la casa, hace mucha ilusión». Sergi Roberto, <a href="/deportes/futbol/2017/03/08/58c07bd322601da60b8b45b2.html">el día después de firmar el 6-1</a> con el que se incrustaría para siempre en el imaginario colectivo azulgrana -hasta la fecha, su único tanto en 43 partidos de esta temporada- sólo descubría una sensación ante semejante torrente de emociones:«Soy el hombre más feliz del mundo».</p>
+<div id='div-gpt-ad-deportes_n_r_58fb88b9e5fdeaee628b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_r_58fb88b9e5fdeaee628b459c');});</script>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Sergi Roberto, el solitario legado de Luis Enrique'</a></div>
+<h3 class="subhead">Debut continental en el Bernabéu</h3>
+<p>Y a su vera, Luis Enrique Martínez, el mismo que le apretaba las tuercas a su manera -<strong>«¡no marcas un gol desde juveniles!"-</strong>, podía sentirse orgulloso. En tres temporadas en las que los jóvenes valores de La Masia apenas han tenido relevancia -bajo las órdenes del asturiano han debutado 16 canteranos, sin incidencia alguna-, el técnico siempre podrá apuntarse en su legado la consolidación definitiva del futbolista de Reus. </p>
+<p>Echar la vista al pasado ayuda a descifrar lo logrado. Sergi Roberto debutó con el primer equipo en noviembre de 2010 de la mano de Pep Guardiola.<strong> Su estreno en la Champions, curiosamente, fue en el Santiago Bernabéu el 27 de abril de 2011</strong>, día en que Messi derrumbó al Madrid de Mourinho. Pero <strong>ni el ahora técnico del City, ni Tito Vilanova, ni Gerardo Martino encontraron la manera de promocionar a un jugador que, intimidado por la presión competitiva, nada tenía que ver con el descarado portento físico de los entrenamientos</strong>. Luis Enrique fue quien le arrancó el descaro de la pechera. Que sirva un dato. <strong>Entre el equipo inicial que conquistó la Champions en Berlín en 2015 y el que cayó eliminado frente a la Juventus esta semana sólo hubo dos novedades. La de Umtiti por Mascherano y la de Sergi Roberto por Dani Alves</strong>. Un par de focos de luz frente al crepúsculo.</p>
+<p>Hermano, hijo y nieto de maestras, Sergi Roberto y su círculo familiar viven alejados de toda farándula. Al futbolista le basta con devorar cada nuevo capítulo de Juego de Tronos o Vikings o dar buena cuenta de la videoconsola en sus ratos de desconexión.</p>
+<p>Y no le va mal.<strong> Sólo Marcelo, con ocho asistencias, ha ofrecido más goles que él (cinco)</strong> jugando como defensa. Precisamente, esta noche volverá a medirse en el Bernabéu al madridista, a quien llevó de cabeza en el 0-4 del curso pasado. Sea como extremo, carrilero, lateral u hombre orquesta. Él no se queja.</p>
+
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/e/pe/pep-guardiola.html" rel="tag">Pep Guardiola</a> </li> <li>
+<a href="/television/series/juego-de-tronos.html" rel="tag">Juego de Tronos</a> </li> <li>
+<a href="/deportes/futbol/jugadores/dani-alves.html" rel="tag">Dani Alves</a> </li> <li>
+<a href="/deportes/futbol/primera-division.html" rel="tag">Primera División</a> </li> </ul> </aside>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-deportes_n_320x53b_58fb88b9e5fdeaee628b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_320x53b_58fb88b9e5fdeaee628b459c');});</script>
+</div>
+</div>
+</div>
+</aside>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fb88b9e5fdeaee628b459c"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+0 </strong>
+</span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Sergi Roberto, el solitario legado de Luis Enrique'</a>
+<i class="ellipsis"></i>
+</div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:0" itemprop="interactionCount">0</strong> Comentarios</h3>
@@ -117,7 +124,42 @@ Comentar noticia
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-deportes_n_rb_58fb88b9e5fdeaee628b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rb_58fb88b9e5fdeaee628b459c');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-deportes_n_rc_58fb88b9e5fdeaee628b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rc_58fb88b9e5fdeaee628b459c');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-deportes_n_nata_58fb88b9e5fdeaee628b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_nata_58fb88b9e5fdeaee628b459c');});</script>
+</div>
+<div id='div-gpt-ad-deportes_n_natb_58fb88b9e5fdeaee628b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natb_58fb88b9e5fdeaee628b459c');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -158,8 +200,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-deportes_n_f2_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_f2_58fb88b9e5fdeaee628b459c');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-deportes_n_f3_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_f3_58fb88b9e5fdeaee628b459c');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-deportes_n_si_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_si_58fb88b9e5fdeaee628b459c');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-deportes_n_sd_58fb88b9e5fdeaee628b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_sd_58fb88b9e5fdeaee628b459c');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fb88b9e5fdeaee628b459c"});}
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fb88b9e5fdeaee628b459c"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fb88b9e5fdeaee628b459c').find('.js_socialMedia').RedesSociales({title:"Sergi Roberto, el solitario legado de Luis Enrique",img:"",url:"/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58fb88b9e5fdeaee628b459c').find('.js_socialMedia_1').RedesSociales({title:"Sergi Roberto, el solitario legado de Luis Enrique",img:"",url:"/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
 if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fb88b9e5fdeaee628b459c');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fb88b9e5fdeaee628b459c').find('.js_socialMedia').RedesSociales({title:"Sergi Roberto, el solitario legado de Luis Enrique",img:"/api/contents/html/images/2017-04-24-14930250691977.jpg",url:"/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fb88b9e5fdeaee628b459c').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery("#js_58fb88b9e5fdeaee628b459c .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Sergi Roberto, el solitario legado de Luis Enrique",img:"",url:"/deportes/futbol/2017/04/23/58fb88b9e5fdeaee628b459c.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

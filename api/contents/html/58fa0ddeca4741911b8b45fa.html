@@ -1,127 +1,81 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58fa0ddeca4741911b8b45fa"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fa0ddeca4741911b8b45fa',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="andalucia"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="cataluna"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="comunidad-valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="pais-vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul>',numComments:'2',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58fa0ddeca4741911b8b45fa">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fa0ddeca4741911b8b45fa',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/espana.html" title="España">España</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="Andalucía"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="Baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="Cataluña"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="Comunidad Valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="País Vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul></li></ul>',numComments:'2',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
-
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/espana.html">España</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_m_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_m_58fa0ddeca4741911b8b45fa');});</script></div></div></div><h2 class="kicker"><a href="/espana.html">ESPAÑA</a></h2><h1 itemprop="headline" class="js-headline">Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo</h1><div class="row content sharing-tools"><ul><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-21"><time datetime="2017-04-21 15:55:46" class="date" itemprop="dateModified">
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/espana.html">España</a></span>
+</span> <h2 class="kicker"> <a href="/espana.html">ESPAÑA</a></h2>
+<h1 itemprop="headline" class="js-headline">Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo</h1>
+ <div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+<meta itemprop="name" content="Video"/>
+<meta itemprop="description" content="Descubre mas videos"/>
+<meta itemprop="thumbnailUrl" content="http://v.uecdn.es/p/108/thumbnail/entry_id/0_vknr20rg/width/320/type/2/bgcolor/000000/0_vknr20rg.jpg/cache_st/1492782947"/>
+<meta itemprop="contentURL" content="http://k.uecdn.es/index.php/kwidget/wid/_108/uiconf_id/8704917/entry_id/0_vknr20rg"/><meta itemprop="uploadDate" content="2017-04-21T15:55:49+02:00"/><meta itemprop="duration" content="T0S"/> <div id="video-58fa0ddeca4741911b8b45fa" style="height: 180px;" class="full-video"></div> <script type="text/javascript">jQuery(function(){if(typeof KalturaUE==='object'){var kalturaPlayer=new KalturaUE.Player('video-58fa0ddeca4741911b8b45fa',kalturaPlayerConfig);kalturaPlayer.setConfig({partnerId:108,opciones:{responsive:'16/9'}});var tags="";kalturaPlayer.setTags(tags.split(","));kalturaPlayer.setTopic("");kalturaPlayer.setThumbnailUrl("http://v.uecdn.es/p/108/thumbnail/entry_id/0_vknr20rg/width/320/cache_st/1492782947/type/2/bgcolor/000000/0_vknr20rg.jpg");kalturaPlayer.load('0_vknr20rg','');};});</script>
+<noscript>
+<img src="http://v.uecdn.es/p/108/thumbnail/entry_id/0_vknr20rg/width/320/cache_st/1492782947/type/2/bgcolor/000000/0_vknr20rg.jpg" style="height: 590px; margin-top: -590px; width:100%; "/>
+</noscript> <figcaption class="caption" itemprop="description"> <i class="icon-video_16_g"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">ANTONIO HEREDIA (Foto)</span> </figcaption></figure>
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-espana_n_320x53_58fa0ddeca4741911b8b45fa' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53_58fa0ddeca4741911b8b45fa');});</script>
+</div>
+</div>
+</div>
+</aside>
+   <meta itemprop="datePublished" content="2017-04-21">
+<time datetime="2017-04-21 15:55:46" class="date" itemprop="dateModified">
 21
 abr.
 2017
-<strong>15:55</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject"><meta itemprop="name" content="Video"/><meta itemprop="description" content="Descubre mas videos"/><meta itemprop="thumbnailUrl" content="http://v.uecdn.es/p/108/thumbnail/entry_id/0_vknr20rg/width/660/type/2/bgcolor/000000/0_vknr20rg.jpg/cache_st/1492782947"/><meta itemprop="contentURL" content="http://k.uecdn.es/index.php/kwidget/wid/_108/uiconf_id/8704917/entry_id/0_vknr20rg"/><meta itemprop="uploadDate" content="2017-04-21T15:55:52+02:00"/><meta itemprop="duration" content="T0S"/><div id="video-58fa0ddeca4741911b8b45fa" style="height: 371px;" class="full-video"></div><script type="text/javascript">jQuery(function(){if(typeof KalturaUE==='object'){var kalturaPlayer=new KalturaUE.Player('video-58fa0ddeca4741911b8b45fa',kalturaPlayerConfig);kalturaPlayer.setConfig({partnerId:108,opciones:{responsive:'16/9'}});var tags="";kalturaPlayer.setTags(tags.split(","));kalturaPlayer.setTopic("");kalturaPlayer.setThumbnailUrl("http://v.uecdn.es/p/108/thumbnail/entry_id/0_vknr20rg/width/660/cache_st/1492782947/type/2/bgcolor/000000/0_vknr20rg.jpg");kalturaPlayer.load('0_vknr20rg','');};});</script><noscript><img src="http://v.uecdn.es/p/108/thumbnail/entry_id/0_vknr20rg/width/660/cache_st/1492782947/type/2/bgcolor/000000/0_vknr20rg.jpg" style="height: 590px; margin-top: -590px; width:100%; "/></noscript><figcaption class="caption" itemprop="description"><i class="icon-video_16_g"></i><span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">ANTONIO HEREDIA (Foto)</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_b300x100_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_b300x100_58fa0ddeca4741911b8b45fa');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fa0ddeca4741911b8b45fa"><span class="left"><i class="icon-comments_24x20_a"></i><strong>2 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_r_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58fa0ddeca4741911b8b45fa');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><p>El presidente del Gobierno y del Partido Popular, Mariano Rajoy, inaugura el XIV Congreso Nacional de Nuevas Generaciones, que se celebrará el viernes 21 y el sábado 22 de abril en Sevilla.</p><p>En el acto de inauguración, que comenzará a las 16:30 horas, intervendrán también el presidente del PP de Andalucía, Juanma Moreno, y el presidente de NNGG de Andalucía, Luis Paniagua.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-espana_n_nata_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58fa0ddeca4741911b8b45fa');});</script></div><div id='div-gpt-ad-espana_n_natb_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58fa0ddeca4741911b8b45fa');});</script></div><div id='div-gpt-ad-espana_n_natc_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natc_58fa0ddeca4741911b8b45fa');});</script></div></aside><div class="related-links inside-news-body"><!-- ====RelatedNewsTags==== --></div><aside class="related-tags inside-news-body"></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rb_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58fa0ddeca4741911b8b45fa');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_mb_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_mb_58fa0ddeca4741911b8b45fa');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rc_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58fa0ddeca4741911b8b45fa');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:2" itemprop="interactionCount">2</strong> Comentarios</h3>
-<article>
-<header>
-<span>2</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/social/ugc/avatars/005/414/xlarge_5414011.jpg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">Siglo21yAunMedievos</a>
-</div>
-<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T17:18:00+01:00">
-<span class="fecha">21/04/2017</span>
-<span class="hora">17:18 horas</span>
+<strong>15:55</strong>
 </time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>... y er marianico al que nada le consta ... promocionando la marca de jabones PP ... para los buenos centiftrifugados.</p>
+
+<p>El presidente del Gobierno y del Partido Popular, Mariano Rajoy, inaugura el XIV Congreso Nacional de Nuevas Generaciones, que se celebrará el viernes 21 y el sábado 22 de abril en Sevilla.</p>
+<p>En el acto de inauguración, que comenzará a las 16:30 horas, intervendrán también el presidente del PP de Andalucía, Juanma Moreno, y el presidente de NNGG de Andalucía, Luis Paniagua.</p> <div id='div-gpt-ad-espana_n_r_58fa0ddeca4741911b8b45fa' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58fa0ddeca4741911b8b45fa');});</script>
 </div>
-</article>
-<article>
-<header>
-<span>1</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">pilisms</a>
+
+
 </div>
-<time content="2017-04-21" itemprop="dateCreated" datetime="2017-04-21T17:00:00+01:00">
-<span class="fecha">21/04/2017</span>
-<span class="hora">17:00 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Ahi estamos, con las nuevas camadas listas para el robo y latrocinio de la España que tanto queremos.</p>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_320x53b_58fa0ddeca4741911b8b45fa' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53b_58fa0ddeca4741911b8b45fa');});</script>
 </div>
-</article>
-<div class="comments-tool js-botonComentarios-58fa0ddeca4741911b8b45fa">
-<span>Ver <strong>2</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</div>
+</div>
+</aside>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fa0ddeca4741911b8b45fa"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+2 Comentarios </strong>
 </span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo'</a>
+<i class="ellipsis"></i>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo'</a></div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:2" itemprop="interactionCount">2</strong> Comentarios</h3>
@@ -210,7 +164,42 @@ abr.
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rb_58fa0ddeca4741911b8b45fa' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58fa0ddeca4741911b8b45fa');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rc_58fa0ddeca4741911b8b45fa' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58fa0ddeca4741911b8b45fa');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-espana_n_nata_58fa0ddeca4741911b8b45fa' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58fa0ddeca4741911b8b45fa');});</script>
+</div>
+<div id='div-gpt-ad-espana_n_natb_58fa0ddeca4741911b8b45fa' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58fa0ddeca4741911b8b45fa');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -251,8 +240,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-espana_n_f2_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f2_58fa0ddeca4741911b8b45fa');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-espana_n_f3_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f3_58fa0ddeca4741911b8b45fa');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-espana_n_si_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_si_58fa0ddeca4741911b8b45fa');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-espana_n_sd_58fa0ddeca4741911b8b45fa' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_sd_58fa0ddeca4741911b8b45fa');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fa0ddeca4741911b8b45fa"});}
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fa0ddeca4741911b8b45fa"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fa0ddeca4741911b8b45fa').find('.js_socialMedia').RedesSociales({title:"Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo",img:"",url:"/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58fa0ddeca4741911b8b45fa').find('.js_socialMedia_1').RedesSociales({title:"Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo",img:"",url:"/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
 if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fa0ddeca4741911b8b45fa');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fa0ddeca4741911b8b45fa').find('.js_socialMedia').RedesSociales({title:"Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo",img:"",url:"/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fa0ddeca4741911b8b45fa').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery("#js_58fa0ddeca4741911b8b45fa .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Mariano Rajoy participa en el Congreso Nacional de las NNGG del PP en Sevilla, en directo",img:"",url:"/espana/2017/04/21/58fa0ddeca4741911b8b45fa.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

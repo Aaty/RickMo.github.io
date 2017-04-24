@@ -1,130 +1,99 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58fb4b5e468aeb41778b459c"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fb4b5e468aeb41778b459c',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="andalucia"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="cataluna"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="comunidad-valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="pais-vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul>',numComments:'8',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58fb4b5e468aeb41778b459c">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fb4b5e468aeb41778b459c',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/espana.html" title="España">España</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="Andalucía"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="Baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="Cataluña"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="Comunidad Valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="País Vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul></li></ul>',numComments:'8',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/espana.html">España</a></span>
+</span> <h2 class="kicker"> TERRORISMO</h2>
+<h1 itemprop="headline" class="js-headline">Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional</h1>
+ <div class="row content" itemprop="articleBody">
 
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/espana.html">España</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_m_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_m_58fb4b5e468aeb41778b459c');});</script></div></div></div><h2 class="kicker"> TERRORISMO</h2><h1 itemprop="headline" class="js-headline">Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name" class="author-name"><strong>EUROPA PRESS</strong></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Madrid</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-22"><time datetime="2017-04-22 14:24:06" class="date" itemprop="dateModified">
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-espana_n_320x53_58fb4b5e468aeb41778b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53_58fb4b5e468aeb41778b459c');});</script>
+</div>
+</div>
+</div>
+</aside>
+   <footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li itemprop="name" class="author-name">
+<strong>EUROPA PRESS</strong>
+</li> <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality"> Madrid</span>
+</li>
+</ul>
+</address>
+</footer> <meta itemprop="datePublished" content="2017-04-22">
+<time datetime="2017-04-22 14:24:06" class="date" itemprop="dateModified">
 22
 abr.
 2017
-<strong>14:24</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_b300x100_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_b300x100_58fb4b5e468aeb41778b459c');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fb4b5e468aeb41778b459c"><span class="left"><i class="icon-comments_24x20_a"></i><strong>8 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_r_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58fb4b5e468aeb41778b459c');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><p>Agentes de la <a href="/e/gu/guardia-civil.html">Guardia Civil</a> han detenido esta madrugada en <strong>El</strong><strong>Espinar (Segovia)</strong> a un varón de 43 años de edad, nacido en <strong>Egipto</strong>, sobre el que pesaba una Orden Internacional de Detención dictada por su supuesta pertenencia a una organización terrorista, han informado fuentes de lucha antiterrorista. </p><p> La detención se ha producido tras una investigación intercambiando información con los servicios de información egipcios y alemanes. Dicha investigación ha permitido conocer que el arrestado habría residido durante un tiempo en otros países europeos como <strong>Alemania</strong>, donde también habría estado incurso en una investigación. Asimismo, el detenido estuvo vinculado a la célula terrorista desarticulada en abril de 2002 en Hamburgo, aunque fue puesto en libertad posteriormente.</p><p>En base a las disposiciones recogidas en los acuerdos internacionales de extradición, el detenido será puesto a disposición judicial a lo largo del día de hoy.</p><p>Una vez más, la colaboración internacional en el ámbito de la lucha antiterrorista ha sido determinante para la neutralización de potenciales amenazas para la seguridad de <strong>España </strong>y de nuestros vecinos, tanto europeos como mediterráneos, prestando especial atención a aquellas personas con conexiones con residentes en España y procedentes de terceros países.</p><aside class="ficha"><h3 class="list-header"><span>Estaba "de paso"</span></h3><h4></h4><p>La alcaldesa de El Espinar, Alicia Palomo, ha asegurado hoy que los vecinos del municipio segoviano se encuentran "tranquilos" ya que el presunto terrorista detenido en la madrugada del sábado estaba "de paso", al tiempo que ha agradecido la labor de los Cuerpos y Fuerzas de Seguridad del Estado por su "labor". <br><br>
+<strong>14:24</strong>
+</time>
+
+<p>Agentes de la <a href="/e/gu/guardia-civil.html">Guardia Civil</a> han detenido esta madrugada en <strong>El</strong> <strong>Espinar (Segovia)</strong> a un varón de 43 años de edad, nacido en <strong>Egipto</strong>, sobre el que pesaba una Orden Internacional de Detención dictada por su supuesta pertenencia a una organización terrorista, han informado fuentes de lucha antiterrorista. </p>
+<p> La detención se ha producido tras una investigación intercambiando información con los servicios de información egipcios y alemanes. Dicha investigación ha permitido conocer que el arrestado habría residido durante un tiempo en otros países europeos como <strong>Alemania</strong>, donde también habría estado incurso en una investigación. Asimismo, el detenido estuvo vinculado a la célula terrorista desarticulada en abril de 2002 en Hamburgo, aunque fue puesto en libertad posteriormente.</p>
+<p>En base a las disposiciones recogidas en los acuerdos internacionales de extradición, el detenido será puesto a disposición judicial a lo largo del día de hoy.</p>
+<div id='div-gpt-ad-espana_n_r_58fb4b5e468aeb41778b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_r_58fb4b5e468aeb41778b459c');});</script>
+</div>
+<p>Una vez más, la colaboración internacional en el ámbito de la lucha antiterrorista ha sido determinante para la neutralización de potenciales amenazas para la seguridad de <strong>España </strong>y de nuestros vecinos, tanto europeos como mediterráneos, prestando especial atención a aquellas personas con conexiones con residentes en España y procedentes de terceros países.</p>
+<aside class="ficha"><h3 class="list-header"><span>Estaba "de paso"</span></h3>
+<h4></h4>
+<p>La alcaldesa de El Espinar, Alicia Palomo, ha asegurado hoy que los vecinos del municipio segoviano se encuentran "tranquilos" ya que el presunto terrorista detenido en la madrugada del sábado estaba "de paso", al tiempo que ha agradecido la labor de los Cuerpos y Fuerzas de Seguridad del Estado por su "labor". <br><br>
 Así lo ha señalado, en declaraciones a Europa Press, para confirmar que no tiene muchos más datos ya que las "diligencias" las llevan "directamente" desde el Ministerio del Interior. <br><br>
 No obstante, sí ha confirmado el "revuelo" que se ha generado en la localidad una vez que se ha conocido la noticia a través de los "medios de comunicación" y las "redes sociales". "Sí que ha habido cierto revuelo entre los vecinos cuando han conocido la noticia, pero no ha pasado de ahí ya que la detención se ha realizado por la noche y no nos hemos enterado, prácticamente, de nada", ha continuado.
-</p></aside><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-espana_n_nata_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58fb4b5e468aeb41778b459c');});</script></div><div id='div-gpt-ad-espana_n_natb_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58fb4b5e468aeb41778b459c');});</script></div><div id='div-gpt-ad-espana_n_natc_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natc_58fb4b5e468aeb41778b459c');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'Detenido por abusar sexualmente de una peregrina alemana en Lugo', '/sociedad/2017/03/22/58d26bc4268e3e816d8b45e0.html?cid=MNOT23801&amp;s_kw=detenido_por_abusar_sexualmente_de_una_peregrina_alemana_en_lugo');" href="/sociedad/2017/03/22/58d26bc4268e3e816d8b45e0.html?cid=MNOT23801&amp;s_kw=detenido_por_abusar_sexualmente_de_una_peregrina_alemana_en_lugo">Detenido por abusar sexualmente de una peregrina alemana en Lugo</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'Detenido un Guardia Civil en Ourense por intentar atracar un restaurante', '/sociedad/2017/04/17/58f5010046163fcd128b45c5.html?cid=MNOT23801&amp;s_kw=detenido_un_guardia_civil_en_ourense_por_intentar_atracar_un_restaurante');" href="/sociedad/2017/04/17/58f5010046163fcd128b45c5.html?cid=MNOT23801&amp;s_kw=detenido_un_guardia_civil_en_ourense_por_intentar_atracar_un_restaurante">Detenido un Guardia Civil en Ourense por intentar atracar un restaurante</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'El Síndic de Greuges investiga dos posibles vulneraciones del derecho a expresarse en catalán', '/cataluna/2017/03/27/58d93cf022601d29148b4602.html?cid=MNOT23801&amp;s_kw=el_sindic_de_greuges_investiga_dos_posibles_vulneraciones_del_derecho_a_expresarse_en_catalan');" href="/cataluna/2017/03/27/58d93cf022601d29148b4602.html?cid=MNOT23801&amp;s_kw=el_sindic_de_greuges_investiga_dos_posibles_vulneraciones_del_derecho_a_expresarse_en_catalan">El Síndic de Greuges investiga dos posibles vulneraciones del derecho a expresarse en catalán</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'Se ofrecía como entrenador personal y abusó de 6 mujeres, tres menores', '/comunidad-valenciana/alicante/2017/04/10/58eb799eca47416f488b45fb.html?cid=MNOT23801&amp;s_kw=se_ofrecia_como_entrenador_personal_y_abuso_de_6_mujeres_tres_menores');" href="/comunidad-valenciana/alicante/2017/04/10/58eb799eca47416f488b45fb.html?cid=MNOT23801&amp;s_kw=se_ofrecia_como_entrenador_personal_y_abuso_de_6_mujeres_tres_menores">Se ofrecía como entrenador personal y abusó de 6 mujeres, tres menores</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'Investigan a un hombre en Galicia por la muerte violenta de perros', '/sociedad/2017/03/29/58dbd66e468aeb537e8b45c9.html?cid=MNOT23801&amp;s_kw=investigan_a_un_hombre_en_galicia_por_la_muerte_violenta_de_perros');" href="/sociedad/2017/03/29/58dbd66e468aeb537e8b45c9.html?cid=MNOT23801&amp;s_kw=investigan_a_un_hombre_en_galicia_por_la_muerte_violenta_de_perros">Investigan a un hombre en Galicia por la muerte violenta de perros</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/castilla-y-leon/segovia.html" rel="tag">Segovia</a></li><li><a href="/internacional/egipto.html" rel="tag">Egipto</a></li><li><a href="/e/gu/guardia-civil.html" rel="tag">Guardia Civil</a></li><li><a href="/ciencia-y-salud/salud.html" rel="tag">salud</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rb_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58fb4b5e468aeb41778b459c');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/espana/2017/04/22/58fb4b5e468aeb41778b459c.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/22/58fb4b5e468aeb41778b459c.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/22/58fb4b5e468aeb41778b459c.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_n_mb_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_mb_58fb4b5e468aeb41778b459c');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_n_rc_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58fb4b5e468aeb41778b459c');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:8" itemprop="interactionCount">8</strong> Comentarios</h3>
-<article>
-<header>
-<span>2</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">hispanis000</a>
+</p>
+</aside>
+
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/castilla-y-leon/segovia.html" rel="tag">Segovia</a> </li> <li>
+<a href="/internacional/egipto.html" rel="tag">Egipto</a> </li> <li>
+<a href="/e/gu/guardia-civil.html" rel="tag">Guardia Civil</a> </li> <li>
+<a href="/ciencia-y-salud/salud.html" rel="tag">salud</a> </li> </ul> </aside>
 </div>
-<time content="2017-04-22" itemprop="dateCreated" datetime="2017-04-22T16:07:00+01:00">
-<span class="fecha">22/04/2017</span>
-<span class="hora">16:07 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>es bastante problable que recibiera algún subsidio de "integración", que fuera a Cáritas, Cruz Roja u otros a recibir ayudas ... en fin, esto es lo que tenemos con las puertas abiertas</p>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_320x53b_58fb4b5e468aeb41778b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_320x53b_58fb4b5e468aeb41778b459c');});</script>
 </div>
-</article>
-<article>
-<header>
-<span>1</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">Filalia</a>
 </div>
-<time content="2017-04-22" itemprop="dateCreated" datetime="2017-04-22T15:55:00+01:00">
-<span class="fecha">22/04/2017</span>
-<span class="hora">15:55 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Ahora sólo falta un tercero en discordia: un juez buen rollito que, como en Alemania, lo ponga en liberta. ¿A Egipto cargado de cadenas! Allá sabrán qué hacen con este "loco de Alá".</p>
 </div>
-</article>
-<div class="comments-tool js-botonComentarios-58fb4b5e468aeb41778b459c">
-<span>Ver <strong>8</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</aside>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fb4b5e468aeb41778b459c"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+8 Comentarios </strong>
 </span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional'</a>
+<i class="ellipsis"></i>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional'</a></div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:8" itemprop="interactionCount">8</strong> Comentarios</h3>
@@ -393,7 +362,42 @@ No obstante, sí ha confirmado el "revuelo" que se ha generado en la localidad un
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rb_58fb4b5e468aeb41778b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rb_58fb4b5e468aeb41778b459c');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/espana/2017/04/22/58fb4b5e468aeb41778b459c.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/22/58fb4b5e468aeb41778b459c.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/22/58fb4b5e468aeb41778b459c.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-espana_n_rc_58fb4b5e468aeb41778b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_rc_58fb4b5e468aeb41778b459c');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-espana_n_nata_58fb4b5e468aeb41778b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_nata_58fb4b5e468aeb41778b459c');});</script>
+</div>
+<div id='div-gpt-ad-espana_n_natb_58fb4b5e468aeb41778b459c' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_natb_58fb4b5e468aeb41778b459c');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -434,8 +438,79 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-espana_n_f2_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f2_58fb4b5e468aeb41778b459c');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-espana_n_f3_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_f3_58fb4b5e468aeb41778b459c');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-espana_n_si_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_si_58fb4b5e468aeb41778b459c');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-espana_n_sd_58fb4b5e468aeb41778b459c' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_n_sd_58fb4b5e468aeb41778b459c');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fb4b5e468aeb41778b459c"});}
-if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fb4b5e468aeb41778b459c');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fb4b5e468aeb41778b459c').find('.js_socialMedia').RedesSociales({title:"Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional",img:"",url:"/espana/2017/04/22/58fb4b5e468aeb41778b459c.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
-if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fb4b5e468aeb41778b459c').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery("#js_58fb4b5e468aeb41778b459c .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>
+        jQuery(function() {
+            if (Comentarios) {
+                window.Comments = new Comentarios({
+                    botonesDesplegar : '.js-botonComentarios',
+                    newsId: "58fb4b5e468aeb41778b459c"
+                });
+            }
+            if (typeof jQuery.fn.RedesSociales === 'function') {
+                jQuery('#js_58fb4b5e468aeb41778b459c').find('.js_socialMedia').RedesSociales({
+                    title: "Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional",
+                    img:"",
+                    url: "/espana/2017/04/22/58fb4b5e468aeb41778b459c.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_1',
+                    sharedFb: true
+                });
+                jQuery('#js_58fb4b5e468aeb41778b459c').find('.js_socialMedia_1').RedesSociales({
+                    title: "Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional",
+                    img:"",
+                    url: "/espana/2017/04/22/58fb4b5e468aeb41778b459c.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_2',
+                    sharedFb: true
+                });
+            }
+            if (typeof inicializarComentarios === 'function') {
+                inicializarComentarios(1, '#js_58fb4b5e468aeb41778b459c');
+            }
+            if (typeof jQuery.fn.ElementoFijo === 'function') {
+                jQuery('#js_58fb4b5e468aeb41778b459c').find('.js_fixed').ElementoFijo({
+                    elementosAnteriores: ['.nav-container', '.breadcrumbs '],
+                    elementoDesdeFixed: '.content',
+                    elementoHastaFixed: '.end-fixed',
+                    minWidthFijo: 768
+                });
+            }
+
+            jQuery(window).on('slotRendered',function(event,data){
+                fixedAdv(data.slotId);
+            });
+            window.fixedAdv = function (divgpt){
+                var advFixedCount = jQuery(".js-sky #"+divgpt+" .js_fixed").length;
+                if(advFixedCount > 0){
+                    var advFixed = jQuery("#"+divgpt);
+                    var container = advFixed.closest("main");
+                    var height=0;
+                    height = container.height() - (advFixed.parent().outerHeight() - advFixed.parent().height()) - advFixed.position().top;
+                    advFixed.height(height);
+                    advFixed.find(".js_fixed").ElementoFijo(
+                    {
+                        elementosAnteriores:['.site-header'],
+                        elementoDesdeFixed:'.content-ad',
+                        minWidthFijo:768,
+                        initialPosition:'fixed',
+                        parentContainer:true
+                    });
+                };
+            };
+        });
+    </script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Detenido en Segovia un presunto yihadista de origen egipcio buscado a nivel internacional",img:"",url:"/espana/2017/04/22/58fb4b5e468aeb41778b459c.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

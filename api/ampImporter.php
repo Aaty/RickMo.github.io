@@ -67,7 +67,7 @@ function generateHtmlContent($data)
 {
     global $siteRootUrl, $siteRootPath, $originDomain;
 
-    $entireContent = getFile($data->url);
+    $entireContent = getFile(str_replace(".html", "_mobile.html", $data->url));
 
     if (isset($data->multimedia) && count($data->multimedia) > 0) {
         foreach ($data->multimedia as $multimediaItem) {

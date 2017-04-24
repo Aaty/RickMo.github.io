@@ -1,127 +1,92 @@
-<main role="main" class="main news Opinion js_navContinua" data-ue-contenido id="js_58fa64a0ca4741f00a8b4679"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fa64a0ca4741f00a8b4679',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="andalucia"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="cataluna"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="comunidad-valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="pais-vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul>',numComments:'8',rrss:{img:"/api/contents/html/images/2017-04-21-14928054446240.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua Opinion" data-ue-contenido id="js_58fa64a0ca4741f00a8b4679">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"España",portal:"elmundo",ct:"n",model:"espana-home",contentId:'58fa64a0ca4741f00a8b4679',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="España" href="/espana.html"><span itemprop="title">España</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/espana.html" title="España">España</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Madrid"><a title="Madrid" href="/madrid.html">Madrid</a></li><li data-section="Andalucía"><a title="Andalucía" href="/andalucia.html">Andalucía</a></li><li data-section="Baleares"><a title="Baleares" href="/baleares.html">Baleares</a></li><li data-section="Cataluña"><a title="Cataluña" href="/elmundo/barcelona.html">Cataluña</a></li><li data-section="Comunidad Valenciana"><a title="Comunidad Valenciana" href="/comunidad-valenciana.html">Comunidad Valenciana</a></li><li data-section="País Vasco"><a title="País Vasco" href="/pais-vasco.html">País Vasco</a></li></ul></li></ul>',numComments:'8',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
-
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/espana.html">España</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_o_m_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_m_58fa64a0ca4741f00a8b4679');});</script></div></div></div><h2 class="kicker"> LIBRE DE MARCA</h2><h1 itemprop="headline" class="js-headline">Abundancia sin alternancia</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li class="author-twitter"><a href="https://twitter.com/javi_redondo14" target="_blank"><i class="icon-twitter_14x11_a"></i>JAVIER REDONDO</a></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Madrid</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-22"><time datetime="2017-04-22 03:01:45" class="date" itemprop="dateModified">
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/espana.html">España</a></span>
+</span> <h2 class="kicker"> LIBRE DE MARCA</h2>
+<h1 itemprop="headline" class="js-headline">Abundancia sin alternancia</h1>
+<div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="/api/contents/html/images/2017-04-21-14928054446240.jpg" class="full-image" itemprop="contentUrl" alt="Esperanza Aguirre, a su salida de la Audiencia Nacional tras declarar..."/>
+<figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Esperanza Aguirre, a su salida de la Audiencia Nacional tras declarar como testigo en el 'caso Gürtel', este jueves. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">ALBERTO DI LOLLI</span> </figcaption></figure>
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-espana_o_320x53_58fa64a0ca4741f00a8b4679' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_320x53_58fa64a0ca4741f00a8b4679');});</script>
+</div>
+</div>
+</div>
+</aside>
+   <footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li class="author-twitter"><a href="https://twitter.com/javi_redondo14" target="_blank"><i class="icon-twitter_14x11_a"></i>JAVIER REDONDO</a></li>
+<li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality"> Madrid</span>
+</li>
+</ul>
+</address>
+</footer> <meta itemprop="datePublished" content="2017-04-22">
+<time datetime="2017-04-22 03:01:45" class="date" itemprop="dateModified">
 22
 abr.
 2017
-<strong>03:01</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img src="/api/contents/html/images/2017-04-21-14928054446240.jpg" class="full-image" itemprop="contentUrl" alt="Esperanza Aguirre, a su salida de la Audiencia Nacional tras declarar..."/><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Esperanza Aguirre, a su salida de la Audiencia Nacional tras declarar como testigo en el 'caso Gürtel', este jueves. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">ALBERTO DI LOLLI</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_o_b300x100_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_b300x100_58fa64a0ca4741f00a8b4679');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fa64a0ca4741f00a8b4679"><span class="left"><i class="icon-comments_24x20_a"></i><strong>8 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_o_r_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_r_58fa64a0ca4741f00a8b4679');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><p>El 17 de septiembre de 2012, <strong>Esperanza Aguirre </strong>anunció a su manera que abandonaba la política. Dejaba la Presidencia de la Comunidad en manos de su escudero, <strong>Ignacio González</strong>, si bien se mantuvo al frente del partido en Madrid hasta febrero de 2016. Ella combatió a <strong>Gallardón</strong>, el verso suelto, hasta que se convirtió en lo mismo.</p><p>El universo <em>popular </em>gira alrededor de <strong>Rajoy</strong>, al que no le perturba la velocidad a la que se sucedan los acontecimientos, pues dilata con aplomo los tiempos. Aguirre quiso dejar a González de candidato a la Presidencia. No obstante Génova decidió no arriesgar y en marzo de 2015 designó a <strong>Cifuentes</strong>, alineada con el oficialismo. Sobre González planeaban demasiadas sospechas. Aguirre se reservó la baza de la candidatura a la Alcaldía. Derrotó a <strong>Carmena </strong>aunque no obtuvo el bastón de mando. Por el contrario, Cifuentes se instaló en la Antigua Casa de Correos, en Sol. Así se escribe y resume el final de una época dorada y ahora enlodazada en el PP de Madrid. </p><p>Entre tanto, los años de crisis exigieron una auditoría a los años del despilfarro. El PP gobierna en Madrid desde 1995. En política hay una combinación letal: apariencia de abundancia sin alternancia. El PSOE se fue a pique en 2003. Desde entonces, el PP se erigió en partido dominante. No hay gobierno virtuoso sin una oposición sólida y responsable. Donde abunda el dinero público y fallan los controles la calidad de la democracia se resiente. </p><p>Aguirre presumía de <em>thatcherismo</em>, pero en la trastienda de Sol se practicó un capitalismo de Estado que amplió el agujero de las arcas de la Comunidad. Madrid era el corazón del libre mercado mientras el Canal creaba filiales y empresas públicas. El profesor <strong>Buesa </strong>muestra en <em>La pachorra conservadora </em>que si tomamos como indicador el número de imputados y condenados entre 2000 y 2014 en relación con el número de habitantes, las autonomías con más corrupción son Andalucía, Galicia, Murcia, Canarias, Ceuta, Melilla y Baleares. Si prescindimos del tamaño de la región, en números absolutos, Andalucía, Baleares, Canarias, Cataluña y Galicia están por delante de Valencia y Madrid, los dos patrones mediáticos de autonomías corruptas. </p><p>En todo caso, los datos contextualizan y redimensionan pero no varían la interpretación de los hechos. La gestión de ese PP madrileño que se desangra moralmente con González en el calabozo y <strong>Granados </strong>en prisión preventiva supuso una traición a sus votantes.</p><p>La libertad económica no radica sólo en ampliar horarios comerciales. Importa mucho más el manejo del dinero de todos y la relación que se establece entre la Administración y las empresas. De nada sirve promover la gestión privada de los servicios públicos para mejorar su eficiencia si se crea en torno a ella un contubernio que acaba por pudrir el loable principio y a la larga generar una simbiosis entre sectores público y privado. Seguro que Aguirre no sabe nada de los fraudulentos procesos de compra ni de los paraísos fiscales, pero pudo haber hecho por enterarse desde que en 2009 las aguas bajaban turbias en su Gobierno y la crisis azotaba los hogares. Su batalla era otra. El resultado es este.</p><aside class="floated-left-button end-fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_o_b300x100b_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_b300x100b_58fa64a0ca4741f00a8b4679');});</script></div></div></div></aside><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-espana_o_nata_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_nata_58fa64a0ca4741f00a8b4679');});</script></div><div id='div-gpt-ad-espana_o_natb_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_natb_58fa64a0ca4741f00a8b4679');});</script></div><div id='div-gpt-ad-espana_o_natc_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_natc_58fa64a0ca4741f00a8b4679');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'Otro caso que impide que el PP supere el estigma de la corrupción', '/opinion/2017/04/20/58f7b5deca47410e7f8b4622.html?cid=MNOT23801&amp;s_kw=otro_caso_que_impide_que_el_pp_supere_el_estigma_de_la_corrupcion');" href="/opinion/2017/04/20/58f7b5deca47410e7f8b4622.html?cid=MNOT23801&amp;s_kw=otro_caso_que_impide_que_el_pp_supere_el_estigma_de_la_corrupcion">Otro caso que impide que el PP supere el estigma de la corrupción</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', '¿&quot;Será fuerte&quot; Mariano?', '/opinion/2017/04/19/58f660d6e2704efb248b45db.html?cid=MNOT23801&amp;s_kw=sera_fuerte_mariano');" href="/opinion/2017/04/19/58f660d6e2704efb248b45db.html?cid=MNOT23801&amp;s_kw=sera_fuerte_mariano">¿"Será fuerte" Mariano?</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'Una comisión que coloca al PP frente a su pasado', '/opinion/2017/03/31/58dd501b46163f2d2a8b4586.html?cid=MNOT23801&amp;s_kw=una_comision_que_coloca_al_pp_frente_a_su_pasado');" href="/opinion/2017/03/31/58dd501b46163f2d2a8b4586.html?cid=MNOT23801&amp;s_kw=una_comision_que_coloca_al_pp_frente_a_su_pasado">Una comisión que coloca al PP frente a su pasado</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', '¿Jura decir toda la verdad?', '/espana/2017/04/19/58f7b0b5468aebfc418b4605.html?cid=MNOT23801&amp;s_kw=jura_decir_toda_la_verdad');" href="/espana/2017/04/19/58f7b0b5468aebfc418b4605.html?cid=MNOT23801&amp;s_kw=jura_decir_toda_la_verdad">¿Jura decir toda la verdad?</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'Estado zombi', '/opinion/2017/04/21/58f8e5efe5fdea57678b45a5.html?cid=MNOT23801&amp;s_kw=estado_zombi');" href="/opinion/2017/04/21/58f8e5efe5fdea57678b45a5.html?cid=MNOT23801&amp;s_kw=estado_zombi">Estado zombi</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/madrid.html" rel="tag">Madrid</a></li><li><a href="/e/es/esperanza-aguirre.html" rel="tag">Esperanza Aguirre</a></li><li><a href="/e/pp/pp-partido-popular.html" rel="tag">PP</a></li><li><a href="/e/ma/mariano-rajoy.html" rel="tag">Mariano Rajoy</a></li><li><a href="/e/ig/ignacio-gonzalez.html" rel="tag">Ignacio González</a></li><li><a href="/e/ps/psoe-partido-socialista-obrero-espanol.html" rel="tag">PSOE</a></li><li><a href="/e/al/alberto-ruiz-gallardon.html" rel="tag">Alberto Ruiz-Gallardón</a></li><li><a href="/t/op/operacion-lezo.html" rel="tag">Operación Lezo</a></li></ul></aside></aside></div><div class="row content cols-30-70"><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_o_rb_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_rb_58fa64a0ca4741f00a8b4679');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-espana_o_mb_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_mb_58fa64a0ca4741f00a8b4679');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-espana_o_rc_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_rc_58fa64a0ca4741f00a8b4679');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:8" itemprop="interactionCount">8</strong> Comentarios</h3>
-<article>
-<header>
-<span>1</span>
-<img class="avatar" alt src="//e02-elmundo.uecdn.es/portal/social/ugc/avatars/003/615/xlarge_3615685.png">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">manhuel</a>
-</div>
-<time content="2017-04-22" itemprop="dateCreated" datetime="2017-04-22T08:54:00+01:00">
-<span class="fecha">22/04/2017</span>
-<span class="hora">08:54 horas</span>
+<strong>03:01</strong>
 </time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Hay que añadir al código penal el delito de no enterarse de nada, pero ya.</p>
+
+<p>El 17 de septiembre de 2012, <strong>Esperanza Aguirre </strong>anunció a su manera que abandonaba la política. Dejaba la Presidencia de la Comunidad en manos de su escudero, <strong>Ignacio González</strong>, si bien se mantuvo al frente del partido en Madrid hasta febrero de 2016. Ella combatió a <strong>Gallardón</strong>, el verso suelto, hasta que se convirtió en lo mismo.</p>
+<p>El universo <em>popular </em>gira alrededor de <strong>Rajoy</strong>, al que no le perturba la velocidad a la que se sucedan los acontecimientos, pues dilata con aplomo los tiempos. Aguirre quiso dejar a González de candidato a la Presidencia. No obstante Génova decidió no arriesgar y en marzo de 2015 designó a <strong>Cifuentes</strong>, alineada con el oficialismo. Sobre González planeaban demasiadas sospechas. Aguirre se reservó la baza de la candidatura a la Alcaldía. Derrotó a <strong>Carmena </strong>aunque no obtuvo el bastón de mando. Por el contrario, Cifuentes se instaló en la Antigua Casa de Correos, en Sol. Así se escribe y resume el final de una época dorada y ahora enlodazada en el PP de Madrid. </p>
+<p>Entre tanto, los años de crisis exigieron una auditoría a los años del despilfarro. El PP gobierna en Madrid desde 1995. En política hay una combinación letal: apariencia de abundancia sin alternancia. El PSOE se fue a pique en 2003. Desde entonces, el PP se erigió en partido dominante. No hay gobierno virtuoso sin una oposición sólida y responsable. Donde abunda el dinero público y fallan los controles la calidad de la democracia se resiente. </p>
+<div id='div-gpt-ad-espana_o_r_58fa64a0ca4741f00a8b4679' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_r_58fa64a0ca4741f00a8b4679');});</script>
 </div>
-</article>
-<article>
-<header>
-<span>2</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">car_dom</a>
+<p>Aguirre presumía de <em>thatcherismo</em>, pero en la trastienda de Sol se practicó un capitalismo de Estado que amplió el agujero de las arcas de la Comunidad. Madrid era el corazón del libre mercado mientras el Canal creaba filiales y empresas públicas. El profesor <strong>Buesa </strong>muestra en <em>La pachorra conservadora </em>que si tomamos como indicador el número de imputados y condenados entre 2000 y 2014 en relación con el número de habitantes, las autonomías con más corrupción son Andalucía, Galicia, Murcia, Canarias, Ceuta, Melilla y Baleares. Si prescindimos del tamaño de la región, en números absolutos, Andalucía, Baleares, Canarias, Cataluña y Galicia están por delante de Valencia y Madrid, los dos patrones mediáticos de autonomías corruptas. </p>
+<p>En todo caso, los datos contextualizan y redimensionan pero no varían la interpretación de los hechos. La gestión de ese PP madrileño que se desangra moralmente con González en el calabozo y <strong>Granados </strong>en prisión preventiva supuso una traición a sus votantes.</p>
+<p>La libertad económica no radica sólo en ampliar horarios comerciales. Importa mucho más el manejo del dinero de todos y la relación que se establece entre la Administración y las empresas. De nada sirve promover la gestión privada de los servicios públicos para mejorar su eficiencia si se crea en torno a ella un contubernio que acaba por pudrir el loable principio y a la larga generar una simbiosis entre sectores público y privado. Seguro que Aguirre no sabe nada de los fraudulentos procesos de compra ni de los paraísos fiscales, pero pudo haber hecho por enterarse desde que en 2009 las aguas bajaban turbias en su Gobierno y la crisis azotaba los hogares. Su batalla era otra. El resultado es este.</p>
+
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/madrid.html" rel="tag">Madrid</a> </li> <li>
+<a href="/e/es/esperanza-aguirre.html" rel="tag">Esperanza Aguirre</a> </li> <li>
+<a href="/e/pp/pp-partido-popular.html" rel="tag">PP</a> </li> <li>
+<a href="/e/ma/mariano-rajoy.html" rel="tag">Mariano Rajoy</a> </li> <li>
+<a href="/e/ig/ignacio-gonzalez.html" rel="tag">Ignacio González</a> </li> <li>
+<a href="/e/ps/psoe-partido-socialista-obrero-espanol.html" rel="tag">PSOE</a> </li> <li>
+<a href="/e/al/alberto-ruiz-gallardon.html" rel="tag">Alberto Ruiz-Gallardón</a> </li> <li>
+<a href="/t/op/operacion-lezo.html" rel="tag">Operación Lezo</a> </li> </ul> </aside>
 </div>
-<time content="2017-04-22" itemprop="dateCreated" datetime="2017-04-22T10:22:00+01:00">
-<span class="fecha">22/04/2017</span>
-<span class="hora">10:22 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Su obligación también era enterarse; una cosa es delegar poder y otra no controlar a sus subalternos. Y aún dándole el beneficio de la duda, se rodeó de delicuentes y no se enteró de sus fechorías, esto le anula como líder ética y moralmente. De todas formas no me creo sus excusas.</p>
-</div>
-</article>
-<div class="comments-tool js-botonComentarios-58fa64a0ca4741f00a8b4679">
-<span>Ver <strong>8</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fa64a0ca4741f00a8b4679"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+8 Comentarios </strong>
 </span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel comments-panel no-visible js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Abundancia sin alternancia'</a>
+<i class="ellipsis"></i>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Abundancia sin alternancia'</a></div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:8" itemprop="interactionCount">8</strong> Comentarios</h3>
@@ -390,7 +355,25 @@ abr.
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+ <aside>
+<div class="content-ad">
+<div class="ad-item-300">
+<div id='div-gpt-ad-espana_o_rb_58fa64a0ca4741f00a8b4679' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_rb_58fa64a0ca4741f00a8b4679');});</script>
+</div>
+</div>
+</div>
+</aside>
+  <div class="OUTBRAIN" data-src="/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -431,8 +414,39 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-espana_o_f2_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_f2_58fa64a0ca4741f00a8b4679');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-espana_o_si_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_si_58fa64a0ca4741f00a8b4679');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-espana_o_sd_58fa64a0ca4741f00a8b4679' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_sd_58fa64a0ca4741f00a8b4679');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fa64a0ca4741f00a8b4679"});}
+</div></div>
+</section>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+<div id='div-gpt-ad-espana_o_rc_58fa64a0ca4741f00a8b4679' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_rc_58fa64a0ca4741f00a8b4679');});</script>
+</div>
+</div>
+</div>
+</aside>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+<div id='div-gpt-ad-espana_o_320x53b_58fa64a0ca4741f00a8b4679' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_320x53b_58fa64a0ca4741f00a8b4679');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-espana_o_nata_58fa64a0ca4741f00a8b4679' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_nata_58fa64a0ca4741f00a8b4679');});</script>
+</div>
+<div id='div-gpt-ad-espana_o_natb_58fa64a0ca4741f00a8b4679' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-espana_o_natb_58fa64a0ca4741f00a8b4679');});</script>
+</div>
+</aside>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fa64a0ca4741f00a8b4679"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fa64a0ca4741f00a8b4679').find('.js_socialMedia').RedesSociales({title:"Abundancia sin alternancia",img:"",url:"/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58fa64a0ca4741f00a8b4679').find('.js_socialMedia_1').RedesSociales({title:"Abundancia sin alternancia",img:"",url:"/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
 if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fa64a0ca4741f00a8b4679');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fa64a0ca4741f00a8b4679').find('.js_socialMedia').RedesSociales({title:"Abundancia sin alternancia",img:"/api/contents/html/images/2017-04-21-14928054446240.jpg",url:"/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fa64a0ca4741f00a8b4679').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery("#js_58fa64a0ca4741f00a8b4679 .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Abundancia sin alternancia",img:"",url:"/espana/2017/04/22/58fa64a0ca4741f00a8b4679.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

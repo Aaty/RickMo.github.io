@@ -1,127 +1,113 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58fcde76ca4741c12d8b45c6"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Fútbol",portal:"elmundo",ct:"n",model:"futbol",contentId:'58fcde76ca4741c12d8b45c6',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="Deportes" href="/deportes.html"><span itemprop="title">Deportes</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level"  id="bread-2"><a itemprop="url" title="Fútbol" href="/deportes/futbol.html"><span itemprop="title">Fútbol</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="laliga-santander"><a title="LaLiga Santander" href="/deportes/futbol/primera-division.html">LaLiga Santander</a></li><li data-section="copa"><a title="Copa" href="/deportes/futbol/copa-del-rey.html">Copa</a></li><li data-section="laliga123"><a title="LaLiga123" href="/deportes/futbol/segunda-division.html">LaLiga123</a></li><li data-section="2b"><a title="2ªB" href="/elmundodeporte/futbol/liga-segunda-b/grupo-1.html">2ªB</a></li><li data-section="premier"><a title="Premier" href="/deportes/futbol/premier-league.html">Premier</a></li><li data-section="alemania"><a title="Alemania" href="/deportes/futbol/bundesliga.html">Alemania</a></li><li data-section="italia"><a title="Italia" href="/deportes/futbol/serie-a.html">Italia</a></li><li data-section="champions"><a title="Champions" href="/deportes/futbol/champions-league.html">Champions</a></li><li data-section="e-league"><a title="E. League" href="/deportes/futbol/europa-league/calendario.html">E. League</a></li><li data-section="mundial18"><a title="Mundial&#039;18" href="/deportes/futbol/mundial.html">Mundial&#039;18</a></li></ul>',numComments:'8',rrss:{img:"/api/contents/html/images/2017-04-23-14929664944999.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58fcde76ca4741c12d8b45c6">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"Fútbol",portal:"elmundo",ct:"n",model:"futbol",contentId:'58fcde76ca4741c12d8b45c6',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="Deportes" href="/deportes.html"><span itemprop="title">Deportes</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level"  id="bread-2"><a itemprop="url" title="Fútbol" href="/deportes/futbol.html"><span itemprop="title">Fútbol</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/deportes/futbol.html" title="Fútbol">Fútbol</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="LaLiga Santander"><a title="LaLiga Santander" href="/deportes/futbol/primera-division.html">LaLiga Santander</a></li><li data-section="Copa"><a title="Copa" href="/deportes/futbol/copa-del-rey.html">Copa</a></li><li data-section="LaLiga123"><a title="LaLiga123" href="/deportes/futbol/segunda-division.html">LaLiga123</a></li><li data-section="2ªB"><a title="2ªB" href="/elmundodeporte/futbol/liga-segunda-b/grupo-1.html">2ªB</a></li><li data-section="Premier"><a title="Premier" href="/deportes/futbol/premier-league.html">Premier</a></li><li data-section="Alemania"><a title="Alemania" href="/deportes/futbol/bundesliga.html">Alemania</a></li><li data-section="Italia"><a title="Italia" href="/deportes/futbol/serie-a.html">Italia</a></li><li data-section="Champions"><a title="Champions" href="/deportes/futbol/champions-league.html">Champions</a></li><li data-section="E. League"><a title="E. League" href="/deportes/futbol/europa-league/calendario.html">E. League</a></li><li data-section="Mundial&#039;18"><a title="Mundial&#039;18" href="/deportes/futbol/mundial.html">Mundial&#039;18</a></li></ul></li></ul>',numComments:'8',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
-
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
-
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/deportes/futbol.html">Fútbol</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-deportes_n_m_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_m_58fcde76ca4741c12d8b45c6');});</script></div></div></div><h2 class="kicker"> FA CUP</h2><span class="kicker">Semifinal en Wembley (1-2)</span><h1 itemprop="headline" class="js-headline">Alexis Sánchez condena a Guardiola a su primera temporada sin títulos</h1><div class="row content sharing-tools"><ul><li class="signatures-container"><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li class="author-twitter"><a href="https://twitter.com/Albmg" target="_blank"><i class="icon-twitter_14x11_a"></i>ALBERTO MUÑOZ</a></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Manchester</span></li></ul></address></li><li class="social-networks-container"><ul class="js_socialMedia"><li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li class="date-container"><meta itemprop="datePublished" content="2017-04-23"><time datetime="2017-04-23 19:09:48" class="date" itemprop="dateModified">
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/deportes/futbol.html">Fútbol</a></span>
+</span> <h2 class="kicker"> FA CUP</h2><span class="kicker">Semifinal en Wembley (1-2)</span>
+<h1 itemprop="headline" class="js-headline">Alexis Sánchez condena a Guardiola a su primera temporada sin títulos</h1>
+ <div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/api/contents/html/images/2017-04-23-14929664944999.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Alexis Sánchez anota el gol del triunfo en Wembley. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">Carl Recine</span> <span>REUTERS</span> </figcaption></figure>
+  <aside>
+<div class="content-ad">
+<div class="ad-item-320">
+<div id='div-gpt-ad-deportes_n_320x53_58fcde76ca4741c12d8b45c6' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_320x53_58fcde76ca4741c12d8b45c6');});</script>
+</div>
+</div>
+</div>
+</aside>
+  <div class="subtitle-items">
+<p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>El City, que se adelantó en el marcador, culmina así una triste temporada</p> <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>Un gol en la prórroga del '7' lleva a los 'gunners' a una final ante el Chelsea</p>
+</div>
+ <footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li class="author-twitter"><a href="https://twitter.com/Albmg" target="_blank"><i class="icon-twitter_14x11_a"></i>ALBERTO MUÑOZ</a></li>
+<li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality"> Manchester</span>
+</li>
+</ul>
+</address>
+</footer> <meta itemprop="datePublished" content="2017-04-23">
+<time datetime="2017-04-23 19:09:48" class="date" itemprop="dateModified">
 23
 abr.
 2017
-<strong>19:09</strong></time></li></ul></div><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="/api/contents/html/images/2017-04-23-14929664944999.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Alexis Sánchez anota el gol del triunfo en Wembley. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">Carl Recine</span><span>REUTERS</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_b300x100_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_b300x100_58fcde76ca4741c12d8b45c6');});</script></div></div></div><aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fcde76ca4741c12d8b45c6"><span class="left"><i class="icon-comments_24x20_a"></i><strong>8 Comentarios </strong></span><span class="right"><strong>Comentar</strong><i class="icon-forward_8x16_a"></i></span></a><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_r_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_r_58fcde76ca4741c12d8b45c6');});</script></div></div></div></aside></aside><!-- Fin Modulo publicidad y boton --><div class="subtitle-items"><p class="summary-lead"><i class="icon-apoyo_16_b"></i>El City, que se adelantó en el marcador, culmina así una triste temporada</p><p class="summary-lead"><i class="icon-apoyo_16_b"></i>Un gol en la prórroga del '7' lleva a los 'gunners' a una final ante el Chelsea</p></div><p>Han tenido que pasar 85 años, que las expectativas del club estuvieran en lo más alto y que haya llegado uno de los entrenadores más importantes de la historia reciente para que el Manchester City vuelva a caer en unas semifinales de la FA Cup (2-1). A pesar de dominar durante muchos minutos y de adelantarse en el marcador, los <em>citizens</em> permitieron resucitar al Arsenal y lograr la remontada en el minuto 11 de la prórroga. Alexis Sánchez privó con su gol a Pep Guardiola de su primera final inglesa. Será la primera de sus ocho temporadas en los banquillos en que el técnico de Santpedor se quedará en blanco, sin un solo título que añadir a su formidable palmarés.</p><p>Si la semifinal del sábado ilustró perfectamente la pelea entre Chelsea y Tottenham en un duelo de altura por la Premier, la del domingo dejó claro cuantísimo tienen que trabajar Wenger y Guardiola para consolidar sus equipos si de verdad quieren aspirar a ganar títulos importantes. Arrastrado por bandazos e individualidades en ataque, y alentado por la fragilidad defensiva de ambos conjuntos, el partido discurrió en su mayoría con más de dos tercios de posesión del City, pero sin que eso se tradujese en oportunidades reales de gol para los de Pep.</p><h3 class="subhead">Gol mal anulado a Agüero</h3><p>Pronto se quedaron incluso sin su timón, con la lesión de David Silva a los 20 minutos, y sus transiciones se perdieron entre la horizontalidad y el pase atrás una vez alcanzada la muralla defensiva londinense. En la única ocasión de la primera parte en que Leroy Sané llegó a ganar con claridad la partida a los zagueros <em>gunners</em>, su centro bordeó la línea de cal por encima del larguero y Agüero anotó un gol anulado erróneamente por el linier, que indicó saque de portería. Una más para el VAR.</p><p>La vuelta de Claudio Bravo a la titularidad, que parece haber quedado relegado a portero de copa, volvió a encender las emociones de los aficionados <em>citizens</em>. No por sus paradas ni porque se reclame su titularidad en la grada del Etihad, sino por la sangre fría y los medios errores que comete siempre que tiene que dar salida al esférico el chileno. Una salida en falso, un resbalón frente a Giroud y un regate al límite frente a un contrario fueron sólo algunas de las jugadas que pararon el corazón a los <em>skyblues</em>.</p><aside class="summary-item"><span class="blueline-top"></span><figure class="multimedia-item foto" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="/assets/multimedia/imagenes/2017/04/23/14929666251568.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>Guardiola, cabizbajo en la zona técnica de Wembley. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span>REUTERS</span></figcaption></figure><span class="blueline-bottom"></span></aside><p>Se rebelaron los hombres de Wenger, salieron a por todas tras el descanso y arrebataron la posesión en los primeros 15 minutos del segundo acto. Pero en lo que menos le gusta al entrenador español, en una jugada que pondría los pelos de punta al mismísimo Xavi, Agüero se aprovechó de una contra en la que los <em>citizens</em> estaban encerrados para galopar hasta Cech y batirle con una preciosa pelota picada.</p><p>La contestación no vino por Özil, Giroud ni Alexis Sánchez sino que debió ser Nacho Monreal, después de un centro fantástico de Chamberlain al segundo palo, quien fusiló a Bravo con un disparo inapelable en el que es su primer gol con esa camiseta. La réplica no se hizo esperar: un disparo al poste de Yayá Touré y un cabezazo imperial de Fernandinho al larguero, que no podía creerse no estar celebrando el gol en los minutos finales.</p><h3 class="subhead">Barullo en el área</h3><p>Tanta indulgencia se tradujo en castigo en la prórroga, con la aparición de Alexis Sánchez en el momento y en el lugar indicado. Gracias a una jugada embarullada fruto de un córner, en la que la defensa no termina de despejar hasta en dos ocasiones, el chileno recibe con comodidad en el área pequeña y fusila a placer a su compatriota.</p><p>La final, que enfrentará a Arsenal y Chelsea el sábado 27 de mayo en Wembley, se presenta como la única tabla de salvación que justifique la continuidad de Wenger y como una posibilidad más que real de que se consume el doblete <em>blue</em> en la primera temporada de Antonio Conte en el banquillo del Chelsea.</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-deportes_n_nata_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_nata_58fcde76ca4741c12d8b45c6');});</script></div><div id='div-gpt-ad-deportes_n_natb_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natb_58fcde76ca4741c12d8b45c6');});</script></div><div id='div-gpt-ad-deportes_n_natc_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natc_58fcde76ca4741c12d8b45c6');});</script></div></aside><div class="related-links inside-news-body"><aside class="related-links end-fixed"><h3 class="list-header"><span>Noticias relacionadas</span></h3><ol class="list"><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'La Premier, en vivo: Arsenal vs Manchester City', '/deportes/futbol/2017/04/02/58e0c30546163f1b4f8b4600.html?cid=MNOT23801&amp;s_kw=la_premier_en_vivo_arsenal_vs_manchester_city');" href="/deportes/futbol/2017/04/02/58e0c30546163f1b4f8b4600.html?cid=MNOT23801&amp;s_kw=la_premier_en_vivo_arsenal_vs_manchester_city">La Premier, en vivo: Arsenal vs Manchester City</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'Guardiola y Wenger empatan a errores en el Emirates', '/deportes/futbol/2017/04/02/58e1335a468aeb13538b4629.html?cid=MNOT23801&amp;s_kw=guardiola_y_wenger_empatan_a_errores_en_el_emirates');" href="/deportes/futbol/2017/04/02/58e1335a468aeb13538b4629.html?cid=MNOT23801&amp;s_kw=guardiola_y_wenger_empatan_a_errores_en_el_emirates">Guardiola y Wenger empatan a errores en el Emirates</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'Guardiola se lame las heridas en el Etihad', '/deportes/futbol/2017/04/08/58e90c4fe5fdead3018b457e.html?cid=MNOT23801&amp;s_kw=guardiola_se_lame_las_heridas_en_el_etihad');" href="/deportes/futbol/2017/04/08/58e90c4fe5fdead3018b457e.html?cid=MNOT23801&amp;s_kw=guardiola_se_lame_las_heridas_en_el_etihad">Guardiola se lame las heridas en el Etihad</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '4', 'Cristiano Ronaldo, mejor pagado que Messi por primera vez', '/deportes/futbol/2017/03/27/58d90fa3ca47414f2e8b4668.html?cid=MNOT23801&amp;s_kw=cristiano_ronaldo_mejor_pagado_que_messi_por_primera_vez');" href="/deportes/futbol/2017/03/27/58d90fa3ca47414f2e8b4668.html?cid=MNOT23801&amp;s_kw=cristiano_ronaldo_mejor_pagado_que_messi_por_primera_vez">Cristiano Ronaldo, mejor pagado que Messi por primera vez</a><span class="baseline"></span></li><li><a onclick="eventoSCModulos('noticias', 'relacionadas', '5', 'El Govern nombra a la hermana de Guardiola &#039;embajadora&#039; en los países nórdicos', '/cataluna/2017/04/04/58e3d6df46163fc40f8b45fa.html?cid=MNOT23801&amp;s_kw=el_govern_nombra_a_la_hermana_de_guardiola_embajadora_en_los_paises_nordicos');" href="/cataluna/2017/04/04/58e3d6df46163fc40f8b45fa.html?cid=MNOT23801&amp;s_kw=el_govern_nombra_a_la_hermana_de_guardiola_embajadora_en_los_paises_nordicos">El Govern nombra a la hermana de Guardiola 'embajadora' en los países nórdicos</a><span class="baseline"></span></li></ol></aside></div><aside class="related-tags inside-news-body"><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/e/pe/pep-guardiola.html" rel="tag">Pep Guardiola</a></li><li><a href="/deportes.html" rel="tag">deportes</a></li><li><a href="/deportes/futbol.html" rel="tag">fútbol</a></li></ul></aside></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_rb_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rb_58fcde76ca4741c12d8b45c6');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-deportes_n_mb_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_mb_58fcde76ca4741c12d8b45c6');});</script></div></div></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-deportes_n_rc_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rc_58fcde76ca4741c12d8b45c6');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
-<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:8" itemprop="interactionCount">8</strong> Comentarios</h3>
-<article>
-<header>
-<span>4</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">comecome</a>
-</div>
-<time content="2017-04-23" itemprop="dateCreated" datetime="2017-04-23T19:52:00+01:00">
-<span class="fecha">23/04/2017</span>
-<span class="hora">19:52 horas</span>
+<strong>19:09</strong>
 </time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Me alegro por Guardiola como persona.... ¡y yo era del Barça! Pero después de aquel presidente independentista de cuyo nombre no quiero acordarme dejé atrás 45 años de fan. Se acabó.</p>
+
+<p>Han tenido que pasar 85 años, que las expectativas del club estuvieran en lo más alto y que haya llegado uno de los entrenadores más importantes de la historia reciente para que el Manchester City vuelva a caer en unas semifinales de la FA Cup (2-1). A pesar de dominar durante muchos minutos y de adelantarse en el marcador, los <em>citizens</em> permitieron resucitar al Arsenal y lograr la remontada en el minuto 11 de la prórroga. Alexis Sánchez privó con su gol a Pep Guardiola de su primera final inglesa. Será la primera de sus ocho temporadas en los banquillos en que el técnico de Santpedor se quedará en blanco, sin un solo título que añadir a su formidable palmarés.</p>
+<p>Si la semifinal del sábado ilustró perfectamente la pelea entre Chelsea y Tottenham en un duelo de altura por la Premier, la del domingo dejó claro cuantísimo tienen que trabajar Wenger y Guardiola para consolidar sus equipos si de verdad quieren aspirar a ganar títulos importantes. Arrastrado por bandazos e individualidades en ataque, y alentado por la fragilidad defensiva de ambos conjuntos, el partido discurrió en su mayoría con más de dos tercios de posesión del City, pero sin que eso se tradujese en oportunidades reales de gol para los de Pep.</p>
+<h3 class="subhead">Gol mal anulado a Agüero</h3>
+<div id='div-gpt-ad-deportes_n_r_58fcde76ca4741c12d8b45c6' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_r_58fcde76ca4741c12d8b45c6');});</script>
 </div>
-</article>
-<article>
-<header>
-<span>1</span>
-<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
-<div itemprop="author" class="autor ">
-<a rel="nofollow" href="#" class="alias">Frandelo</a>
+<p>Pronto se quedaron incluso sin su timón, con la lesión de David Silva a los 20 minutos, y sus transiciones se perdieron entre la horizontalidad y el pase atrás una vez alcanzada la muralla defensiva londinense. En la única ocasión de la primera parte en que Leroy Sané llegó a ganar con claridad la partida a los zagueros <em>gunners</em>, su centro bordeó la línea de cal por encima del larguero y Agüero anotó un gol anulado erróneamente por el linier, que indicó saque de portería. Una más para el VAR.</p>
+<p>La vuelta de Claudio Bravo a la titularidad, que parece haber quedado relegado a portero de copa, volvió a encender las emociones de los aficionados <em>citizens</em>. No por sus paradas ni porque se reclame su titularidad en la grada del Etihad, sino por la sangre fría y los medios errores que comete siempre que tiene que dar salida al esférico el chileno. Una salida en falso, un resbalón frente a Giroud y un regate al límite frente a un contrario fueron sólo algunas de las jugadas que pararon el corazón a los <em>skyblues</em>.</p>
+<aside class="summary-item"> <span class="blueline-top"></span>
+<figure class="multimedia-item foto" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/assets/multimedia/imagenes/2017/04/23/14929666251568.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Guardiola, cabizbajo en la zona técnica de Wembley. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span>REUTERS</span> </figcaption></figure>
+<span class="blueline-bottom"></span>
+</aside>
+<p>Se rebelaron los hombres de Wenger, salieron a por todas tras el descanso y arrebataron la posesión en los primeros 15 minutos del segundo acto. Pero en lo que menos le gusta al entrenador español, en una jugada que pondría los pelos de punta al mismísimo Xavi, Agüero se aprovechó de una contra en la que los <em>citizens</em> estaban encerrados para galopar hasta Cech y batirle con una preciosa pelota picada.</p>
+<p>La contestación no vino por Özil, Giroud ni Alexis Sánchez sino que debió ser Nacho Monreal, después de un centro fantástico de Chamberlain al segundo palo, quien fusiló a Bravo con un disparo inapelable en el que es su primer gol con esa camiseta. La réplica no se hizo esperar: un disparo al poste de Yayá Touré y un cabezazo imperial de Fernandinho al larguero, que no podía creerse no estar celebrando el gol en los minutos finales.</p>
+<h3 class="subhead">Barullo en el área</h3>
+<p>Tanta indulgencia se tradujo en castigo en la prórroga, con la aparición de Alexis Sánchez en el momento y en el lugar indicado. Gracias a una jugada embarullada fruto de un córner, en la que la defensa no termina de despejar hasta en dos ocasiones, el chileno recibe con comodidad en el área pequeña y fusila a placer a su compatriota.</p>
+<p>La final, que enfrentará a Arsenal y Chelsea el sábado 27 de mayo en Wembley, se presenta como la única tabla de salvación que justifique la continuidad de Wenger y como una posibilidad más que real de que se consume el doblete <em>blue</em> en la primera temporada de Antonio Conte en el banquillo del Chelsea.</p>
+
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/e/pe/pep-guardiola.html" rel="tag">Pep Guardiola</a> </li> <li>
+<a href="/deportes.html" rel="tag">deportes</a> </li> <li>
+<a href="/deportes/futbol.html" rel="tag">fútbol</a> </li> </ul> </aside>
 </div>
-<time content="2017-04-23" itemprop="dateCreated" datetime="2017-04-23T19:19:00+01:00">
-<span class="fecha">23/04/2017</span>
-<span class="hora">19:19 horas</span>
-</time>
-</header>
-<div itemprop="text" class="texto-comentario">
-<p>Hasta Wenger gana a Guardiola.......</p>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-deportes_n_320x53b_58fcde76ca4741c12d8b45c6' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_320x53b_58fcde76ca4741c12d8b45c6');});</script>
 </div>
-</article>
-<div class="comments-tool js-botonComentarios-58fcde76ca4741c12d8b45c6">
-<span>Ver <strong>8</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</div>
+</div>
+</aside>
+<div class="row content">
+
+<a href="#ancla_comentarios" class="comments-btn js-botonComentarios-58fcde76ca4741c12d8b45c6"><span class="left">
+<i class="icon-comments_24x20_a"></i>
+<strong>
+8 Comentarios </strong>
 </span>
+<span class="right">
+<strong>Comentar</strong>
+<i class="icon-forward_8x16_a"></i>
+</span>
+</a>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Alexis Sánchez condena a Guardiola a su primera temporada sin títulos'</a>
+<i class="ellipsis"></i>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'Alexis Sánchez condena a Guardiola a su primera temporada sin títulos'</a></div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:8" itemprop="interactionCount">8</strong> Comentarios</h3>
@@ -390,7 +376,42 @@ abr.
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-deportes_n_rb_58fcde76ca4741c12d8b45c6' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rb_58fcde76ca4741c12d8b45c6');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-deportes_n_rc_58fcde76ca4741c12d8b45c6' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_rc_58fcde76ca4741c12d8b45c6');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-deportes_n_nata_58fcde76ca4741c12d8b45c6' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_nata_58fcde76ca4741c12d8b45c6');});</script>
+</div>
+<div id='div-gpt-ad-deportes_n_natb_58fcde76ca4741c12d8b45c6' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_natb_58fcde76ca4741c12d8b45c6');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -431,8 +452,79 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-deportes_n_f2_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_f2_58fcde76ca4741c12d8b45c6');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-deportes_n_f3_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_f3_58fcde76ca4741c12d8b45c6');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-deportes_n_si_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_si_58fcde76ca4741c12d8b45c6');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-deportes_n_sd_58fcde76ca4741c12d8b45c6' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_sd_58fcde76ca4741c12d8b45c6');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fcde76ca4741c12d8b45c6"});}
-if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fcde76ca4741c12d8b45c6');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fcde76ca4741c12d8b45c6').find('.js_socialMedia').RedesSociales({title:"Alexis Sánchez condena a Guardiola a su primera temporada sin títulos",img:"/api/contents/html/images/2017-04-23-14929664944999.jpg",url:"/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
-if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fcde76ca4741c12d8b45c6').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery("#js_58fcde76ca4741c12d8b45c6 .comentarios.aside-comments").find(".texto-comentario p").map(function(){var textComment=jQuery(this).parent(".texto-comentario");var size=textComment.css("max-height").split("px")[0];if(this.offsetHeight>size){textComment.append("<a href='#' onclick='cargarComentario(event, this)' class='leer-mas-btn'><span class='gradient'></span><span class='txt'>Leer más</span></a>");}})});function cargarComentario(event,element){event.preventDefault();jQuery(element).parent(".texto-comentario").css("max-height","none");jQuery(element).remove();}</script></main>
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>
+        jQuery(function() {
+            if (Comentarios) {
+                window.Comments = new Comentarios({
+                    botonesDesplegar : '.js-botonComentarios',
+                    newsId: "58fcde76ca4741c12d8b45c6"
+                });
+            }
+            if (typeof jQuery.fn.RedesSociales === 'function') {
+                jQuery('#js_58fcde76ca4741c12d8b45c6').find('.js_socialMedia').RedesSociales({
+                    title: "Alexis Sánchez condena a Guardiola a su primera temporada sin títulos",
+                    img:"",
+                    url: "/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_1',
+                    sharedFb: true
+                });
+                jQuery('#js_58fcde76ca4741c12d8b45c6').find('.js_socialMedia_1').RedesSociales({
+                    title: "Alexis Sánchez condena a Guardiola a su primera temporada sin títulos",
+                    img:"",
+                    url: "/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_2',
+                    sharedFb: true
+                });
+            }
+            if (typeof inicializarComentarios === 'function') {
+                inicializarComentarios(1, '#js_58fcde76ca4741c12d8b45c6');
+            }
+            if (typeof jQuery.fn.ElementoFijo === 'function') {
+                jQuery('#js_58fcde76ca4741c12d8b45c6').find('.js_fixed').ElementoFijo({
+                    elementosAnteriores: ['.nav-container', '.breadcrumbs '],
+                    elementoDesdeFixed: '.content',
+                    elementoHastaFixed: '.end-fixed',
+                    minWidthFijo: 768
+                });
+            }
+
+            jQuery(window).on('slotRendered',function(event,data){
+                fixedAdv(data.slotId);
+            });
+            window.fixedAdv = function (divgpt){
+                var advFixedCount = jQuery(".js-sky #"+divgpt+" .js_fixed").length;
+                if(advFixedCount > 0){
+                    var advFixed = jQuery("#"+divgpt);
+                    var container = advFixed.closest("main");
+                    var height=0;
+                    height = container.height() - (advFixed.parent().outerHeight() - advFixed.parent().height()) - advFixed.position().top;
+                    advFixed.height(height);
+                    advFixed.find(".js_fixed").ElementoFijo(
+                    {
+                        elementosAnteriores:['.site-header'],
+                        elementoDesdeFixed:'.content-ad',
+                        minWidthFijo:768,
+                        initialPosition:'fixed',
+                        parentContainer:true
+                    });
+                };
+            };
+        });
+    </script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Alexis Sánchez condena a Guardiola a su primera temporada sin títulos",img:"",url:"/deportes/futbol/2017/04/23/58fcde76ca4741c12d8b45c6.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

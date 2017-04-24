@@ -1,84 +1,118 @@
-<main role="main" class="main news js_navContinua" data-ue-contenido id="js_58f7a7a146163ffd238b462f"><div class="container"><script>var ueDataPage={rootSection:"default",sectionPrettyName:"Macroeconomía",portal:"elmundo",ct:"n",model:"economia-home",contentId:'58f7a7a146163ffd238b462f',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Economía" href="/economia.html"><span itemprop="title">Economía</span></a></li></ul>',children:'<ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="macroeconomia"><a title="Macroeconomía" href="/economia/macroeconomia.html">Macroeconomía</a></li><li data-section="empresas"><a title="Empresas" href="/economia/empresas.html">Empresas</a></li><li data-section="bolsa"><a title="Bolsa" href="/economia/bolsa/indices.html">Bolsa</a></li><li data-section="ahorro-y-consumo"><a title="Ahorro y Consumo" href="/economia/ahorro-y-consumo.html">Ahorro y Consumo</a></li><li data-section="vivienda"><a title="Vivienda" href="/economia/vivienda.html">Vivienda</a></li><li data-section="innovadores"><a title="INnovadores" href="/economia/innovadores.html">INnovadores</a></li><li data-section="comparador"><a title="Comparador" href="http://comparador.elmundo.es/">Comparador</a></li></ul>',numComments:'37',rrss:{img:"/api/contents/html/images/2017-04-19-14926248150116.jpg",summary:"",viaTwitter:'elmundoes'}}</script><div class="alerta" id="alerta">
+<main role="main" class="main news js_navContinua " data-ue-contenido id="js_58f7a7a146163ffd238b462f">
+<script>var ueDataPage={rootSection:"default",sectionPrettyName:"Macroeconomía",portal:"elmundo",ct:"n",model:"economia-home",contentId:'58f7a7a146163ffd238b462f',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Economía" href="/economia.html"><span itemprop="title">Economía</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/economia.html" title="Economía">Economía</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Macroeconomía"><a title="Macroeconomía" href="/economia/macroeconomia.html">Macroeconomía</a></li><li data-section="Empresas"><a title="Empresas" href="/economia/empresas.html">Empresas</a></li><li data-section="Bolsa"><a title="Bolsa" href="/economia/bolsa/indices.html">Bolsa</a></li><li data-section="Ahorro y Consumo"><a title="Ahorro y Consumo" href="/economia/ahorro-y-consumo.html">Ahorro y Consumo</a></li><li data-section="Vivienda"><a title="Vivienda" href="/economia/vivienda.html">Vivienda</a></li><li data-section="INnovadores"><a title="INnovadores" href="/economia/innovadores.html">INnovadores</a></li><li data-section="Comparador"><a title="Comparador" href="http://comparador.elmundo.es/">Comparador</a></li></ul></li></ul>',numComments:'37',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
+<div class="container">
+ <div class="alerta" id="alerta">
 <ul><li class="urgente">
 <span><strong>ÚLTIMA HORA:</strong>Millet y Montull desviaron 2,5 millones a obras particulares del Palau.</span>
 </li></ul>
 </div>
-<script type="text/javascript">
-if (typeof portal == 'undefined') {
-    portal = '';
-}
-var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+<script type="text/javascript">if(typeof portal=='undefined'){portal='';}
+var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
+function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
+ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
+init();return ueAlert;}</script>
+ <article class="news-item" itemtype="http://schema.org/NewsArticle">
+<span class="section-title-group">
+<span class="section-type"><a href="/economia/macroeconomia.html">Macroeconomía</a></span>
+</span>
+<h1 itemprop="headline" class="js-headline">El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones</h1>
+ <div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/api/contents/html/images/2017-04-19-14926248150116.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>El ex presidente del Gobierno, José Luis Rodríguez Zapatero, durante una rueda de prensa. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span>EFE</span> </figcaption></figure>
+  <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>El Plan E elaborado por Zapatero presentó unas "pérdidas" totales de 7.836 millones de euros, según el Tribunal de Cuentas.</p> <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>Sólo el 15% de las entidades que se beneficiaron del Plan dio prioridad al empleo como criterio de reparto.</p>
+<aside class="aside-tools byline-tools"><ul class="tools">
+<li class="social-tools"><ul class="horizontal js_socialMedia"><li>
+<i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span>
+</li>
+<li>
+<i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span>
+</li><li>
+<a onclick="envioEventoRedSocial('whatsapp');" href="whatsapp://send?text=El%20Tribunal%20de%20Cuentas%20ve%20irregularidades%20en%20el%20Plan%20E%20y%20p%C3%A9rdidas%20de%207.800%20millones | Economia%2Fmacroeconomia | ELMUNDO - http%3A%2F%2Fwww.elmundo.es%2Feconomia%2Fmacroeconomia%2F2017%2F04%2F19%2F58f7a7a146163ffd238b462f.html" title="Whatsapp"><i class="icon-whatsapp icon-whatsapp_36_d"></i><span class="hidden-content">Whatsapp</span></a>
+</li> <li class="comments-tool js-botonComentarios-58f7a7a146163ffd238b462f"><a href="#ancla_comentarios" title="Ver comentarios"><i class="icon-comentarios2_36_d"></i>
+<strong>
+37 </strong>
+</a>
+</li>
+</ul>
+</li></ul></aside>
+<footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<li itemprop="name" class="author-name">
+<strong>EFE</strong>
+</li>
+<li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city">
+<span itemprop="addressLocality">Madrid</span>
+</li>
+</ul></address>
+</footer> <meta itemprop="datePublished" content="2017-04-19">
+<time datetime="2017-04-19 20:08:41" class="date" itemprop="dateModified">
+19/04/2017 <strong>20:08</strong>
+</time>
 
-if (ueAlert == null) {
-    window.addEventListener('cargaUtils', function(){
-        ueAlert = initUeAlerts();
-    });
-}
+<p>El Fondo Estatal para el Empleo y Sostenibilidad Local, conocido como Plan E de Zapatero para reactivar la economía durante la crisis, presentó unas <strong>"pérdidas" globales de 7.836 millones</strong>, según el Tribunal de Cuentas, que ha detectado <strong>numerosas irregularidades en su aplicación</strong>.</p>
+<p>Así lo pone de relieve un informe del Tribunal de Cuentas complementario a otro realizado desde el punto de vista del ámbito local, que estudió una muestra de 400 ayuntamientos beneficiarios del fondo y que concluyó que <strong>únicamente el 15% de las entidades dio prioridad al empleo como criterio de reparto</strong>.</p>
+<p>Según ha expuesto hoy en la Comisión Mixta para las Relaciones con el Tribunal de Cuentas el presidente de este órgano fiscalizador, Ramón María Álvarez de Miranda, la imputación presupuestaria de las aportaciones realizadas por el Ministerio al fondo<strong> no siguió el criterio establecido en la normativa contable relativa a los fondos carentes de personalidad jurídica</strong>.</p>
+<div id='div-gpt-ad-economia_n_r_58f7a7a146163ffd238b462f' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_r_58f7a7a146163ffd238b462f');});</script>
+</div>
+<p>Las cuentas anuales del fondo correspondientes a los ejercicios de 2009 a 2011 representan, en sus aspectos significativos, la imagen fiel de su situación financiera y patrimonial, del resultado de sus operaciones, de los cambios en el patrimonio neto y de los flujos de efectivo, de conformidad con las normas y principios aplicables.</p>
+<p>En el informe, de ámbito estatal, el Tribunal de Cuentas detalla que los resultados del fondo presentaron unas "pérdidas" de 5.435 millones de euros en 2009, 2.304 millones en 2010 y 97 millones en 2011, como consecuencia del criterio contable de <strong>registrar como gastos las subvenciones concedidas a las entidades locales y como ingresos los reintegros e intereses de demora cobrados</strong>.</p>
+<p>De las 8.112 entidades locales a las que correspondía el reparto teórico de los recursos, solicitaron financiación 8.094 municipios, las dos ciudades autónomas y siete mancomunidades, y se autorizaron proyectos, finalmente, <strong>para 8.082 municipios, Ceuta y Melilla y seis mancomunidades</strong>.</p>
+<p>Las inversiones realizadas por las entidades locales <strong>no superaron, en ningún caso, el importe máximo de inversión</strong> establecido legalmente.</p>
+<p>Con fecha de 30 de noviembre de 2012 no quedaba ningún proyecto pendiente de liquidación y <strong>el importe total pagado ascendía a 7.838 millones de euros</strong>, el 97,98% del total de los fondos inicialmente autorizados.</p>
+<p>Respecto al análisis de los criterios para la adjudicación de los contratos establecidos en los pliegos-tipo elaborados por la Junta Consultiva de Contratación Administrativa, el Tribunal considera que eran <strong>"excesivamente genéricos e imprecisos"</strong>.</p>
+<p>Hubo retrasos en los plazos <strong>en el 83% de los proyectos analizados</strong> y en el 44% de los proyectos analizados se detectaron demoras en el pago de alguna certificación de obra.</p>
+<p>La Intervención General de la Administración del Estado <strong>realizó 423 informes de control financiero</strong>, en los que halló deficiencias e irregularidades relativas, principalmente, a la falta de compromiso de creación de empleo por el adjudicatario, a la existencia de inversiones que no cumplían los requisitos legales para su financiación y a la justificación fuera del plazo establecido.</p>
+<p>Sobre el grado de cumplimiento de los compromisos de creación y mantenimiento de empleo, el órgano fiscalizador aprecia <strong>la desviación a la baja respecto a lo comprometido</strong> y la contratación de muchos trabajadores por periodos muy cortos.</p>
+<p>Así las cosas, recomienda que, si se aprueban fondos de similares características, <strong>se introduzcan los cambios oportunos en la aplicación informática de gestión de los mismos</strong>, facilitando el adecuado seguimiento y control de los reintegros y de los intereses de demora liquidados.</p>
+<p>También aconseja al Ministerio que establezca un adecuado <strong>sistema de seguimiento del cumplimiento de las condiciones, que se subsanen las deficiencias puestas de manifiesto en el informe</strong> y que se definan de forma más precisa los objetivos del fondo.</p>
+<p>Del mismo modo, se sugiere que, en la regulación de instrumentos como el fondo, que constituye el objeto de la fiscalización, exija que en el criterio de creación o fomento del empleo se valore el número de trabajadores nuevos contratados o ya empleados, en función del número de días trabajados.</p>
+<p>El portavoz del PSOE en la comisión, Antonio Hurtado, <strong>ha querido quedarse con lo "positivo" del Plan E, como los 426.000 empleos creados y los 244.000 que se mantienen</strong>, mientras que, por Ciudadanos, Vicente Ten Oliver ha considerado al Plan E como "el mayor ejemplo de fracaso del PSOE para hacer frente a la crisis".</p>
 
-function initUeAlerts(event) {
-    var pos = 0,
-    lis = [],
-    nlis = 0,
-    timer1 = null,
-    btPlay = null,
-    btStop = null;
-
-    function init() {
-        var alerta_container = document.getElementById("alerta");
-        var cont = alerta_container.getElementsByTagName("ul")[0];
-        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
-        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
-        if(portal == 'portada'){
-            lis = cont.getElementsByTagName("li");
-        } else {
-            lis = cont.getElementsByClassName('urgente');
-        }
-        nlis = lis.length;
-        if (nlis == 0){
-            ueUtils.addClass(alerta_container,'ocultar');
-        } else {
-            ueUtils.addClass(lis[0], "mostrar");
-            ueUtils.addClass(btStop, "ocultar");
-            ueAlert.play();
-                    }
-    }
-
-    var ueAlert = {
-        play: function () {
-            timer1 = setInterval(ueAlert.next, 5000);
-            ueUtils.addClass(btPlay, "ocultar");
-            ueUtils.removeClass(btStop, "ocultar");
-        },
-
-        stop: function () {
-            if (timer1) {
-            clearInterval(timer1);
-            timer1 = null;
-            }
-            ueUtils.addClass(btStop, "ocultar");
-            ueUtils.removeClass(btPlay, "ocultar");
-        },
-
-        next: function () {
-            var nextPos=((pos+1)<nlis)?(pos+1):0;
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        },
-
-        preview: function () {
-            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
-            ueUtils.removeClass(lis[pos], "mostrar");
-            ueUtils.addClass(lis[nextPos], "mostrar");
-            pos = nextPos;
-        }
-    }
-    init();
-    return ueAlert;
-}
-</script>
-<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="/economia/macroeconomia.html">Macroeconomía</a></span></span><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_m_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_m_58f7a7a146163ffd238b462f');});</script></div></div></div><h2 class="kicker"></h2><h1 itemprop="headline" class="js-headline">El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones</h1><div class="row content cols-30-70" itemprop="articleBody"><figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><div class="container-image"><img src="/api/contents/html/images/2017-04-19-14926248150116.jpg" class="full-image" itemprop="contentUrl" alt/></div><figcaption class="caption" itemprop="description"><i class="icon-foto_16_g"></i>El ex presidente del Gobierno, José Luis Rodríguez Zapatero, durante una rueda de prensa. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span>EFE</span></figcaption></figure><aside class="aside-tools byline-tools"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_b300x100_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_b300x100_58f7a7a146163ffd238b462f');});</script></div></div></div><aside class="aside-tools js_fixed"><ul class="tools"><li class="social-tools"><ul class="horizontal js_socialMedia"><li><i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span></li><li><i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span></li><li onclick="envioSC('Enviar');"><i class="icon-mail icon-mail_36_d js-icon-mail"></i><span class="hidden-content">Enviar</span></li></ul></li><li><ul class="horizontal"><li class="comments-tool js-botonComentarios-58f7a7a146163ffd238b462f"><a href="#ancla_comentarios"><i class="icon-comentarios_32_d"></i><strong>37 Comentarios </strong><i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i><i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i></a></li></ul></li></ul><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_r_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_r_58f7a7a146163ffd238b462f');});</script></div></div></div></aside></aside><p class="summary-lead"><i class="icon-apoyo_16_b"></i>El Plan E elaborado por Zapatero presentó unas "pérdidas" totales de 7.836 millones de euros, según el Tribunal de Cuentas.</p><p class="summary-lead"><i class="icon-apoyo_16_b"></i>Sólo el 15% de las entidades que se beneficiaron del Plan dio prioridad al empleo como criterio de reparto.</p><footer><address class="news-author"><ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name" class="author-name"><strong>EFE</strong></li><li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality">Madrid</span></li></ul></address></footer><meta itemprop="datePublished" content="2017-04-19"><time datetime="2017-04-19 20:08:41" class="date" itemprop="dateModified">
-19/04/2017 <strong>20:08</strong></time><p>El Fondo Estatal para el Empleo y Sostenibilidad Local, conocido como Plan E de Zapatero para reactivar la economía durante la crisis, presentó unas <strong>"pérdidas" globales de 7.836 millones</strong>, según el Tribunal de Cuentas, que ha detectado <strong>numerosas irregularidades en su aplicación</strong>.</p><p>Así lo pone de relieve un informe del Tribunal de Cuentas complementario a otro realizado desde el punto de vista del ámbito local, que estudió una muestra de 400 ayuntamientos beneficiarios del fondo y que concluyó que <strong>únicamente el 15% de las entidades dio prioridad al empleo como criterio de reparto</strong>.</p><p>Según ha expuesto hoy en la Comisión Mixta para las Relaciones con el Tribunal de Cuentas el presidente de este órgano fiscalizador, Ramón María Álvarez de Miranda, la imputación presupuestaria de las aportaciones realizadas por el Ministerio al fondo<strong> no siguió el criterio establecido en la normativa contable relativa a los fondos carentes de personalidad jurídica</strong>.</p><p>Las cuentas anuales del fondo correspondientes a los ejercicios de 2009 a 2011 representan, en sus aspectos significativos, la imagen fiel de su situación financiera y patrimonial, del resultado de sus operaciones, de los cambios en el patrimonio neto y de los flujos de efectivo, de conformidad con las normas y principios aplicables.</p><p>En el informe, de ámbito estatal, el Tribunal de Cuentas detalla que los resultados del fondo presentaron unas "pérdidas" de 5.435 millones de euros en 2009, 2.304 millones en 2010 y 97 millones en 2011, como consecuencia del criterio contable de <strong>registrar como gastos las subvenciones concedidas a las entidades locales y como ingresos los reintegros e intereses de demora cobrados</strong>.</p><p>De las 8.112 entidades locales a las que correspondía el reparto teórico de los recursos, solicitaron financiación 8.094 municipios, las dos ciudades autónomas y siete mancomunidades, y se autorizaron proyectos, finalmente, <strong>para 8.082 municipios, Ceuta y Melilla y seis mancomunidades</strong>.</p><p>Las inversiones realizadas por las entidades locales <strong>no superaron, en ningún caso, el importe máximo de inversión</strong> establecido legalmente.</p><p>Con fecha de 30 de noviembre de 2012 no quedaba ningún proyecto pendiente de liquidación y <strong>el importe total pagado ascendía a 7.838 millones de euros</strong>, el 97,98% del total de los fondos inicialmente autorizados.</p><p>Respecto al análisis de los criterios para la adjudicación de los contratos establecidos en los pliegos-tipo elaborados por la Junta Consultiva de Contratación Administrativa, el Tribunal considera que eran <strong>"excesivamente genéricos e imprecisos"</strong>.</p><p>Hubo retrasos en los plazos <strong>en el 83% de los proyectos analizados</strong> y en el 44% de los proyectos analizados se detectaron demoras en el pago de alguna certificación de obra.</p><p>La Intervención General de la Administración del Estado <strong>realizó 423 informes de control financiero</strong>, en los que halló deficiencias e irregularidades relativas, principalmente, a la falta de compromiso de creación de empleo por el adjudicatario, a la existencia de inversiones que no cumplían los requisitos legales para su financiación y a la justificación fuera del plazo establecido.</p><p>Sobre el grado de cumplimiento de los compromisos de creación y mantenimiento de empleo, el órgano fiscalizador aprecia <strong>la desviación a la baja respecto a lo comprometido</strong> y la contratación de muchos trabajadores por periodos muy cortos.</p><p>Así las cosas, recomienda que, si se aprueban fondos de similares características, <strong>se introduzcan los cambios oportunos en la aplicación informática de gestión de los mismos</strong>, facilitando el adecuado seguimiento y control de los reintegros y de los intereses de demora liquidados.</p><p>También aconseja al Ministerio que establezca un adecuado <strong>sistema de seguimiento del cumplimiento de las condiciones, que se subsanen las deficiencias puestas de manifiesto en el informe</strong> y que se definan de forma más precisa los objetivos del fondo.</p><p>Del mismo modo, se sugiere que, en la regulación de instrumentos como el fondo, que constituye el objeto de la fiscalización, exija que en el criterio de creación o fomento del empleo se valore el número de trabajadores nuevos contratados o ya empleados, en función del número de días trabajados.</p><p>El portavoz del PSOE en la comisión, Antonio Hurtado, <strong>ha querido quedarse con lo "positivo" del Plan E, como los 426.000 empleos creados y los 244.000 que se mantienen</strong>, mientras que, por Ciudadanos, Vicente Ten Oliver ha considerado al Plan E como "el mayor ejemplo de fracaso del PSOE para hacer frente a la crisis".</p><aside class="publicidad mod-multipurpose end-fixed"><h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3><div id='div-gpt-ad-economia_n_nata_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_nata_58f7a7a146163ffd238b462f');});</script></div><div id='div-gpt-ad-economia_n_natb_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natb_58f7a7a146163ffd238b462f');});</script></div><div id='div-gpt-ad-economia_n_natc_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natc_58f7a7a146163ffd238b462f');});</script></div></aside><aside class="related-tags"><h4 class="list-header"><span>Temas Relacionados</span></h4><ul class="item-tags"><li><a href="/e/ps/psoe-partido-socialista-obrero-espanol.html" rel="tag">PSOE</a></li><li><a href="/melilla.html" rel="tag">Melilla</a></li><li><a href="/e/cs/cs-ciudadanos.html" rel="tag">Ciudadanos</a></li><li><a href="/ceuta.html" rel="tag">Ceuta</a></li><li><a href="/economia.html" rel="tag">economía</a></li><li><a href="/t/im/impuestos.html" rel="tag">Impuestos</a></li><li><a href="/t/co/corrupcion.html" rel="tag">Corrupción</a></li><li><a href="/t/ay/ayudas-sociales.html" rel="tag">Ayudas sociales</a></li><li><a href="/t/sa/sanidad.html" rel="tag">Sanidad</a></li></ul></aside></div><div class="row content cols-30-70 "><aside class="aside-ad floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rb_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rb_58f7a7a146163ffd238b462f');});</script></div></div></div></aside><aside class="aside-outbrain"><div class="OUTBRAIN" data-src="/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html" data-widget-id="AR_7" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html" data-widget-id="AR_8" data-ob-template="elmundo"></div><div class="OUTBRAIN" data-src="/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html" data-widget-id="AR_9" data-ob-template="elmundo"></div><script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script></aside></div><div class="row content cols-30-70"><aside class="aside-tools floated-left-item js_fixed"><div class="content-ad"><div class="ad-item-300"><div id='div-gpt-ad-economia_n_rc_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rc_58f7a7a146163ffd238b462f');});</script></div></div></div></aside><aside id="ancla_comentarios" class="comentarios aside-comments">
+ <aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/e/ps/psoe-partido-socialista-obrero-espanol.html" rel="tag">PSOE</a> </li> <li>
+<a href="/melilla.html" rel="tag">Melilla</a> </li> <li>
+<a href="/e/cs/cs-ciudadanos.html" rel="tag">Ciudadanos</a> </li> <li>
+<a href="/ceuta.html" rel="tag">Ceuta</a> </li> <li>
+<a href="/economia.html" rel="tag">economía</a> </li> <li>
+<a href="/t/im/impuestos.html" rel="tag">Impuestos</a> </li> <li>
+<a href="/t/co/corrupcion.html" rel="tag">Corrupción</a> </li> <li>
+<a href="/t/ay/ayudas-sociales.html" rel="tag">Ayudas sociales</a> </li> <li>
+<a href="/t/sa/sanidad.html" rel="tag">Sanidad</a> </li> </ul> </aside>
+<aside class="aside-tools byline-tools"><ul class="tools">
+<li class="social-tools"><ul class="horizontal js_socialMedia_1">
+<li>
+Compartir:
+</li><li>
+<i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span>
+</li>
+<li>
+<i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span>
+</li><li>
+<a onclick="envioEventoRedSocial('whatsapp');" href="whatsapp://send?text=El%20Tribunal%20de%20Cuentas%20ve%20irregularidades%20en%20el%20Plan%20E%20y%20p%C3%A9rdidas%20de%207.800%20millones | Economia%2Fmacroeconomia | ELMUNDO - http%3A%2F%2Fwww.elmundo.es%2Feconomia%2Fmacroeconomia%2F2017%2F04%2F19%2F58f7a7a146163ffd238b462f.html" title="Whatsapp"><i class="icon-whatsapp icon-whatsapp_36_d"></i><span class="hidden-content">Whatsapp</span></a>
+</li></ul>
+</li></ul></aside>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_320x53b_58f7a7a146163ffd238b462f' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_320x53b_58f7a7a146163ffd238b462f');});</script>
+</div>
+</div>
+</div>
+</aside>
+<div class="row content">
+ <aside id="ancla_comentarios" class="comentarios aside-comments">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:37" itemprop="interactionCount">37</strong> Comentarios</h3>
 <article>
 <header>
@@ -118,7 +152,13 @@ function initUeAlerts(event) {
 <i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
 </span>
 </div>
-</aside></div><div class="lightbox_shadow no-visible js-popup"></div><div class="right-panel comments-panel js-right-panel"><div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones'</a></div>
+</aside>
+ <div class="right-panel no-visible comments-panel js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones'</a>
+<i class="ellipsis"></i>
+</div>
+
 <script type="text/javascript">var registroCookie=false;</script>
 <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
 <h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:37" itemprop="interactionCount">37</strong> Comentarios</h3>
@@ -440,7 +480,42 @@ function initUeAlerts(event) {
 {document.getElementById(divId).style.display='block';}
 else{document.getElementById(divId).style.display='none';}};</script>
 </section>
-</div></article><section class="row content row-layout"></section><div class="content-ad"><div class="ad-item-990"><div id='div-gpt-ad-economia_n_mb_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_mb_58f7a7a146163ffd238b462f');});</script></div></div></div><section class="row content row-layout"><div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
+ </div>
+</div>
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_rb_58f7a7a146163ffd238b462f' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rb_58f7a7a146163ffd238b462f');});</script>
+</div>
+</div>
+</div>
+</aside>
+ <div class="OUTBRAIN" data-src="/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript">(function(){if(jQuery&&jQuery('script[src*="outbrain.js"]').length===0){try{var scriptEl=document.createElement('script');scriptEl.type='text/javascript';scriptEl.async='true';scriptEl.src='http://widgets.outbrain.com/outbrain.js';var targetEl=document.getElementsByTagName('script')[0];targetEl.parentNode.insertBefore(scriptEl,targetEl);}catch(e){};}})();</script>
+ </article>
+<section class="row content cols-30-70">
+<aside class="aside-ad floated-left-item">
+<div class="content-ad">
+<div class="ad-item-300">
+ <div id='div-gpt-ad-economia_n_rc_58f7a7a146163ffd238b462f' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_rc_58f7a7a146163ffd238b462f');});</script>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<aside class="publicidad mod-multipurpose end-fixed">
+<h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+<div id='div-gpt-ad-economia_n_nata_58f7a7a146163ffd238b462f' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_nata_58f7a7a146163ffd238b462f');});</script>
+</div>
+<div id='div-gpt-ad-economia_n_natb_58f7a7a146163ffd238b462f' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_natb_58f7a7a146163ffd238b462f');});</script>
+</div>
+</aside>
+<section class="row content ">
+</section>
+<section class="row content row-layout">
+<div class="container content-items flex-a" data-col="12" data-flexible="1"><div class="content-item"><section class="content-item featured-links UEClass">
 <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
 <ul class="list">
 <li><a href="/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
@@ -481,7 +556,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 </li>
 </ul>
 </section>
-</div></div></section><div class="content-ad"><div class="ad-item-f2"><div id='div-gpt-ad-economia_n_f2_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f2_58f7a7a146163ffd238b462f');});</script></div></div></div><div class="content-ad"><div class="ad-item-f3"><div id='div-gpt-ad-economia_n_f3_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_f3_58f7a7a146163ffd238b462f');});</script></div></div></div><div class="content-ad"><div class="ad-item-si js-sky"><div id='div-gpt-ad-economia_n_si_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_si_58f7a7a146163ffd238b462f');});</script></div></div></div><div class="content-ad"><div class="ad-item-sd js-sky"><div id='div-gpt-ad-economia_n_sd_58f7a7a146163ffd238b462f' class="publicidad"><script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-economia_n_sd_58f7a7a146163ffd238b462f');});</script></div></div></div></div><script type="text/javascript">jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f7a7a146163ffd238b462f"});}
+</div></div>
+</section><div class="no-visible" id="iframeACargar">
+<div class="lightbox_shadow">
+<div class="cerrar icon-close" title="Cerrar"></div>
+</div>
+<section class="lightbox inicio-sesion"></section>
+</div>
+<script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
+<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58f7a7a146163ffd238b462f"});}
+if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f7a7a146163ffd238b462f').find('.js_socialMedia').RedesSociales({title:"El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones",img:"",url:"/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58f7a7a146163ffd238b462f').find('.js_socialMedia_1').RedesSociales({title:"El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones",img:"",url:"/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
 if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58f7a7a146163ffd238b462f');}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58f7a7a146163ffd238b462f').find('.js_socialMedia').RedesSociales({title:"El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones",img:"/api/contents/html/images/2017-04-19-14926248150116.jpg",url:"/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
-if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f7a7a146163ffd238b462f').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}});</script></main>
+if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58f7a7a146163ffd238b462f').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
+jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+</div>
+<script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"El Tribunal de Cuentas ve irregularidades en el Plan E y pérdidas de 7.800 millones",img:"",url:"/economia/macroeconomia/2017/04/19/58f7a7a146163ffd238b462f.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
+jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>
