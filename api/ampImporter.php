@@ -68,12 +68,6 @@ function generateHtmlContent($data)
     global $siteRootUrl, $siteRootPath, $originDomain;
 
     $entireContent = getFile($data->url);
-    $entireContent = str_replace($originDomain, "/", $entireContent);
-    $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
-    $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
-    $entireContent = str_replace("http://estaticos.elmundo.es/", "/", $entireContent);
-    $entireContent = str_replace("assets/v7/css/", "css/", $entireContent);
-    $entireContent = str_replace("assets/v7/js/", "js/", $entireContent);
     $matches = array();
     preg_match('/<main[^>]+>(.*)<\/main>/s', $entireContent, $matches);
     $content = $matches[0];
@@ -85,15 +79,29 @@ function generateHtmlContent($data)
                     $imageExtension = pathinfo($multimediaItem->url)['extension'];
                     $imageFile = getFile(str_replace("http://e00-marca.uecdn.es/", "http://estaticos.elmundo.es/",$multimediaItem->url));
                     file_put_contents('./contents/html/images/'.$multimediaItem->id.'.'.$imageExtension, $imageFile);
-                    if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($data->url)))) {
-                        mkdir($siteRootPath.str_replace($originDomain, "", dirname($data->url)), 0755, true);
-                    }
-                    file_put_contents($siteRootPath.str_replace($originDomain, "", $data->url), $entireContent);
                     $content = str_replace($multimediaItem->url, $siteRootUrl."api/contents/html/images/".$multimediaItem->id.'.'.$imageExtension, $content);
                 }
             }
         }
     }
+
+    $entireContent = str_replace($originDomain, "/", $entireContent);
+    $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
+    $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
+    $entireContent = str_replace("http://estaticos.elmundo.es/", "/", $entireContent);
+    $entireContent = str_replace("assets/v7/css/", "css/", $entireContent);
+    $entireContent = str_replace("assets/v7/js/", "js/", $entireContent);
+    if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($data->url)))) {
+        mkdir($siteRootPath.str_replace($originDomain, "", dirname($data->url)), 0755, true);
+    }
+    file_put_contents($siteRootPath.str_replace($originDomain, "", $data->url), $entireContent);
+
+    $content = str_replace($originDomain, "/", $content);
+    $content = str_replace("http://e00-marca.uecdn.es/", "/", $content);
+    $content = str_replace("http://e00-elmundo.uecdn.es/", "/", $content);
+    $content = str_replace("http://estaticos.elmundo.es/", "/", $content);
+    $content = str_replace("assets/v7/css/", "css/", $content);
+    $content = str_replace("assets/v7/js/", "js/", $content);
 
     return $content;
 }
