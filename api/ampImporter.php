@@ -21,10 +21,9 @@
         preg_match('/<main[^>]+>(.*)<\/main>/s', $entireCoverHtml, $matches);
         $coverHtml = $matches[0];
 
-        $autocoverJson = file_get_contents("http://www.elmundo.es/json/".$section.".json");
+        $autocoverJson = getFile("http://www.elmundo.es/json/".$section.".json");
 
         $autocoverArray = json_decode($autocoverJson);
-
         foreach ($autocoverArray->cts as $contentType) {
             $contentUrl = $contentType->url;
             
