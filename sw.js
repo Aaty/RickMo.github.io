@@ -47,6 +47,7 @@ self.addEventListener('fetch', function(event)
     var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
     currentUrl = remove_query_string(event.request.url);
+console.log("QUERY STRING REMOVED URL: ", currentUrl);
 
     if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
         shellRequest = new Request(siteDomain+"/shell.html");
