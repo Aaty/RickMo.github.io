@@ -46,7 +46,9 @@ self.addEventListener('fetch', function(event)
 
     var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
-    if (autocoverPattern.test(event.request.url) || newPattern.test(event.request.url)) {
+    currentUrl = removeQueryString(event.request.url);
+
+    if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
         shellRequest = new Request(siteDomain+"/shell.html");
         event.respondWith(
             caches.match(shellRequest).then(function(response) {
@@ -60,7 +62,7 @@ self.addEventListener('fetch', function(event)
                 });
             })
         );
-    } else if (newContentPattern.test(event.request.url)) {
+    } else if (newContentPattern.test(currentUrl)) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 if (response) {
@@ -151,4 +153,10 @@ var clean_cache = function (cache_name) {
             }
         })
     });
+}
+
+var remove_query_string = function (url) {
+    urlArray = url.split('?');
+
+    return urlArray[0];
 }
