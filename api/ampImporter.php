@@ -1,4 +1,12 @@
 <?php
+    $last_resources = array(
+        'http://pq-direct.revsci.net/pql?placementIdList=YLbLgY,hTTEBW&cb=1493103341046',
+        'http://active.cache.el-mundo.net/js/fmu1475575200.js',
+        'http://estaticos.cookies.unidadeditorial.es/js/policy.js',
+        'http://active.cache.el-mundo.net/js/advertisement.js',
+        'http://active.cache.el-mundo.net/js/s_code.js'
+    );
+
     ini_set("allow_url_fopen", true);
 
     $siteRootUrl = "/";
@@ -24,6 +32,8 @@
         $entireCoverHtml = str_replace("assets/v7/css/", "css/", $entireCoverHtml);
         $entireCoverHtml = str_replace("assets/v7/js/", "js/", $entireCoverHtml);
         $entireCoverHtml = str_replace("iso-8859-15", "UTF-8", $entireCoverHtml);
+
+        $entireCoverHtml = extract_last_resources($entireCoverHtml, $last_resources);
 
         $coverHtml = extract_main_content($entireCoverHtml);
 
@@ -71,7 +81,7 @@ function urlExists ($url)
 
 function generateHtmlContent($data)
 {
-    global $siteRootUrl, $siteRootPath, $originDomain;
+    global $siteRootUrl, $siteRootPath, $originDomain, $last_resources;
 
     $entireContent = getFile(str_replace(".html", "_mobile.html", $data->url));
 
@@ -88,6 +98,8 @@ function generateHtmlContent($data)
     $entireContent = str_replace("assets/v7/css/", "css/", $entireContent);
     $entireContent = str_replace("assets/v7/js/", "js/", $entireContent);
     $entireContent = str_replace("iso-8859-15", "UTF-8", $entireContent);
+
+    $entireContent = extract_last_resources($entireContent, $last_resources); 
 
     if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($data->url)))) {
         mkdir($siteRootPath.str_replace($originDomain, "", dirname($data->url)), 0755, true);
@@ -149,6 +161,27 @@ function add_sw_registration($content)
 {
     $content = preg_replace("/<\/head>/i", '<script src="/js/sw_register.js"></script></head>', $content);
 
+    $result = $content;
+
+    return $result;
+}
+
+function extract_last_resources($content, $resources)
+{
+    global $siteRootPath;
+
+    $substitutions = array();
+    foreach ($resources as $key => $resource_url) {
+        $url_info = parse_url($resource_url);
+        $substitutions[$key] = $url_info['path'];
+        $resource_content = getFile($resource_url);
+        if (!file_exists($siteRootPath.dirname($url_info['path']))) {
+            mkdir($siteRootPath.dirname($url_info['path']), 0755, true);
+        }
+        file_put_contents($siteRootPath.$url_info['path'], $resource_content);
+    }
+
+    $content = str_replace($resources, $substitutions, $content);
     $result = $content;
 
     return $result;
