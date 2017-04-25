@@ -11,13 +11,13 @@ var static_assets = Array(
     "/js/mobile.min.js",
     "/js/hydratator.js",
     "/js/v0.js",
-    "/js/v0/amp-iframe-0.1.js",
+/*    "/js/v0/amp-iframe-0.1.js",
     "/js/v0/amp-analytics-0.1.js",
     "/js/v0/amp-sidebar-0.1.js",
     "/js/v0/amp-list-0.1.js",
     "/js/v0/amp-mustache-0.1.js",
     "/js/v0/amp-fit-text-0.1.js",
-    "/js/v0/amp-ad-0.1.js",
+    "/js/v0/amp-ad-0.1.js",*/
     "https://securepubads.g.doubleclick.net/gpt/pubads_impl_113.js",
     "https://static.chartbeat.com/js/chartbeat_mab.js"
 );
