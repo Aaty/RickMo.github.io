@@ -14,6 +14,8 @@ var updatePage = function (data) {
 
 var getAmpUrl = function (url) {
     var siteDomain = "https://jangosto.github.io";
+    // ... regex for portada
+    var coverPattern =  new RegExp("^"+siteDomain+"(\/)?$", "i");
     // ... regex for portadillas
     var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+.html)?$", "i");
     // ... regex for news
@@ -21,13 +23,13 @@ var getAmpUrl = function (url) {
     var currentUrl = removeQueryString(url);
 
     var ampUrl = "";
-    if (newPattern.test(currentUrl) || autocoverPattern.test(currentUrl)) {
+    if (coverPattern.test(currentUrl)) {
+        ampUrl = "/api/contents/html/index.html";
+    } else if (newPattern.test(currentUrl) || autocoverPattern.test(currentUrl)) {
         var urlArray = currentUrl.split("/");
         var fileName = urlArray[urlArray.length-1];
         ampUrl = "/api/contents/html/"+fileName;
-    } /*else if (autocoverPattern.test(currentUrl)) {
-        ampUrl = "/api/contents/html/index.html";
-    }*/
+    }
 
     return ampUrl;
 }
