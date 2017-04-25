@@ -49,21 +49,7 @@ self.addEventListener('fetch', function(event)
     var currentUrl = remove_query_string(event.request.url);
 console.log("QUERY STRING REMOVED URL: ", currentUrl);
 
-    if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
-        shellRequest = new Request(siteDomain+"/shell.html");
-        event.respondWith(
-            caches.match(shellRequest).then(function(response) {
-                if (response) {
-                    return response;
-                }
-                return caches.open(assets_cache_name).then(function(cache) {
-                    cache.add(shellRequest).then(function() {
-                        return fetch(shellRequest);
-                    });
-                });
-            })
-        );
-    } else if (newContentPattern.test(currentUrl)) {
+    if (newContentPattern.test(currentUrl)) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 if (response) {
@@ -82,7 +68,21 @@ console.log("QUERY STRING REMOVED URL: ", currentUrl);
                 }
             })
         );
-    }else {
+    } else if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
+        shellRequest = new Request(siteDomain+"/shell.html");
+        event.respondWith(
+            caches.match(shellRequest).then(function(response) {
+                if (response) {
+                    return response;
+                }
+                return caches.open(assets_cache_name).then(function(cache) {
+                    cache.add(shellRequest).then(function() {
+                        return fetch(shellRequest);
+                    });
+                });
+            })
+        );
+    } else {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 if (response) {
