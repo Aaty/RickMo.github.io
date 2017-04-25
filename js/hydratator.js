@@ -21,13 +21,13 @@ var getAmpUrl = function (url) {
     var currentUrl = removeQueryString(url);
 
     var ampUrl = "";
-    if (newPattern.test(currentUrl)) {
+    if (newPattern.test(currentUrl) || autocoverPattern.test(currentUrl)) {
         var urlArray = currentUrl.split("/");
         var fileName = urlArray[urlArray.length-1];
         ampUrl = "/api/contents/html/"+fileName;
-    } else if (autocoverPattern.test(currentUrl)) {
+    } /*else if (autocoverPattern.test(currentUrl)) {
         ampUrl = "/api/contents/html/index.html";
-    }
+    }*/
 
     return ampUrl;
 }
