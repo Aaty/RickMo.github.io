@@ -40,13 +40,13 @@ self.addEventListener('fetch', function(event)
 {
     console.log("REQUEST: ", event.request.url);
     // ... regex for portadillas
-    var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?(.html)?$", "i");
+    var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+.html)?$", "i");
     // ... regex for news
     var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
 
     var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
-    currentUrl = remove_query_string(event.request.url);
+    var currentUrl = remove_query_string(event.request.url);
 console.log("QUERY STRING REMOVED URL: ", currentUrl);
 
     if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
