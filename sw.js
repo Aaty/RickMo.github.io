@@ -2,6 +2,9 @@ var assets_cache_name = "v1_static";
 var content_cache_name = 'v1_dynamic';
 var user_cache_name = 'v1_user';
 
+var primary_cover_css = "/css/core-portada-elmundo-mobile.css";
+var primary_new_css = "/css/core-noticia-elmundo-mobile.css";
+
 var siteDomain = "https://jangosto.github.io";
 
 var static_assets = Array(
@@ -38,7 +41,6 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
-    console.log("REQUEST: ", event.request.url);
     // ... regex for portadillas
     var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+.html)?$", "i");
     // ... regex for news
@@ -47,7 +49,6 @@ self.addEventListener('fetch', function(event)
     var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
     var currentUrl = remove_query_string(event.request.url);
-console.log("QUERY STRING REMOVED URL: ", currentUrl);
 
     if (newContentPattern.test(currentUrl)) {
         event.respondWith(
@@ -73,7 +74,7 @@ console.log("QUERY STRING REMOVED URL: ", currentUrl);
         event.respondWith(
             caches.match(shellRequest).then(function(response) {
                 if (response) {
-                    return response;
+                    return createResponse(response, currentUrl);
                 }
                 return caches.open(assets_cache_name).then(function(cache) {
                     cache.add(shellRequest).then(function() {
@@ -160,4 +161,8 @@ var remove_query_string = function (url) {
     urlArray = url.split('?');
 
     return urlArray[0];
+}
+
+var createResponse = function () {
+
 }
