@@ -1,5 +1,3 @@
-importScripts("/js/polyfills/subworkers.js");
-
 var assets_cache_name = "v1_static";
 var content_cache_name = 'v1_dynamic';
 var user_cache_name = 'v1_user';
