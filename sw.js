@@ -166,6 +166,7 @@ var remove_query_string = function (url) {
 }
 
 var createResponse = function (content, url) {
+console.log("RESPONSE: ", content);
     var result = "";
     if (newPattern.test(url)) {
         result = content.replace('[[[---PRIMARY_CSS---]]]', primary_new_css);
