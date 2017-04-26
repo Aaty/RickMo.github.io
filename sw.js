@@ -55,6 +55,7 @@ self.addEventListener('fetch', function(event)
             var myWorker = new Worker('/worker.js');
         }
     }
+console.log("WORKER: ", worker);
 
     var currentUrl = remove_query_string(event.request.url);
 
