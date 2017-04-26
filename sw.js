@@ -165,21 +165,23 @@ var remove_query_string = function (url) {
     return urlArray[0];
 }
 
-var createResponse = function (content, url) {
-    var shell = "";
-    if (newPattern.test(url)) {
-        shell = contenti.text().replace('[[[---PRIMARY_CSS---]]]', primary_new_css);
-    } else if (autocoverPattern.test(url)) {
-        shell = content.text().replace('[[[---PRIMARY_CSS---]]]', primary_cover_css);
-    }
+var createResponse = function (response, url) {
+    return response.text().then(function(text) {
+        var shell = "";
+        if (newPattern.test(url)) {
+            shell = text.replace('[[[---PRIMARY_CSS---]]]', primary_new_css);
+        } else if (autocoverPattern.test(url)) {
+            shell = text.replace('[[[---PRIMARY_CSS---]]]', primary_cover_css);
+        }
 
-    var init = {
-        status:     content.status,
-        statusText: content.statusText,
-        headers:    {'Content-Type': 'text/plain'}
-    };
+        var init = {
+            status:     response.status,
+            statusText: response.statusText,
+            headers:    {'Content-Type': 'text/plain'}
+        };
 
-    result = new Response(shell, init); 
+        result = new Response(shell, init);
 
-    return result;
+        return result;
+    });
 }
