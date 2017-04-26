@@ -11,7 +11,6 @@ var updatePage = function (data) {
     var div = document.createElement('div');
     div.innerHTML = data;
     var elements = div.childNodes;
-console.log("CHILD NODES: ", elements);
     var container = document.getElementById("content");
 //    container.innerHTML = data;
     container.parentNode.replaceChild(elements[0], container);
