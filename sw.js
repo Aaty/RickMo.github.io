@@ -166,13 +166,20 @@ var remove_query_string = function (url) {
 }
 
 var createResponse = function (content, url) {
-console.log("RESPONSE: ", content);
-    var result = "";
+    var shell = "";
     if (newPattern.test(url)) {
-        result = content.replace('[[[---PRIMARY_CSS---]]]', primary_new_css);
+        shell = contenti.text().replace('[[[---PRIMARY_CSS---]]]', primary_new_css);
     } else if (autocoverPattern.test(url)) {
-        result = content.replace('[[[---PRIMARY_CSS---]]]', primary_cover_css);
+        shell = content.text().replace('[[[---PRIMARY_CSS---]]]', primary_cover_css);
     }
+
+    var init = {
+        status:     content.status,
+        statusText: content.statusText,
+        headers:    {'Content-Type': 'text/plain'}
+    };
+
+    result = new Response(shell, init); 
 
     return result;
 }
