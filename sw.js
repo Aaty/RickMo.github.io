@@ -14,7 +14,13 @@ var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([
 // ... regex for hydratation contents
 var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
-var worker = null;
+var worker = new Worker("/js/worker.js");
+
+worker.postMessage({"message": "message1"});
+worker.onmessage = function(e) {
+    console.log("QUE PASA: "+e.data.message);
+}
+
 
 var static_assets = Array(
     "/shell.html",
@@ -50,11 +56,6 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
-    if (worker == null) {
-        var worker = new Worker('/js/worker.js');
-    }
-console.log("WORKER: ", worker);
-
     var currentUrl = remove_query_string(event.request.url);
 
     if (newContentPattern.test(currentUrl)) {
