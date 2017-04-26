@@ -16,10 +16,10 @@ var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+
 
 var worker = new Worker("/js/worker.js");
 
-worker.postMessage({"message": "message1"});
-worker.onmessage = function(e) {
+worker.addEventListener("message", function(e) {
     console.log("QUE PASA: "+e.data.message);
-}
+});
+worker.postMessage({"message": "message1"});
 
 
 var static_assets = Array(
