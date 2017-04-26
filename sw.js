@@ -7,6 +7,13 @@ var primary_new_css = "/css/core-noticia-elmundo-mobile.css";
 
 var siteDomain = "https://jangosto.github.io";
 
+// ... regex for portadillas
+var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+.html)?$", "i");
+// ... regex for news
+var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
+// ... regex for hydratation contents
+var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
+
 var static_assets = Array(
     "/shell.html",
     "/css/core-portada-elmundo-mobile.css",
@@ -41,13 +48,6 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
-    // ... regex for portadillas
-    var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+.html)?$", "i");
-    // ... regex for news
-    var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
-
-    var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
-
     var currentUrl = remove_query_string(event.request.url);
 
     if (newContentPattern.test(currentUrl)) {
@@ -78,7 +78,9 @@ self.addEventListener('fetch', function(event)
                 }
                 return caches.open(assets_cache_name).then(function(cache) {
                     cache.add(shellRequest).then(function() {
-                        return fetch(shellRequest);
+                        return fetch(shellRequest).then(function(response) {
+                            return createResponse(response, currentUrl);
+                        });
                     });
                 });
             })
@@ -163,6 +165,13 @@ var remove_query_string = function (url) {
     return urlArray[0];
 }
 
-var createResponse = function () {
+var createResponse = function (content, url) {
+    var result = "";
+    if (newPattern.test(currentUrl)) {
+        result = content.replace('[[[---PRIMARY_CSS---]]]', primary_new_css);
+    } else if (autocoverPattern.test(currentUrl)) {
+        result = content.replace('[[[---PRIMARY_CSS---]]]', primary_cover_css);
+    }
 
+    return result;
 }
