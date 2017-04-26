@@ -14,7 +14,7 @@ var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([
 // ... regex for hydratation contents
 var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
-console.log(navigator);
+console.log(WorkerGlobalScope.navigator);
 var worker = new Worker("/js/worker.js");
 
 worker.postMessage({"message": "message1"});
