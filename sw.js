@@ -177,7 +177,7 @@ var createResponse = function (response, url) {
         var init = {
             status:     response.status,
             statusText: response.statusText,
-            headers:    {'Content-Type': 'text/plain'}
+            headers:    {'Content-Type': 'text/html'}
         };
 
         result = new Response(shell, init);
