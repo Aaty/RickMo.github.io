@@ -14,6 +14,8 @@ var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([
 // ... regex for hydratation contents
 var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
+var worker = null;
+
 var static_assets = Array(
     "/shell.html",
     "/css/core-portada-elmundo-mobile.css",
@@ -48,6 +50,12 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
+    if (window.Worker) {
+        if (worker = null;) {
+            var myWorker = new Worker('/worker.js');
+        }
+    }
+
     var currentUrl = remove_query_string(event.request.url);
 
     if (newContentPattern.test(currentUrl)) {
