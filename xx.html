@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<script>
+    var worker = new Worker("/js/worker.js");
+    worker.addEventListener("message", function(e) {
+        console.log("QUE PASA: "+e.data.message);
+    });
+    worker.postMessage({"message": "message1"});
+</script>
+</head>
+
+<body>
+Content of the document......
+</body>
+
+</html>
