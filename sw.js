@@ -50,10 +50,8 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
-    if (window.Worker) {
-        if (worker = null) {
-            var myWorker = new Worker('/worker.js');
-        }
+    if (worker = null) {
+        var myWorker = new Worker('/worker.js');
     }
 console.log("WORKER: ", worker);
 
