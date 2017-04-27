@@ -50,8 +50,6 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
-    var currentUrl = remove_query_string(event.request.url);
-
     if (newContentPattern.test(currentUrl)) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
@@ -71,7 +69,11 @@ self.addEventListener('fetch', function(event)
                 }
             })
         );
-    } else if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
+    }
+
+    var currentUrl = remove_query_string(event.request.url);
+
+    if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
         shellRequest = new Request(siteDomain+"/shell.html");
         event.respondWith(
             caches.match(shellRequest).then(function(response) {
