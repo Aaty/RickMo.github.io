@@ -14,7 +14,7 @@ var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([
 // ... regex for hydratation contents
 var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
 
-var worker = new Worker("/js/worker.js");
+var worker = new SharedWorker("/js/worker.js");
 
 worker.addEventListener("message", function(e) {
     console.log("QUE PASA: "+e.data.message);
