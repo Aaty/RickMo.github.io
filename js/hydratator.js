@@ -37,7 +37,7 @@ var getAmpUrl = function (url) {
         ampUrl = parser.pathname.replace(".html", "");
     }
 
-    ampUrl = contentUrl."?url="+ampUrl;
+    ampUrl = contentUrl+"?url="+ampUrl;
 
     return ampUrl;
 }
