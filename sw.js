@@ -12,14 +12,8 @@ var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]
 // ... regex for news
 var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
 // ... regex for hydratation contents
-var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
-
-var worker = new Worker("/js/worker.js");
-
-worker.addEventListener("message", function(e) {
-    console.log("QUE PASA: "+e.data.message);
-});
-worker.postMessage({"message": "message1"});
+//var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
+var newContentPattern = new RegExp("^"+siteDomain+"\/services\/nydus-mirror.php?url=(.*)$", "i");
 
 
 var static_assets = Array(

@@ -19,6 +19,7 @@ var updatePage = function (data) {
 
 var getAmpUrl = function (url) {
     var siteDomain = "https://jangosto.github.io";
+    var contentUrl = "/services/nydus-mirror.php";
     // ... regex for portada
     var coverPattern =  new RegExp("^"+siteDomain+"(\/)?$", "i");
     // ... regex for portadillas
@@ -28,13 +29,15 @@ var getAmpUrl = function (url) {
     var currentUrl = removeQueryString(url);
 
     var ampUrl = "";
+    var parser = document.createElement('a');
+    parser.href = currentUrl;
     if (coverPattern.test(currentUrl)) {
-        ampUrl = "/api/contents/html/index.html";
+        ampUrl = "index";
     } else if (newPattern.test(currentUrl) || autocoverPattern.test(currentUrl)) {
-        var urlArray = currentUrl.split("/");
-        var fileName = urlArray[urlArray.length-1];
-        ampUrl = "/api/contents/html/"+fileName;
+        ampUrl = parser.pathname.replace(".html", "");
     }
+
+    ampUrl = contentUrl."?url="+ampUrl;
 
     return ampUrl;
 }
