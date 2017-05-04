@@ -2,21 +2,29 @@
 <script>var ueDataPage={rootSection:"default",sectionPrettyName:"Baloncesto",portal:"elmundo",ct:"n",model:"nba",contentId:'58fef0c3e2704e1e6c8b4572',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="Deportes" href="/deportes.html"><span itemprop="title">Deportes</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level" itemref="bread-3" id="bread-2"><a itemprop="url" title="Baloncesto" href="/deportes/baloncesto.html"><span itemprop="title">Baloncesto</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="third-level"  id="bread-3"><a itemprop="url" title="NBA" href="/deportes/baloncesto/nba.html"><span itemprop="title">NBA</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/deportes/baloncesto/nba.html" title="NBA">NBA</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Playoffs"><a title="Playoffs" href="/deportes/baloncesto/nba/playoffs.html">Playoffs</a></li><li data-section="Calendario"><a title="Calendario" href="/deportes/baloncesto/nba/calendario.html">Calendario</a></li><li data-section="Clasificación"><a title="Clasificación" href="/deportes/baloncesto/nba/clasificacion.html">Clasificación</a></li><li data-section="Palmarés"><a title="Palmarés" href="/deportes/baloncesto/nba/estadisticas/palmares.html">Palmarés</a></li><li data-section="Historia"><a title="Historia" href="/deportes/baloncesto/nba/estadisticas/puntos.html">Historia</a></li></ul></li></ul>',numComments:'',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
 <div class="container">
  <div class="alerta" id="alerta">
-<ul><li class="urgente">
-<span><strong>ÚLTIMA HORA</strong><a href="/espana/2017/04/25/58fe82c5468aeb49658b4616.html?cid=ULTHR22001&amp;s_kw=ultima_hora">Un empresario admite al juez que OHL transfirió 1,4 millones de México a Suiza para Ignacio González.</a></span>
+<ul><li class="deportes">
+<span><strong>METEOROLOGÍA</strong><a href="/tiempo/index.html?cid=ULTHR22001&amp;s_kw=meteorologia">Consulta la previsión del tiempo para el puente de mayo.</a></span>
+</li><li class="deportes">
+<span><strong>DIRECTO</strong><a href="/espana/2017/04/28/5902d86f268e3e3d078b46d1.html?cid=ULTHR22001&amp;s_kw=directo">El número 2 de Interior comparece para explicar su reunión con el hermano de Ignacio González.</a></span>
 </li></ul>
+<ul class="controles">
+<li><a title="Avanzar" class="play" href="javascript:void(0)">Reproducir</a></li>
+<li><a title="Parar" class="stop" href="javascript:void(0)">Parar</a></li>
+<li><a title="Anterior" class="anterior" href="javascript:void(0)">Anterior</a></li>
+<li><a title="Siguiente" class="siguiente" href="javascript:void(0)">Siguiente</a></li>
+</ul>
 </div>
 <script type="text/javascript">if(typeof portal=='undefined'){portal='';}
 var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
 function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
-nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();btPlay.onclick=ueAlert.play;btStop.onclick=ueAlert.stop;alertElement=document.getElementById("alerta");alertControls=alertElement.getElementsByClassName("controles").item(0);alertControls.getElementsByClassName("anterior").item(0).onclick=ueAlert.preview;alertControls.getElementsByClassName("siguiente").item(0).onclick=ueAlert.next;}}
 var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
 ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
 init();return ueAlert;}</script>
  <article class="news-item" itemtype="http://schema.org/NewsArticle">
 <span class="section-title-group">
 <span class="section-type"><a href="/deportes/baloncesto.html">Baloncesto</a></span>
-</span> <h2 class="kicker"> Baloncesto</h2><span class="kicker">NBA</span>
+</span> <h2 class="kicker"> Baloncesto</h2><span class="kicker">Blazers 103-128 Warriors</span>
 <h1 itemprop="headline" class="js-headline">Otra explosión anotadora de Stephen Curry para eliminar a los Blazers</h1>
  <div class="row content" itemprop="articleBody">
  <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
@@ -40,7 +48,7 @@ init();return ueAlert;}</script>
  <footer>
 <address class="news-author">
 <ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"> <li itemprop="name" class="author-name">
-<strong>EFE</strong>
+<strong>EFE/ELMUNDO</strong>
 </li></ul>
 </address>
 </footer> <meta itemprop="datePublished" content="2017-04-25">
@@ -53,12 +61,51 @@ abr.
 
 <p><strong>Stephen Curry</strong> volvió a elevar su figura de súper estrella y con 37 puntos lideró de nuevo el ataque ganador de los Golden State Warriors que se impusieron de visitantes 103-128 a los Portland Trail Blazers en el cuarto partido de la eliminatoria de primera ronda de playoffs de la Conferencia Oeste que barrieron por 4-0 al mejor de siete. De nuevo, la ausencia por enfermedad del entrenador <strong>Steve Kerr</strong>, no impidió que los Warriors diesen otra exhibición de una filosofía de equipo ganador que ha implantado y que no importa el técnico que esté sentado en el banquillo, en este caso el asistente <strong>Mike Brown</strong>, para arrollar con su juego imparable.</p>
 <p>Curry que por segundo partido consecutivo superó los 30 puntos, no jugó el cuarto periodo, porque en el primero los Warriors ya habían anotado nada menos que 45 tantos, y concluyó el partido con ocho asistencias, siete rebotes y 7 triples de 11 intentos. En las últimas tres décadas, sólo Michael Jordan había anotado en playoff más de 35 puntos en menos de 30 minutos. Ante tal superioridad, los Warriors ahora tendrán descanso varios días hasta conocer al próximo rival que saldrá del ganador de la serie que disputan Los Ángeles Clippers y los Utah Jazz y que está empatada a 2-2.</p>
-<p>Junto a Curry, <strong>Draymond Green</strong> también destacó al aportar seis rebotes, cuatro asistencias y puso tres tapones que lo dejaron protagonista en el juego interior. <strong>Klay Thompson </strong>llegó a los 18 puntos y junto con <strong>Zaza Pachulia </strong>y <strong>Kevin Durant</strong>, que anotaron 11 y 10 tantos, respectivamente, completaron la lista de los cinco titulares que tuvieron números de dos dígitos. Mientras que el suplente <strong>David West</strong>, que cada día va a más en su juego individual, acabó con sexto hombre al aportar 12 puntos, cuatro asistencias y dos rebotes.</p>
+<p></p>
 <div id='div-gpt-ad-deportes_n_r_58fef0c3e2704e1e6c8b4572' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-deportes_n_r_58fef0c3e2704e1e6c8b4572');});</script>
 </div>
+<blockquote class="twitter-tweet" data-lang="es">
+<p lang="es" dir="ltr">Golden State barre a Portland y Curry se va a los 37 puntos.<br><br>WOW. <a href="https://t.co/yQzOjFvC9F">pic.twitter.com/yQzOjFvC9F</a></p>
+<p>? NBA Spain (@NBAspain) <a href="https://twitter.com/NBAspain/status/856765471848251392">25 de abril de 2017</a></p>
+</blockquote>
+<p><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Junto a Curry, <strong>Draymond Green</strong> también destacó al aportar seis rebotes, cuatro asistencias y puso tres tapones que lo dejaron protagonista en el juego interior. <strong>Klay Thompson </strong>llegó a los 18 puntos y junto con <strong>Zaza Pachulia </strong>y <strong>Kevin Durant</strong>, que anotaron 11 y 10 tantos, respectivamente, completaron la lista de los cinco titulares que tuvieron números de dos dígitos. Mientras que el suplente <strong>David West</strong>, que cada día va a más en su juego individual, acabó con sexto hombre al aportar 12 puntos, cuatro asistencias y dos rebotes.</p>
 <p>Durant, que se perdió los dos partidos anteriores, regresó con el equipo y jugó 20 minutos en los anotó 4 de 7 tiros de campo, incluidos los dos intentos de triple que hizo, capturó tres rebotes, dio dos asistencias, recuperó un balón, perdió tres y puso dos tapones. "Estoy feliz de regresar con el equipo, y más en el este momento cuando todos los compañeros nos sentimos unidos en la lucha por demostrar en el campo todo el gran trabajo que ha realizado Kerr al igual que Brown con nosotros durante la temporada", declaró Durant. "Era otro partido muy importante para nosotros y el ganarlo todavía más".</p>
+<p></p>
+<blockquote class="twitter-tweet" data-lang="es">
+<p lang="es" dir="ltr">Stephen Curry, amo y señor del partido.<br><a href="https://t.co/iUpVCM6h6S">pic.twitter.com/iUpVCM6h6S</a></p>
+<p>? RUN&DUB (@SomosRunandDub) <a href="https://twitter.com/SomosRunandDub/status/856729234064199681">25 de abril de 2017</a></p>
+</blockquote>
+<p><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <p>La buena labor de equipo de Durant, que se recuperó de un tirón muscular en la pantorrilla izquierda, hizo posible también que los Warriors al concluir la primera parte tuviesen una ventaja parcial de 24 puntos (48-72), que incrementaron hasta los 33 en la segunda parte. <strong>Damian Lillard </strong>con 34 puntos volvió a ser el líder encestador de los Trail Blazers, que nunca pudieron con el mejor juego individual y de equipo de los Warriors, actuales campeones defensores de la Conferencia Oeste.</p>
-<p>La pasada temporada los Warriors también se encargaron de eliminar a los Trail Blazers en los playoffs, pero lo hicieron en las semifinales de la Conferencia Oeste y con marca de 4-1. Los Trail Blazers sufrieron la segunda barrida en una serie de playoffs de siete partidos después que la primera fue en las finales de la Conferencia Oeste de 1999 ante los Spurs de San Antonio (0-4). La otra vez que los Trail Blazers fueron barridos en una serie se dió en la del 2000 ante Los Angeles Lakers (0-3), en la primera ronda, cuando las series eran al mejor de cinco partidos.</p>
+<p>La pasada temporada los Warriors también se encargaron de eliminar a los Trail Blazers en los playoffs, pero lo hicieron en las semifinales de la Conferencia Oeste y con marca de 4-1. Los Trail Blazers sufrieron la segunda barrida en una serie de playoffs de siete partidos después que la primera fue en las finales de la Conferencia Oeste de 1999 ante los Spurs de San Antonio (0-4). La otra vez que los Trail Blazers fueron barridos en una serie se dio en la del 2000 ante Los Angeles Lakers (0-3), en la primera ronda, cuando las series eran al mejor de cinco partidos.</p>
+<h3 class="subhead">Ibaka acecha a LeBron</h3>
+<aside class="summary-item"> <span class="blueline-top"></span>
+<figure class="multimedia-item foto" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/assets/multimedia/imagenes/2017/04/25/14931067494732.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Serge Ibaka hace un mate ante la marca de Giannis Antetokounmpo. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">WARREN TODA</span> <span>EFE</span> </figcaption></figure>
+<span class="blueline-bottom"></span>
+</aside>
+<p><strong>Serge Ibaka</strong> se erigió como líder en la pintura con 19 puntos de los Raptors, que arrollaron a unos indolentes Bucks (<strong>118-93</strong>). La franquicia canadiense pone el 3-2 a favor y se acerca a jugar las semifinales en el Este contra los Cavaliers de Lebron James, que <a href="/deportes/baloncesto/2017/04/23/58fd11f346163fb6218b4574.html" target="_blank">destrozaron 4-0 a Indiana en su serie</a>.</p>
+<p>El hispano-congoleño estuvo <strong>acertadísimo en sus tiros de campo</strong> y terminó con un fantástico 8/10 de éxito, solo errando dos intentos desde fuera del perímetro. Completó sus guarismos con seis rebotes, tres asistencias, un robo y tres tapones. El alero<strong>Norman Powell</strong> se convirtió en líder inesperado del ataque de los de Tornoto al encestar <strong>25 tantos </strong> (4/4 en triples) y estuvo secundado por la pareja <strong>DeRozan </strong>y <strong>Lowry</strong>, con 18 puntos el primero, y 16 y 10 asistencias el segundo.</p>
+<p></p>
+<blockquote class="twitter-tweet" data-lang="es">
+<p lang="es" dir="ltr">19 puntos de <a href="https://twitter.com/sergeibaka_7">@sergeibaka_7</a> y Toronto se adelanta.<a href="https://twitter.com/hashtag/NBAPlayoffs?src=hash">#NBAPlayoffs</a> <a href="https://t.co/7qA4qa3EtN">pic.twitter.com/7qA4qa3EtN</a></p>
+<p>? NBA Spain (@NBAspain) <a href="https://twitter.com/NBAspain/status/856757946088210432">25 de abril de 2017</a></p>
+</blockquote>
+<p><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>En los Bucks, una vez más, la figura fue de <strong>Antetokounmpo</strong>, sobresaliente en la anotación. El griego finalizó el encuentro con una firma de <strong>30 puntos </strong>y nueve rebotes. Tan solo su compañero Brogdon aportó 19 tantos para estar a la altura de un choque en el que los dinosaurios se comieron a los ciervos.</p>
+<h3 class="subhead">Calderón hace volar a los Hawks</h3>
+<p><strong>José Manuel Calderón</strong> sumó 10 puntos y repartió cinco asistencias en el triunfo de los Hawks sobre los Wizards (111-101). Con el base titular Dennis Schroder acumulando faltas demasiado rápido, el extremeño tuvo una oportunidad para dirigir el juego y no la desaprovechó.</p>
+<p></p>
+<blockquote class="twitter-tweet" data-lang="es">
+<p lang="es" dir="ltr">10 puntos para <a href="https://twitter.com/JmCalderon">@JmCalderon</a> y victoria de Atlanta para igualar la serie. <a href="https://t.co/iwgPJAt8kZ">pic.twitter.com/iwgPJAt8kZ</a></p>
+<p>? NBA Spain (@NBAspain) <a href="https://twitter.com/NBAspain/status/856751358627729409">25 de abril de 2017</a></p>
+</blockquote>
+<p><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Calderón solo estuvo en cancha 20 minutos, pero coordinó con mano diestra a los suyos. Atlanta se benefició de su participación <strong>con un +29 cuando el español estuvo sobre el parqué</strong>, más que nadie en el duelo (el más cercano, Kent, firmó un +13). Al otro lado, Washington no explotó las capacidades de <strong>Bradley Beal</strong>, que aportó <strong>33 tantos</strong>, ni <strong>John Wall</strong>, que selló el enfrentamiento con <strong>22 puntos</strong>.</p>
 
  <aside class="related-tags"><h4 class="list-header">
 <span>Temas Relacionados</span>
@@ -153,10 +200,16 @@ abr.
 <h4>En vivos</h4>
 <ul class="list">
 <li>
-<a href="/eventos/en-directo/2017/04/24/43895-eibar-athletic-club/"> Eibar vs Athletic, en vivo</a>
+<a href="/eventos/en-directo/2017/04/27/44213-alavs-eibar/"> Alavés vs Eibar, en vivo</a>
 </li>
 <li>
-<a href="/eventos/en-directo/2017/04/24/43931-pescara-roma/"> Pescara vs Roma, en vivo</a>
+<a href="/eventos/en-directo/2017/04/27/44215-sevilla-celta-de-vigo/"> Sevilla vs Celta, en vivo</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/04/27/44199-manchester-city-manchester-united/"> Manchester City vs Manchester United, en vivo</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/04/27/44214-athletic-club-real-betis/"> Athletic vs Betis, en vivo</a>
 </li>
 </ul>
 </section>
@@ -168,11 +221,71 @@ abr.
 <section class="lightbox inicio-sesion"></section>
 </div>
 <script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
-<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fef0c3e2704e1e6c8b4572"});}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fef0c3e2704e1e6c8b4572').find('.js_socialMedia').RedesSociales({title:"Otra explosión anotadora de Stephen Curry para eliminar a los Blazers",img:"",url:"/deportes/baloncesto/2017/04/25/58fef0c3e2704e1e6c8b4572.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58fef0c3e2704e1e6c8b4572').find('.js_socialMedia_1').RedesSociales({title:"Otra explosión anotadora de Stephen Curry para eliminar a los Blazers",img:"",url:"/deportes/baloncesto/2017/04/25/58fef0c3e2704e1e6c8b4572.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
-if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fef0c3e2704e1e6c8b4572');}
-if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fef0c3e2704e1e6c8b4572').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+<script>
+        jQuery(function() {
+            if (Comentarios) {
+                window.Comments = new Comentarios({
+                    botonesDesplegar : '.js-botonComentarios',
+                    newsId: "58fef0c3e2704e1e6c8b4572"
+                });
+            }
+            if (typeof jQuery.fn.RedesSociales === 'function') {
+                jQuery('#js_58fef0c3e2704e1e6c8b4572').find('.js_socialMedia').RedesSociales({
+                    title: "Otra explosión anotadora de Stephen Curry para eliminar a los Blazers",
+                    img:"",
+                    url: "/deportes/baloncesto/2017/04/25/58fef0c3e2704e1e6c8b4572.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_1',
+                    sharedFb: true
+                });
+                jQuery('#js_58fef0c3e2704e1e6c8b4572').find('.js_socialMedia_1').RedesSociales({
+                    title: "Otra explosión anotadora de Stephen Curry para eliminar a los Blazers",
+                    img:"",
+                    url: "/deportes/baloncesto/2017/04/25/58fef0c3e2704e1e6c8b4572.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_2',
+                    sharedFb: true
+                });
+            }
+            if (typeof inicializarComentarios === 'function') {
+                inicializarComentarios(1, '#js_58fef0c3e2704e1e6c8b4572');
+            }
+            if (typeof jQuery.fn.ElementoFijo === 'function') {
+                jQuery('#js_58fef0c3e2704e1e6c8b4572').find('.js_fixed').ElementoFijo({
+                    elementosAnteriores: ['.nav-container', '.breadcrumbs '],
+                    elementoDesdeFixed: '.content',
+                    elementoHastaFixed: '.end-fixed',
+                    minWidthFijo: 768
+                });
+            }
+
+            jQuery(window).on('slotRendered',function(event,data){
+                fixedAdv(data.slotId);
+            });
+            window.fixedAdv = function (divgpt){
+                var advFixedCount = jQuery(".js-sky #"+divgpt+" .js_fixed").length;
+                if(advFixedCount > 0){
+                    var advFixed = jQuery("#"+divgpt);
+                    var container = advFixed.closest("main");
+                    var height=0;
+                    height = container.height() - (advFixed.parent().outerHeight() - advFixed.parent().height()) - advFixed.position().top;
+                    advFixed.height(height);
+                    advFixed.find(".js_fixed").ElementoFijo(
+                    {
+                        elementosAnteriores:['.site-header'],
+                        elementoDesdeFixed:'.content-ad',
+                        minWidthFijo:768,
+                        initialPosition:'fixed',
+                        parentContainer:true
+                    });
+                };
+            };
+        });
+    </script>
 </div>
 <script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Otra explosión anotadora de Stephen Curry para eliminar a los Blazers",img:"",url:"/deportes/baloncesto/2017/04/25/58fef0c3e2704e1e6c8b4572.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

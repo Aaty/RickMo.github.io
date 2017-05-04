@@ -1,0 +1,312 @@
+<main role="main" class="main news F5 Comparte" data-ue-contenido id="js_59020fde268e3e39078b4636">
+<div class="container">
+<div class="alerta" id="alerta">
+<ul><li class="deportes">
+<span><strong>DIRECTO</strong><a href="/espana/2017/04/28/5902d86f268e3e3d078b46d1.html?cid=ULTHR22001&amp;s_kw=directo">El número 2 de Interior comparece para explicar su reunión con el hermano de Ignacio González.</a></span>
+</li></ul>
+</div>
+<script type="text/javascript">
+if (typeof portal == 'undefined') {
+    portal = '';
+}
+var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+
+if (ueAlert == null) {
+    window.addEventListener('cargaUtils', function(){
+        ueAlert = initUeAlerts();
+    });
+}
+
+function initUeAlerts(event) {
+    var pos = 0,
+    lis = [],
+    nlis = 0,
+    timer1 = null,
+    btPlay = null,
+    btStop = null;
+
+    function init() {
+        var alerta_container = document.getElementById("alerta");
+        var cont = alerta_container.getElementsByTagName("ul")[0];
+        btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
+        btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
+        if(portal == 'portada'){
+            lis = cont.getElementsByTagName("li");
+        } else {
+            lis = cont.getElementsByClassName('urgente');
+        }
+        nlis = lis.length;
+        if (nlis == 0){
+            ueUtils.addClass(alerta_container,'ocultar');
+        } else {
+            ueUtils.addClass(lis[0], "mostrar");
+            ueUtils.addClass(btStop, "ocultar");
+            ueAlert.play();
+                    }
+    }
+
+    var ueAlert = {
+        play: function () {
+            timer1 = setInterval(ueAlert.next, 5000);
+            ueUtils.addClass(btPlay, "ocultar");
+            ueUtils.removeClass(btStop, "ocultar");
+        },
+
+        stop: function () {
+            if (timer1) {
+            clearInterval(timer1);
+            timer1 = null;
+            }
+            ueUtils.addClass(btStop, "ocultar");
+            ueUtils.removeClass(btPlay, "ocultar");
+        },
+
+        next: function () {
+            var nextPos=((pos+1)<nlis)?(pos+1):0;
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        },
+
+        preview: function () {
+            var nextPos=((pos-1)<0)?(nlis-1):(pos-1);
+            ueUtils.removeClass(lis[pos], "mostrar");
+            ueUtils.addClass(lis[nextPos], "mostrar");
+            pos = nextPos;
+        }
+    }
+    init();
+    return ueAlert;
+}
+</script>
+<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><h2 class="kicker"> REDES SOCIALES</h2><h1 itemprop="headline" class="js-headline">Baba Lena, la abuela mochilera que triunfa en Instagram recala en Tenerife: "Quiero tirarme en paracaídas"</h1>
+<div class="row content" itemprop="articleBody">
+ <figure class="multimedia-item image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div class="container-image">
+<img src="/assets/multimedia/imagenes/2017/04/27/14933104128576.jpg" class="full-image" itemprop="contentUrl" alt/>
+</div> <figcaption class="caption" itemprop="description"> <i class="icon-foto_16_g"></i>Baba Lena luce sonrisa en Tenerife. <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span>
+<span itemprop="name">FOTOS: INPUT360 DENTAL & MEDICAL MARKETING</span> </figcaption></figure>
+  <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i>A sus 90 años, 'Babushka' lleva siete recorriendo 14 países sin más compañía que su mochila y sus historias en las redes sociales</p> <p class="summary-lead">
+<i class="icon-apoyo_16_b"></i><a href="/f5/comparte/2017/04/14/58ee4a7f22601d5b3d8b459a.html">Cómo recorrer el mundo con nueve dólares al día</a></p>
+<aside class="aside-tools byline-tools"><ul class="tools">
+<li class="social-tools"><ul class="horizontal js_socialMedia"><li>
+<i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span>
+</li>
+<li>
+<i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span>
+</li><li>
+<a onclick="envioEventoRedSocial('whatsapp');" href="whatsapp://send?text=Baba%20Lena%2C%20la%20abuela%20mochilera%20que%20triunfa%20en%20Instagram%20recala%20en%20Tenerife%3A%20%22Quiero%20tirarme%20en%20paraca%C3%ADdas%22 | F5%2Fcomparte | ELMUNDO - http%3A%2F%2Fwww.elmundo.es%2Ff5%2Fcomparte%2F2017%2F04%2F28%2F59020fde268e3e39078b4636.html" title="Whatsapp"><i class="icon-whatsapp icon-whatsapp_36_d"></i><span class="hidden-content">Whatsapp</span></a>
+</li> <li class="comments-tool js-botonComentarios-59020fde268e3e39078b4636"><a href="#ancla_comentarios" title="Ver comentarios"><i class="icon-comentarios2_36_d"></i>
+<strong>
+1 </strong>
+</a>
+</li>
+</ul>
+</li></ul></aside>
+<footer>
+<address class="news-author">
+<ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<li itemprop="name" class="author-name">
+<strong>SARA POLO</strong>
+</li>
+<li class="author-twitter"><a href="https://twitter.com/SaraPolo" target="_blank"><i class="icon-twitter-color icon-twitter_32_c"></i>@SaraPolo</a></li>
+</ul></address>
+</footer> <meta itemprop="datePublished" content="2017-04-28">
+<time datetime="2017-04-28 02:53:00" class="date" itemprop="dateModified">
+28/04/2017 <strong>02:53</strong>
+</time>
+
+<p>Es tremendamente chiquitita, pero tiene una energía que ya quisieran muchos. Elena Erkhova <strong>se convirtió en Baba Lena, una estrella de las redes sociales, a finales del año pasado</strong>, cuando una compatriota la encontró, sola con su mochila, recorriendo Tailandia, y lo contó en Facebook. Pero la historia de amor de esta abuela rusa con los viajes comenzó mucho antes, hace siete años, cuando metió algo de ropa en una bolsa y se lanzó a conocer la República Checa.</p>
+<p>"Fui a un balneario, en Praga, y me conquistó tanto que volví cinco veces más", recuerda, al otro lado del teléfono. No la vemos, pero escuchamos su risa, su voz pequeñita, enérgica. <strong>No deja de interrumpir, no tiene tiempo que perder.</strong> Es un puro nervio. Aquella primera incursión al extranjero, después de una sencilla visita a Polonia 40 años atrás, convirtió la República Checa en su lugar favorito en el mundo. Pero aún le faltaban muchos imanes para llevarse como <em>souvenir</em>. <strong>España es su 15º país en siete años. Siempre sola.</strong></p>
+<p><strong>Baba Lena tiene 90 años y sólo habla ruso</strong>. Hablamos con ella con la ayuda de Victoria, su traductora en Tenerife, pero normalmente se comunica siempre por gestos. Salvo algún malentendido -"algunas veces pido pescado y me sirven pollo"-, nunca ha tenido ningún problema para hacer amigos. Es más, en la isla están anonadados con ella: "<strong>Saluda a todo el mundo por la calle, habla con todos, se hace <em>selfies</em></strong>. Intentamos evitar que todo el mundo quiera hacerse fotos con ella, pero es ella la que lo pide".</p>
+<div id='div-gpt-ad-f5_comparte_n_r_59020fde268e3e39078b4636' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-f5_comparte_n_r_59020fde268e3e39078b4636');});</script>
+</div>
+<h3 class="subhead">Sonrisa española</h3>
+<figure class="multimedia-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img src="/assets/multimedia/imagenes/2017/04/27/14933195640021.jpg"></figure>
+<p>La abuela trotamundos aterrizó en España el pasado domingo, presta a pasar una semana en la isla con todos los gastos pagados. <strong>El motivo: su sonrisa. Por partida doble.</strong> Amaya Sáez conoció a Baba Lena a través de sus redes sociales, como tantas miles de personas alrededor del mundo, y cayó rendida a sus encantos. "Yo quiero ser así de mayor", se dijo la directora de <a href="http://www.artedentalclinic.com/" target="_blank">la clínica Artedental</a> y anfitriona de Baba Lena en Puerto de la Cruz, <strong>un municipio de apenas 30.000 habitantes en el que la visita de esta <em>celebrity</em> rusa ha causado sensación</strong>.</p>
+<p>No hay foto en la que no sonría, y lo hace con todo el rostro; casi, casi con todo el cuerpo. Hasta esta semana, sin embargo, <strong>sonreía siempre con la boca cerrada: no tenía dientes</strong>. En esa boca vacía encontró Amaya la excusa perfecta para invitar a la anciana rusa a poner un sello más en su pasaporte. Artedental es una clínica especializada en turismo sanitario, así que lo tenían fácil. <strong>"La edad y la comunicación eran lo complicado"</strong>, reconoce la anfitriona. Nada que no pudiera conseguir la perserverancia de Svetlana, nieta y <em>community manager</em> de esta instagramer que en la vida ha tocado un ordenador.</p>
+<p>Y eso que el viaje tuvo grandes complicaciones hasta el final. Agradecida y emocionaba contaba Baba Lena en un emotivo <em>post</em> cómo, <strong>cuando acudió a su cita para obtener el visado y poder venir a España, se dio cuenta de que había perdido el pasaporte</strong>. "Decenas de llamadas, de correos, y ¡ocurrió un milagro!", relata. Amaya se puso en contacto con el embajador español en Moscú, le explicó la situación, y él contestó: "Dame su teléfono y dile que venga ahora mismo, que lo resolvemos".</p>
+<h3 class="subhead">Una vida de privaciones</h3>
+<figure class="multimedia-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img src="/assets/multimedia/imagenes/2017/04/27/14933184481749.jpg"></figure>
+<p>Cuando hablamos con <em>Babushka</em>, el alias de esta abuelita trotamundos en las redes sociales, su sonrisa entrañable luce ya completa. Es el primer día que le han permitido comer lo que quería. <strong>"Sólo os pido que no me deis más pescado"</strong>, imploraba en el restaurante. Así que ha comido -agárrense- tortilla de camarón, ensaladilla, escaldón de gofio (un plato típico canario) y queso fresco. Todo en pequeñas cantidades, <strong>"a la gente que ha vivido la guerra no le gusta dejar nada en el plato"</strong>. </p>
+<p>Porque la vida de <em>Babushka</em> no ha sido siempre tan divertida, ni mucho menos. Nació en la dura Siberia en 1927, con un incipiente estalinismo que iría sumiendo a Rusia en un inmenso campo de concentración donde las privaciones y la hambruna eran el pan de cada día. En ese ambiente se crió esta rusa aventurera, entonces <strong>una niña huérfana que araba los campos con bueyes para sobrevivir.</strong> </p>
+<p>Llegó la guerra cuando tenía 12 años, y ella labraba y labraba, aunque el fin del conflicto no traería la paz a su vida. Al menos, no en el hogar. <strong>Elena se casó con un militar que la maltrataba</strong>. Sufría tanto que huyó con su hija para instalarse en Krasnoyarsk, a orillas del río Yeniséi, donde aún hoy mantiene su centro de operaciones entre viaje y viaje. Aunque, quizá, no por mucho tiempo. <em>Babushka</em> <strong>ha quedado tan encantada con Tenerife que quiere terminar su vida allí</strong>. Ya ha estado preguntando en inmobiliarias locales. "Hace calor, me encanta la comida y la gente es muy amable. Si encuentro algo, vendo mi piso y me mudo a Canarias", dice.</p>
+<h3 class="subhead">Una abuela de altos vuelos</h3>
+<p></p>
+<blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+<div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+</div>
+<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BN1lYW0D2zV/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de (@babushka_1927)</a> el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-12-10T12:50:45+00:00">10 de Dic de 2016 a la(s) 4:50 PST</time></p>
+</div>
+<p></p>
+</blockquote>
+<script src="//platform.instagram.com/en_US/embeds.js"></script>
+<p>Con todo lo que ha pasado, no cuesta imaginar por qué, a los 83 años, decidió echarse una mochila al hombro y ponerse el mundo por montera. <strong>A Baba Lena no le asusta nada</strong>. En <a href="https://www.instagram.com/babushka_1927/" target="_blank">su perfil de Instagram</a>, con más de 34.000 seguidores, la vemos en moto por Bangkok, dando de comer a un elefante en Tailandia o montando a camello en Jerusalén como si llevara toda la vida haciéndolo. El plan que sus anfitrionas le habían preparado le gustaba, pero... </p>
+<p>-¿Pero te parece aburrido, Baba Lena?<br>-Bueno...<br>-¿Y qué te gustaría hacer?<br>-<strong>Me gustaría tirarme en paracaídas</strong>.<br></p>
+<p>A estas alturas de la vida, ella sólo piensa en hoy, le da lo mismo lo que pase mañana. "Al final, hemos tenido que cambiar el salto en paracaídas por parapente, es que no había en la isla", explica Amaya, entre risas. Cuando usted lea estas líneas, y si el tiempo acompaña, <strong><em>Babushka</em> habrá sobrevolado Tenerife a casi 1.000 metros de altura.</strong> Por supuesto, habrá vídeo. "Esto sí que va a ser viral", anticipa Amaya. No hace falta que lo jure.</p>
+
+
+<aside class="related-tags"><h4 class="list-header">
+<span>Temas Relacionados</span>
+</h4>
+<ul class="item-tags"> <li>
+<a href="/canarias.html" rel="tag">Canarias</a> </li> <li>
+<a href="/canarias/santa-cruz-de-tenerife.html" rel="tag">Santa Cruz de Tenerife</a> </li> <li>
+<a href="/internacional/rusia.html" rel="tag">Rusia</a> </li> <li>
+<a href="/t/re/redes-sociales.html" rel="tag">Redes Sociales</a> </li> <li>
+<a href="/e/in/internet.html" rel="tag">Internet</a> </li> </ul> </aside>
+<aside class="aside-tools byline-tools"><ul class="tools">
+<li class="social-tools"><ul class="horizontal js_socialMedia_1">
+<li>
+Compartir:
+</li><li>
+<i class="icon-twitter icon-twitter_36_d js-icon-twitter"></i><span class="hidden-content">Twitter</span>
+</li>
+<li>
+<i class="icon-facebook icon-facebook_36_d js-icon-facebook"></i><span class="hidden-content">Facebook</span>
+</li><li>
+<a onclick="envioEventoRedSocial('whatsapp');" href="whatsapp://send?text=Baba%20Lena%2C%20la%20abuela%20mochilera%20que%20triunfa%20en%20Instagram%20recala%20en%20Tenerife%3A%20%22Quiero%20tirarme%20en%20paraca%C3%ADdas%22 | F5%2Fcomparte | ELMUNDO - http%3A%2F%2Fwww.elmundo.es%2Ff5%2Fcomparte%2F2017%2F04%2F28%2F59020fde268e3e39078b4636.html" title="Whatsapp"><i class="icon-whatsapp icon-whatsapp_36_d"></i><span class="hidden-content">Whatsapp</span></a>
+</li></ul>
+</li></ul></aside>
+ <aside class="content-item">
+<div class="content-item autopromo">
+<a href="https://clk.tradedoubler.com/click?p=279130&amp;a=2404199&amp;g=23794072" title="Promoción">
+<img src="/assets/multimedia/imagenes/includes_banners/2017/04/fd3231dff8706e5c28a0f0d395ae948e.jpeg" alt="Promoción">
+</a>
+<div id="pixelcontabilizacionNLalerta" class="pixelcontabilizacion" style="position:absolute;top:0px;left:0px;width:1px;height:1px;z-index:1">
+<img src="/imp" width="1" height="1" alt>
+</div>
+</div>
+</aside>
+</div>
+<div class="row content">
+ <aside id="ancla_comentarios" class="comentarios aside-comments">
+<h3><i class="icon-comentarios_32_a"></i> Comentario</h3>
+<article>
+<header>
+<span>1</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div itemprop="author" class="autor ">
+<a rel="nofollow" href="#" class="alias">carlos99rios</a>
+</div>
+<time content="2017-04-28" itemprop="dateCreated" datetime="2017-04-28T10:02:00+01:00">
+<span class="fecha">28/04/2017</span>
+<span class="hora">10:02 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Maravilloso ejemplo de optimismo y vitalidad !!! Si vienes a Oslo, ya tienes tu casa, Baba Lena ¿</p>
+</div>
+</article>
+<div class="comments-tool js-botonComentarios-59020fde268e3e39078b4636">
+<span>Ver <strong>1</strong> comentario
+<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
+<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</span>
+</div>
+</aside>
+ <div class="right-panel comments-panel no-visible js-right-panel" data-mobile="true">
+<div class="fixed-button">
+<a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Baba Lena, la abuela mochilera que triunfa en Instagram recala en Tenerife: &quot;Quiero tirarme en paracaídas&quot;'</a>
+<i class="ellipsis"></i>
+</div>
+
+<script type="text/javascript">var registroCookie=false;</script>
+<section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+<h3><i class="icon-comentarios_32_a"></i><strong content="UserComments:1" itemprop="interactionCount">1</strong> Comentario</h3>
+<form name="formulario_paginar_comentarios" id="formulario_paginar_comentarios" method="post">
+<input type="hidden" name="noticia" value="1417351"/>
+<input type="hidden" name="portal" value="R"/>
+<input type="hidden" name="pagina" value="0"/>
+</form>
+<div class="right-panel login-comentar js-comentar">
+<p id="navTopComentarios" class="js-cajaLogin"><button class="registro-login-button js-loginClick" ue-attr-csp="1403">Iniciar sesión para participar</button></p>
+<div id="hacer-comentario" class="js-cajaComentario no-visible ">
+<form class="comentar" name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
+<input type="hidden" name="opcion" value="1"/>
+<input type="hidden" name="noticia" value="1417351"/>
+<input type="hidden" name="portal" value="R"/>
+<textarea rows="1" name="texto" id="formulario_comentar_comentarios_texto" placeholder="Escriba aqu&iacute; su comentario" required="required"></textarea>
+<input type="button" onclick="javascript:enviarComentario()" class="boton" id="enviar" value="PUBLICAR" name="enviar"/>
+</form>
+</div>
+</div>
+<div id="listado_comentarios"><nav>
+<ul>
+<li class="seleccionado"><a rel="nofollow" href="#comentarios" onclick="javascript:return false;" title="Ver todos los mensajes">Todos</a></li>
+<li class="mejor-valorados"><a rel="nofollow" href="#comentarios" onclick="javascript:pasarPaginaComentariosMejorValorados(1);return false;" title="Ver los mensajes más valorados">M&aacute;s valorados</a></li>
+</ul>
+</nav>
+<section id="comentarios-usuarios" class="comentarios-usuarios">
+<article>
+<header>
+<span>
+<a rel="nofollow" title="Responder mensaje" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@carlos99rios');comentarReferenciaComentario(this, '#1');return false;">1</a>
+</span>
+<img class="avatar" alt src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+<div class="autor" itemprop="author">
+<span class="alias">carlos99rios</span>
+</div>
+<time content="2017-04-28" itemprop="dateCreated" datetime="2017-04-28T10:02:00+01:00">
+<span class="fecha">28/04/2017</span>
+<span class="hora">10:02 horas</span>
+</time>
+</header>
+<div itemprop="text" class="texto-comentario">
+<p>Maravilloso ejemplo de optimismo y vitalidad !!! Si vienes a Oslo, ya tienes tu casa, Baba Lena ¿</p>
+</div>
+ <ul class="comentario-acciones">
+<li>
+<a rel="nofollow" class="comenta" title="Responder al usuario" href="#comentar" onclick="javascript:comentarReferenciaComentario(this, '@carlos99rios');comentarReferenciaComentario(this, '#1');return false; "><span>Responder</span></a>
+</li>
+<li id="valoracion_comentario_10922080" class="valorar">
+<a rel="nofollow" class="valorar-positivo" title="Positivo" href="#" onclick="javascript:enviarValoracionComentario(10922080,1);return false;"><span><i class="icon-like_32_e"></i>+</span></a>
+<a rel="nofollow" class="valorar-negativo" title="Negativo" href="#" onclick="javascript:enviarValoracionComentario(10922080,-1);return false;"><span><i class="icon-dislike_32_f"></i>-</span></a>
+</li>
+<li id="denunciar_comentario_10922080">
+<span class="denunciar"><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span> </li>
+</ul>
+</article>
+</section>
+<ul id="subNavComentarios">
+<li>
+</li>
+</ul></div>
+<script type="text/javascript">function ocultaMuestraCapa(divId){if(document.getElementById(divId).style.display=='none')
+{document.getElementById(divId).style.display='block';}
+else{document.getElementById(divId).style.display='none';}};</script>
+</section>
+ </div>
+</div>
+ <aside>
+<div class="content-ad">
+<div class="ad-item-300">
+<div id='div-gpt-ad-f5_comparte_n_rb_59020fde268e3e39078b4636' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-f5_comparte_n_rb_59020fde268e3e39078b4636');});</script>
+</div>
+</div>
+</div>
+</aside>
+  <div class="OUTBRAIN" data-src="/f5/comparte/2017/04/28/59020fde268e3e39078b4636.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/f5/comparte/2017/04/28/59020fde268e3e39078b4636.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+<div class="OUTBRAIN" data-src="/f5/comparte/2017/04/28/59020fde268e3e39078b4636.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+<script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script>
+ </article>
+<div class="publicidad" style="display: inline-block">
+<aside class="aside-pan">
+<div id="ElMundo_Mobile_59020fde268e3e39078b4636" style="display: none"></div>
+<script type="text/javascript">var cX=cX||{};cX.callQueue=cX.callQueue||[];cX.callQueue.push(['insertWidget',{widgetId:'0',insertBeforeElementId:'ElMundo_Mobile_59020fde268e3e39078b4636',renderTemplateUrl:'http://cdn.cxpublic.com/PAN_Combo_Elmundo_Mobile_Pie_Articulo_APP.html',numItems:1,numCols:1,tagIds:"10067136",width:'100%',height:0,adpositions:"1"}]);if(!cX.isTopWindow()){cX.setSiteId('9222274424412905877');cX.sendPageViewEvent();}
+var cxSegments=cX.getUserSegmentIds({persistedQueryId:'85ef33bb3337b41bf10ae5c5500436f2982bd698'});var e=document.createElement("img");e.width=1;e.height=1;e.alt="";e.border=0;var cxenseSegmentParams='&'+encodeURIComponent('add_code')+'=';for(var i=0;i<Math.min(cxSegments.length,40);i++){cxenseSegmentParams+="cxsegment_"+encodeURIComponent(cxSegments[i]);if(i!==(Math.min(cxSegments.length,40)-1))cxenseSegmentParams+=',';}
+e.src='http://ib.adnxs.com/seg?'+cxenseSegmentParams+'&member=7037';t=document.getElementsByTagName('body')[0];t.parentNode.appendChild(e);</script>
+</aside>
+</div>
+ <aside>
+<div class="content-ad">
+<div class="ad-item-300">
+<div id='div-gpt-ad-f5_comparte_n_320x53b_59020fde268e3e39078b4636' class="publicidad"> <script type='text/javascript'>googletag.cmd.push(function(){googletag.display('div-gpt-ad-f5_comparte_n_320x53b_59020fde268e3e39078b4636');});</script>
+</div>
+</div>
+</div>
+</aside>
+ </div>
+</main>

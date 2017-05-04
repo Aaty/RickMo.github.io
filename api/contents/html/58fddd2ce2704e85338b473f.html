@@ -2,14 +2,22 @@
 <script>var ueDataPage={rootSection:"default",sectionPrettyName:"Fútbol",portal:"elmundo",ct:"n",model:"deportes-home",contentId:'58fddd2ce2704e85338b473f',breadcrumb:'<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level"  id="bread-1"><a itemprop="url" title="Deportes" href="/deportes.html"><span itemprop="title">Deportes</span></a></li></ul>',children:'<ul class="local-navigation"><li><span class="local-navigation-title"><a href="/deportes.html" title="Deportes">Deportes</a></span><ul class="local-navigation-links js-breadcrumbChildren js-breadcrumb-submenu"><li data-section="Football Leaks"><a title="Football Leaks" href="/deportes/football-leaks.html">Football Leaks</a></li><li data-section="Fútbol"><a title="Fútbol" href="/deportes/futbol.html">Fútbol</a></li><li data-section="Fórmula 1"><a title="Fórmula 1" href="/deportes/formula-1.html">Fórmula 1</a></li><li data-section="Motociclismo"><a title="Motociclismo" href="/deportes/motociclismo.html">Motociclismo</a></li><li data-section="Tenis"><a title="Tenis" href="/deportes/tenis.html">Tenis</a></li><li data-section="Baloncesto"><a title="Baloncesto" href="/deportes/baloncesto.html">Baloncesto</a></li><li data-section="Ciclismo"><a title="Ciclismo" href="/deportes/ciclismo.html">Ciclismo</a></li><li data-section="Más deporte"><a title="Más deporte" href="/deportes/mas-deporte.html">Más deporte</a></li><li data-section="Rugby"><a title="Rugby" href="/deportes/rugby.html">Rugby</a></li></ul></li></ul>',numComments:'3',rrss:{img:"",summary:"",viaTwitter:'elmundoes'}}</script>
 <div class="container">
  <div class="alerta" id="alerta">
-<ul><li class="urgente">
-<span><strong>ÚLTIMA HORA</strong><a href="/espana/2017/04/25/58fe82c5468aeb49658b4616.html?cid=ULTHR22001&amp;s_kw=ultima_hora">Un empresario admite al juez que OHL transfirió 1,4 millones de México a Suiza para Ignacio González.</a></span>
+<ul><li>
+<span><strong>TITULARES</strong><a href="/television/2017/04/28/5902b5e3e5fdea2c558b4667.html?cid=ULTHR22001&amp;s_kw=titulares">Seis noticias que debes leer esta mañana.</a></span>
+</li><li class="deportes">
+<span><strong>DIRECTO</strong><a href="/espana/2017/04/28/5902d86f268e3e3d078b46d1.html?cid=ULTHR22001&amp;s_kw=directo">El número 2 de Interior comparece para explicar su reunión con el hermano de Ignacio González.</a></span>
 </li></ul>
+<ul class="controles">
+<li><a title="Avanzar" class="play" href="javascript:void(0)">Reproducir</a></li>
+<li><a title="Parar" class="stop" href="javascript:void(0)">Parar</a></li>
+<li><a title="Anterior" class="anterior" href="javascript:void(0)">Anterior</a></li>
+<li><a title="Siguiente" class="siguiente" href="javascript:void(0)">Siguiente</a></li>
+</ul>
 </div>
 <script type="text/javascript">if(typeof portal=='undefined'){portal='';}
 var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
 function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
-nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();btPlay.onclick=ueAlert.play;btStop.onclick=ueAlert.stop;alertElement=document.getElementById("alerta");alertControls=alertElement.getElementsByClassName("controles").item(0);alertControls.getElementsByClassName("anterior").item(0).onclick=ueAlert.preview;alertControls.getElementsByClassName("siguiente").item(0).onclick=ueAlert.next;}}
 var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
 ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
 init();return ueAlert;}</script>
@@ -131,13 +139,7 @@ abr.
 <div class="right-panel login-comentar js-comentar">
 <p id="navTopComentarios" class="js-cajaLogin"><button class="registro-login-button js-loginClick" ue-attr-csp="1403">Iniciar sesión para participar</button></p>
 <div id="hacer-comentario" class="js-cajaComentario no-visible ">
-<form class="comentar" name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
-<input type="hidden" name="opcion" value="1"/>
-<input type="hidden" name="noticia" value="1416062"/>
-<input type="hidden" name="portal" value="R"/>
-<textarea rows="1" name="texto" id="formulario_comentar_comentarios_texto" placeholder="Escriba aqu&iacute; su comentario" required="required"></textarea>
-<input type="button" onclick="javascript:enviarComentario()" class="boton" id="enviar" value="PUBLICAR" name="enviar"/>
-</form>
+<p class="mensaje error">En esta noticia ya no se admiten nuevos comentarios</p>
 </div>
 </div>
 <div id="listado_comentarios"><nav>
@@ -303,10 +305,16 @@ else{document.getElementById(divId).style.display='none';}};</script>
 <h4>En vivos</h4>
 <ul class="list">
 <li>
-<a href="/eventos/en-directo/2017/04/24/43895-eibar-athletic-club/"> Eibar vs Athletic, en vivo</a>
+<a href="/eventos/en-directo/2017/04/27/44213-alavs-eibar/"> Alavés vs Eibar, en vivo</a>
 </li>
 <li>
-<a href="/eventos/en-directo/2017/04/24/43931-pescara-roma/"> Pescara vs Roma, en vivo</a>
+<a href="/eventos/en-directo/2017/04/27/44215-sevilla-celta-de-vigo/"> Sevilla vs Celta, en vivo</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/04/27/44199-manchester-city-manchester-united/"> Manchester City vs Manchester United, en vivo</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/04/27/44214-athletic-club-real-betis/"> Athletic vs Betis, en vivo</a>
 </li>
 </ul>
 </section>
@@ -318,11 +326,71 @@ else{document.getElementById(divId).style.display='none';}};</script>
 <section class="lightbox inicio-sesion"></section>
 </div>
 <script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
-<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"58fddd2ce2704e85338b473f"});}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_58fddd2ce2704e85338b473f').find('.js_socialMedia').RedesSociales({title:"Ibrahimovic: \"Soy yo el que decide cuando me retiro, nadie más\"",img:"",url:"/deportes/futbol/2017/04/24/58fddd2ce2704e85338b473f.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_58fddd2ce2704e85338b473f').find('.js_socialMedia_1').RedesSociales({title:"Ibrahimovic: \"Soy yo el que decide cuando me retiro, nadie más\"",img:"",url:"/deportes/futbol/2017/04/24/58fddd2ce2704e85338b473f.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
-if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_58fddd2ce2704e85338b473f');}
-if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_58fddd2ce2704e85338b473f').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+<script>
+        jQuery(function() {
+            if (Comentarios) {
+                window.Comments = new Comentarios({
+                    botonesDesplegar : '.js-botonComentarios',
+                    newsId: "58fddd2ce2704e85338b473f"
+                });
+            }
+            if (typeof jQuery.fn.RedesSociales === 'function') {
+                jQuery('#js_58fddd2ce2704e85338b473f').find('.js_socialMedia').RedesSociales({
+                    title: "Ibrahimovic: \"Soy yo el que decide cuando me retiro, nadie más\"",
+                    img:"",
+                    url: "/deportes/futbol/2017/04/24/58fddd2ce2704e85338b473f.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_1',
+                    sharedFb: true
+                });
+                jQuery('#js_58fddd2ce2704e85338b473f').find('.js_socialMedia_1').RedesSociales({
+                    title: "Ibrahimovic: \"Soy yo el que decide cuando me retiro, nadie más\"",
+                    img:"",
+                    url: "/deportes/futbol/2017/04/24/58fddd2ce2704e85338b473f.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_2',
+                    sharedFb: true
+                });
+            }
+            if (typeof inicializarComentarios === 'function') {
+                inicializarComentarios(1, '#js_58fddd2ce2704e85338b473f');
+            }
+            if (typeof jQuery.fn.ElementoFijo === 'function') {
+                jQuery('#js_58fddd2ce2704e85338b473f').find('.js_fixed').ElementoFijo({
+                    elementosAnteriores: ['.nav-container', '.breadcrumbs '],
+                    elementoDesdeFixed: '.content',
+                    elementoHastaFixed: '.end-fixed',
+                    minWidthFijo: 768
+                });
+            }
+
+            jQuery(window).on('slotRendered',function(event,data){
+                fixedAdv(data.slotId);
+            });
+            window.fixedAdv = function (divgpt){
+                var advFixedCount = jQuery(".js-sky #"+divgpt+" .js_fixed").length;
+                if(advFixedCount > 0){
+                    var advFixed = jQuery("#"+divgpt);
+                    var container = advFixed.closest("main");
+                    var height=0;
+                    height = container.height() - (advFixed.parent().outerHeight() - advFixed.parent().height()) - advFixed.position().top;
+                    advFixed.height(height);
+                    advFixed.find(".js_fixed").ElementoFijo(
+                    {
+                        elementosAnteriores:['.site-header'],
+                        elementoDesdeFixed:'.content-ad',
+                        minWidthFijo:768,
+                        initialPosition:'fixed',
+                        parentContainer:true
+                    });
+                };
+            };
+        });
+    </script>
 </div>
 <script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"Ibrahimovic: \"Soy yo el que decide cuando me retiro, nadie más\"",img:"",url:"/deportes/futbol/2017/04/24/58fddd2ce2704e85338b473f.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

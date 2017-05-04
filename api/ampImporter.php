@@ -1,4 +1,5 @@
 <?php
+
     $last_resources = array(
         'http://pq-direct.revsci.net/pql?placementIdList=YLbLgY,hTTEBW&cb=1493103341046',
         'http://active.cache.el-mundo.net/js/fmu1475575200.js',
@@ -19,12 +20,6 @@
         $coverUrl = $originDomain.$section.".html";
         $entireCoverHtml = getFile($originDomain.$section."_mobile.html");
 
-        $entireCoverHtml = utf8_encode($entireCoverHtml);
-
-        $entireCoverHtml = extract_images($entireCoverHtml);
-
-        $entireCoverHtml = add_sw_registration($entireCoverHtml);
-
         $entireCoverHtml = str_replace($originDomain, "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
         $entireCoverHtml = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireCoverHtml);
@@ -32,7 +27,22 @@
         $entireCoverHtml = str_replace("assets/v7/css/", "css/", $entireCoverHtml);
         $entireCoverHtml = str_replace("assets/v7/js/", "js/", $entireCoverHtml);
         $entireCoverHtml = str_replace("iso-8859-15", "UTF-8", $entireCoverHtml);
+        $entireCoverHtml = preg_replace("/<i (((?!\/>).)*)\/>/i", "<i $1></i>", $entireCoverHtml);
 
+        $entireCoverHtml = utf8_encode($entireCoverHtml);
+
+        $entireCoverHtml = extract_images($entireCoverHtml);
+
+        $entireCoverHtml = add_sw_registration($entireCoverHtml);
+
+/*        $entireCoverHtml = str_replace($originDomain, "/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("http://e00-marca.uecdn.es/", "/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("http://estaticos.elmundo.es/", "/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("assets/v7/css/", "css/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("assets/v7/js/", "js/", $entireCoverHtml);
+        $entireCoverHtml = str_replace("iso-8859-15", "UTF-8", $entireCoverHtml);
+*/
         $entireCoverHtml = extract_last_resources($entireCoverHtml, $last_resources);
 
         $coverHtml = extract_main_content($entireCoverHtml);
@@ -56,6 +66,9 @@
         if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($coverUrl)))) {
             mkdir($siteRootPath.str_replace($originDomain, "", dirname($coverUrl)), 0755, true);
         }
+
+        extractContNavContents($originDomain.$section.".html", $siteRootPath.str_replace($originDomain, "", $coverUrl));
+
         file_put_contents($siteRootPath.str_replace($originDomain, "", $coverUrl), $entireCoverHtml);
         file_put_contents("./contents/html/".$section.".html", $coverHtml);
     }
@@ -85,12 +98,6 @@ function generateHtmlContent($data)
 
     $entireContent = getFile(str_replace(".html", "_mobile.html", $data->url));
 
-    $entireContent = utf8_encode($entireContent);
-
-    $entireContent = extract_images($entireContent);
-
-    $entireContent = add_sw_registration($entireContent);
-
     $entireContent = str_replace($originDomain, "/", $entireContent);
     $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
     $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
@@ -98,7 +105,22 @@ function generateHtmlContent($data)
     $entireContent = str_replace("assets/v7/css/", "css/", $entireContent);
     $entireContent = str_replace("assets/v7/js/", "js/", $entireContent);
     $entireContent = str_replace("iso-8859-15", "UTF-8", $entireContent);
+    $entireContent = preg_replace("/<i (((?!\/>).)*)\/>/i", "<i $1></i>", $entireContent);
 
+    $entireContent = utf8_encode($entireContent);
+
+    $entireContent = extract_images($entireContent);
+
+    $entireContent = add_sw_registration($entireContent);
+
+    /*$entireContent = str_replace($originDomain, "/", $entireContent);
+    $entireContent = str_replace("http://e00-marca.uecdn.es/", "/", $entireContent);
+    $entireContent = str_replace("http://e00-elmundo.uecdn.es/", "/", $entireContent);
+    $entireContent = str_replace("http://estaticos.elmundo.es/", "/", $entireContent);
+    $entireContent = str_replace("assets/v7/css/", "css/", $entireContent);
+    $entireContent = str_replace("assets/v7/js/", "js/", $entireContent);
+    $entireContent = str_replace("iso-8859-15", "UTF-8", $entireContent);
+*/
     $entireContent = extract_last_resources($entireContent, $last_resources); 
 
     if (!file_exists($siteRootPath.str_replace($originDomain, "", dirname($data->url)))) {
@@ -106,16 +128,44 @@ function generateHtmlContent($data)
     }
     file_put_contents($siteRootPath.str_replace($originDomain, "", $data->url), $entireContent);
 
+    extractContNavContents($data->url, $siteRootPath.str_replace($originDomain, "", $data->url));
+
     $content = extract_main_content($entireContent);
 
     return $content;
 }
 
+function extractContNavContents($origin, $destination)
+{
+    global $originDomain;
+
+    $content = getFile(str_replace(".html", "_comentarios_numero.html", $origin));
+    file_put_contents(str_replace(".html", "_comentarios_numero.html", $destination), $content);
+
+    $content = getFile(str_replace(".html", "_mobile_nav.json", $origin));
+    file_put_contents(str_replace(".html", "_nav.json", $destination), $content);
+
+    $content = getFile(str_replace(".html", "_mobile_nav_content.html", $origin));
+    $content = str_replace($originDomain, "/", $content);
+    $content = str_replace("http://e00-marca.uecdn.es/", "/", $content);
+    $content = str_replace("http://e00-elmundo.uecdn.es/", "/", $content);
+    $content = str_replace("http://estaticos.elmundo.es/", "/", $content);
+    $content = str_replace("assets/v7/css/", "css/", $content);
+    $content = str_replace("assets/v7/js/", "js/", $content);
+//    $content = str_replace("iso-8859-15", "UTF-8", $content);
+    $content = preg_replace("/<i (((?!\/>).)*)\/>/i", "<i $1></i>", $content);
+
+//    $content = utf8_encode($content);
+
+    file_put_contents(str_replace(".html", "_nav_content.html", $destination), $content);
+
+    return true;
+}
 
 function getFile($url)
 {
     $ch = curl_init();
-    $timeout = 5;
+    $timeout = 20;
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
@@ -134,12 +184,12 @@ function extract_images($content)
         $urls = array();
         preg_match_all('/src="([^"]+)"/i', $match, $urls);
         foreach ($urls[1] as $imageUrl) {
-            $image = getFile($imageUrl);
             $imageInfo = parse_url($imageUrl);
+/*            $image = getFile($imageUrl);
             if (!file_exists($siteRootPath.dirname($imageInfo['path']))) {
                 mkdir($siteRootPath.dirname($imageInfo['path']), 0755, true);
             }
-            file_put_contents($siteRootPath.$imageInfo['path'], $image);
+            file_put_contents($siteRootPath.$imageInfo['path'], $image);*/
             $content = str_replace($imageUrl, $imageInfo['path'], $content);
         }
     }

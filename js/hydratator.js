@@ -8,8 +8,9 @@ var removeQueryString = function (url) {
 }
 
 var updatePage = function (data) {
+console.log("DATA: ", data);
     var div = document.createElement('div');
-    div.innerHTML = data;
+    div.innerHTML = JSON.parse(data).content;
     var elements = div.childNodes;
     var container = document.getElementById("content");
 //    container.innerHTML = data;
@@ -18,8 +19,8 @@ var updatePage = function (data) {
 }
 
 var getAmpUrl = function (url) {
-    var siteDomain = "https://jangosto.github.io";
-    var contentUrl = "/services/nydus-mirror.php";
+    var siteDomain = "http://localhost";
+    var contentUrl = "/ue-nydus/nydus.php";
     // ... regex for portada
     var coverPattern =  new RegExp("^"+siteDomain+"(\/)?$", "i");
     // ... regex for portadillas
@@ -37,7 +38,7 @@ var getAmpUrl = function (url) {
         ampUrl = parser.pathname.replace(".html", "");
     }
 
-    ampUrl = contentUrl+"?url="+ampUrl;
+    ampUrl = contentUrl+"?content="+ampUrl;
 
     return ampUrl;
 }

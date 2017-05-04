@@ -5,7 +5,7 @@ var user_cache_name = 'v1_user';
 var primary_cover_css = "/css/core-portada-elmundo-mobile.css";
 var primary_new_css = "/css/core-noticia-elmundo-mobile.css";
 
-var siteDomain = "https://jangosto.github.io";
+var siteDomain = "http://localhost";
 
 // ... regex for portadillas
 var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+.html)?$", "i");
@@ -13,7 +13,7 @@ var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]
 var newPattern = new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?[0-9]{4}\/[0-1][0-9]\/[0-3][0-9]\/[0-9a-f]{24}.html$", "i");
 // ... regex for hydratation contents
 //var newContentPattern = new RegExp("^"+siteDomain+"\/api\/contents\/html\/[^\/]+.html$", "i");
-var newContentPattern = new RegExp("^"+siteDomain+"\/services\/nydus-mirror.php?url=(.*)$", "i");
+var newContentPattern = new RegExp("^"+siteDomain+"\/ue-nydus\/nydus.php(.*)$", "i");
 
 
 var static_assets = Array(
@@ -31,7 +31,9 @@ var static_assets = Array(
     "/js/v0/amp-fit-text-0.1.js",
     "/js/v0/amp-ad-0.1.js",*/
     "https://securepubads.g.doubleclick.net/gpt/pubads_impl_113.js",
-    "https://static.chartbeat.com/js/chartbeat_mab.js"
+    "https://static.chartbeat.com/js/chartbeat_mab.js",
+    "http://www.googletagservices.com/tag/js/gpt.js",
+    "https://securepubads.g.doubleclick.net/gpt/pubads_impl_115.js"
 );
 
 self.addEventListener('install', function(event) {
@@ -50,7 +52,7 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
-    if (newContentPattern.test(currentUrl)) {
+    if (newContentPattern.test(event.request.url)) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 if (response) {
