@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="UEdit - Unidad Editorial" default="deploy">
+    <target name="install" depends="config, pulldown, structure, deploy" description="First install after the first clone"/>
+    <target name="update" depends="config, pulldown, deploy" description="Updates the project with new changes and deploy it"/>
+
+    <target name="config" hidden="true">
+        <echo msg="Checking configuration..."/>
+
+        <if>
+            <available file="build.ini" />
+            <then>
+                <property file="build.ini" />
+            </then>
+        </if>
+        <property file="build.ini.dist" />
+        <if>
+            <not>
+                <isset property="project.develop" />
+            </not>
+            <then>
+                <property name="project.develop" value="false" />
+            </then>
+        </if>
+    </target>
+
+    <target name="pulldown" depends="config" description="Updates the project with the latest changes.">
+        <exec command='git branch | grep "*" | tr -d "* "' outputProperty="vendors.branch" />
+        <if>
+            <not><equals arg1="${vendors.branch}" arg2="(nobranch)" trim="true" /></not>
+            <then>
+                <echo msg="Updating files from repository..."/>
+                <exec command="git pull origin ${vendors.branch}" passthru="true" />
+            </then>
+        </if>
+    </target>
+
+    <target name="structure" description="Prepares the required files to be used.">
+        <copy todir="config" overwrite="true">
+            <mapper type="glob" from="*.php.sample" to="*.php" />
+            <fileset dir="config" >
+                <include name="*.sample" />
+            </fileset>
+            <filterchain>
+                <expandproperties />
+            </filterchain>
+        </copy>
+    </target>
+
+    <target name="deploy" description="Generates the final transporter.">
+        <if>
+            <available file="config/parameters.php" />
+            <then>
+                <echo msg="parameters.php exists!"/>
+                <copy file="transporter-template.php.tpl" tofile="dist/nydus.php" overwrite="true">
+                    <filterchain>
+                        <replacetokenswithfile begintoken="##" endtoken="##" dir="config/" postfix=".php" translatehtml="false"/>
+                    </filterchain>
+                </copy>
+            </then>
+            <else>
+                <echo level="error" msg="The file 'parameters.php' doesnt exist."/>
+            </else>
+        </if>
+    </target>
+
+</project>

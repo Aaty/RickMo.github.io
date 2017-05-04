@@ -1,0 +1,9 @@
+$portal = "elmundo";
+$publicRootPath = "/home/jangosto/projects/elmundo/pwa/";
+$coreExtension = "_nav_content.html";
+$numCommentsFileExtension = "_comentarios_numero.html";
+$jsonNavExtension = "_nav.json";
+$dfpFileExtension = "_nav-cont.php";
+$dfpRootPath = "/mnt/filer/html/produccion/datos/include/dfp/$portal/";
+$static_path = "/mnt/filer/html/produccion/datos/portales/es/elmundo/www/includes/editorial/";
+$cookieName = "ELMUNDO_pref";
