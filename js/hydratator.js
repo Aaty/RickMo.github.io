@@ -15,6 +15,10 @@ console.log("DATA: ", data);
     var container = document.getElementById("content");
 //    container.innerHTML = data;
     container.parentNode.replaceChild(elements[0], container);
+
+    MetadataParser.updateContentTags(JSON.parse(data).metadata["other-tags"],"data-ue-");
+    MetadataParser.updateContentTags(JSON.parse(data).metadata["meta-tags"],"data-ue-");
+    AnalyticsParser.updateAnalytics({content:{analytics:JSON.parse(data).analytics}});
     
 }
 
