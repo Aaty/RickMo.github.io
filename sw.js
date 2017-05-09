@@ -52,6 +52,7 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event)
 {
+console.log("RESQUEST: ", event.request.url);
     if (newContentPattern.test(event.request.url)) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
@@ -71,44 +72,44 @@ self.addEventListener('fetch', function(event)
                 }
             })
         );
-    }
-
-    var currentUrl = remove_query_string(event.request.url);
-
-    if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
-        shellRequest = new Request(siteDomain+"/shell.html");
-        event.respondWith(
-            caches.match(shellRequest).then(function(response) {
-                if (response) {
-                    return createResponse(response, currentUrl);
-                }
-                return caches.open(assets_cache_name).then(function(cache) {
-                    cache.add(shellRequest).then(function() {
-                        return fetch(shellRequest).then(function(response) {
-                            return createResponse(response, currentUrl);
-                        });
-                    });
-                });
-            })
-        );
     } else {
-        event.respondWith(
-            caches.match(event.request).then(function(response) {
-                if (response) {
-                    return response;
-                }
+        var currentUrl = remove_query_string(event.request.url);
 
-                if (event.request.method = "GET") {
+        if (autocoverPattern.test(currentUrl) || newPattern.test(currentUrl)) {
+            shellRequest = new Request(siteDomain+"/shell.html");
+            event.respondWith(
+                caches.match(shellRequest).then(function(response) {
+                    if (response) {
+                        return createResponse(response, currentUrl);
+                    }
                     return caches.open(assets_cache_name).then(function(cache) {
-                        return cache.add(event.request).then(function() {
-                            return fetch(event.request);
+                        cache.add(shellRequest).then(function() {
+                            return fetch(shellRequest).then(function(response) {
+                                return createResponse(response, currentUrl);
+                            });
                         });
                     });
-                } else {
-                    return fetch(event.request);
-                }
-            })
-        );
+                })
+            );
+        } else {
+            event.respondWith(
+                caches.match(event.request).then(function(response) {
+                    if (response) {
+                        return response;
+                    }
+
+                    if (event.request.method = "GET") {
+                        return caches.open(assets_cache_name).then(function(cache) {
+                            return cache.add(event.request).then(function() {
+                                return fetch(event.request);
+                            });
+                        });
+                    } else {
+                        return fetch(event.request);
+                    }
+                })
+            );
+        }
     }
 });
 

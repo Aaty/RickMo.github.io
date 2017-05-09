@@ -3,9 +3,9 @@
 <div class="container">
  <div class="alerta" id="alerta">
 <ul><li class="deportes">
-<span><strong>DIRECTO</strong><a href="/espana/2017/05/03/5909772eca4741d95a8b4622.html?cid=ULTHR22001&amp;s_kw=directo">Debate de los Presupuestos Generales del Estado en el Congreso.</a></span>
+<span><strong>ENCUENTRO</strong><a href="/elmundo/encuentros/elmundo/2017/05/09/simon-casas/index.html?cid=ULTHR22001&amp;s_kw=encuentro">Pregunta ya a Simón Casas, empresario de Las Ventas.</a></span>
 </li><li class="urgente">
-<span><strong>ÚLTIMA HORA</strong>El equipo de Susana Díaz presenta 62.500 avales para ser candidata a las primarias del PSOE.</span>
+<span><strong>ÚLTIMA HORA</strong>Decenas de heridos en dos explosiones en una zona turística al sur de Tailandia.</span>
 </li></ul>
 <ul class="controles">
 <li><a title="Avanzar" class="play" href="javascript:void(0)">Reproducir</a></li>
@@ -125,13 +125,7 @@ may.
 <div class="right-panel login-comentar js-comentar">
 <p id="navTopComentarios" class="js-cajaLogin"><button class="registro-login-button js-loginClick" ue-attr-csp="1403">Iniciar sesión para participar</button></p>
 <div id="hacer-comentario" class="js-cajaComentario no-visible ">
-<form class="comentar" name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
-<input type="hidden" name="opcion" value="1"/>
-<input type="hidden" name="noticia" value="1418678"/>
-<input type="hidden" name="portal" value="R"/>
-<textarea rows="1" name="texto" id="formulario_comentar_comentarios_texto" placeholder="Escriba aqu&iacute; su comentario" required="required"></textarea>
-<input type="button" onclick="javascript:enviarComentario()" class="boton" id="enviar" value="PUBLICAR" name="enviar"/>
-</form>
+<p class="mensaje error">En esta noticia ya no se admiten nuevos comentarios</p>
 </div>
 </div>
 <div id="listado_comentarios"><nav>
@@ -239,10 +233,13 @@ else{document.getElementById(divId).style.display='none';}};</script>
 <h4>En vivos</h4>
 <ul class="list">
 <li>
-<a href="/eventos/en-directo/2017/05/03/44452-ajax-lyon/"> Ajax vs O. Lyon, en vivo</a>
+<a href="/eventos/en-directo/2017/05/08/44511-legans-real-betis/"> Leganés vs Betis, en vivo</a>
 </li>
 <li>
-<a href="/eventos/en-directo/2017/05/03/44449-monaco-juventus/"> Mónaco vs Juventus, en vivo</a>
+<a href="/eventos/en-directo/2017/05/08/44533-chelsea-middlesbrough/"> Chelsea vs Middlesbrough, en vivo</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/05/09/44723-4-etapa-del-giro-en-vivo-cefal-etna/"> 4ª etapa del Giro de Italia, en vivo (Cefalù-Etna)</a>
 </li>
 </ul>
 </section>
@@ -254,11 +251,71 @@ else{document.getElementById(divId).style.display='none';}};</script>
 <section class="lightbox inicio-sesion"></section>
 </div>
 <script>jQuery(document).ready(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});jQuery(window).resize(function(){jQuery(".kaltura-video-player").each(function(){jQuery(this).height(jQuery(this).width()*9/16);});});});</script>
-<script>jQuery(function(){if(Comentarios){window.Comments=new Comentarios({botonesDesplegar:'.js-botonComentarios',newsId:"590993dd46163f66118b45c6"});}
-if(typeof jQuery.fn.RedesSociales==='function'){jQuery('#js_590993dd46163f66118b45c6').find('.js_socialMedia').RedesSociales({title:"La futura Ley de Vivienda del Pacte se retrasa a finales de año",img:"",url:"/baleares/2017/05/03/590993dd46163f66118b45c6.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1',sharedFb:true});jQuery('#js_590993dd46163f66118b45c6').find('.js_socialMedia_1').RedesSociales({title:"La futura Ley de Vivienda del Pacte se retrasa a finales de año",img:"",url:"/baleares/2017/05/03/590993dd46163f66118b45c6.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_2',sharedFb:true});}
-if(typeof inicializarComentarios==='function'){inicializarComentarios(1,'#js_590993dd46163f66118b45c6');}
-if(typeof jQuery.fn.ElementoFijo==='function'){jQuery('#js_590993dd46163f66118b45c6').find('.js_fixed').ElementoFijo({elementosAnteriores:['.nav-container','.breadcrumbs '],elementoDesdeFixed:'.content',elementoHastaFixed:'.end-fixed',minWidthFijo:768});}
-jQuery(window).on('slotRendered',function(event,data){fixedAdv(data.slotId);});window.fixedAdv=function(divgpt){var advFixedCount=jQuery(".js-sky #"+divgpt+" .js_fixed").length;if(advFixedCount>0){var advFixed=jQuery("#"+divgpt);var container=advFixed.closest("main");var height=0;height=container.height()-(advFixed.parent().outerHeight()-advFixed.parent().height())-advFixed.position().top;advFixed.height(height);advFixed.find(".js_fixed").ElementoFijo({elementosAnteriores:['.site-header'],elementoDesdeFixed:'.content-ad',minWidthFijo:768,initialPosition:'fixed',parentContainer:true});};};});</script>
+<script>
+        jQuery(function() {
+            if (Comentarios) {
+                window.Comments = new Comentarios({
+                    botonesDesplegar : '.js-botonComentarios',
+                    newsId: "590993dd46163f66118b45c6"
+                });
+            }
+            if (typeof jQuery.fn.RedesSociales === 'function') {
+                jQuery('#js_590993dd46163f66118b45c6').find('.js_socialMedia').RedesSociales({
+                    title: "La futura Ley de Vivienda del Pacte se retrasa a finales de año",
+                    img:"",
+                    url: "/baleares/2017/05/03/590993dd46163f66118b45c6.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_1',
+                    sharedFb: true
+                });
+                jQuery('#js_590993dd46163f66118b45c6').find('.js_socialMedia_1').RedesSociales({
+                    title: "La futura Ley de Vivienda del Pacte se retrasa a finales de año",
+                    img:"",
+                    url: "/baleares/2017/05/03/590993dd46163f66118b45c6.html",
+                    summary :"",
+                    viaTwitter: 'elmundoes',
+                    urlCorreo: "/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",
+                    sufijoAnalitica: '_2',
+                    sharedFb: true
+                });
+            }
+            if (typeof inicializarComentarios === 'function') {
+                inicializarComentarios(1, '#js_590993dd46163f66118b45c6');
+            }
+            if (typeof jQuery.fn.ElementoFijo === 'function') {
+                jQuery('#js_590993dd46163f66118b45c6').find('.js_fixed').ElementoFijo({
+                    elementosAnteriores: ['.nav-container', '.breadcrumbs '],
+                    elementoDesdeFixed: '.content',
+                    elementoHastaFixed: '.end-fixed',
+                    minWidthFijo: 768
+                });
+            }
+
+            jQuery(window).on('slotRendered',function(event,data){
+                fixedAdv(data.slotId);
+            });
+            window.fixedAdv = function (divgpt){
+                var advFixedCount = jQuery(".js-sky #"+divgpt+" .js_fixed").length;
+                if(advFixedCount > 0){
+                    var advFixed = jQuery("#"+divgpt);
+                    var container = advFixed.closest("main");
+                    var height=0;
+                    height = container.height() - (advFixed.parent().outerHeight() - advFixed.parent().height()) - advFixed.position().top;
+                    advFixed.height(height);
+                    advFixed.find(".js_fixed").ElementoFijo(
+                    {
+                        elementosAnteriores:['.site-header'],
+                        elementoDesdeFixed:'.content-ad',
+                        minWidthFijo:768,
+                        initialPosition:'fixed',
+                        parentContainer:true
+                    });
+                };
+            };
+        });
+    </script>
 </div>
 <script type="text/javascript">jQuery(function(){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:"La futura Ley de Vivienda del Pacte se retrasa a finales de año",img:"",url:"/baleares/2017/05/03/590993dd46163f66118b45c6.html",summary:"",viaTwitter:'elmundoes',urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}
 jQuery(document).on("urlChanged",function(event,data){if(typeof jQuery.fn.RedesSociales==='function'){jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({title:data.title,img:data.rrss.img,url:data.url,summary:data.rrss.summary,viaTwitter:data.rrss.viaTwitter,urlCorreo:"/enviar/formulario_enviar_noticia.html?que_mundo=elmundo",sufijoAnalitica:'_1'});}});});</script> </main>

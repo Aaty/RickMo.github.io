@@ -8,7 +8,6 @@ var removeQueryString = function (url) {
 }
 
 var updatePage = function (data) {
-console.log("DATA: ", data);
     var div = document.createElement('div');
     div.innerHTML = JSON.parse(data).content;
     var elements = div.childNodes;

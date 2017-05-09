@@ -48,9 +48,7 @@ function s_doPlugins(s) {
         }
     }
     s.prop14 = s.eVar14 = s.getNewRepeat();
-    s.prop16 = s.eVar16 = s.getTimeParting('h', '+1', new Date().getFullYear());
-    s.prop17 = s.eVar17 = s.getTimeParting('d', '+1', new Date().getFullYear());
-    s.prop18 = s.eVar18 = s.getTimeParting('w', '+1', new Date().getFullYear());
+    s.eVar18 = s.getTimeParting('w', '+1', new Date().getFullYear());
 
     /* TimeParting Config */
     var fecha = new Date();
@@ -87,6 +85,31 @@ function s_doPlugins(s) {
         day = '0' + day;
 
     s.eVar83 = hours + ":" + minutes + ":" + seconds + ":" + milliseconds;
+
+    // Hora del dia y dia de la semana 
+    s.prop16 = s.eVar16 = hours + ':' + minutes;
+    var dias = new Array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday')
+    s.prop17 = s.eVar17 = dias[fecha.getDay()-1];
+
+    // Sexo y edad
+    if (typeof localStorage.getItem('kxunidad_segs') == "string"){
+        if (localStorage.getItem('kxunidad_segs').indexOf('qzzijsvz1') >= 0) s.prop19 = '18-30';
+        if (localStorage.getItem('kxunidad_segs').indexOf('qzzimf67a') >= 0) s.prop19 = '31-45';
+        if (localStorage.getItem('kxunidad_segs').indexOf('qzzipp4jn') >= 0) s.prop19 = '46-60';
+        if (localStorage.getItem('kxunidad_segs').indexOf('qzzir2rz7') >= 0) s.prop19 = '61-90';
+        if (localStorage.getItem('kxunidad_segs').indexOf('qzzium0t6') >= 0) s.prop18 = 'male';
+        if (localStorage.getItem('kxunidad_segs').indexOf('qzziv5m1g') >= 0) s.prop18 = 'female';
+    }
+
+    // Nuevo/Repetidor Mensual 
+    if (typeof localStorage.getItem('lastVisitMonth') == "string" && localStorage.getItem('lastVisitMonth')==fecha.getMonth()){
+        s.prop50 = s.eVar50 = "Repeat";
+    }
+    else{
+        s.prop50 = s.eVar50 = "New";
+        localStorage.setItem("lastVisitMonth", fecha.getMonth());
+    }
+
     s.prop49 = s.eVar83;
     s.eVar26 = s.getQueryParam('intcmp','',sc_urlencode);
     s.eVar66 = s.getQueryParam('emk','',sc_urlencode);
@@ -101,7 +124,6 @@ function s_doPlugins(s) {
     s.eVar47 = s._channel;
     s.eVar48 = s._partner;
     s.eVar49 = decodeURI(s._keywords);
-    s.eVar50 = s._referringDomain;
     s.campaign = s._campaign;
     if (s._channel == 'Natural Search') {
         s.campaign = 'SEO:' + s.eVar48;
@@ -333,8 +355,7 @@ function omniture_fill_vars_reg_user_metrics(omniture_name_reg_cookie, omniture_
         s.eVar37 = s.prop37;
     }
     if (counter_status_usr_aux_omniture != '') {
-        s.prop19 = counter_status_usr_aux_omniture == '0' ? 'No actualizado' : 'Actualizado';
-        s.eVar19 = s.prop19;
+        s.eVar19 = counter_status_usr_aux_omniture == '0' ? 'No actualizado' : 'Actualizado';
     }
     if (registered_usr_aux_omniture != '') {
         s.prop45 = registered_usr_aux_omniture == '0' ? 'No conocido' : (contract_usr_aux_omniture == '0' ? 'Registrado' : 'Pago' + (suscription_type_aux_omniture == '0' ? '' : '-' + suscription_type_aux_omniture));

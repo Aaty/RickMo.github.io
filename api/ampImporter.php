@@ -5,7 +5,14 @@
         'http://active.cache.el-mundo.net/js/fmu1475575200.js',
         'http://estaticos.cookies.unidadeditorial.es/js/policy.js',
         'http://active.cache.el-mundo.net/js/advertisement.js',
-        'http://active.cache.el-mundo.net/js/s_code.js'
+        'http://active.cache.el-mundo.net/js/s_code.js',
+        '//e03-elmundo.uecdn.es/iconos/v1.x/v1.0/imgP.gif',
+        'http://static.chartbeat.com/js/chartbeat_mab.js',
+        'http://e02-elmundo.uecdn.es/elmundo/imagenes/2017/05/05/minirecomendados_ventana_al_futuro/1486116745_extras_noticia_foton_1_0.jpg',
+        'http://active.cache.el-mundo.net/banners/cxense/cx.js',
+        'https://securepubads.g.doubleclick.net/gpt/pubads_impl_116.js',
+        'http://static.chartbeat.com/js/chartbeat.js',
+        'https://scdn.cxense.com/cx.js'
     );
 
     ini_set("allow_url_fopen", true);
@@ -223,6 +230,9 @@ function extract_last_resources($content, $resources)
     $substitutions = array();
     foreach ($resources as $key => $resource_url) {
         $url_info = parse_url($resource_url);
+if ($resource_url == '//e03-elmundo.uecdn.es/iconos/v1.x/v1.0/imgP.gif') {
+    print_r($url_info);
+}
         $substitutions[$key] = $url_info['path'];
         $resource_content = getFile($resource_url);
         if (!file_exists($siteRootPath.dirname($url_info['path']))) {

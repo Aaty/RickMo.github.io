@@ -6,7 +6,7 @@
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <link data-ue-u="primary-stylesheet" href="[[[---PRIMARY_CSS---]]]" rel="stylesheet" type="text/css">
         <title data-ue-u="title" data-ue-c="innerHTML"></title>
-        <script data-ue-u="only-portada" type='text/javascript'>var _sf_async_config=_sf_async_config||{};_sf_async_config.uid=52682;_sf_async_config.domain='elmundo.es';_sf_async_config.flickerControl=false;_sf_async_config.useCanonical=true;var _sf_startpt=(new Date()).getTime();</script><script src='//static.chartbeat.com/js/chartbeat_mab.js'></script>
+        <script data-ue-u="only-portada" type='text/javascript'>var _sf_async_config=_sf_async_config||{};_sf_async_config.uid=52682;_sf_async_config.domain='elmundo.es';_sf_async_config.flickerControl=false;_sf_async_config.useCanonical=true;var _sf_startpt=(new Date()).getTime();</script><script src='/js/chartbeat_mab.js'></script>
         <meta data-ue-u="description" name="description" content="Noticias, actualidad, álbumes, debates, sociedad, servicios, entretenimiento y última hora en España y el mundo"/>
         <meta data-ue-u="keywords" name="keywords" content="[PARAMETER]elmundo, elmundo.es, El Mundo, Diario, periodico, periódico, noticias, España, Espana, internacional, economia, economía, dinero, opinion, ultimas noticias, deportes, sport, Madrid, politica, Cataluña, Catalunya, navegante, internet, Salud, Metropoli, Spain, daily, newspaper, news, breaking news, urgente, technology, tecnología, tiempo, weather, buscador[/PARAMETER]"/>
         <meta data-ue-u="news_keywords" name="news_keywords" content="[PARAMETER]elmundo, elmundo.es, El Mundo, Diario, periodico, periódico, noticias, España, Espana, internacional, economia, economía, dinero, opinion, ultimas noticias, deportes, sport, Madrid, politica, Cataluña, Catalunya, navegante, internet, Salud, Metropoli, Spain, daily, newspaper, news, breaking news, urgente, technology, tecnología, tiempo, weather, buscador[/PARAMETER]"/>
@@ -704,7 +704,7 @@
                     var scriptEl = document.createElement('script');
                     scriptEl.type = 'text/javascript';
                     scriptEl.async = 'async';
-                    scriptEl.src = ('https:' == document.location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://active.cache.el-mundo.net/banners/cxense/cx.js';
+                    scriptEl.src = ('https:' == document.location.protocol) ? '/cx.js' : '/banners/cxense/cx.js';
                     var targetEl = document.getElementsByTagName('script')[0];
                     targetEl.parentNode.insertBefore(scriptEl, targetEl);
                 } catch (e) {};
@@ -725,7 +725,7 @@
                     var e = document.createElement('script');
                     e.setAttribute('language', 'javascript');
                     e.setAttribute('type', 'text/javascript');
-                    e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+                    e.setAttribute('src', '/js/chartbeat.js');
                     document.body.appendChild(e);
                 }
                 var oldonload = window.onload;

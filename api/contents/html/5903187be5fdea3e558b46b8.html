@@ -3,21 +3,13 @@
 <div class="container">
  <div class="alerta" id="alerta">
 <ul><li class="deportes">
-<span><strong>DIRECTO</strong><a href="/espana/2017/05/03/5909772eca4741d95a8b4622.html?cid=ULTHR22001&amp;s_kw=directo">Debate de los Presupuestos Generales del Estado en el Congreso.</a></span>
-</li><li class="urgente">
-<span><strong>ÚLTIMA HORA</strong>El equipo de Susana Díaz presenta 62.500 avales para ser candidata a las primarias del PSOE.</span>
+<span><strong>DIRECTO:</strong><a href="/internacional/2017/05/08/591034b046163f3c1a8b4672.html?cid=ULTHR22001&amp;s_kw=directo">Conmemoración del 72.º aniversario de la Victoria en Francia.</a></span>
 </li></ul>
-<ul class="controles">
-<li><a title="Avanzar" class="play" href="javascript:void(0)">Reproducir</a></li>
-<li><a title="Parar" class="stop" href="javascript:void(0)">Parar</a></li>
-<li><a title="Anterior" class="anterior" href="javascript:void(0)">Anterior</a></li>
-<li><a title="Siguiente" class="siguiente" href="javascript:void(0)">Siguiente</a></li>
-</ul>
 </div>
 <script type="text/javascript">if(typeof portal=='undefined'){portal='';}
 var ueAlert=window.ueAlert||(window.utilsEvent?null:initUeAlerts());if(ueAlert==null){window.addEventListener('cargaUtils',function(){ueAlert=initUeAlerts();});}
 function initUeAlerts(event){var pos=0,lis=[],nlis=0,timer1=null,btPlay=null,btStop=null;function init(){var alerta_container=document.getElementById("alerta");var cont=alerta_container.getElementsByTagName("ul")[0];btPlay=ueUtils.getElementsByClass("play",cont.getElementsByTagName("ul")[1])[0];btStop=ueUtils.getElementsByClass("stop",cont.getElementsByTagName("ul")[1])[0];if(portal=='portada'){lis=cont.getElementsByTagName("li");}else{lis=cont.getElementsByClassName('urgente');}
-nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();btPlay.onclick=ueAlert.play;btStop.onclick=ueAlert.stop;alertElement=document.getElementById("alerta");alertControls=alertElement.getElementsByClassName("controles").item(0);alertControls.getElementsByClassName("anterior").item(0).onclick=ueAlert.preview;alertControls.getElementsByClassName("siguiente").item(0).onclick=ueAlert.next;}}
+nlis=lis.length;if(nlis==0){ueUtils.addClass(alerta_container,'ocultar');}else{ueUtils.addClass(lis[0],"mostrar");ueUtils.addClass(btStop,"ocultar");ueAlert.play();}}
 var ueAlert={play:function(){timer1=setInterval(ueAlert.next,5000);ueUtils.addClass(btPlay,"ocultar");ueUtils.removeClass(btStop,"ocultar");},stop:function(){if(timer1){clearInterval(timer1);timer1=null;}
 ueUtils.addClass(btStop,"ocultar");ueUtils.removeClass(btPlay,"ocultar");},next:function(){var nextPos=((pos+1)<nlis)?(pos+1):0;ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;},preview:function(){var nextPos=((pos-1)<0)?(nlis-1):(pos-1);ueUtils.removeClass(lis[pos],"mostrar");ueUtils.addClass(lis[nextPos],"mostrar");pos=nextPos;}}
 init();return ueAlert;}</script>
@@ -183,10 +175,19 @@ else{document.getElementById(divId).style.display='none';}};</script>
 <h4>En vivos</h4>
 <ul class="list">
 <li>
-<a href="/eventos/en-directo/2017/05/03/44452-ajax-lyon/"> Ajax vs O. Lyon, en vivo</a>
+<a href="/eventos/en-directo/2017/05/07/44510-alavs-athletic-club/"> Alavés vs Athletic, en vivo</a>
 </li>
 <li>
-<a href="/eventos/en-directo/2017/05/03/44449-monaco-juventus/"> Mónaco vs Juventus, en vivo</a>
+<a href="/eventos/en-directo/2017/05/07/44696-3-etapa-del-giro-tortol-cagliari-148-km-en-vivo/"> 3ª etapa del Giro: Tortolì-Cagliari (148 km), en vivo</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/05/07/44557-udinese-atalanta/">Udinese - Atalanta</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/05/07/44690-fc-barcelona-fuenlabrada/"> Barcelona Lassa vs Fuenlabrada, en vivo</a>
+</li>
+<li>
+<a href="/eventos/en-directo/2017/05/07/44527-tenerife-lugo/">Tenerife - Lugo</a>
 </li>
 </ul>
 </section>
