@@ -2,6 +2,7 @@
     ini_set("allow_url_fopen", true);
 
     $siteRootUrl = "https://jangosto.github.io/";
+    $siteRootPath = "/home/jangosto/projects/elmundo/pwa";
     $coverHtml = '<div id="container cover">';
 
     $autocoverJson = file_get_contents("http://www.elmundo.es/json/index.json");
@@ -106,6 +107,19 @@ function generateAmpContent($data)
     $content = str_replace("[[[---URL---]]]", "[[[...URL...]]]", $content);
     $content = preg_replace("/\[\[\[\-\-\-[^\-\]]+\-\-\-\]\]\]/i", "", $content);
     $content = str_replace("[[[...URL...]]]", "[[[---URL---]]]",  $content);
+
+    $shell = file_get_contents($siteRootPath."/shell.html");
+
+    $completeContent = $shell;
+    $completeContent = str_replace('<div id="content"></div>', '<div id="content">'.$content.'</div>', $completeContent);
+    $completeContent = str_replace('</head>', '<script src="/js/sw_register.js" type="text/javascript"></script>'.'</head>', $completeContent);
+    $url_info = parse_url($data->url);
+
+    if (!file_exists($siteRootPath.dirname($url_info['path']))) {
+        mkdir($siteRootPath.dirname($url_info['path']), 0755, true);
+    }
+
+    file_put_contents($siteRootPath.$url_info['path']);
 
     return $content;
 }
