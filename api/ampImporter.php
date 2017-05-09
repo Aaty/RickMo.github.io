@@ -50,7 +50,7 @@ function urlExists ($url)
 
 function generateAmpContent($data)
 {
-    global $siteRootUrl, $coverHtml;
+    global $siteRootUrl, $siteRootPath, $coverHtml;
 
     $content = file_get_contents("./ampPrototype.html");
 
@@ -119,7 +119,7 @@ function generateAmpContent($data)
         mkdir($siteRootPath.dirname($url_info['path']), 0755, true);
     }
 
-    file_put_contents($siteRootPath.$url_info['path']);
+    file_put_contents($siteRootPath.$url_info['path'], $completeContent);
 
     return $content;
 }
