@@ -3,6 +3,7 @@ var content_cache_name = 'v1_dynamic';
 var user_cache_name = 'v1_user';
 
 var siteDomain = "https://jangosto.github.io";
+//var siteDomain = "http://localhost";
 
 var static_assets = Array(
     "https://jangosto.github.io/shell.html",

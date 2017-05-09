@@ -14,6 +14,7 @@ var updatePage = function (data) {
 
 var getAmpUrl = function (url) {
     var siteDomain = "https://jangosto.github.io";
+//    var siteDomain = "http://localhost";
     // ... regex for portadillas
     var autocoverPattern =  new RegExp("^"+siteDomain+"\/([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?([a-z0-9\-]+\/)?$", "i");
     // ... regex for news

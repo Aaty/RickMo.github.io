@@ -2,6 +2,7 @@
     ini_set("allow_url_fopen", true);
 
     $siteRootUrl = "https://jangosto.github.io/";
+    //$siteRootUrl = "http://localhost/";
     $siteRootPath = "/home/jangosto/projects/elmundo/pwa";
     $coverHtml = '<div id="container cover">';
 
@@ -28,7 +29,12 @@
     $coverHtml .= '</div>';
 
     file_put_contents("./contents/index.html", $coverHtml);
-
+    
+    $shell = file_get_contents($siteRootPath."/shell.html");
+    $completeContent = $shell;
+    $completeContent = str_replace('<div id="content"></div>', '<div id="content">'.$coverHtml.'</div>', $completeContent);
+    $completeContent = str_replace('</head>', '<script src="/js/sw_register.js" type="text/javascript"></script>'.'</head>', $completeContent);
+    file_put_contents($siteRootPath.'/index.html', $completeContent);
 
 function urlExists ($url)
 {
